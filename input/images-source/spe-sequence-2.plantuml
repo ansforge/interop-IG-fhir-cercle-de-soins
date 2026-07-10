@@ -1,0 +1,38 @@
+@startuml 
+
+hide footbox
+
+skinparam backgroundColor #FFFFFF
+skinparam sequence {
+    ArrowThickness 1
+    LifeLineBorderColor #333333
+    LifeLineBackgroundColor #EFEFEF
+    ParticipantBorderColor #333333
+    ParticipantFontStyle bold
+}
+
+participant "SI DAC" as DAC1 #SkyBlue
+participant "SI DAC" as DAC2 #SkyBlue
+participant "Dossier Patient\nInformatisé" as DPI #SkyBlue
+participant "SI Médecin traitant" as MT #SkyBlue
+
+DAC1-> DAC2 : Recherche existance cercle de soins
+activate DAC2
+DAC2 --> DAC1 : Resultat recherche : cercle inexistant
+deactivate DAC2
+
+DAC1 -> DAC2 : Créer le cercle de soins
+activate DAC2
+deactivate DAC2
+
+MT -> DAC2 : Mise à jour membre\n( infirmière libérale)
+activate DAC2
+DAC2 --> MT
+deactivate DAC2
+
+DPI -> DAC2 : Consulter cercle de soins
+activate DAC2
+DAC2 --> DPI : Résultat : cercle existant
+deactivate DAC2
+
+@enduml

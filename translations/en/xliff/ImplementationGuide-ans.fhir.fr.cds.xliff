@@ -5,63 +5,63 @@
     <body>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.name">
              <notes>
-               <note id="n1">A natural language name identifying the implementation guide. This name should be usable as an identifier for the module by machine processing applications such as code generation.</note>
+               <note id="n1">ImplementationGuide.name</note>
              </notes>
         <source>CDS</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.title">
              <notes>
-               <note id="n1">A short, descriptive, user-friendly title for the implementation guide.</note>
+               <note id="n1">ImplementationGuide.title</note>
              </notes>
         <source>Cercle De Soins</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.publisher">
              <notes>
-               <note id="n1">The name of the organization or individual that published the implementation guide.</note>
+               <note id="n1">ImplementationGuide.publisher</note>
              </notes>
-        <source>ANS</source>
+        <source>Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ContactDetail.name">
              <notes>
-               <note id="n1">The name of an individual to contact.</note>
+               <note id="n1">ContactDetail.name</note>
              </notes>
-        <source>ANS</source>
+        <source>Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="Coding.display">
              <notes>
-               <note id="n1">A representation of the meaning of the code in the system, following the rules of the system.</note>
+               <note id="n1">Coding.display</note>
              </notes>
         <source>France (la)</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
              <notes>
-               <note id="n1">A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).</note>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
         <source>CDS Bundle Response Recherche Profile</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
              <notes>
-               <note id="n1">A description of the reason that a resource has been included in the implementation guide.</note>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
         <source>Profil « Bundle » de type « searchset » encapsulant une collection de 0, une ou plusieurs ressources « CareTeam » répondant aux critères de recherche. Les ressources référencées par les ressources CareTeam retournées sont aussi dans le Bundle s’il a été demandé de les inclure dans la requête GET.</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
              <notes>
-               <note id="n1">A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).</note>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
         <source>CDS Bundle Transaction Creation Profile</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
              <notes>
-               <note id="n1">A description of the reason that a resource has been included in the implementation guide.</note>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
         <source>Profil défini dans le volet de Gestion du Cercle de Soins (flux 1c) pour créer un cercle de soins selon l’option Transaction.
 Il s'agit d'un bundle de type `transaction` permettant d'organiser le contenu du flux de création d'un cercle de soins.</source>
@@ -69,14 +69,14 @@ Il s'agit d'un bundle de type `transaction` permettant d'organiser le contenu du
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
              <notes>
-               <note id="n1">A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).</note>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
         <source>CDS Bundle Transaction MAJ Profile</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
              <notes>
-               <note id="n1">A description of the reason that a resource has been included in the implementation guide.</note>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
         <source>Profil défini dans le volet de Gestion du Cercle de Soins (flux 1c) pour mettre à jour un cercle de soins selon l’option Transaction.
 Il s'agit d'un bundle de type &quot;transaction&quot; permettant d'organiser le contenu du flux de création d'un cercle de soins.</source>
@@ -84,189 +84,385 @@ Il s'agit d'un bundle de type &quot;transaction&quot; permettant d'organiser le 
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
              <notes>
-               <note id="n1">A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).</note>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
         <source>CDS CareTeam Profile</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
              <notes>
-               <note id="n1">A description of the reason that a resource has been included in the implementation guide.</note>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
         <source>Profil héritant du profil défini dans DCTM et défini pour le volet Gestion du Cercle de Soins. Le concept métier « cercle de soins » correspond à la ressource FHIR « CareTeam ».</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
              <notes>
-               <note id="n1">A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).</note>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>CDS Cercle Soins</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Le cercle de soins est l'agrégation de membres qui participent à la prise en charge et aux actions de coordination du parcours de santé d’une personne.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>CDS Consommateur</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Le rôle de consommateur incarné par un système, peut consulter un cercle de soins.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>CDS Contact</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Un contact peut être un membre de la famille ou un proche de l’Usager. Il peut s’agir par exemple d’un aidant, de la personne de confiance de l’Usager</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>CDS Créateur</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Le rôle de créateur incarné par un système peut créer ou mettre à jour le cercle de soins d'une personne.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>CDS Entite Geographique</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>L’Entité Géographique (EG) correspond à la notion d’établissement : ** Pour les établissements inscrits au FINESS, cette notion d’établissement résulte du croisement de trois critères : - Un critère géographique : Est un établissement tout lieu dont l’implantation d’activité(s) ou d’équipement(s) est géographiquement distincte d’une autre implantation. Ainsi un Centre Hospitalier Régional comprend autant d’établissements que d’implantations géographiques différentes. Un établissement principal et son établissement secondaire situé à 1 km constituent deux établissements distincts dans FINESS. L’implantation géographique peut-être décrite soit avec l’attribut addresseEG soit au travers de la classe Lieu. - Un critère budgétaire : Pour une même implantation géographique, on distingue autant d’établissements du secteur public qu’il y a de budgets distincts (budget général, budget annexe).Ainsi un ESAT et son foyer d’hébergement constituent deux établissements même s’ils sont implantés à la même adresse. - Un critère d’activité : Pour une même implantation géographique et un même budget, on distingue autant d’établissements que de « catégorie d’établissement » décrivant l’activité principale autorisée.Ainsi un centre hospitalier et son EHPAD, financés par le même budget, constituent deux établissements même s’ils sont implantés à la même adresse.** Pour les entreprises inscrites dans le SIRENE, l’EG correspond à un établissement de la personne morale, elle est identifiée par un numéro Siret.Synonymes: Etablissement, structure</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>CDS Entite Juridique</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>L’Entité Juridique (EJ) correspond à la notion de personne morale :** Pour les établissements sanitaires, sociaux, médico-sociaux et de formation aux professions de ces secteurs enregistrés dans le FINESS, une EJ détient des droits (autorisations, agréments, conventions, etc.) lui permettant d’exercer ses activités dans des établissements; chaque EJ dispose d’un statut juridique de la personne morale;** Pour les autres types de structures, une EJ est une personne morale inscrite dans le SIRENE, identifiée par son numéro Siren.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>CDS Exercice Professionnel</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Informations décrivant notamment la profession exercée, l’identité d’exercice d’un professionnel et le cadre de son exercice (civil, agent public, etc.).Il peut exister plusieurs exercices professionnels pour une personne à un instant donné.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
         <source>CDS Fr RelatedPerson Profile</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
              <notes>
-               <note id="n1">A description of the reason that a resource has been included in the implementation guide.</note>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
         <source>Profil créé pour le volet Gestion du Cercle de Soins afin de décrire les contacts du sujet du cercle de soins (aidant, personne de confiance…).</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
              <notes>
-               <note id="n1">A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).</note>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>CDS Gestionnaire</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Le rôle de gestionnaire incarné par un système, gère et stocke le cercle de soins, donne accès aux informations en cas de consultation.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>CDS Membre Cercle Soins</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Un membre du cercle de soins est une personne (Professionnel ou Personne Tierce) ou une Entité qui fait partie du Cercle de Soins d’un Usager.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>CDS Organisation Interne</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>La classe Organisation Interne est une classe abstraite qui contient les attributs inhérents et communs aux classes décrivant l’organisation opérationnelle interne d’une EG permettant de délivrer la prestation.Une organisation interne peut être composée d’autres organisations internes. Par exemple, les unités fonctionnelles peuvent être regroupées au sein de services qui peuvent être regroupés en pôles.La description de cette organisation interne de l’EG n’est pas obligatoire. Lorsqu’elle est décrite cette organisation porte les ressources opérationnelles.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
         <source>CDS Organization Profile</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
              <notes>
-               <note id="n1">A description of the reason that a resource has been included in the implementation guide.</note>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
         <source>Profil organization adapté au cercle de soins. Ce profil peut modéliser une entité juridique (EJ), une entité géographique (EG) ou une organisation interne (OI)</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
              <notes>
-               <note id="n1">A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).</note>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>CDS Personne Physique</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Une personne physique est un individu titulaire de droits et d'obligations caractérisé par une identité civile.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>CDS Personne Prise Charge</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Personne physique bénéficiaire de soins, d'examens, d'actes de prévention ou de services. Selon le contexte, la personne prise en charge peut être un patient ou un usager.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>CDS Professionnel</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Données d’identification pérennes d’une personne physique, qui travaille en tant que professionnel (professionnel enregistré dans RPPS ou ADELI), personnel autorisé ou personnel d’établissement, dans les domaines sanitaire, médico-social et social.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
+             </notes>
+        <source>CDS Situation Exercice</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
+             </notes>
+        <source>Caractéristiques de l’exercice d’un professionnel pendant une période déterminée et dans une structure déterminée (à l’exception des remplaçants). Synonymes : Activité (RPPS).</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
+             <notes>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
         <source>cds-bundle-transaction-creation-example</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
              <notes>
-               <note id="n1">A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).</note>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
         <source>cds-careteam-end</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
              <notes>
-               <note id="n1">A description of the reason that a resource has been included in the implementation guide.</note>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
         <source>Recherche sur la date de fin du cercle de soins</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
              <notes>
-               <note id="n1">A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).</note>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
         <source>cds-careteam-example</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
              <notes>
-               <note id="n1">A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).</note>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
         <source>cds-careteam-managing-organization</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
              <notes>
-               <note id="n1">A description of the reason that a resource has been included in the implementation guide.</note>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
         <source>Organisation responsable du Cercle De Soins</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
              <notes>
-               <note id="n1">A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).</note>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
         <source>cds-careteam-participant-end</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
              <notes>
-               <note id="n1">A description of the reason that a resource has been included in the implementation guide.</note>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
         <source>Date de sortie d’un membre du cercle de soins</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
              <notes>
-               <note id="n1">A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).</note>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
         <source>cds-careteam-participant-start</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
              <notes>
-               <note id="n1">A description of the reason that a resource has been included in the implementation guide.</note>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
         <source>Date d’entrée d’un membre du cercle de soins</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
              <notes>
-               <note id="n1">A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).</note>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
         <source>cds-careteam-start</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
              <notes>
-               <note id="n1">A description of the reason that a resource has been included in the implementation guide.</note>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
         <source>Recherche sur la date de création du cercle de soins</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
              <notes>
-               <note id="n1">A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).</note>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
         <source>cds-organization-example</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
              <notes>
-               <note id="n1">A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).</note>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
         <source>cds-patient-birthplace</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
              <notes>
-               <note id="n1">A description of the reason that a resource has been included in the implementation guide.</note>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
         <source>Lieu de naissance du patient</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
              <notes>
-               <note id="n1">A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).</note>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
         <source>cds-patient-example</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
              <notes>
-               <note id="n1">A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).</note>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
         <source>cds-relatedperson-example</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
              <notes>
-               <note id="n1">A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).</note>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
         <source>CI-SIS Gestion du Cercle de Soins - Consommateur</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
              <notes>
-               <note id="n1">A description of the reason that a resource has been included in the implementation guide.</note>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
         <source>Le rôle de consommateur incarné par un système, peut consulter un cercle de soins.  Exemples  de  consommateur  :  un  dossier  patient  informatisé,  un  système  de  gestion  de  laboratoire,  un  système  d’information  radiologique,  un  logiciel  de  gestion de cabinet, un service numérique d’appui à la coordination.</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
              <notes>
-               <note id="n1">A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).</note>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
         <source>CI-SIS Gestion du Cercle de Soins - CreateurRestful</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
              <notes>
-               <note id="n1">A description of the reason that a resource has been included in the implementation guide.</note>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
         <source>Le rôle de créateur incarné par un système peut créer ou mettre à jour le cercle
 de soins d'une personne</source>
@@ -274,21 +470,21 @@ de soins d'une personne</source>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
              <notes>
-               <note id="n1">A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).</note>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
         <source>CI-SIS Gestion du Cercle de Soins - CreateurTransaction</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
              <notes>
-               <note id="n1">A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).</note>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
         <source>CI-SIS Gestion du Cercle de Soins - Gestionnaire</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
              <notes>
-               <note id="n1">A description of the reason that a resource has been included in the implementation guide.</note>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
         <source>Le rôle de gestionnaire incarné par un système, gère et stocke le cercle de soins,
 donne accès aux informations en cas de consultation.</source>
@@ -296,98 +492,98 @@ donne accès aux informations en cas de consultation.</source>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.name">
              <notes>
-               <note id="n1">A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).</note>
+               <note id="n1">ImplementationGuide.definition.resource.name</note>
              </notes>
         <source>Roles des participants dans un cercle de soins</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.resource.description">
              <notes>
-               <note id="n1">A description of the reason that a resource has been included in the implementation guide.</note>
+               <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
         <source>Roles des participants dans un cercle de soins.</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.page.title">
              <notes>
-               <note id="n1">A short title used to represent this page in navigational structures such as table of contents, bread crumbs, etc.</note>
+               <note id="n1">ImplementationGuide.definition.page.title</note>
              </notes>
         <source>Table of Contents</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.page.title">
              <notes>
-               <note id="n1">A short title used to represent this page in navigational structures such as table of contents, bread crumbs, etc.</note>
+               <note id="n1">ImplementationGuide.definition.page.title</note>
              </notes>
         <source>Accueil</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.page.title">
              <notes>
-               <note id="n1">A short title used to represent this page in navigational structures such as table of contents, bread crumbs, etc.</note>
+               <note id="n1">ImplementationGuide.definition.page.title</note>
              </notes>
-        <source>Volume 1 - Etude fonctionnelle</source>
+        <source>Specifications</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.page.title">
              <notes>
-               <note id="n1">A short title used to represent this page in navigational structures such as table of contents, bread crumbs, etc.</note>
+               <note id="n1">ImplementationGuide.definition.page.title</note>
              </notes>
-        <source>Specifications Techniques</source>
+        <source>Synthèse</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.page.title">
              <notes>
-               <note id="n1">A short title used to represent this page in navigational structures such as table of contents, bread crumbs, etc.</note>
+               <note id="n1">ImplementationGuide.definition.page.title</note>
              </notes>
-        <source>Interactions RESTful</source>
+        <source>Création du cercle de soins</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.page.title">
              <notes>
-               <note id="n1">A short title used to represent this page in navigational structures such as table of contents, bread crumbs, etc.</note>
+               <note id="n1">ImplementationGuide.definition.page.title</note>
              </notes>
-        <source>Interactions transaction</source>
+        <source>Consultation du cercle de soins</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.page.title">
              <notes>
-               <note id="n1">A short title used to represent this page in navigational structures such as table of contents, bread crumbs, etc.</note>
+               <note id="n1">ImplementationGuide.definition.page.title</note>
              </notes>
-        <source>Recherche CDS</source>
+        <source>Mise à jour du cercle de soins</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.page.title">
              <notes>
-               <note id="n1">A short title used to represent this page in navigational structures such as table of contents, bread crumbs, etc.</note>
+               <note id="n1">ImplementationGuide.definition.page.title</note>
              </notes>
-        <source>Correspondances métier</source>
+        <source>Tests</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.page.title">
              <notes>
-               <note id="n1">A short title used to represent this page in navigational structures such as table of contents, bread crumbs, etc.</note>
+               <note id="n1">ImplementationGuide.definition.page.title</note>
              </notes>
-        <source>Autres Ressources</source>
+        <source>Annexes</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.page.title">
              <notes>
-               <note id="n1">A short title used to represent this page in navigational structures such as table of contents, bread crumbs, etc.</note>
+               <note id="n1">ImplementationGuide.definition.page.title</note>
              </notes>
         <source>Téléchargements et usages</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.page.title">
              <notes>
-               <note id="n1">A short title used to represent this page in navigational structures such as table of contents, bread crumbs, etc.</note>
+               <note id="n1">ImplementationGuide.definition.page.title</note>
              </notes>
         <source>Informations sur la traduction</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-ans.fhir.fr.cds" resname="ImplementationGuide.definition.page.title">
              <notes>
-               <note id="n1">A short title used to represent this page in navigational structures such as table of contents, bread crumbs, etc.</note>
+               <note id="n1">ImplementationGuide.definition.page.title</note>
              </notes>
         <source>Historique</source>
         <target></target>

@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="fr" target-language="en" id="ActorDefinition-CDS-Consommateur-Actor" original="Resource ActorDefinition-CDS-Consommateur-Actor" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="ActorDefinition-CDS-Consommateur-Actor" resname="ActorDefinition.title">
+             <notes>
+               <note id="n1">ActorDefinition.title</note>
+             </notes>
+        <source>CDS Consommateur</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ActorDefinition-CDS-Consommateur-Actor" resname="ContactDetail.name">
+             <notes>
+               <note id="n1">ContactDetail.name</note>
+             </notes>
+        <source>Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ActorDefinition-CDS-Consommateur-Actor" resname="ActorDefinition.description">
+             <notes>
+               <note id="n1">ActorDefinition.description</note>
+             </notes>
+        <source>Le rôle de consommateur incarné par un système, peut consulter un cercle de soins.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ActorDefinition-CDS-Consommateur-Actor" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>France (la)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ActorDefinition-CDS-Consommateur-Actor" resname="ActorDefinition.purpose">
+             <notes>
+               <note id="n1">ActorDefinition.purpose</note>
+             </notes>
+        <source>**Exemples**
+- Dossier patient informatisé
+- Système de gestion de laboratoire
+- Système d’information radiologique
+- Logiciel de gestion de cabinet
+- Service numérique d’appui à la coordination</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ActorDefinition-CDS-Consommateur-Actor" resname="ActorDefinition.documentation">
+             <notes>
+               <note id="n1">ActorDefinition.documentation</note>
+             </notes>
+        <source>Le consommateur du cercle de soins doit au préalable :
+
+- **DOIT** être habilité ;
+- **DOIT** disposer des paramètres de la demande de consultation du cercle de soins (et en particulier de l’identifiant du patient).
+</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

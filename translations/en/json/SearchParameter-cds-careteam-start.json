@@ -1,41 +1,37 @@
 {
   "id" : "SearchParameter-cds-careteam-start",
   "baseLang" : "fr",
-  "languages" : [
+  "languages" : [{
+    "targetLang" : "en",
+    "entries" : [{
+      "id" : "SearchParameter.name",
+      "context" : "SearchParameter.name",
+      "source" : "CDSCareTeamStart",
+      "target" : null
+    },
     {
-      "targetLang" : "en",
-      "entries" : [
-        {
-          "id" : "SearchParameter.name",
-          "context" : "A natural language name identifying the search parameter. This name should be usable as an identifier for the module by machine processing applications such as code generation.",
-          "source" : "CDSCareTeamStart",
-          "target" : null
-        },
-        {
-          "id" : "SearchParameter.publisher",
-          "context" : "The name of the organization or individual that published the search parameter.",
-          "source" : "ANS",
-          "target" : null
-        },
-        {
-          "id" : "ContactDetail.name",
-          "context" : "The name of an individual to contact.",
-          "source" : "ANS",
-          "target" : null
-        },
-        {
-          "id" : "SearchParameter.description",
-          "context" : "And how it used.",
-          "source" : "Recherche sur la date de création du cercle de soins",
-          "target" : null
-        },
-        {
-          "id" : "Coding.display",
-          "context" : "A representation of the meaning of the code in the system, following the rules of the system.",
-          "source" : "France (la)",
-          "target" : null
-        }
-      ]
-    }
-  ]
+      "id" : "SearchParameter.publisher",
+      "context" : "SearchParameter.publisher",
+      "source" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+      "target" : null
+    },
+    {
+      "id" : "ContactDetail.name",
+      "context" : "ContactDetail.name",
+      "source" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+      "target" : null
+    },
+    {
+      "id" : "SearchParameter.description",
+      "context" : "SearchParameter.description",
+      "source" : "Recherche sur la date de création du cercle de soins",
+      "target" : null
+    },
+    {
+      "id" : "Coding.display",
+      "context" : "Coding.display",
+      "source" : "France (la)",
+      "target" : null
+    }]
+  }]
 }

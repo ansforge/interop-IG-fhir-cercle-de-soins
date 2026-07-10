@@ -1,25 +1,25 @@
 
-# A natural language name identifying the search parameter. This name should be usable as an identifier for the module by machine processing applications such as code generation.
+# SearchParameter.name
 #: SearchParameter.name
 msgid "CDSCareTeamParticipantEnd"
 msgstr ""
 
-# The name of the organization or individual that published the search parameter.
+# SearchParameter.publisher
 #: SearchParameter.publisher
-msgid "ANS"
+msgid "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"
 msgstr ""
 
-# The name of an individual to contact.
+# ContactDetail.name
 #: ContactDetail.name
-msgid "ANS"
+msgid "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"
 msgstr ""
 
-# And how it used.
+# SearchParameter.description
 #: SearchParameter.description
 msgid "Date de sortie d’un membre du cercle de soins"
 msgstr ""
 
-# A representation of the meaning of the code in the system, following the rules of the system.
+# Coding.display
 #: Coding.display
 msgid "France (la)"
 msgstr ""

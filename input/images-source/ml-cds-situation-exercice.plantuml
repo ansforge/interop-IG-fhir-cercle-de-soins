@@ -1,0 +1,18 @@
+@startuml
+!theme carbon-gray
+object "[[StructureDefinition-cds-situation-exercice.html CDSSituationExercice]]" as CDSSituationExercice {
+  role : Coding [0..1]
+  modeExercice : Coding [0..1]
+}
+
+object "[[https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-SituationExercice.html SituationExercice]]" as SituationExercice #LightGreen
+SituationExercice <|-- CDSSituationExercice
+
+object "[[StructureDefinition-cds-membre-cercle-soins.html CDSMembreCercleSoins]]" as CDSMembreCercleSoins
+CDSSituationExercice "1" -- "1" CDSMembreCercleSoins
+object "[[StructureDefinition-cds-exercice-professionnel.html CDSExerciceProfessionnel]]" as CDSExerciceProfessionnel
+CDSSituationExercice "1" -- "1" CDSExerciceProfessionnel
+object "[[StructureDefinition-cds-entite-geographique.html CDSEntiteGeographique]]" as CDSEntiteGeographique
+CDSSituationExercice "1" -- "0..1" CDSEntiteGeographique
+
+@enduml

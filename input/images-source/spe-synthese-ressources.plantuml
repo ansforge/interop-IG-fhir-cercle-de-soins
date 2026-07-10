@@ -1,0 +1,62 @@
+@startuml
+
+scale 1000 width
+
+skinparam linetype ortho
+
+skinparam hyperlinkUnderline false
+'Declaration des éléments
+rectangle {
+
+    rectangle "CDSPersonnePriseCharge\n [[https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient.html FR Core Patient]]" as Patient #LightSeaGreen;line:Black;text:Black
+
+    rectangle "CDSCercleSoins\n [[StructureDefinition-cds-ihe-careteam.html CDS IHE CareTeam]]" as CareTeam #LightSkyBlue;line:Black;text:Black
+
+    rectangle "CDSProfessionnel\n [[https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-practitioner.html AS Practitioner]]" as Practitioner #aquamarine;line:Black;text:Black
+
+    rectangle "CDSEntiteGeographique\n  [[StructureDefinition-cds-organization.html CDS Organization]]" as Organization1 #plum;line:Black;text:Black
+    rectangle " CDSEntiteJuridique\n [[StructureDefinition-cds-organization.html CDS Organization]]" as Organization2 #plum;line:Black;text:Black
+    rectangle "CDSOrganisationInterne\n [[StructureDefinition-cds-organization.html CDS Organization]]" as Organization3 #plum;line:Black;text:Black
+
+    rectangle "CDSContact\n [[StructureDefinition-cds-fr-related-person.html CDS FrRelatedPerson]]" as RelatedPerson #mintcream;line:Black;text:Black
+
+    rectangle "CDSExerciceProfessionnel\n [[https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-practitionerrole.html AS PractitionerRole]]" as PractitionerRole1 #paleturquoise;line:Black;text:Black
+    rectangle "CDSSituationExercice \n [[https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-practitionerrole.html AS PractitionerRole]]" as PractitionerRole2 #paleturquoise;line:Black;text:Black
+
+
+    rectangle "Modèle logique\nProfil FHIR " AS Legend
+
+}
+
+
+'Liens entre éléments
+
+' # Patient #
+
+Patient <-- CareTeam : subject 0..1
+
+' # careteam #
+CareTeam --> RelatedPerson : participant[0..*].member
+CareTeam --> Organization1 : participant[0..*].member
+CareTeam --> Organization2 : participant[0..*].member
+CareTeam --> Organization3 : participant[0..*].member
+CareTeam --> PractitionerRole1 : participant[0..*].member
+CareTeam --> PractitionerRole2 : participant[0..*].member
+
+
+' # practitionerrole #
+PractitionerRole1 -->  Practitioner : practitioner 0..1
+PractitionerRole2 -->  Practitioner : practitioner 0..1
+
+
+' ##################
+' # frorganization #
+' ##################
+' asorganization --> asorganization : partof 1..*
+
+
+' Dans le schéma initial, il y a d'autres relations qui n'ont pas été tracées : Lien entre orgaint et FrOrganization, Lien entre practitionerrole et organization.
+
+Organization1 -[hidden]-> Legend
+
+@enduml

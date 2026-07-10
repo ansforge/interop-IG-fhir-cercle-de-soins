@@ -1,0 +1,99 @@
+@startuml
+!theme carbon-gray
+
+skinparam classFontSize 11
+skinparam noteFontSize 11
+skinparam classAttributeFontSize 10
+skinparam padding 2
+
+skinparam ranksep 50
+skinparam nodesep 50
+
+
+object "[[StructureDefinition-cds-cercle-soins.html CDSCercleSoins]]" as CercleSoins {
+  idCercleSoins
+  dateCreation
+  dateFin
+  dateMAJ
+  statut
+}
+
+object "[[StructureDefinition-cds-membre-cercle-soins.html CDSMembreCercleSoins]]" as MembreCercleSoins {
+  idMembreCercleSoins
+  dateEntreeCercleSoin
+  dateSortieCercleSoin
+}
+
+object "[[StructureDefinition-cds-personne-prise-charge.html CDSPersonnePriseCharge]]" as PersonnePriseCharge {
+  INS
+  idPersonnePriseCharge
+  adresseCorrespondance
+}
+
+object "[[StructureDefinition-cds-personne-physique.html CDSPersonnePhysique]]" as PersonnePhysique {
+  nomFamille
+  prenom
+  dateNaissance
+}
+
+object "[[StructureDefinition-cds-situation-exercice.html CDSSituationExercice]]" as SituationExercice {
+  role
+}
+
+object "[[StructureDefinition-cds-exercice-professionnel.html CDSExerciceProfessionnel]]" as ExerciceProfessionnel {
+  nomExercice
+  profession
+}
+
+object "[[StructureDefinition-cds-professionnel.html CDSProfessionnel]]" as Professionnel {
+  idPP
+}
+
+object "[[StructureDefinition-cds-entite-geographique.html CDSEntitegeographique]]" as Entitegeographique {
+  denominationEG
+  numFINESS
+  numSIRET
+  identifiantEG
+  idNat_struct
+}
+
+object "[[StructureDefinition-cds-entite-juridique.html CDSEntiteJuridique]]" as EntiteJuridique {
+  raisonSociale
+  numFINESS
+  numSIREN
+  idNat_struct
+  identifiantEJ
+}
+
+object "[[StructureDefinition-cds-organisation-interne.html CDSOrganisationInterne]]" as OrganisationInterne {
+  identifiantOI
+  nom
+}
+
+object "[[StructureDefinition-cds-contact.html CDSContact]]" as Contact {
+  nom
+  role
+}
+
+CercleSoins "1" -- "1" PersonnePriseCharge
+CercleSoins "1" *-- "*" MembreCercleSoins
+PersonnePriseCharge "1" -- "1" PersonnePhysique
+
+MembreCercleSoins "1" *-d-> "0..1" SituationExercice
+MembreCercleSoins "1" *--> "0..1" Entitegeographique
+MembreCercleSoins "1" *-d-> "0..1" OrganisationInterne
+MembreCercleSoins "1" *--> "0..1" Contact
+
+SituationExercice "*" -r-> "0..1" Entitegeographique
+OrganisationInterne "*" -l-> "1" Entitegeographique
+Entitegeographique "*" -- "1" EntiteJuridique
+
+SituationExercice "1" -- "1" ExerciceProfessionnel
+ExerciceProfessionnel "1" -- "1" Professionnel
+Professionnel "1" -- "1" PersonnePhysique
+
+Contact "1..*" -- "1" PersonnePhysique
+
+Entitegeographique  -[hidden]r- Contact
+
+@enduml

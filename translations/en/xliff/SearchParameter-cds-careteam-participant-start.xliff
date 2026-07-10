@@ -5,35 +5,35 @@
     <body>
       <trans-unit id="SearchParameter-cds-careteam-participant-start" resname="SearchParameter.name">
              <notes>
-               <note id="n1">A natural language name identifying the search parameter. This name should be usable as an identifier for the module by machine processing applications such as code generation.</note>
+               <note id="n1">SearchParameter.name</note>
              </notes>
         <source>CDSCareTeamParticipantStart</source>
         <target></target>
       </trans-unit>
       <trans-unit id="SearchParameter-cds-careteam-participant-start" resname="SearchParameter.publisher">
              <notes>
-               <note id="n1">The name of the organization or individual that published the search parameter.</note>
+               <note id="n1">SearchParameter.publisher</note>
              </notes>
-        <source>ANS</source>
+        <source>Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</source>
         <target></target>
       </trans-unit>
       <trans-unit id="SearchParameter-cds-careteam-participant-start" resname="ContactDetail.name">
              <notes>
-               <note id="n1">The name of an individual to contact.</note>
+               <note id="n1">ContactDetail.name</note>
              </notes>
-        <source>ANS</source>
+        <source>Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</source>
         <target></target>
       </trans-unit>
       <trans-unit id="SearchParameter-cds-careteam-participant-start" resname="SearchParameter.description">
              <notes>
-               <note id="n1">And how it used.</note>
+               <note id="n1">SearchParameter.description</note>
              </notes>
         <source>Date d’entrée d’un membre du cercle de soins</source>
         <target></target>
       </trans-unit>
       <trans-unit id="SearchParameter-cds-careteam-participant-start" resname="Coding.display">
              <notes>
-               <note id="n1">A representation of the meaning of the code in the system, following the rules of the system.</note>
+               <note id="n1">Coding.display</note>
              </notes>
         <source>France (la)</source>
         <target></target>

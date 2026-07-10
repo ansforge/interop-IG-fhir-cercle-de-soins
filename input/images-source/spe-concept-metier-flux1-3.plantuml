@@ -1,0 +1,51 @@
+@startuml 
+!theme carbon-gray
+skinparam classAttributeIconSize 0
+skinparam classAttributeFontSize 10
+skinparam padding 2
+skinparam noteFontSize 11
+
+skinparam ranksep 50
+skinparam nodesep 50
+
+
+'' Concepts extensions (absents du MOS)''
+rectangle "[[StructureDefinition-cds-cercle-soins.html CDSCercleSoins]]" as CDSCercleSoins #Pink
+rectangle "[[StructureDefinition-cds-membre-cercle-soins.html CDSMembreCercleSoins]]" as CDSMembreCercleSoins #Pink
+note left of CDSMembreCercleSoins : Le membre est soit une entité géographique,\n soit une organisation interne,\nsoit une situation exercice, soit un contact
+'' Concepts restreints à partir d'un concept MOS''
+rectangle "Contact\n[[StructureDefinition-cds-contact.html CDSContact]]" as CDSContact #PeachPuff
+note right of CDSContact : Lorsque la PersonnePhysique représente\n un Contact seuls les attributs\n civilite, nomFamille et prénom sont repris
+rectangle "EntiteGeographique\n[[StructureDefinition-cds-entite-geographique.html CDSEntiteGeographique]]" as CDSEntiteGeographique #PeachPuff
+rectangle "EntiteJuridique\n[[StructureDefinition-cds-entite-juridique.html CDSEntiteJuridique]]" as CDSEntiteJuridique #PeachPuff
+rectangle "ExerciceProfessionnel\n[[StructureDefinition-cds-exercice-professionnel.html CDSExerciceProfessionnel]]" as CDSExerciceProfessionnel #PeachPuff
+rectangle "OrganisationInterne\n[[StructureDefinition-cds-organisation-interne.html CDSOrganisationInterne]]" as CDSOrganisationInterne #PeachPuff
+rectangle "PersonnePhysique\n[[StructureDefinition-cds-personne-physique.html CDSPersonnePhysique]]" as CDSPersonnePhysique #Lavender
+rectangle "PersonnePriseCharge\n[[StructureDefinition-cds-personne-prise-charge.html CDSPersonnePriseCharge]]" as CDSPersonnePriseCharge #Lavender
+rectangle "Professionnel\n[[StructureDefinition-cds-professionnel.html CDSProfessionnel]]" as CDSProfessionnel #PeachPuff
+note right of CDSProfessionnel : Lorsque la PersonnePhysique représente,\n un Professionnel, ne pas considérer les attributs\n situationFamiliale, lieuNaissance, paysResidence
+rectangle "SituationExercice\n[[StructureDefinition-cds-situation-exercice.html CDSSituationExercice]]" as CDSSituationExercice #PeachPuff
+'' Relations''
+CDSCercleSoins "1" -- "1" CDSPersonnePriseCharge
+CDSCercleSoins "1" *-- "1" CDSMembreCercleSoins
+CDSMembreCercleSoins "1" *-d-> "0..1" CDSSituationExercice
+CDSMembreCercleSoins *--> CDSEntiteGeographique
+CDSMembreCercleSoins "1" *-d-> "0..1" CDSOrganisationInterne
+CDSMembreCercleSoins "1" *--> "0..1" CDSContact
+CDSSituationExercice "1" -- "1" CDSExerciceProfessionnel
+CDSSituationExercice "1" -r-> "0..1" CDSEntiteGeographique
+CDSOrganisationInterne "1" -l-> "1" CDSEntiteGeographique
+CDSExerciceProfessionnel "1" -- "1" CDSProfessionnel
+CDSProfessionnel "1"--"1" CDSPersonnePhysique
+CDSPersonnePriseCharge "1" -- "1" CDSPersonnePhysique
+CDSEntiteGeographique "1" -- "1" CDSEntiteJuridique
+CDSContact "1..*" -- "1" CDSPersonnePhysique
+
+legend right
+|= Légende|= Correspondance MOS |
+|<#Pink>| extension |
+|<#PeachPuff>| restriction |
+|<#Lavender>| équivalence |
+endlegend
+
+@enduml

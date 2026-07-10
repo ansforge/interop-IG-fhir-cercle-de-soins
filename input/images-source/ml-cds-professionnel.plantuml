@@ -1,0 +1,16 @@
+@startuml
+!theme carbon-gray
+object "[[StructureDefinition-cds-professionnel.html CDSProfessionnel]]" as CDSProfessionnel {
+  idPP : Identifier [0..1]
+  typeIdNatPP : Coding [0..1]
+}
+
+object "[[https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-Professionnel.html Professionnel]]" as Professionnel #LightGreen
+Professionnel <|-- CDSProfessionnel
+
+object "[[StructureDefinition-cds-situation-exercice.html CDSSituationExercice]]" as CDSSituationExercice
+CDSProfessionnel "1" -- "1" CDSSituationExercice
+object "[[https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-PersonnePhysique.html PersonnePhysique]]" as PersonnePhysique 
+CDSProfessionnel "1" -- "1" PersonnePhysique
+
+@enduml

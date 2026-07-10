@@ -1,0 +1,8 @@
+@startuml
+
+hide footbox
+
+Créateur -> Gestionnaire : [[spe_creation_cercle_soins.html#gestion-des-acteurs Flux 1a - CreationActeurRESTful]] \n  POST [Lien vers le serveur] / [RessourceActeur]
+Gestionnaire --> Créateur : HTTP 201 created
+
+@enduml

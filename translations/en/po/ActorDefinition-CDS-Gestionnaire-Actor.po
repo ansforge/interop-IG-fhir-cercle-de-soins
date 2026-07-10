@@ -1,0 +1,28 @@
+
+# ActorDefinition.title
+#: ActorDefinition.title
+msgid "CDS Gestionnaire"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"
+msgstr ""
+
+# ActorDefinition.description
+#: ActorDefinition.description
+msgid "Le rôle de gestionnaire incarné par un système, gère et stocke le cercle de soins, donne accès aux informations en cas de consultation."
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "France (la)"
+msgstr ""
+
+# ActorDefinition.purpose
+#: ActorDefinition.purpose
+msgid "**Exemples**
+- Dossier patient informatisé
+- Service numérique de partage de données"
+msgstr ""
+

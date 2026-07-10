@@ -21,6 +21,7 @@ dependencies:
   hl7.fhir.fr.core: 2.1.0
   ans.fr.terminologies: latest
   hl7.fhir.uv.extensions.r4: 5.2.0
+  ans.fr.mos: 0.1.0-ballot
 
 parameters:
     shownav: 'true'
@@ -38,19 +39,19 @@ parameters:
 pages:
     index.md:
         title: Accueil
-    specifications_fonctionnelles.md:
-        title: Volume 1 - Etude fonctionnelle
-    specifications_techniques.md:
-        interaction_restful.md:
-            title: Interactions RESTful
-        interaction_transaction.md:
-            title: Interactions transaction
-        recherche_recuperation_cds.md:
-            title: Recherche CDS
-        correspondances_metier.md:
-            title: Correspondances métier
-    autres_ressources.md:
-        title: Autres Ressources
+    specifications.md: 
+        spe_synthese.md:
+            title: Synthèse
+        spe_creation_cercle_soins.md:
+            title: Création du cercle de soins
+        spe_consultation_cercle_soins.md:
+            title: Consultation du cercle de soins
+        spe_mise_jour_cercle_soins.md:
+            title: Mise à jour du cercle de soins
+    tests.md: 
+        title: Tests
+    annexes.md:
+        title: Annexes
         downloads.md:
             title: Téléchargements et usages
         translationinfo.md:
@@ -58,16 +59,18 @@ pages:
     changes.md:
         title: Historique
 
+
 menu:
     Accueil: index.html
-    Vol 1 - Etude fonctionnelle: specifications_fonctionnelles.html
-    Vol 2 - Détail des transactions:
-        Interactions RESTful: interaction_restful.html
-        Interactions transaction: interaction_transaction.html
-        Recherche CDS: recherche_recuperation_cds.html
-        Correspondances métier: correspondances_metier.html
+    Spécifications:
+        Synthèse: spe_synthese.html
+        Création du cercle de soins: spe_creation_cercle_soins.html
+        Consultation du cercle de soins: spe_consultation_cercle_soins.html
+        Mise à jour du cercle de soins: spe_mise_jour_cercle_soins.html
     Ressources de conformité: artifacts.html
-    Autres ressources:
+    Tests: tests.html
+    Annexes: 
+        Informations sur la traduction: translationinfo.html
         Téléchargements et usage: downloads.html
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
         "Site de l'ANS ": new-tab https://esante.gouv.fr/

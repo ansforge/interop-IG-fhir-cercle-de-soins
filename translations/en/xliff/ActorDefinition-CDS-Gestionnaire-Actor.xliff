@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0">
+  <file source-language="fr" target-language="en" id="ActorDefinition-CDS-Gestionnaire-Actor" original="Resource ActorDefinition-CDS-Gestionnaire-Actor" datatype="KEYVALUEJSON">
+    <body>
+      <trans-unit id="ActorDefinition-CDS-Gestionnaire-Actor" resname="ActorDefinition.title">
+             <notes>
+               <note id="n1">ActorDefinition.title</note>
+             </notes>
+        <source>CDS Gestionnaire</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ActorDefinition-CDS-Gestionnaire-Actor" resname="ContactDetail.name">
+             <notes>
+               <note id="n1">ContactDetail.name</note>
+             </notes>
+        <source>Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ActorDefinition-CDS-Gestionnaire-Actor" resname="ActorDefinition.description">
+             <notes>
+               <note id="n1">ActorDefinition.description</note>
+             </notes>
+        <source>Le rôle de gestionnaire incarné par un système, gère et stocke le cercle de soins, donne accès aux informations en cas de consultation.</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ActorDefinition-CDS-Gestionnaire-Actor" resname="Coding.display">
+             <notes>
+               <note id="n1">Coding.display</note>
+             </notes>
+        <source>France (la)</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="ActorDefinition-CDS-Gestionnaire-Actor" resname="ActorDefinition.purpose">
+             <notes>
+               <note id="n1">ActorDefinition.purpose</note>
+             </notes>
+        <source>**Exemples**
+- Dossier patient informatisé
+- Service numérique de partage de données</source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

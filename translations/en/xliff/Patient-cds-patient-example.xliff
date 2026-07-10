@@ -5,21 +5,21 @@
     <body>
       <trans-unit id="Patient-cds-patient-example" resname="Address.city">
              <notes>
-               <note id="n1">The name of the city, town, suburb, village or other community or delivery center.</note>
+               <note id="n1">Address.city</note>
              </notes>
         <source>GOULVEN</source>
         <target></target>
       </trans-unit>
       <trans-unit id="Patient-cds-patient-example" resname="HumanName.family">
              <notes>
-               <note id="n1">The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father.</note>
+               <note id="n1">HumanName.family</note>
              </notes>
         <source>Thobois</source>
         <target></target>
       </trans-unit>
       <trans-unit id="Patient-cds-patient-example" resname="HumanName.given">
              <notes>
-               <note id="n1">Given name.</note>
+               <note id="n1">HumanName.given</note>
              </notes>
         <source>Jacques</source>
         <target></target>

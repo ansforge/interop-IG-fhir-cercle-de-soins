@@ -5,56 +5,56 @@
     <body>
       <trans-unit id="RelatedPerson-cds-relatedperson-example" resname="Coding.display">
              <notes>
-               <note id="n1">A representation of the meaning of the code in the system, following the rules of the system.</note>
+               <note id="n1">Coding.display</note>
              </notes>
         <source>Entité à contacter en cas d'urgence</source>
         <target></target>
       </trans-unit>
       <trans-unit id="RelatedPerson-cds-relatedperson-example" resname="Coding.display">
              <notes>
-               <note id="n1">A representation of the meaning of the code in the system, following the rules of the system.</note>
+               <note id="n1">Coding.display</note>
              </notes>
         <source>Voisin(e)</source>
         <target></target>
       </trans-unit>
       <trans-unit id="RelatedPerson-cds-relatedperson-example" resname="HumanName.family">
              <notes>
-               <note id="n1">The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father.</note>
+               <note id="n1">HumanName.family</note>
              </notes>
         <source>Lamine</source>
         <target></target>
       </trans-unit>
       <trans-unit id="RelatedPerson-cds-relatedperson-example" resname="HumanName.given">
              <notes>
-               <note id="n1">Given name.</note>
+               <note id="n1">HumanName.given</note>
              </notes>
         <source>CHIBOUT</source>
         <target></target>
       </trans-unit>
       <trans-unit id="RelatedPerson-cds-relatedperson-example" resname="Address.line">
              <notes>
-               <note id="n1">This component contains the house number, apartment number, street name, street direction,  P.O. Box number, delivery hints, and similar address information.</note>
+               <note id="n1">Address.line</note>
              </notes>
         <source>12 Rue de la Paix</source>
         <target></target>
       </trans-unit>
       <trans-unit id="RelatedPerson-cds-relatedperson-example" resname="Address.city">
              <notes>
-               <note id="n1">The name of the city, town, suburb, village or other community or delivery center.</note>
+               <note id="n1">Address.city</note>
              </notes>
         <source>Paris</source>
         <target></target>
       </trans-unit>
       <trans-unit id="RelatedPerson-cds-relatedperson-example" resname="Address.postalCode">
              <notes>
-               <note id="n1">A postal code designating a region defined by the postal service.</note>
+               <note id="n1">Address.postalCode</note>
              </notes>
         <source>75004</source>
         <target></target>
       </trans-unit>
       <trans-unit id="RelatedPerson-cds-relatedperson-example" resname="Address.country">
              <notes>
-               <note id="n1">Country - a nation as commonly understood or generally accepted.</note>
+               <note id="n1">Address.country</note>
              </notes>
         <source>FRA</source>
         <target></target>

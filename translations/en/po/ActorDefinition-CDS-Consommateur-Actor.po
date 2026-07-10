@@ -1,0 +1,40 @@
+
+# ActorDefinition.title
+#: ActorDefinition.title
+msgid "CDS Consommateur"
+msgstr ""
+
+# ContactDetail.name
+#: ContactDetail.name
+msgid "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"
+msgstr ""
+
+# ActorDefinition.description
+#: ActorDefinition.description
+msgid "Le rôle de consommateur incarné par un système, peut consulter un cercle de soins."
+msgstr ""
+
+# Coding.display
+#: Coding.display
+msgid "France (la)"
+msgstr ""
+
+# ActorDefinition.purpose
+#: ActorDefinition.purpose
+msgid "**Exemples**
+- Dossier patient informatisé
+- Système de gestion de laboratoire
+- Système d’information radiologique
+- Logiciel de gestion de cabinet
+- Service numérique d’appui à la coordination"
+msgstr ""
+
+# ActorDefinition.documentation
+#: ActorDefinition.documentation
+msgid "Le consommateur du cercle de soins doit au préalable :
+
+- **DOIT** être habilité ;
+- **DOIT** disposer des paramètres de la demande de consultation du cercle de soins (et en particulier de l’identifiant du patient).
+"
+msgstr ""
+

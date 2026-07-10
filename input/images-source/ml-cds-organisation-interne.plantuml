@@ -1,0 +1,16 @@
+@startuml
+!theme carbon-gray
+object "[[StructureDefinition-cds-organisation-interne.html CDSOrganisationInterne]]" as CDSOrganisationInterne {
+  identifiantOI : Identifier [0..1]
+  nomOI : string [0..1]
+}
+
+object "[[https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-OrganisationInterne.html OrganisationInterne]]" as OrganisationInterne #LightGreen
+OrganisationInterne <|-- CDSOrganisationInterne
+
+object "[[StructureDefinition-cds-entite-geographique.html CDSEntiteGeographique]]" as CDSEntiteGeographique
+CDSOrganisationInterne "1" -- "1" CDSEntiteGeographique
+object "[[StructureDefinition-cds-membre-cercle-soins.html CDSMembreCercleSoins]]" as CDSMembreCercleSoins
+CDSOrganisationInterne "1" -- "1" CDSMembreCercleSoins
+
+@enduml

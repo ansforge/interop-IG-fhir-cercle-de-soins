@@ -1,0 +1,24 @@
+@startuml
+!theme carbon-gray
+object "[[StructureDefinition-cds-personne-physique.html CDSPersonnePhysique]]" as CDSPersonnePhysique {
+  civilite : Coding [0..1]
+  nomFamille : string [0..1]
+  prenom : string [0..*]
+  sexe : Coding [0..1]
+  situationFamiliale : Coding [0..1]
+  dateNaissance : date [0..1]
+  lieuNaissance : Coding [0..1]
+  paysResidence : Coding [0..1]
+}
+
+object "[[https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-PersonnePhysique.html PersonnePhysique]]" as PersonnePhysique #LightGreen
+PersonnePhysique <|-- CDSPersonnePhysique
+
+object "[[StructureDefinition-cds-contact.html CDSContact]]" as CDSContact
+CDSPersonnePhysique "1" -- "1" CDSContact
+object "[[StructureDefinition-cds-personne-prise-charge.html CDSPersonnePriseCharge]]" as CDSPersonnePriseCharge
+CDSPersonnePhysique "1" -- "1" CDSPersonnePriseCharge
+object "[[StructureDefinition-cds-professionnel.html CDSProfessionnel]]" as CDSProfessionnel
+CDSPersonnePhysique "1" -- "1" CDSProfessionnel
+
+@enduml

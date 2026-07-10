@@ -5,7 +5,7 @@
     <body>
       <trans-unit id="CareTeam-cds-careteam-example" resname="CareTeam.name">
              <notes>
-               <note id="n1">A label for human use intended to distinguish like teams.  E.g. the &quot;red&quot; vs. &quot;green&quot; trauma teams.</note>
+               <note id="n1">CareTeam.name</note>
              </notes>
         <source>Cercle de soins de Mr Jacques Thobois</source>
         <target></target>

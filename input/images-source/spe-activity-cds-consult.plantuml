@@ -1,0 +1,22 @@
+@startuml
+
+skinparam backgroundColor #fcf6eb
+skinparam activityBackgroundColor #efd9fc
+skinparam activityBorderColor #000000
+
+skinparam defaultFontSize 12
+
+skinparam shadowing false
+
+|Consommateur|
+start
+:Envoyer une demande de consultation;
+-[dashed]-> Flux 2 - **RechercheCercleSoins**;
+|Gestionnaire|
+:           Rechercher le cercle de soins         ;
+-[dashed]-> Flux 3 - 
+**ResultatRechercheCercleSoins**;
+|Consommateur|
+:Consulter la réponse;
+stop 
+@enduml
