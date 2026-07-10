@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cds-situation-exercice"/>
+  <language value="fr"/>
+  <text>
+    <status value="extensions"/><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : DéfinitionStructure cds-situation-exercice</b></p><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Le nom logique de l'élément">Nom</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Informations sur l'utilisation de l'élément">Drapeaux</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Nombre minimum et maximum de fois que l'élément peut apparaître dans l'instance">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Référence au type de l'élément">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Informations supplémentaires sur l'élément">Description et contraintes</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-cds-situation-exercice-definitions.html#cds-situation-exercice" title="Caractéristiques de l’exercice d’un professionnel pendant une période déterminée et dans une structure déterminée (à l’exception des remplaçants). Synonymes : Activité (RPPS).">cds-situation-exercice</a><a name="cds-situation-exercice"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-SituationExercice.html">SituationExercice(0.1.0-ballot)</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Caractéristiques de l’exercice d’un professionnel pendant une période déterminée et dans une structure déterminée (à l’exception des remplaçants). Synonymes : Activité (RPPS).<br/><br/>Éléments définis dans les ancêtres :<a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-SituationExercice.html" title="Rôle du professionnel au sein de la structure d’exercice. Par exemple, ** Titulaire de cabinet;** Titulaire d’officine;** Médecin scolaire;** etc.Synonyme : fonction">role</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-SituationExercice.html" title="Indique le type de rôle du professionnel au sein de la structure d’exercice.Synonyme : typeFonction">typeRole</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-SituationExercice.html" title="Le mode d'exercice décrit selon quelle modalité une activité est exercée au regard de l'organisation de la rétribution du professionnel.Exemples : ** Libéral;** Salarié;** Bénévole.Les valeurs de ce code sont répertoriées dans la nomenclature CodeSystem-TRE-R23-ModeExercice.">modeExercice</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-SituationExercice.html" title="Identifiant d’activité, propre à l’Assurance Maladie. Cet identifiant est attribué lors de l’enregistrement de l’activité par l’Assurance Maladie. Un professionnel a autant de numéros AM que d’activités enregistrées à l’Assurance Maladie. Cet identifiant d’activité est utilisé pour la facturation à l’Assurance Maladie. Sa diffusion est restreinte aux entités choisies par l’Assurance Maladie.Format : 9 caractères numériques généralement identiques au n°ADELI ou pseudo ADELI du professionnel pour sa première activité.">numeroAM</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-SituationExercice.html" title="Date de début de l’activité correspondant à la date d’installation en cabinet ou à la date d’embauche du salarié, etc.">dateDebutActivite</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-SituationExercice.html" title="Date de fin de l’activité.">dateFinActivite</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-SituationExercice.html" title="Le genre d'activité identifie les activités qui nécessitent l’application de règles de gestion spécifiques, par exemple, activité standard de soins ou de pharmacien, activité non soignante, activité non médicale, etc.">genreActivite</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-SituationExercice.html" title="Motif de fin d'activité, par exemple:** Décès;** Retraite libérale;** Changement de profession;** etc.">motifFinActivite</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-SituationExercice.html" title="Statut hospitalier dans le cas d’une activité exercée en établissement public de santé, par exemple:** Professeur des universités - praticien hospitalier (PU-PH);** Assistant hospitalier universitaire (AHU);** etc.">statutHospitalier</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-SituationExercice.html" title="Section du tableau de l’Ordre des pharmaciens, par exemple:** Pharmacien titulaire d’officine;** Pharmacien biologiste;** etc.">sectionOrdrePharmacien</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-SituationExercice.html" title="Sous-section ou à défaut section du tableau de l’Ordre des pharmaciens.">sousSectionOrdrePharmacien</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-SituationExercice.html" title="Type d’activité libérale, par exemple:** Cabinet;** Secteur privé à l'hôpital;** etc.">typeActiviteLiberale</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-SituationExercice.html" title="Statut du professionnel du Service de santé des armées, par exemple:** Praticien certifié;** Praticien confirmé;** etc.">statutPSSSA</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-SituationExercice.html" title="Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.) rattachée(s) à la situation d'exercice.">telecommunication</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-SituationExercice.html" title="Adresse(s) géopostale(s) rattachée(s) à la situation d'exercice.">adresseSE</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-SituationExercice.html" title="Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à la situation d'exercice.">boiteLettresMSS</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-SituationExercice.html" title="Lien vers la classe ExerciceProfessionnel">ExerciceProfessionnel</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-SituationExercice.html" title="Lien vers la classe EntiteGeographique">EntiteGeographique</a></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-cds-situation-exercice-definitions.html#cds-situation-exercice.role">role</a><a name="cds-situation-exercice.role"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="Cet élément doit être pris en charge">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Rôle du professionnel au sein de la structure d’exercice. Par exemple, ** Titulaire de cabinet;** Titulaire d’officine;** Médecin scolaire;** etc.Synonyme : fonction</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-cds-situation-exercice-definitions.html#cds-situation-exercice.modeExercice">modeExercice</a><a name="cds-situation-exercice.modeExercice"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="Cet élément doit être pris en charge">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Le mode d'exercice décrit selon quelle modalité une activité est exercée au regard de l'organisation de la rétribution du professionnel.Exemples : ** Libéral;** Salarié;** Bénévole.Les valeurs de ce code sont répertoriées dans la nomenclature CodeSystem-TRE-R23-ModeExercice.</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-cds-situation-exercice-definitions.html#cds-situation-exercice.boiteLettresMSS">boiteLettresMSS</a><a name="cds-situation-exercice.boiteLettresMSS"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="Cet élément doit être pris en charge">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-BoiteLettreMSS.html">BoiteLettreMSS</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à la situation d'exercice.</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Ressource" class="hierarchy"/> <a href="StructureDefinition-cds-situation-exercice-definitions.html#cds-situation-exercice.CDSMembreCercleSoins" title="Lien vers le concept Membre Cercle Soins">CDSMembreCercleSoins</a><a name="cds-situation-exercice.CDSMembreCercleSoins"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-cds-membre-cercle-soins.html">cds-membre-cercle-soins</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Lien vers le concept Membre Cercle Soins</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Ressource" class="hierarchy"/> <a href="StructureDefinition-cds-situation-exercice-definitions.html#cds-situation-exercice.CDSExerciceProfessionnel" title="Lien vers le concept Exercice Professionnel">CDSExerciceProfessionnel</a><a name="cds-situation-exercice.CDSExerciceProfessionnel"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-cds-exercice-professionnel.html">cds-exercice-professionnel</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Lien vers le concept Exercice Professionnel</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Ressource" class="hierarchy"/> <a href="StructureDefinition-cds-situation-exercice-definitions.html#cds-situation-exercice.CDSEntiteGeographique" title="Lien vers le concept Entité Géographique">CDSEntiteGeographique</a><a name="cds-situation-exercice.CDSEntiteGeographique"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-cds-entite-geographique.html">cds-entite-geographique</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Lien vers le concept Entité Géographique</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Légende pour ce format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation pour ce format</a></td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-situation-exercice"/>
+  <version value="2.0.1"/>
+  <name value="CDSSituationExercice"/>
+  <title value="CDS Situation Exercice"/>
+  <status value="draft"/>
+  <date value="2026-07-10T13:11:38+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Caractéristiques de l’exercice d’un professionnel pendant une période déterminée et dans une structure déterminée (à l’exception des remplaçants). Synonymes : Activité (RPPS)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="4.0.1"/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-situation-exercice"/>
+  <baseDefinition value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/SituationExercice|0.1.0-ballot"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version">
+      <valueString value="0.1.0-ballot"/>
+    </extension>
+    <element id="cds-situation-exercice">
+      <path value="cds-situation-exercice"/>
+      <short value="Caractéristiques de l’exercice d’un professionnel pendant une période déterminée et dans une structure déterminée (à l’exception des remplaçants). Synonymes : Activité (RPPS)."/>
+      <definition value="Caractéristiques de l’exercice d’un professionnel pendant une période déterminée et dans une structure déterminée (à l’exception des remplaçants). Synonymes : Activité (RPPS)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Base"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <isModifier value="false"/>
+    </element>
+    <element id="cds-situation-exercice.role">
+      <path value="cds-situation-exercice.role"/>
+      <short value="Rôle du professionnel au sein de la structure d’exercice. Par exemple, ** Titulaire de cabinet;** Titulaire d’officine;** Médecin scolaire;** etc.Synonyme : fonction"/>
+      <definition value="Rôle du professionnel au sein de la structure d’exercice. Par exemple, ** Titulaire de cabinet;** Titulaire d’officine;** Médecin scolaire;** etc.Synonyme : fonction"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SituationExercice.role"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="true"/>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://interop.esante.gouv.fr/ig/mos/ValueSet/role-vs|0.1.0-ballot"/>
+      </binding>
+    </element>
+    <element id="cds-situation-exercice.typeRole">
+      <path value="cds-situation-exercice.typeRole"/>
+      <short value="Indique le type de rôle du professionnel au sein de la structure d’exercice.Synonyme : typeFonction"/>
+      <definition value="Indique le type de rôle du professionnel au sein de la structure d’exercice.Synonyme : typeFonction"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SituationExercice.typeRole"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://interop.esante.gouv.fr/ig/mos/ValueSet/typeRole-vs|0.1.0-ballot"/>
+      </binding>
+    </element>
+    <element id="cds-situation-exercice.modeExercice">
+      <path value="cds-situation-exercice.modeExercice"/>
+      <short value="Le mode d'exercice décrit selon quelle modalité une activité est exercée au regard de l'organisation de la rétribution du professionnel.Exemples : ** Libéral;** Salarié;** Bénévole.Les valeurs de ce code sont répertoriées dans la nomenclature CodeSystem-TRE-R23-ModeExercice."/>
+      <definition value="Le mode d'exercice décrit selon quelle modalité une activité est exercée au regard de l'organisation de la rétribution du professionnel.Exemples : ** Libéral;** Salarié;** Bénévole.Les valeurs de ce code sont répertoriées dans la nomenclature CodeSystem-TRE-R23-ModeExercice."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SituationExercice.modeExercice"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="true"/>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_R23-ModeExercice/FHIR/TRE-R23-ModeExercice?vs"/>
+      </binding>
+    </element>
+    <element id="cds-situation-exercice.numeroAM">
+      <path value="cds-situation-exercice.numeroAM"/>
+      <short value="Identifiant d’activité, propre à l’Assurance Maladie. Cet identifiant est attribué lors de l’enregistrement de l’activité par l’Assurance Maladie. Un professionnel a autant de numéros AM que d’activités enregistrées à l’Assurance Maladie. Cet identifiant d’activité est utilisé pour la facturation à l’Assurance Maladie. Sa diffusion est restreinte aux entités choisies par l’Assurance Maladie.Format : 9 caractères numériques généralement identiques au n°ADELI ou pseudo ADELI du professionnel pour sa première activité."/>
+      <definition value="Identifiant d’activité, propre à l’Assurance Maladie. Cet identifiant est attribué lors de l’enregistrement de l’activité par l’Assurance Maladie. Un professionnel a autant de numéros AM que d’activités enregistrées à l’Assurance Maladie. Cet identifiant d’activité est utilisé pour la facturation à l’Assurance Maladie. Sa diffusion est restreinte aux entités choisies par l’Assurance Maladie.Format : 9 caractères numériques généralement identiques au n°ADELI ou pseudo ADELI du professionnel pour sa première activité."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SituationExercice.numeroAM"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element id="cds-situation-exercice.dateDebutActivite">
+      <path value="cds-situation-exercice.dateDebutActivite"/>
+      <short value="Date de début de l’activité correspondant à la date d’installation en cabinet ou à la date d’embauche du salarié, etc."/>
+      <definition value="Date de début de l’activité correspondant à la date d’installation en cabinet ou à la date d’embauche du salarié, etc."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SituationExercice.dateDebutActivite"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="date"/>
+      </type>
+    </element>
+    <element id="cds-situation-exercice.dateFinActivite">
+      <path value="cds-situation-exercice.dateFinActivite"/>
+      <short value="Date de fin de l’activité."/>
+      <definition value="Date de fin de l’activité."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SituationExercice.dateFinActivite"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="date"/>
+      </type>
+    </element>
+    <element id="cds-situation-exercice.genreActivite">
+      <path value="cds-situation-exercice.genreActivite"/>
+      <short value="Le genre d'activité identifie les activités qui nécessitent l’application de règles de gestion spécifiques, par exemple, activité standard de soins ou de pharmacien, activité non soignante, activité non médicale, etc."/>
+      <definition value="Le genre d'activité identifie les activités qui nécessitent l’application de règles de gestion spécifiques, par exemple, activité standard de soins ou de pharmacien, activité non soignante, activité non médicale, etc."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SituationExercice.genreActivite"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_R22-GenreActivite/FHIR/TRE-R22-GenreActivite?vs"/>
+      </binding>
+    </element>
+    <element id="cds-situation-exercice.motifFinActivite">
+      <path value="cds-situation-exercice.motifFinActivite"/>
+      <short value="Motif de fin d'activité, par exemple:** Décès;** Retraite libérale;** Changement de profession;** etc."/>
+      <definition value="Motif de fin d'activité, par exemple:** Décès;** Retraite libérale;** Changement de profession;** etc."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SituationExercice.motifFinActivite"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_R25-MotifFinActivite/FHIR/TRE-R25-MotifFinActivite?vs"/>
+      </binding>
+    </element>
+    <element id="cds-situation-exercice.statutHospitalier">
+      <path value="cds-situation-exercice.statutHospitalier"/>
+      <short value="Statut hospitalier dans le cas d’une activité exercée en établissement public de santé, par exemple:** Professeur des universités - praticien hospitalier (PU-PH);** Assistant hospitalier universitaire (AHU);** etc."/>
+      <definition value="Statut hospitalier dans le cas d’une activité exercée en établissement public de santé, par exemple:** Professeur des universités - praticien hospitalier (PU-PH);** Assistant hospitalier universitaire (AHU);** etc."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SituationExercice.statutHospitalier"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_R32-StatutHospitalier/FHIR/TRE-R32-StatutHospitalier?vs"/>
+      </binding>
+    </element>
+    <element id="cds-situation-exercice.sectionOrdrePharmacien">
+      <path value="cds-situation-exercice.sectionOrdrePharmacien"/>
+      <short value="Section du tableau de l’Ordre des pharmaciens, par exemple:** Pharmacien titulaire d’officine;** Pharmacien biologiste;** etc."/>
+      <definition value="Section du tableau de l’Ordre des pharmaciens, par exemple:** Pharmacien titulaire d’officine;** Pharmacien biologiste;** etc."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SituationExercice.sectionOrdrePharmacien"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_R06-SectionTableauCNOP/FHIR/TRE-R06-SectionTableauCNOP?vs"/>
+      </binding>
+    </element>
+    <element id="cds-situation-exercice.sousSectionOrdrePharmacien">
+      <path value="cds-situation-exercice.sousSectionOrdrePharmacien"/>
+      <short value="Sous-section ou à défaut section du tableau de l’Ordre des pharmaciens."/>
+      <definition value="Sous-section ou à défaut section du tableau de l’Ordre des pharmaciens."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SituationExercice.sousSectionOrdrePharmacien"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_G05-SousSectionTableauCNOP/FHIR/TRE-G05-SousSectionTableauCNOP?vs"/>
+      </binding>
+    </element>
+    <element id="cds-situation-exercice.typeActiviteLiberale">
+      <path value="cds-situation-exercice.typeActiviteLiberale"/>
+      <short value="Type d’activité libérale, par exemple:** Cabinet;** Secteur privé à l'hôpital;** etc."/>
+      <definition value="Type d’activité libérale, par exemple:** Cabinet;** Secteur privé à l'hôpital;** etc."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SituationExercice.typeActiviteLiberale"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_R24-TypeActiviteLiberale/FHIR/TRE-R24-TypeActiviteLiberale?vs"/>
+      </binding>
+    </element>
+    <element id="cds-situation-exercice.statutPSSSA">
+      <path value="cds-situation-exercice.statutPSSSA"/>
+      <short value="Statut du professionnel du Service de santé des armées, par exemple:** Praticien certifié;** Praticien confirmé;** etc."/>
+      <definition value="Statut du professionnel du Service de santé des armées, par exemple:** Praticien certifié;** Praticien confirmé;** etc."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SituationExercice.statutPSSSA"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_R34-StatutProfessionnelSSA/FHIR/TRE-R34-StatutProfessionnelSSA?vs"/>
+      </binding>
+    </element>
+    <element id="cds-situation-exercice.telecommunication">
+      <path value="cds-situation-exercice.telecommunication"/>
+      <short value="Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.) rattachée(s) à la situation d'exercice."/>
+      <definition value="Adresse(s) de télécommunication (numéro de téléphone, adresse email, URL, etc.) rattachée(s) à la situation d'exercice."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="SituationExercice.telecommunication"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Telecommunication"/>
+      </type>
+    </element>
+    <element id="cds-situation-exercice.adresseSE">
+      <path value="cds-situation-exercice.adresseSE"/>
+      <short value="Adresse(s) géopostale(s) rattachée(s) à la situation d'exercice."/>
+      <definition value="Adresse(s) géopostale(s) rattachée(s) à la situation d'exercice."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="SituationExercice.adresseSE"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Adresse"/>
+      </type>
+    </element>
+    <element id="cds-situation-exercice.boiteLettresMSS">
+      <path value="cds-situation-exercice.boiteLettresMSS"/>
+      <short value="Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à la situation d'exercice."/>
+      <definition value="Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à la situation d'exercice."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="SituationExercice.boiteLettresMSS"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/BoiteLettreMSS"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-situation-exercice.ExerciceProfessionnel">
+      <path value="cds-situation-exercice.ExerciceProfessionnel"/>
+      <short value="Lien vers la classe ExerciceProfessionnel"/>
+      <definition value="Lien vers la classe ExerciceProfessionnel"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="SituationExercice.ExerciceProfessionnel"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/ExerciceProfessionnel"/>
+      </type>
+    </element>
+    <element id="cds-situation-exercice.EntiteGeographique">
+      <path value="cds-situation-exercice.EntiteGeographique"/>
+      <short value="Lien vers la classe EntiteGeographique"/>
+      <definition value="Lien vers la classe EntiteGeographique"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="SituationExercice.EntiteGeographique"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/EntiteGeographique"/>
+      </type>
+    </element>
+    <element id="cds-situation-exercice.CDSMembreCercleSoins">
+      <path value="cds-situation-exercice.CDSMembreCercleSoins"/>
+      <short value="Lien vers le concept Membre Cercle Soins"/>
+      <definition value="Lien vers le concept Membre Cercle Soins"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cds-situation-exercice.CDSMembreCercleSoins"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-membre-cercle-soins"/>
+      </type>
+    </element>
+    <element id="cds-situation-exercice.CDSExerciceProfessionnel">
+      <path value="cds-situation-exercice.CDSExerciceProfessionnel"/>
+      <short value="Lien vers le concept Exercice Professionnel"/>
+      <definition value="Lien vers le concept Exercice Professionnel"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cds-situation-exercice.CDSExerciceProfessionnel"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-exercice-professionnel"/>
+      </type>
+    </element>
+    <element id="cds-situation-exercice.CDSEntiteGeographique">
+      <path value="cds-situation-exercice.CDSEntiteGeographique"/>
+      <short value="Lien vers le concept Entité Géographique"/>
+      <definition value="Lien vers le concept Entité Géographique"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="cds-situation-exercice.CDSEntiteGeographique"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-entite-geographique"/>
+      </type>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cds-situation-exercice">
+      <path value="cds-situation-exercice"/>
+      <short value="Caractéristiques de l’exercice d’un professionnel pendant une période déterminée et dans une structure déterminée (à l’exception des remplaçants). Synonymes : Activité (RPPS)."/>
+      <definition value="Caractéristiques de l’exercice d’un professionnel pendant une période déterminée et dans une structure déterminée (à l’exception des remplaçants). Synonymes : Activité (RPPS)."/>
+    </element>
+    <element id="cds-situation-exercice.role">
+      <path value="cds-situation-exercice.role"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-situation-exercice.modeExercice">
+      <path value="cds-situation-exercice.modeExercice"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-situation-exercice.boiteLettresMSS">
+      <path value="cds-situation-exercice.boiteLettresMSS"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-situation-exercice.CDSMembreCercleSoins">
+      <path value="cds-situation-exercice.CDSMembreCercleSoins"/>
+      <short value="Lien vers le concept Membre Cercle Soins"/>
+      <definition value="Lien vers le concept Membre Cercle Soins"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-membre-cercle-soins"/>
+      </type>
+    </element>
+    <element id="cds-situation-exercice.CDSExerciceProfessionnel">
+      <path value="cds-situation-exercice.CDSExerciceProfessionnel"/>
+      <short value="Lien vers le concept Exercice Professionnel"/>
+      <definition value="Lien vers le concept Exercice Professionnel"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-exercice-professionnel"/>
+      </type>
+    </element>
+    <element id="cds-situation-exercice.CDSEntiteGeographique">
+      <path value="cds-situation-exercice.CDSEntiteGeographique"/>
+      <short value="Lien vers le concept Entité Géographique"/>
+      <definition value="Lien vers le concept Entité Géographique"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-entite-geographique"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

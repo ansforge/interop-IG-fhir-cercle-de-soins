@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cds-entite-juridique"/>
+  <language value="en"/>
+  <text>
+    <status value="extensions"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: StructureDefinition cds-entite-juridique</b></p><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-cds-entite-juridique-definitions.html#cds-entite-juridique" title="L’Entité Juridique (EJ) correspond à la notion de personne morale :** Pour les établissements sanitaires, sociaux, médico-sociaux et de formation aux professions de ces secteurs enregistrés dans le FINESS, une EJ détient des droits (autorisations, agréments, conventions, etc.) lui permettant d’exercer ses activités dans des établissements; chaque EJ dispose d’un statut juridique de la personne morale;** Pour les autres types de structures, une EJ est une personne morale inscrite dans le SIRENE, identifiée par son numéro Siren.">cds-entite-juridique</a><a name="en-cds-entite-juridique"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html">EntiteJuridique(0.1.0-ballot)</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">L’Entité Juridique (EJ) correspond à la notion de personne morale :** Pour les établissements sanitaires, sociaux, médico-sociaux et de formation aux professions de ces secteurs enregistrés dans le FINESS, une EJ détient des droits (autorisations, agréments, conventions, etc.) lui permettant d’exercer ses activités dans des établissements; chaque EJ dispose d’un statut juridique de la personne morale;** Pour les autres types de structures, une EJ est une personne morale inscrite dans le SIRENE, identifiée par son numéro Siren.<br/><br/>Elements defined in Ancestors:<a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Identifiant FINESS de l'entité juridique attribué lors de sa création.Les personnes morales identifiées par des numéros FINESS sont également dotées de numéros Siren.  Le numéro FINESS étant porteur intrinsèquement de liens avec le domaine sanitaire ou le domaine médico-social, il est, s'il existe, à privilégier pour l’identification de ces personnes morales en tant qu’acteurs sanitaires et médico-sociaux (Référentiel d’identification des acteurs sanitaires et médico-sociaux - Politique Générale de Sécurité des Systèmes d’Information de Santé (PGSSI-S)).Le numéro FINESS est composé de 9 caractères numériques, tels que:** Position 1-2 : numéro du département d'implantation (&quot;2A&quot;, &quot;2B&quot; pour la Corse; &quot;97&quot; pour les départements d’Outre-mer; &quot;98&quot; pour Mayotte);** Position 3 : &quot;0&quot;;** Position 4-8: &quot;1&quot; pour Guadeloupe, &quot;2&quot; pour Martinique, &quot;3&quot; pour Guyane, &quot;4&quot; pour Réunion, &quot;5&quot; pour Saint-Pierre-et-Miquelon + numéro d'ordre de 4 chiffres;** Position 4-8 : numéro d’ordre de 5 chiffres pour tous les autres départements;** Position 9 : clé de Luhn calculée automatiquement.">numFINESS</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Le numéro Siren est le numéro unique d'identification attribué à chaque entreprise ou organisme par l'INSEE.C'est un simple numéro d'ordre, composé de neuf chiffres:     ** huit chiffres non significatifs (excepté pour les organismes publics où celui-ci commence obligatoirement par 1 ou 2) complétés par une clé de Luhn.Il n'a aucun lien avec les caractéristiques de l'entreprise ou de l'organisme. Il est attribué une seule fois et n'est supprimé du répertoire qu'au moment de la disparition de la personne juridique (décès ou cessation de toute activité pour un entrepreneur individuel, dissolution pour une personne juridique).">numSiren</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Identification nationale de l'Entité juridique initiée pour les besoins du SI-CPS.Cette identification est obtenue par la concaténation du type d'identifiant national de structure (provenant de la nomenclature CodeSystem-TRE-G07-TypeIdentifiantStructure) et de l'identifiant de la structure:** 1 + N° FINESS (entité juridique et entité géographique indéterminées);** 2 + N° Siren.Cas particulier:La notion d’identifiant d'entité juridique n'a pas de sens métier pour un cabinet individuel ou un cabinet de groupe identifié par un RPPS-Rang ou un ADELI-rang (cf. Attribut IdentifiantEG de la classe EntiteGeographique). Si un cas d'usage nécessite d'appliquer la notion générique d'entité juridique et d'entité géographique pour un cabinet individuel ou un cabinet de groupe, alors l'identifiant de l'entité juridique est constitué de la façon suivante: ** pour le cabinet d’un PS ADELI : 0 + IdentifiantEJ;** pour le cabinet d’un PS RPPS : 4 + IdentifiantEJ. Synonyme : Struct_IdNat (CI-SIS)">idNatStruct</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Identifiant spécifique de l’entité juridique d’un cabinet individuel ou d’un cabinet de groupe dont l’entité géographique est identifiée par l’attribut identifiantEG. Cet identifiant concerne les entités juridiques qui ne sont pas identifiées par un numéro SIREN mais qui sont présentes dans le RPPS ou ADELI. Pour information, cet identifiant est construit en reprenant l’identifiantEG précédé des caractère « EJ » (cf. Attribut IdentifiantEG  de la classe EntiteGeographique).Synonyme : numEJ_RPPS_ADELI">identifiantEJ</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Type d’identifiant national de la structure.">typeIdNatStruct</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Le numéro de TVA intracommunautaire est un numéro d'identification individuel.Il est délivré par l'administration fiscale du pays de domiciliation de l'entreprise concernée au moment de son immatriculation ou de sa déclaration d'activité.La structure du numéro est propre à chaque pays.En France, le numéro est constitué du code FR, d'une clé informatique à 2 chiffres ou lettres et du numéro Siren de l'entreprise (9 chiffres).">numeroTVAIntracommunautaire</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Numéro d'enregistrement unique (Single Registration Number - SRN) de l’acteur EUDAMED. Un acteur est un opérateur économique dont le rôle vis-à-vis du dispositif médical est enregistré dans la base de données EUDAMED : **MF : Fabricant**AR : Mandataire**IM : Importateur **PR :  AssembleurCe numéro est construit sur la base du numéro de tva intracommunautaire.">numeroSRN</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="La raison sociale est le nom de l'entité juridique.Elle figure obligatoirement dans les statuts de l'EJ.Synonyme: Dénomination">raisonSociale</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Raison sociale complète de l'entité juridique (acronymes, sigles ou abréviations développées).">raisonSocialeLongue</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Suite de la raison sociale, si elle existe. Ce complément peut contenir notamment des informations facilitant l'adressage d'un courrier aux structures.">complementRaisonSociale</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Chaque entité juridique dispose d'un statut juridique qui caractérise la situation juridique de la personne morale.Le statut juridique détermine la situation juridique de l’établissement c’est-à-dire les règles particulières de fonctionnement qui le régissent, notamment sa gestion administrative et financière et la gestion de ses biens. Le statut juridique est attribué à la personne morale ou physique de l’établissement : l’entité juridique. Tous les établissements de la même EJ relèvent du même statut juridique.La nomenclature des statuts juridiques est une notion propre à FINESS.Les statuts juridiques sont eux-mêmes classifiés en grands agrégats qui sont :** Organismes et établissements publics:      - Etat et collectivités territoriales;     - Etablissements publics;** Organismes privés:     - Organismes privés à but non lucratif;     - Organismes privés à caractère commercial;** Personne morale de droit étranger.">statutJuridique</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Agrégat de statut juridique de niveau 1. L'agrégat de niveau 1 représente des regroupements d'agrégats de niveau 2. Par exemple, le code 1000 &quot;Organismes et Etablissements publics&quot; regroupe les codes d'agrégat de niveau 2 1100 et 1200.">agregatStatutJuridiqueNiv1</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Agrégat de statut juridique de niveau 2. L'agrégat de niveau 2 représente des regroupements d'agrégats de niveau 3. Par exemple, le code 1100 &quot;Etat et Collectivités territoriales&quot; regroupe les codes d'agrégats de niveau 3 1110 et 1120. Il caractérise le statut juridique d’une structure au sens du droit applicable (public / privé) et de la finalité (non lucratif / commercial).">agregatStatutJuridiqueNiv2</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Agrégat de statut juridique de niveau 3. L'agrégat de niveau 3 représente des regroupements de statuts juridiques. Par exemple, le code 1120 &quot;Collectivité territoriale&quot; regroupe les statuts juridiques 02, 03 etc.">agregatStatutJuridiqueNiv3</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Toute entité juridique et chacun de ses établissements (EG) se voit attribuer par l'Insee, lors de son inscription au répertoire SIRENE, un code caractérisant son activité principale par référence à la nomenclature d'activités française (NAF rév. 2). Plus précisément, on distingue le code APEN pour l'EJ.">codeAPEN</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Date de création de l'entité juridique.">dateCreation</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Date de modification du numéro Siren.">dateModificationSiren</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Origine/nature de la modification du Siren (motif de modification de l’identifiant).">origineModificationSIREN</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Date de fermeture de l'entité juridique.">dateFermeture</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Type de fermeture de l'entité juridique, au sens des règles de gestion du SI FINESS (par exemple, fermeture définitive), obligatoire lors de la fermeture de l'entité.">typeFermeture</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Adresse géopostale de l'entité juridique.">adresseEJ</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Point(s) de contact de l'entité juridique.">contact</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Adresse(s) de télécommunication de l'entité juridique (numéro de téléphone, adresse email, URL, etc.).">telecommunication</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'entité juridique.">boiteLettresMSS</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Lien vers la classe EntiteGeographique">EntiteGeographique</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Lien vers la classe DispositifMedical">DispositifMedical</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteJuridique.html" title="Lien vers la classe Certificat">Certificat</a></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-cds-entite-juridique-definitions.html#cds-entite-juridique.numFINESS">numFINESS</a><a name="en-cds-entite-juridique.numFINESS"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Identifiant FINESS de l'entité juridique attribué lors de sa création.Les personnes morales identifiées par des numéros FINESS sont également dotées de numéros Siren.  Le numéro FINESS étant porteur intrinsèquement de liens avec le domaine sanitaire ou le domaine médico-social, il est, s'il existe, à privilégier pour l’identification de ces personnes morales en tant qu’acteurs sanitaires et médico-sociaux (Référentiel d’identification des acteurs sanitaires et médico-sociaux - Politique Générale de Sécurité des Systèmes d’Information de Santé (PGSSI-S)).Le numéro FINESS est composé de 9 caractères numériques, tels que:** Position 1-2 : numéro du département d'implantation (&quot;2A&quot;, &quot;2B&quot; pour la Corse; &quot;97&quot; pour les départements d’Outre-mer; &quot;98&quot; pour Mayotte);** Position 3 : &quot;0&quot;;** Position 4-8: &quot;1&quot; pour Guadeloupe, &quot;2&quot; pour Martinique, &quot;3&quot; pour Guyane, &quot;4&quot; pour Réunion, &quot;5&quot; pour Saint-Pierre-et-Miquelon + numéro d'ordre de 4 chiffres;** Position 4-8 : numéro d’ordre de 5 chiffres pour tous les autres départements;** Position 9 : clé de Luhn calculée automatiquement.</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-cds-entite-juridique-definitions.html#cds-entite-juridique.numSiren">numSiren</a><a name="en-cds-entite-juridique.numSiren"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Le numéro Siren est le numéro unique d'identification attribué à chaque entreprise ou organisme par l'INSEE.C'est un simple numéro d'ordre, composé de neuf chiffres:     ** huit chiffres non significatifs (excepté pour les organismes publics où celui-ci commence obligatoirement par 1 ou 2) complétés par une clé de Luhn.Il n'a aucun lien avec les caractéristiques de l'entreprise ou de l'organisme. Il est attribué une seule fois et n'est supprimé du répertoire qu'au moment de la disparition de la personne juridique (décès ou cessation de toute activité pour un entrepreneur individuel, dissolution pour une personne juridique).</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-cds-entite-juridique-definitions.html#cds-entite-juridique.idNatStruct">idNatStruct</a><a name="en-cds-entite-juridique.idNatStruct"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Identification nationale de l'Entité juridique initiée pour les besoins du SI-CPS.Cette identification est obtenue par la concaténation du type d'identifiant national de structure (provenant de la nomenclature CodeSystem-TRE-G07-TypeIdentifiantStructure) et de l'identifiant de la structure:** 1 + N° FINESS (entité juridique et entité géographique indéterminées);** 2 + N° Siren.Cas particulier:La notion d’identifiant d'entité juridique n'a pas de sens métier pour un cabinet individuel ou un cabinet de groupe identifié par un RPPS-Rang ou un ADELI-rang (cf. Attribut IdentifiantEG de la classe EntiteGeographique). Si un cas d'usage nécessite d'appliquer la notion générique d'entité juridique et d'entité géographique pour un cabinet individuel ou un cabinet de groupe, alors l'identifiant de l'entité juridique est constitué de la façon suivante: ** pour le cabinet d’un PS ADELI : 0 + IdentifiantEJ;** pour le cabinet d’un PS RPPS : 4 + IdentifiantEJ. Synonyme : Struct_IdNat (CI-SIS)</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-cds-entite-juridique-definitions.html#cds-entite-juridique.identifiantEJ">identifiantEJ</a><a name="en-cds-entite-juridique.identifiantEJ"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Identifiant spécifique de l’entité juridique d’un cabinet individuel ou d’un cabinet de groupe dont l’entité géographique est identifiée par l’attribut identifiantEG. Cet identifiant concerne les entités juridiques qui ne sont pas identifiées par un numéro SIREN mais qui sont présentes dans le RPPS ou ADELI. Pour information, cet identifiant est construit en reprenant l’identifiantEG précédé des caractère « EJ » (cf. Attribut IdentifiantEG  de la classe EntiteGeographique).Synonyme : numEJ_RPPS_ADELI</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-cds-entite-juridique-definitions.html#cds-entite-juridique.raisonSociale">raisonSociale</a><a name="en-cds-entite-juridique.raisonSociale"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">La raison sociale est le nom de l'entité juridique.Elle figure obligatoirement dans les statuts de l'EJ.Synonyme: Dénomination</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-cds-entite-juridique-definitions.html#cds-entite-juridique.boiteLettresMSS">boiteLettresMSS</a><a name="en-cds-entite-juridique.boiteLettresMSS"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-BoiteLettreMSS.html">BoiteLettreMSS</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'entité juridique.</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-cds-entite-juridique-definitions.html#cds-entite-juridique.CDSEntiteGeographique" title="Lien vers le concept Entité Géographique">CDSEntiteGeographique</a><a name="en-cds-entite-juridique.CDSEntiteGeographique"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-cds-entite-geographique.html">cds-entite-geographique</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Lien vers le concept Entité Géographique<br/></td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-entite-juridique"/>
+  <version value="2.0.1"/>
+  <name value="CDSEntiteJuridique"/>
+  <title value="CDS Entite Juridique"/>
+  <status value="draft"/>
+  <date value="2026-07-10T13:11:38+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="L’Entité Juridique (EJ) correspond à la notion de personne morale :** Pour les établissements sanitaires, sociaux, médico-sociaux et de formation aux professions de ces secteurs enregistrés dans le FINESS, une EJ détient des droits (autorisations, agréments, conventions, etc.) lui permettant d’exercer ses activités dans des établissements; chaque EJ dispose d’un statut juridique de la personne morale;** Pour les autres types de structures, une EJ est une personne morale inscrite dans le SIRENE, identifiée par son numéro Siren."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="4.0.1"/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-entite-juridique"/>
+  <baseDefinition value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/EntiteJuridique|0.1.0-ballot"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version">
+      <valueString value="0.1.0-ballot"/>
+    </extension>
+    <element id="cds-entite-juridique">
+      <path value="cds-entite-juridique"/>
+      <short value="L’Entité Juridique (EJ) correspond à la notion de personne morale :** Pour les établissements sanitaires, sociaux, médico-sociaux et de formation aux professions de ces secteurs enregistrés dans le FINESS, une EJ détient des droits (autorisations, agréments, conventions, etc.) lui permettant d’exercer ses activités dans des établissements; chaque EJ dispose d’un statut juridique de la personne morale;** Pour les autres types de structures, une EJ est une personne morale inscrite dans le SIRENE, identifiée par son numéro Siren."/>
+      <definition value="L’Entité Juridique (EJ) correspond à la notion de personne morale :** Pour les établissements sanitaires, sociaux, médico-sociaux et de formation aux professions de ces secteurs enregistrés dans le FINESS, une EJ détient des droits (autorisations, agréments, conventions, etc.) lui permettant d’exercer ses activités dans des établissements; chaque EJ dispose d’un statut juridique de la personne morale;** Pour les autres types de structures, une EJ est une personne morale inscrite dans le SIRENE, identifiée par son numéro Siren."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Base"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <isModifier value="false"/>
+    </element>
+    <element id="cds-entite-juridique.numFINESS">
+      <path value="cds-entite-juridique.numFINESS"/>
+      <short value="Identifiant FINESS de l'entité juridique attribué lors de sa création.Les personnes morales identifiées par des numéros FINESS sont également dotées de numéros Siren.  Le numéro FINESS étant porteur intrinsèquement de liens avec le domaine sanitaire ou le domaine médico-social, il est, s'il existe, à privilégier pour l’identification de ces personnes morales en tant qu’acteurs sanitaires et médico-sociaux (Référentiel d’identification des acteurs sanitaires et médico-sociaux - Politique Générale de Sécurité des Systèmes d’Information de Santé (PGSSI-S)).Le numéro FINESS est composé de 9 caractères numériques, tels que:** Position 1-2 : numéro du département d'implantation (&quot;2A&quot;, &quot;2B&quot; pour la Corse; &quot;97&quot; pour les départements d’Outre-mer; &quot;98&quot; pour Mayotte);** Position 3 : &quot;0&quot;;** Position 4-8: &quot;1&quot; pour Guadeloupe, &quot;2&quot; pour Martinique, &quot;3&quot; pour Guyane, &quot;4&quot; pour Réunion, &quot;5&quot; pour Saint-Pierre-et-Miquelon + numéro d'ordre de 4 chiffres;** Position 4-8 : numéro d’ordre de 5 chiffres pour tous les autres départements;** Position 9 : clé de Luhn calculée automatiquement."/>
+      <definition value="Identifiant FINESS de l'entité juridique attribué lors de sa création.Les personnes morales identifiées par des numéros FINESS sont également dotées de numéros Siren.  Le numéro FINESS étant porteur intrinsèquement de liens avec le domaine sanitaire ou le domaine médico-social, il est, s'il existe, à privilégier pour l’identification de ces personnes morales en tant qu’acteurs sanitaires et médico-sociaux (Référentiel d’identification des acteurs sanitaires et médico-sociaux - Politique Générale de Sécurité des Systèmes d’Information de Santé (PGSSI-S)).Le numéro FINESS est composé de 9 caractères numériques, tels que:** Position 1-2 : numéro du département d'implantation (&quot;2A&quot;, &quot;2B&quot; pour la Corse; &quot;97&quot; pour les départements d’Outre-mer; &quot;98&quot; pour Mayotte);** Position 3 : &quot;0&quot;;** Position 4-8: &quot;1&quot; pour Guadeloupe, &quot;2&quot; pour Martinique, &quot;3&quot; pour Guyane, &quot;4&quot; pour Réunion, &quot;5&quot; pour Saint-Pierre-et-Miquelon + numéro d'ordre de 4 chiffres;** Position 4-8 : numéro d’ordre de 5 chiffres pour tous les autres départements;** Position 9 : clé de Luhn calculée automatiquement."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteJuridique.numFINESS"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-entite-juridique.numSiren">
+      <path value="cds-entite-juridique.numSiren"/>
+      <short value="Le numéro Siren est le numéro unique d'identification attribué à chaque entreprise ou organisme par l'INSEE.C'est un simple numéro d'ordre, composé de neuf chiffres:     ** huit chiffres non significatifs (excepté pour les organismes publics où celui-ci commence obligatoirement par 1 ou 2) complétés par une clé de Luhn.Il n'a aucun lien avec les caractéristiques de l'entreprise ou de l'organisme. Il est attribué une seule fois et n'est supprimé du répertoire qu'au moment de la disparition de la personne juridique (décès ou cessation de toute activité pour un entrepreneur individuel, dissolution pour une personne juridique)."/>
+      <definition value="Le numéro Siren est le numéro unique d'identification attribué à chaque entreprise ou organisme par l'INSEE.C'est un simple numéro d'ordre, composé de neuf chiffres:     ** huit chiffres non significatifs (excepté pour les organismes publics où celui-ci commence obligatoirement par 1 ou 2) complétés par une clé de Luhn.Il n'a aucun lien avec les caractéristiques de l'entreprise ou de l'organisme. Il est attribué une seule fois et n'est supprimé du répertoire qu'au moment de la disparition de la personne juridique (décès ou cessation de toute activité pour un entrepreneur individuel, dissolution pour une personne juridique)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteJuridique.numSiren"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-entite-juridique.idNatStruct">
+      <path value="cds-entite-juridique.idNatStruct"/>
+      <short value="Identification nationale de l'Entité juridique initiée pour les besoins du SI-CPS.Cette identification est obtenue par la concaténation du type d'identifiant national de structure (provenant de la nomenclature CodeSystem-TRE-G07-TypeIdentifiantStructure) et de l'identifiant de la structure:** 1 + N° FINESS (entité juridique et entité géographique indéterminées);** 2 + N° Siren.Cas particulier:La notion d’identifiant d'entité juridique n'a pas de sens métier pour un cabinet individuel ou un cabinet de groupe identifié par un RPPS-Rang ou un ADELI-rang (cf. Attribut IdentifiantEG de la classe EntiteGeographique). Si un cas d'usage nécessite d'appliquer la notion générique d'entité juridique et d'entité géographique pour un cabinet individuel ou un cabinet de groupe, alors l'identifiant de l'entité juridique est constitué de la façon suivante: ** pour le cabinet d’un PS ADELI : 0 + IdentifiantEJ;** pour le cabinet d’un PS RPPS : 4 + IdentifiantEJ. Synonyme : Struct_IdNat (CI-SIS)"/>
+      <definition value="Identification nationale de l'Entité juridique initiée pour les besoins du SI-CPS.Cette identification est obtenue par la concaténation du type d'identifiant national de structure (provenant de la nomenclature CodeSystem-TRE-G07-TypeIdentifiantStructure) et de l'identifiant de la structure:** 1 + N° FINESS (entité juridique et entité géographique indéterminées);** 2 + N° Siren.Cas particulier:La notion d’identifiant d'entité juridique n'a pas de sens métier pour un cabinet individuel ou un cabinet de groupe identifié par un RPPS-Rang ou un ADELI-rang (cf. Attribut IdentifiantEG de la classe EntiteGeographique). Si un cas d'usage nécessite d'appliquer la notion générique d'entité juridique et d'entité géographique pour un cabinet individuel ou un cabinet de groupe, alors l'identifiant de l'entité juridique est constitué de la façon suivante: ** pour le cabinet d’un PS ADELI : 0 + IdentifiantEJ;** pour le cabinet d’un PS RPPS : 4 + IdentifiantEJ. Synonyme : Struct_IdNat (CI-SIS)"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteJuridique.idNatStruct"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-entite-juridique.identifiantEJ">
+      <path value="cds-entite-juridique.identifiantEJ"/>
+      <short value="Identifiant spécifique de l’entité juridique d’un cabinet individuel ou d’un cabinet de groupe dont l’entité géographique est identifiée par l’attribut identifiantEG. Cet identifiant concerne les entités juridiques qui ne sont pas identifiées par un numéro SIREN mais qui sont présentes dans le RPPS ou ADELI. Pour information, cet identifiant est construit en reprenant l’identifiantEG précédé des caractère « EJ » (cf. Attribut IdentifiantEG  de la classe EntiteGeographique).Synonyme : numEJ_RPPS_ADELI"/>
+      <definition value="Identifiant spécifique de l’entité juridique d’un cabinet individuel ou d’un cabinet de groupe dont l’entité géographique est identifiée par l’attribut identifiantEG. Cet identifiant concerne les entités juridiques qui ne sont pas identifiées par un numéro SIREN mais qui sont présentes dans le RPPS ou ADELI. Pour information, cet identifiant est construit en reprenant l’identifiantEG précédé des caractère « EJ » (cf. Attribut IdentifiantEG  de la classe EntiteGeographique).Synonyme : numEJ_RPPS_ADELI"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteJuridique.identifiantEJ"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-entite-juridique.typeIdNatStruct">
+      <path value="cds-entite-juridique.typeIdNatStruct"/>
+      <short value="Type d’identifiant national de la structure."/>
+      <definition value="Type d’identifiant national de la structure."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteJuridique.typeIdNatStruct"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure?vs"/>
+      </binding>
+    </element>
+    <element id="cds-entite-juridique.numeroTVAIntracommunautaire">
+      <path value="cds-entite-juridique.numeroTVAIntracommunautaire"/>
+      <short value="Le numéro de TVA intracommunautaire est un numéro d'identification individuel.Il est délivré par l'administration fiscale du pays de domiciliation de l'entreprise concernée au moment de son immatriculation ou de sa déclaration d'activité.La structure du numéro est propre à chaque pays.En France, le numéro est constitué du code FR, d'une clé informatique à 2 chiffres ou lettres et du numéro Siren de l'entreprise (9 chiffres)."/>
+      <definition value="Le numéro de TVA intracommunautaire est un numéro d'identification individuel.Il est délivré par l'administration fiscale du pays de domiciliation de l'entreprise concernée au moment de son immatriculation ou de sa déclaration d'activité.La structure du numéro est propre à chaque pays.En France, le numéro est constitué du code FR, d'une clé informatique à 2 chiffres ou lettres et du numéro Siren de l'entreprise (9 chiffres)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteJuridique.numeroTVAIntracommunautaire"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element id="cds-entite-juridique.numeroSRN">
+      <path value="cds-entite-juridique.numeroSRN"/>
+      <short value="Numéro d'enregistrement unique (Single Registration Number - SRN) de l’acteur EUDAMED. Un acteur est un opérateur économique dont le rôle vis-à-vis du dispositif médical est enregistré dans la base de données EUDAMED : **MF : Fabricant**AR : Mandataire**IM : Importateur **PR :  AssembleurCe numéro est construit sur la base du numéro de tva intracommunautaire."/>
+      <definition value="Numéro d'enregistrement unique (Single Registration Number - SRN) de l’acteur EUDAMED. Un acteur est un opérateur économique dont le rôle vis-à-vis du dispositif médical est enregistré dans la base de données EUDAMED : **MF : Fabricant**AR : Mandataire**IM : Importateur **PR :  AssembleurCe numéro est construit sur la base du numéro de tva intracommunautaire."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteJuridique.numeroSRN"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element id="cds-entite-juridique.raisonSociale">
+      <path value="cds-entite-juridique.raisonSociale"/>
+      <short value="La raison sociale est le nom de l'entité juridique.Elle figure obligatoirement dans les statuts de l'EJ.Synonyme: Dénomination"/>
+      <definition value="La raison sociale est le nom de l'entité juridique.Elle figure obligatoirement dans les statuts de l'EJ.Synonyme: Dénomination"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteJuridique.raisonSociale"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-entite-juridique.raisonSocialeLongue">
+      <path value="cds-entite-juridique.raisonSocialeLongue"/>
+      <short value="Raison sociale complète de l'entité juridique (acronymes, sigles ou abréviations développées)."/>
+      <definition value="Raison sociale complète de l'entité juridique (acronymes, sigles ou abréviations développées)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteJuridique.raisonSocialeLongue"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="cds-entite-juridique.complementRaisonSociale">
+      <path value="cds-entite-juridique.complementRaisonSociale"/>
+      <short value="Suite de la raison sociale, si elle existe. Ce complément peut contenir notamment des informations facilitant l'adressage d'un courrier aux structures."/>
+      <definition value="Suite de la raison sociale, si elle existe. Ce complément peut contenir notamment des informations facilitant l'adressage d'un courrier aux structures."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteJuridique.complementRaisonSociale"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="cds-entite-juridique.statutJuridique">
+      <path value="cds-entite-juridique.statutJuridique"/>
+      <short value="Chaque entité juridique dispose d'un statut juridique qui caractérise la situation juridique de la personne morale.Le statut juridique détermine la situation juridique de l’établissement c’est-à-dire les règles particulières de fonctionnement qui le régissent, notamment sa gestion administrative et financière et la gestion de ses biens. Le statut juridique est attribué à la personne morale ou physique de l’établissement : l’entité juridique. Tous les établissements de la même EJ relèvent du même statut juridique.La nomenclature des statuts juridiques est une notion propre à FINESS.Les statuts juridiques sont eux-mêmes classifiés en grands agrégats qui sont :** Organismes et établissements publics:      - Etat et collectivités territoriales;     - Etablissements publics;** Organismes privés:     - Organismes privés à but non lucratif;     - Organismes privés à caractère commercial;** Personne morale de droit étranger."/>
+      <definition value="Chaque entité juridique dispose d'un statut juridique qui caractérise la situation juridique de la personne morale.Le statut juridique détermine la situation juridique de l’établissement c’est-à-dire les règles particulières de fonctionnement qui le régissent, notamment sa gestion administrative et financière et la gestion de ses biens. Le statut juridique est attribué à la personne morale ou physique de l’établissement : l’entité juridique. Tous les établissements de la même EJ relèvent du même statut juridique.La nomenclature des statuts juridiques est une notion propre à FINESS.Les statuts juridiques sont eux-mêmes classifiés en grands agrégats qui sont :** Organismes et établissements publics:      - Etat et collectivités territoriales;     - Etablissements publics;** Organismes privés:     - Organismes privés à but non lucratif;     - Organismes privés à caractère commercial;** Personne morale de droit étranger."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteJuridique.statutJuridique"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_R72-FinessStatutJuridique/FHIR/TRE-R72-FinessStatutJuridique?vs"/>
+      </binding>
+    </element>
+    <element id="cds-entite-juridique.agregatStatutJuridiqueNiv1">
+      <path value="cds-entite-juridique.agregatStatutJuridiqueNiv1"/>
+      <short value="Agrégat de statut juridique de niveau 1. L'agrégat de niveau 1 représente des regroupements d'agrégats de niveau 2. Par exemple, le code 1000 &quot;Organismes et Etablissements publics&quot; regroupe les codes d'agrégat de niveau 2 1100 et 1200."/>
+      <definition value="Agrégat de statut juridique de niveau 1. L'agrégat de niveau 1 représente des regroupements d'agrégats de niveau 2. Par exemple, le code 1000 &quot;Organismes et Etablissements publics&quot; regroupe les codes d'agrégat de niveau 2 1100 et 1200."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteJuridique.agregatStatutJuridiqueNiv1"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_R68-FinessAgregatStatutJuridiqueNiv1/FHIR/TRE-R68-FinessAgregatStatutJuridiqueNiv1?vs"/>
+      </binding>
+    </element>
+    <element id="cds-entite-juridique.agregatStatutJuridiqueNiv2">
+      <path value="cds-entite-juridique.agregatStatutJuridiqueNiv2"/>
+      <short value="Agrégat de statut juridique de niveau 2. L'agrégat de niveau 2 représente des regroupements d'agrégats de niveau 3. Par exemple, le code 1100 &quot;Etat et Collectivités territoriales&quot; regroupe les codes d'agrégats de niveau 3 1110 et 1120. Il caractérise le statut juridique d’une structure au sens du droit applicable (public / privé) et de la finalité (non lucratif / commercial)."/>
+      <definition value="Agrégat de statut juridique de niveau 2. L'agrégat de niveau 2 représente des regroupements d'agrégats de niveau 3. Par exemple, le code 1100 &quot;Etat et Collectivités territoriales&quot; regroupe les codes d'agrégats de niveau 3 1110 et 1120. Il caractérise le statut juridique d’une structure au sens du droit applicable (public / privé) et de la finalité (non lucratif / commercial)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteJuridique.agregatStatutJuridiqueNiv2"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_R69-FinessAgregatStatutJuridiqueNiv2/FHIR/TRE-R69-FinessAgregatStatutJuridiqueNiv2?vs"/>
+      </binding>
+    </element>
+    <element id="cds-entite-juridique.agregatStatutJuridiqueNiv3">
+      <path value="cds-entite-juridique.agregatStatutJuridiqueNiv3"/>
+      <short value="Agrégat de statut juridique de niveau 3. L'agrégat de niveau 3 représente des regroupements de statuts juridiques. Par exemple, le code 1120 &quot;Collectivité territoriale&quot; regroupe les statuts juridiques 02, 03 etc."/>
+      <definition value="Agrégat de statut juridique de niveau 3. L'agrégat de niveau 3 représente des regroupements de statuts juridiques. Par exemple, le code 1120 &quot;Collectivité territoriale&quot; regroupe les statuts juridiques 02, 03 etc."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteJuridique.agregatStatutJuridiqueNiv3"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_R70-FinessAgregatStatutJuridique/FHIR/TRE-R70-FinessAgregatStatutJuridique?vs"/>
+      </binding>
+    </element>
+    <element id="cds-entite-juridique.codeAPEN">
+      <path value="cds-entite-juridique.codeAPEN"/>
+      <short value="Toute entité juridique et chacun de ses établissements (EG) se voit attribuer par l'Insee, lors de son inscription au répertoire SIRENE, un code caractérisant son activité principale par référence à la nomenclature d'activités française (NAF rév. 2). Plus précisément, on distingue le code APEN pour l'EJ."/>
+      <definition value="Toute entité juridique et chacun de ses établissements (EG) se voit attribuer par l'Insee, lors de son inscription au répertoire SIRENE, un code caractérisant son activité principale par référence à la nomenclature d'activités française (NAF rév. 2). Plus précisément, on distingue le code APEN pour l'EJ."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteJuridique.codeAPEN"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_R75-InseeNAFrev2Niveau5/FHIR/TRE-R75-InseeNAFrev2Niveau5?vs"/>
+      </binding>
+    </element>
+    <element id="cds-entite-juridique.dateCreation">
+      <path value="cds-entite-juridique.dateCreation"/>
+      <short value="Date de création de l'entité juridique."/>
+      <definition value="Date de création de l'entité juridique."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteJuridique.dateCreation"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="date"/>
+      </type>
+    </element>
+    <element id="cds-entite-juridique.dateModificationSiren">
+      <path value="cds-entite-juridique.dateModificationSiren"/>
+      <short value="Date de modification du numéro Siren."/>
+      <definition value="Date de modification du numéro Siren."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteJuridique.dateModificationSiren"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="date"/>
+      </type>
+    </element>
+    <element id="cds-entite-juridique.origineModificationSIREN">
+      <path value="cds-entite-juridique.origineModificationSIREN"/>
+      <short value="Origine/nature de la modification du Siren (motif de modification de l’identifiant)."/>
+      <definition value="Origine/nature de la modification du Siren (motif de modification de l’identifiant)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteJuridique.origineModificationSIREN"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="cds-entite-juridique.dateFermeture">
+      <path value="cds-entite-juridique.dateFermeture"/>
+      <short value="Date de fermeture de l'entité juridique."/>
+      <definition value="Date de fermeture de l'entité juridique."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteJuridique.dateFermeture"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="date"/>
+      </type>
+    </element>
+    <element id="cds-entite-juridique.typeFermeture">
+      <path value="cds-entite-juridique.typeFermeture"/>
+      <short value="Type de fermeture de l'entité juridique, au sens des règles de gestion du SI FINESS (par exemple, fermeture définitive), obligatoire lors de la fermeture de l'entité."/>
+      <definition value="Type de fermeture de l'entité juridique, au sens des règles de gestion du SI FINESS (par exemple, fermeture définitive), obligatoire lors de la fermeture de l'entité."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteJuridique.typeFermeture"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_R286-TypeFermeture/FHIR/TRE-R286-TypeFermeture?vs"/>
+      </binding>
+    </element>
+    <element id="cds-entite-juridique.adresseEJ">
+      <path value="cds-entite-juridique.adresseEJ"/>
+      <short value="Adresse géopostale de l'entité juridique."/>
+      <definition value="Adresse géopostale de l'entité juridique."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteJuridique.adresseEJ"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Adresse"/>
+      </type>
+    </element>
+    <element id="cds-entite-juridique.contact">
+      <path value="cds-entite-juridique.contact"/>
+      <short value="Point(s) de contact de l'entité juridique."/>
+      <definition value="Point(s) de contact de l'entité juridique."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteJuridique.contact"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Contact"/>
+      </type>
+    </element>
+    <element id="cds-entite-juridique.telecommunication">
+      <path value="cds-entite-juridique.telecommunication"/>
+      <short value="Adresse(s) de télécommunication de l'entité juridique (numéro de téléphone, adresse email, URL, etc.)."/>
+      <definition value="Adresse(s) de télécommunication de l'entité juridique (numéro de téléphone, adresse email, URL, etc.)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteJuridique.telecommunication"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Telecommunication"/>
+      </type>
+    </element>
+    <element id="cds-entite-juridique.boiteLettresMSS">
+      <path value="cds-entite-juridique.boiteLettresMSS"/>
+      <short value="Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'entité juridique."/>
+      <definition value="Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'entité juridique."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteJuridique.boiteLettresMSS"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/BoiteLettreMSS"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-entite-juridique.EntiteGeographique">
+      <path value="cds-entite-juridique.EntiteGeographique"/>
+      <short value="Lien vers la classe EntiteGeographique"/>
+      <definition value="Lien vers la classe EntiteGeographique"/>
+      <min value="1"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteJuridique.EntiteGeographique"/>
+        <min value="1"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/EntiteGeographique"/>
+      </type>
+    </element>
+    <element id="cds-entite-juridique.DispositifMedical">
+      <path value="cds-entite-juridique.DispositifMedical"/>
+      <short value="Lien vers la classe DispositifMedical"/>
+      <definition value="Lien vers la classe DispositifMedical"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteJuridique.DispositifMedical"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/DispositifMedical"/>
+      </type>
+    </element>
+    <element id="cds-entite-juridique.Certificat">
+      <path value="cds-entite-juridique.Certificat"/>
+      <short value="Lien vers la classe Certificat"/>
+      <definition value="Lien vers la classe Certificat"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteJuridique.Certificat"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Certificat"/>
+      </type>
+    </element>
+    <element id="cds-entite-juridique.CDSEntiteGeographique">
+      <path value="cds-entite-juridique.CDSEntiteGeographique"/>
+      <short value="Lien vers le concept Entité Géographique"/>
+      <definition value="Lien vers le concept Entité Géographique"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cds-entite-juridique.CDSEntiteGeographique"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-entite-geographique"/>
+      </type>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cds-entite-juridique">
+      <path value="cds-entite-juridique"/>
+      <short value="L’Entité Juridique (EJ) correspond à la notion de personne morale :** Pour les établissements sanitaires, sociaux, médico-sociaux et de formation aux professions de ces secteurs enregistrés dans le FINESS, une EJ détient des droits (autorisations, agréments, conventions, etc.) lui permettant d’exercer ses activités dans des établissements; chaque EJ dispose d’un statut juridique de la personne morale;** Pour les autres types de structures, une EJ est une personne morale inscrite dans le SIRENE, identifiée par son numéro Siren."/>
+      <definition value="L’Entité Juridique (EJ) correspond à la notion de personne morale :** Pour les établissements sanitaires, sociaux, médico-sociaux et de formation aux professions de ces secteurs enregistrés dans le FINESS, une EJ détient des droits (autorisations, agréments, conventions, etc.) lui permettant d’exercer ses activités dans des établissements; chaque EJ dispose d’un statut juridique de la personne morale;** Pour les autres types de structures, une EJ est une personne morale inscrite dans le SIRENE, identifiée par son numéro Siren."/>
+    </element>
+    <element id="cds-entite-juridique.numFINESS">
+      <path value="cds-entite-juridique.numFINESS"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-entite-juridique.numSiren">
+      <path value="cds-entite-juridique.numSiren"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-entite-juridique.idNatStruct">
+      <path value="cds-entite-juridique.idNatStruct"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-entite-juridique.identifiantEJ">
+      <path value="cds-entite-juridique.identifiantEJ"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-entite-juridique.raisonSociale">
+      <path value="cds-entite-juridique.raisonSociale"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-entite-juridique.boiteLettresMSS">
+      <path value="cds-entite-juridique.boiteLettresMSS"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-entite-juridique.CDSEntiteGeographique">
+      <path value="cds-entite-juridique.CDSEntiteGeographique"/>
+      <short value="Lien vers le concept Entité Géographique"/>
+      <definition value="Lien vers le concept Entité Géographique"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-entite-geographique"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

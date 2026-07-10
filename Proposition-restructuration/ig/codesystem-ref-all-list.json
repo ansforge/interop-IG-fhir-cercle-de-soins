@@ -177,8 +177,8 @@
     "oids" : ["2.16.840.1.113883.18.58"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-relatedperson-relationshiptype.html" : "Patient relationship type",
-    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-patient-contact-role.html" : "FR Core ValueSet Patient contact role"
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-patient-contact-role.html" : "FR Core ValueSet Patient contact role",
+    "http://hl7.org/fhir/R4/valueset-relatedperson-relationshiptype.html" : "Patient relationship type"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v2-0203",
@@ -238,6 +238,30 @@
     "https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/ValueSet-as-vs-type-etablissement.html" : "AS ValueSet type Etablissement"
   },
   {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante",
+    "version" : "20250328120000",
+    "status" : "active",
+    "name" : "TRE_G15_ProfessionSante",
+    "title" : null,
+    "description" : "Professions de santé définies par le code de la santé publique : professions médicales (art. L4111-1 à L4163-10), de la pharmacie et de la physique médicale (art. 4211-1 à 4252-3) et d’auxiliaires médicaux (art. 4311-1 à 4394-3)",
+    "oids" : ["1.2.250.1.71.1.2.7"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-profession-vs.html" : "ProfessionVs"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_G19-SecteurActiviteADELI/FHIR/TRE-G19-SecteurActiviteADELI",
+    "version" : "20250523120000",
+    "status" : "active",
+    "name" : "TRE_G19_SecteurActiviteADELI",
+    "title" : null,
+    "description" : "Secteur d'activité ADELI",
+    "oids" : ["1.2.250.1.71.1.2.23"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-secteurActivite-vs.html" : "SecteuractiviteVs"
+  },
+  {
     "url" : "https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite",
     "version" : "20250523120000",
     "status" : "active",
@@ -247,7 +271,8 @@
     "oids" : ["1.2.250.1.71.4.2.4"],
     "uses" : {
     },
-    "https://interop.esante.gouv.fr/terminologies/1.11.1/ValueSet-JDV-J101-SecteurActivite-RASS.html" : "JDV_J101_SecteurActivite_RASS"
+    "https://interop.esante.gouv.fr/terminologies/1.11.1/ValueSet-JDV-J101-SecteurActivite-RASS.html" : "JDV_J101_SecteurActivite_RASS",
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-secteurActivite-vs.html" : "SecteuractiviteVs"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/TRE_R11-CiviliteExercice/FHIR/TRE-R11-CiviliteExercice",
@@ -262,6 +287,44 @@
     "https://interop.esante.gouv.fr/terminologies/1.11.1/ValueSet-JDV-J79-CiviliteExercice-RASS.html" : "JDV_J79_CiviliteExercice_RASS"
   },
   {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM",
+    "version" : "20260505120000",
+    "status" : "active",
+    "name" : "TRE_R13_CommuneOM",
+    "title" : null,
+    "description" : "",
+    "oids" : ["1.2.250.1.213.2.23"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-lieuNaissance-vs.html" : "LieunaissanceVs"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R20-Pays/FHIR/TRE-R20-Pays",
+    "version" : "20250328120000",
+    "status" : "active",
+    "name" : "TRE_R20_Pays",
+    "title" : null,
+    "description" : "Référentiel des codes pays provenant du COG INSEE",
+    "oids" : ["1.2.250.1.213.2.24"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-paysNaissance-vs.html" : "PaysnaissanceVs",
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-paysNationalite-vs.html" : "PaysnationaliteVs",
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-lieuNaissance-vs.html" : "LieunaissanceVs"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R21-Fonction/FHIR/TRE-R21-Fonction",
+    "version" : "20260223120000",
+    "status" : "active",
+    "name" : "TRE_R21_Fonction",
+    "title" : null,
+    "description" : "Fonction",
+    "oids" : ["1.2.250.1.213.1.6.1.17"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-role-vs.html" : "RoleVs"
+  },
+  {
     "url" : "https://mos.esante.gouv.fr/NOS/TRE_R216-HL7RoleCode/FHIR/TRE-R216-HL7RoleCode",
     "version" : "20241213120000",
     "status" : "active",
@@ -271,6 +334,7 @@
     "oids" : ["2.16.840.1.113883.5.111"],
     "uses" : {
     },
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-relation-vs.html" : "RelationVs",
     "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-relation-type.html" : "FR Core ValueSet relation type"
   },
   {
@@ -283,7 +347,20 @@
     "oids" : ["1.2.250.1.213.1.1.4.327"],
     "uses" : {
     },
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-relation-vs.html" : "RelationVs",
     "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-patient-contact-role.html" : "FR Core ValueSet Patient contact role"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R249-Sexe/FHIR/TRE-R249-Sexe",
+    "version" : "20231215120000",
+    "status" : "active",
+    "name" : "TRE_R249_Sexe",
+    "title" : null,
+    "description" : "Sexe",
+    "oids" : ["1.2.250.1.213.2.53"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-sexe-vs.html" : "SexeVs"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/TRE_R259-HL7ParticipationFunction/FHIR/TRE-R259-HL7ParticipationFunction",
@@ -311,6 +388,128 @@
     "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-patient-contact-role.html" : "FR Core ValueSet Patient contact role"
   },
   {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R262-CategorieSocioProfessionnelle/FHIR/TRE-R262-CategorieSocioProfessionnelle",
+    "version" : "20231215120000",
+    "status" : "active",
+    "name" : "TRE_R262_CategorieSocioProfessionnelle",
+    "title" : null,
+    "description" : "Catégories socio-professionnelles",
+    "oids" : ["1.2.250.1.213.1.6.1.123"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-professionCategorieSocioProfessionnelle-vs.html" : "ProfessioncategoriesocioprofessionnelleVs"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R267-SexeProvenanceISO/FHIR/TRE-R267-SexeProvenanceISO",
+    "version" : "20231215120000",
+    "status" : "active",
+    "name" : "TRE_R267_SexeProvenanceISO",
+    "title" : null,
+    "description" : "Codes de représentation des sexes humains provenant de la norme ISO 5218",
+    "oids" : ["1.2.250.1.213.2.55"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-sexe-vs.html" : "SexeVs"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R268-PaysProvenanceISO/FHIR/TRE-R268-PaysProvenanceISO",
+    "version" : "20240126120000",
+    "status" : "active",
+    "name" : "TRE_R268_PaysProvenanceISO",
+    "title" : null,
+    "description" : "Référentiel des pays provenant de la norme ISO 3166",
+    "oids" : ["1.2.250.1.213.2.57"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-paysNaissance-vs.html" : "PaysnaissanceVs",
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-paysNationalite-vs.html" : "PaysnationaliteVs"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R288-TypeProfession/FHIR/TRE-R288-TypeProfession",
+    "version" : "20231215120000",
+    "status" : "active",
+    "name" : "TRE_R288_TypeProfession",
+    "title" : null,
+    "description" : "Type de profession",
+    "oids" : ["1.2.250.1.213.1.6.1.137"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-typeProfession-vs.html" : "TypeprofessionVs"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R289-TypeFonction/FHIR/TRE-R289-TypeFonction",
+    "version" : "20231215120000",
+    "status" : "active",
+    "name" : "TRE_R289_TypeFonction",
+    "title" : null,
+    "description" : "Type de fonction",
+    "oids" : ["1.2.250.1.213.1.6.1.138"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-typeRole-vs.html" : "TyperoleVs"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R291-AutreProfession/FHIR/TRE-R291-AutreProfession",
+    "version" : "20231215120000",
+    "status" : "active",
+    "name" : "TRE_R291_AutreProfession",
+    "title" : null,
+    "description" : "Liste de professionnels non membres d'une profession réglementée",
+    "oids" : ["1.2.250.1.213.1.6.1.140"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-profession-vs.html" : "ProfessionVs"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R292-INSEECategorieSocioProfessionnelleAgrNiv1/FHIR/TRE-R292-INSEECategorieSocioProfessionnelleAgrNiv1",
+    "version" : "20231215120000",
+    "status" : "active",
+    "name" : "TRE_R292_INSEECategorieSocioProfessionnelleAgrNiv1",
+    "title" : null,
+    "description" : "Codes de niveau 1 des catégories socio-professionnelles de l'INSEE",
+    "oids" : ["1.2.250.1.213.1.6.1.181"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-professionCategorieSocioProfessionnelle-vs.html" : "ProfessioncategoriesocioprofessionnelleVs"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R303-HL7v3AdministrativeGender/FHIR/TRE-R303-HL7v3AdministrativeGender",
+    "version" : "20231215120000",
+    "status" : "active",
+    "name" : "TRE_R303_HL7v3AdministrativeGender",
+    "title" : null,
+    "description" : "Sexe d'une personne utilisée à des fins administratives (par opposition au sexe clinique) repris de la terminologie HL7 v3 AdministrativeGender (https://www.hl7.org/fhir/v3/AdministrativeGender/cs.html)",
+    "oids" : ["2.16.840.1.113883.5.1"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-sexe-vs.html" : "SexeVs"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R316-AutreCategorieEtablissement/FHIR/TRE-R316-AutreCategorieEtablissement",
+    "version" : "20240329120000",
+    "status" : "active",
+    "name" : "TRE_R316_AutreCategorieEtablissement",
+    "title" : null,
+    "description" : "Cette table de référence permet d'identifier des catégories d'établissements qui ne sont pas présentes dans la TRE R66 qui est une table de référence ne listant que les catégories d'établissements présentes dans le FINESS",
+    "oids" : ["1.2.250.1.213.1.6.1.239"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-categorieEtablissement-vs.html" : "CategorieetablissementVs"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R37-TypeProfessionFonction/FHIR/TRE-R37-TypeProfessionFonction",
+    "version" : "20231215120000",
+    "status" : "active",
+    "name" : "TRE_R37_TypeProfessionFonction",
+    "title" : null,
+    "description" : "Type des professions et des fonctions",
+    "oids" : ["1.2.250.1.213.1.6.1.3"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-typeRole-vs.html" : "TyperoleVs",
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-typeProfession-vs.html" : "TypeprofessionVs"
+  },
+  {
     "url" : "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement",
     "version" : "20260505120000",
     "status" : "active",
@@ -320,6 +519,7 @@
     "oids" : ["1.2.250.1.213.1.6.1.8"],
     "uses" : {
     },
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-categorieEtablissement-vs.html" : "CategorieetablissementVs",
     "https://interop.esante.gouv.fr/terminologies/1.11.1/ValueSet-JDV-J129-CategorieEtablissement-RASS.html" : "JDV_J129_CategorieEtablissement_RASS"
   },
   {
@@ -344,7 +544,20 @@
     "oids" : ["1.2.250.1.213.1.6.1.45"],
     "uses" : {
     },
-    "https://interop.esante.gouv.fr/terminologies/1.11.1/ValueSet-JDV-J162-ESPIC-RASS.html" : "JDV_J162_ESPIC_RASS"
+    "https://interop.esante.gouv.fr/terminologies/1.11.1/ValueSet-JDV-J162-ESPIC-RASS.html" : "JDV_J162_ESPIC_RASS",
+    "https://interop.esante.gouv.fr/terminologies/1.11.1/ValueSet-vs-tre-r73-espic-all.html" : "Vs Tre R73 Espic All"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R74-ModeFixationTarifaire/FHIR/TRE-R74-ModeFixationTarifaire",
+    "version" : "20251222120000",
+    "status" : "active",
+    "name" : "TRE_R74_ModeFixationTarifaire",
+    "title" : null,
+    "description" : "Mode de fixation tarifaire",
+    "oids" : ["1.2.250.1.213.1.6.1.46"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/terminologies/1.11.1/ValueSet-vs-tre-r74-mode-fixation-tarifaire-all.html" : "Vs Tre R74 Mode Fixation Tarifaire All"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/TRE_R75-InseeNAFrev2Niveau5/FHIR/TRE-R75-InseeNAFrev2Niveau5",
@@ -369,6 +582,66 @@
     "uses" : {
     },
     "https://interop.esante.gouv.fr/terminologies/1.11.1/ValueSet-JDV-J78-Civilite-RASS.html" : "JDV_J78_Civilite_RASS"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R85-RolePriseCharge/FHIR/TRE-R85-RolePriseCharge",
+    "version" : "20260505120000",
+    "status" : "active",
+    "name" : "TRE_R85_RolePriseCharge",
+    "title" : null,
+    "description" : "Rôle dans la prise en charge des patients ou des usagers",
+    "oids" : ["1.2.250.1.213.1.6.1.107"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-role-vs.html" : "RoleVs"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R89-RegroupementPays/FHIR/TRE-R89-RegroupementPays",
+    "version" : "20231215120000",
+    "status" : "active",
+    "name" : "TRE_R89_RegroupementPays",
+    "title" : null,
+    "description" : "Regroupement de pays",
+    "oids" : ["1.2.250.1.213.2.48"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-paysNationalite-vs.html" : "PaysnationaliteVs"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R94-ProfessionSocial/FHIR/TRE-R94-ProfessionSocial",
+    "version" : "20241213120000",
+    "status" : "active",
+    "name" : "TRE_R94_ProfessionSocial",
+    "title" : null,
+    "description" : "Profession du social",
+    "oids" : ["1.2.250.1.213.1.6.1.4"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-profession-vs.html" : "ProfessionVs"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R95-UsagerTitre/FHIR/TRE-R95-UsagerTitre",
+    "version" : "20241213120000",
+    "status" : "active",
+    "name" : "TRE_R95_UsagerTitre",
+    "title" : null,
+    "description" : "Usager de titre professionnel",
+    "oids" : ["1.2.250.1.213.1.6.1.109"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-profession-vs.html" : "ProfessionVs"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R96-AutreFonctionSanitaire/FHIR/TRE-R96-AutreFonctionSanitaire",
+    "version" : "20231215120000",
+    "status" : "active",
+    "name" : "TRE_R96_AutreFonctionSanitaire",
+    "title" : null,
+    "description" : "Autres fonctions du domaine sanitaire",
+    "oids" : ["1.2.250.1.213.1.6.1.110"],
+    "uses" : {
+    },
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-role-vs.html" : "RoleVs"
   },
   {
     "url" : "urn:ietf:bcp:47",

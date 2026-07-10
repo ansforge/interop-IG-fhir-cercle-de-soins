@@ -1,0 +1,799 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-exercice-professionnel> a fhir:StructureDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "cds-exercice-professionnel"] ;
+  fhir:Resource.language [ fhir:value "fr"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : DéfinitionStructure cds-exercice-professionnel</b></p><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Le nom logique de l'élément\">Nom</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Informations sur l'utilisation de l'élément\">Drapeaux</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Nombre minimum et maximum de fois que l'élément peut apparaître dans l'instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Référence au type de l'élément\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Informations supplémentaires sur l'élément\">Description et contraintes</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-exercice-professionnel-definitions.html#cds-exercice-professionnel\" title=\"Informations décrivant notamment la profession exercée, l’identité d’exercice d’un professionnel et le cadre de son exercice (civil, agent public, etc.).Il peut exister plusieurs exercices professionnels pour une personne à un instant donné.\">cds-exercice-professionnel</a><a name=\"cds-exercice-professionnel\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\">ExerciceProfessionnel(0.1.0-ballot)</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Informations décrivant notamment la profession exercée, l’identité d’exercice d’un professionnel et le cadre de son exercice (civil, agent public, etc.).Il peut exister plusieurs exercices professionnels pour une personne à un instant donné.<br/><br/>Éléments définis dans les ancêtres :<a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Civilité d’exercice du professionnel.\">civiliteExercice</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Nom sous lequel exerce le professionnel.\">nomExercice</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Prénom sous lequel exerce le professionnel.\">prenomExercice</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Profession exercée ou future profession de l'étudiant.\">profession</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Indique le type de profession de la personne.Exemples :** Professionnel de santé** Usager de titre** Professionnel secteur social** etc.\">typeProfession</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Indique si le professionnel exerce sa profession en tant que :** M: Agent public** C: Civil** F: Fonctionnaire ** E: EtudiantL'autorité d'enregistrement du professionnel dépend de la catégorie de sa profession.\">categorieProfessionnelle</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Date à partir de laquelle le professionnel exerce cette profession.\">dateEffetExercice</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Date à partir de laquelle le professionnel n’exerce plus cette profession.\">dateFinEffetExercice</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Code du département du premier référencement, pour un référencement de nature « inscription à l’ordre ».\">departementPremierReferencementAE</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'exercice professionnel du professionnel.\">boiteLettresMSS</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Eléments permettant de retrouver les informations d'inscription à un ordre par rapport à la profession de la personne physique sur une période et un département donnéSynonymes RPPS : Inscription à ordre\">InscriptionOrdre</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Activités ponctuelles du professionnel de type expertise.\">AttributionParticuliere</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Le niveau de formation décrit le niveau de formation de l’étudiant, comme demandé par le décret n°2010-701 et complété par le décret n°2011-462.\">NiveauFormation</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Lien vers la classe SituationExercice\">SituationExercice</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Lien vers la classe Certificat\">Certificat</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Lien vers la classe SavoirFaire\">SavoirFaire</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Lien vers la classe CarteProfessionnel\">CarteProfessionnel</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Lien vers la classe Professionnel\">Professionnel</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Lien vers la classe SituationOperationnelle\">SituationOperationnelle</a></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-exercice-professionnel-definitions.html#cds-exercice-professionnel.civiliteExercice\">civiliteExercice</a><a name=\"cds-exercice-professionnel.civiliteExercice\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Coding\">Coding</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Civilité d’exercice du professionnel.</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-exercice-professionnel-definitions.html#cds-exercice-professionnel.nomExercice\">nomExercice</a><a name=\"cds-exercice-professionnel.nomExercice\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Nom sous lequel exerce le professionnel.</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-exercice-professionnel-definitions.html#cds-exercice-professionnel.prenomExercice\">prenomExercice</a><a name=\"cds-exercice-professionnel.prenomExercice\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Prénom sous lequel exerce le professionnel.</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-exercice-professionnel-definitions.html#cds-exercice-professionnel.profession\">profession</a><a name=\"cds-exercice-professionnel.profession\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Coding\">Coding</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Profession exercée ou future profession de l'étudiant.</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-exercice-professionnel-definitions.html#cds-exercice-professionnel.CDSSituationExercice\" title=\"Lien vers le concept Situation Exercice\">CDSSituationExercice</a><a name=\"cds-exercice-professionnel.CDSSituationExercice\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-cds-situation-exercice.html\">cds-situation-exercice</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Lien vers le concept Situation Exercice</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-exercice-professionnel-definitions.html#cds-exercice-professionnel.CDSProfessionnel\" title=\"Lien vers le concept Professionnel\">CDSProfessionnel</a><a name=\"cds-exercice-professionnel.CDSProfessionnel\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-cds-professionnel.html\">cds-professionnel</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Lien vers le concept Professionnel</td></tr>#xD;\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Légende pour ce format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation pour ce format</a></td></tr></table></div>"
+  ] ;
+  fhir:StructureDefinition.url [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-exercice-professionnel"] ;
+  fhir:StructureDefinition.version [ fhir:value "2.0.1"] ;
+  fhir:StructureDefinition.name [ fhir:value "CDSExerciceProfessionnel"] ;
+  fhir:StructureDefinition.title [ fhir:value "CDS Exercice Professionnel"] ;
+  fhir:StructureDefinition.status [ fhir:value "draft"] ;
+  fhir:StructureDefinition.date [ fhir:value "2026-07-10T13:11:38+00:00"^^xsd:dateTime] ;
+  fhir:StructureDefinition.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
+  fhir:StructureDefinition.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
+     ]
+  ] ;
+  fhir:StructureDefinition.description [ fhir:value "Informations décrivant notamment la profession exercée, l’identité d’exercice d’un professionnel et le cadre de son exercice (civil, agent public, etc.).Il peut exister plusieurs exercices professionnels pour une personne à un instant donné."] ;
+  fhir:StructureDefinition.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "France (la)" ]
+     ]
+  ] ;
+  fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"] ;
+  fhir:StructureDefinition.kind [ fhir:value "logical"] ;
+  fhir:StructureDefinition.abstract [ fhir:value "false"^^xsd:boolean] ;
+  fhir:StructureDefinition.type [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-exercice-professionnel"] ;
+  fhir:StructureDefinition.baseDefinition [
+     fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/ExerciceProfessionnel|0.1.0-ballot" ;
+     fhir:link <https://interop.esante.gouv.fr/ig/mos/StructureDefinition/ExerciceProfessionnel|0.1.0-ballot>
+  ] ;
+  fhir:StructureDefinition.derivation [ fhir:value "specialization"] ;
+  fhir:StructureDefinition.snapshot [
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version" ] ;
+       fhir:Extension.valueString [ fhir:value "0.1.0-ballot" ]
+     ] ;
+     fhir:StructureDefinition.snapshot.element [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Informations décrivant notamment la profession exercée, l’identité d’exercice d’un professionnel et le cadre de son exercice (civil, agent public, etc.).Il peut exister plusieurs exercices professionnels pour une personne à un instant donné." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Informations décrivant notamment la profession exercée, l’identité d’exercice d’un professionnel et le cadre de son exercice (civil, agent public, etc.).Il peut exister plusieurs exercices professionnels pour une personne à un instant donné." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Base" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.civiliteExercice" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.civiliteExercice" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Civilité d’exercice du professionnel." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Civilité d’exercice du professionnel." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.civiliteExercice" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R11-CiviliteExercice/FHIR/TRE-R11-CiviliteExercice?vs" ;
+           fhir:link <https://mos.esante.gouv.fr/NOS/TRE_R11-CiviliteExercice/FHIR/TRE-R11-CiviliteExercice?vs>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.nomExercice" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.nomExercice" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Nom sous lequel exerce le professionnel." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Nom sous lequel exerce le professionnel." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.nomExercice" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.prenomExercice" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.prenomExercice" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Prénom sous lequel exerce le professionnel." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Prénom sous lequel exerce le professionnel." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.prenomExercice" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.profession" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.profession" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Profession exercée ou future profession de l'étudiant." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Profession exercée ou future profession de l'étudiant." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.profession" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://interop.esante.gouv.fr/ig/mos/ValueSet/profession-vs|0.1.0-ballot" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/mos/ValueSet/profession-vs|0.1.0-ballot>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.typeProfession" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.typeProfession" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Indique le type de profession de la personne.Exemples :** Professionnel de santé** Usager de titre** Professionnel secteur social** etc." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Indique le type de profession de la personne.Exemples :** Professionnel de santé** Usager de titre** Professionnel secteur social** etc." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.typeProfession" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://interop.esante.gouv.fr/ig/mos/ValueSet/typeProfession-vs|0.1.0-ballot" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/mos/ValueSet/typeProfession-vs|0.1.0-ballot>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.categorieProfessionnelle" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.categorieProfessionnelle" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Indique si le professionnel exerce sa profession en tant que :** M: Agent public** C: Civil** F: Fonctionnaire ** E: EtudiantL'autorité d'enregistrement du professionnel dépend de la catégorie de sa profession." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Indique si le professionnel exerce sa profession en tant que :** M: Agent public** C: Civil** F: Fonctionnaire ** E: EtudiantL'autorité d'enregistrement du professionnel dépend de la catégorie de sa profession." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.categorieProfessionnelle" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R09-CategorieProfessionnelle/FHIR/TRE-R09-CategorieProfessionnelle?vs" ;
+           fhir:link <https://mos.esante.gouv.fr/NOS/TRE_R09-CategorieProfessionnelle/FHIR/TRE-R09-CategorieProfessionnelle?vs>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.dateEffetExercice" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.dateEffetExercice" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Date à partir de laquelle le professionnel exerce cette profession." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Date à partir de laquelle le professionnel exerce cette profession." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.dateEffetExercice" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "date" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.dateFinEffetExercice" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.dateFinEffetExercice" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Date à partir de laquelle le professionnel n’exerce plus cette profession." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Date à partir de laquelle le professionnel n’exerce plus cette profession." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.dateFinEffetExercice" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "date" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.departementPremierReferencementAE" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.departementPremierReferencementAE" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Code du département du premier référencement, pour un référencement de nature « inscription à l’ordre »." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Code du département du premier référencement, pour un référencement de nature « inscription à l’ordre »." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.departementPremierReferencementAE" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://mos.esante.gouv.fr/NOS/TRE_G09-DepartementOM/FHIR/TRE-G09-DepartementOM?vs" ;
+           fhir:link <https://mos.esante.gouv.fr/NOS/TRE_G09-DepartementOM/FHIR/TRE-G09-DepartementOM?vs>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.boiteLettresMSS" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.boiteLettresMSS" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'exercice professionnel du professionnel." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'exercice professionnel du professionnel." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.boiteLettresMSS" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/BoiteLettreMSS" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.InscriptionOrdre" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.InscriptionOrdre" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Eléments permettant de retrouver les informations d'inscription à un ordre par rapport à la profession de la personne physique sur une période et un département donnéSynonymes RPPS : Inscription à ordre" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Eléments permettant de retrouver les informations d'inscription à un ordre par rapport à la profession de la personne physique sur une période et un département donnéSynonymes RPPS : Inscription à ordre" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.InscriptionOrdre" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Base" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.InscriptionOrdre.ordre" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.InscriptionOrdre.ordre" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Instance de régulation d'une profession de santé réglementée." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Instance de régulation d'une profession de santé réglementée." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.InscriptionOrdre.ordre" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R82-Ordre/FHIR/TRE-R82-Ordre?vs" ;
+           fhir:link <https://mos.esante.gouv.fr/NOS/TRE_R82-Ordre/FHIR/TRE-R82-Ordre?vs>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.InscriptionOrdre.dateDebutInscription" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.InscriptionOrdre.dateDebutInscription" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Date d’inscription de la personne au tableau de l’ordre." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Date d’inscription de la personne au tableau de l’ordre." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.InscriptionOrdre.dateDebutInscription" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "date" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.InscriptionOrdre.dateRadiation" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.InscriptionOrdre.dateRadiation" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Date à partir de laquelle la personne n’est plus autorisée à exercer la profession pour laquelle elle a été inscrite." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Date à partir de laquelle la personne n’est plus autorisée à exercer la profession pour laquelle elle a été inscrite." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.InscriptionOrdre.dateRadiation" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "date" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.InscriptionOrdre.statutInscription" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.InscriptionOrdre.statutInscription" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Information indiquant l’avancement du traitement du dossier d'inscription de la personne." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Information indiquant l’avancement du traitement du dossier d'inscription de la personne." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.InscriptionOrdre.statutInscription" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R33-StatutInscription/FHIR/TRE-R33-StatutInscription?vs" ;
+           fhir:link <https://mos.esante.gouv.fr/NOS/TRE_R33-StatutInscription/FHIR/TRE-R33-StatutInscription?vs>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.InscriptionOrdre.conseilDepartemental" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.InscriptionOrdre.conseilDepartemental" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Département du Conseil départemental." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Département du Conseil départemental." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.InscriptionOrdre.conseilDepartemental" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://mos.esante.gouv.fr/NOS/TRE_G09-DepartementOM/FHIR/TRE-G09-DepartementOM?vs" ;
+           fhir:link <https://mos.esante.gouv.fr/NOS/TRE_G09-DepartementOM/FHIR/TRE-G09-DepartementOM?vs>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.AttributionParticuliere" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.AttributionParticuliere" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Activités ponctuelles du professionnel de type expertise." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Activités ponctuelles du professionnel de type expertise." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.AttributionParticuliere" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Base" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.AttributionParticuliere.attributionParticuliere" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.AttributionParticuliere.attributionParticuliere" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Attribution particulière.Par exemple : **Agrément : Autorisation d’un médecin généraliste ou spécialiste, formalisée par un agrément, à figurer sur une liste départementale établie par le Préfet sur proposition du directeur départemental de l'action sanitaire et sociale et après avis du conseil départemental de l'ordre des médecins et des syndicats départementaux des médecins." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Attribution particulière.Par exemple : **Agrément : Autorisation d’un médecin généraliste ou spécialiste, formalisée par un agrément, à figurer sur une liste départementale établie par le Préfet sur proposition du directeur départemental de l'action sanitaire et sociale et après avis du conseil départemental de l'ordre des médecins et des syndicats départementaux des médecins." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.AttributionParticuliere.attributionParticuliere" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R03-AttributionParticuliere/FHIR/TRE-R03-AttributionParticuliere?vs" ;
+           fhir:link <https://mos.esante.gouv.fr/NOS/TRE_R03-AttributionParticuliere/FHIR/TRE-R03-AttributionParticuliere?vs>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.AttributionParticuliere.dateDebutReconnaissance" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.AttributionParticuliere.dateDebutReconnaissance" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Date à partir de laquelle l'attribution particulière prend effet." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Date à partir de laquelle l'attribution particulière prend effet." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.AttributionParticuliere.dateDebutReconnaissance" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "date" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.AttributionParticuliere.dateAbandon" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.AttributionParticuliere.dateAbandon" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Date à laquelle le professionnel ne veut plus faire apparaître cette attribution." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Date à laquelle le professionnel ne veut plus faire apparaître cette attribution." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.AttributionParticuliere.dateAbandon" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "date" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.NiveauFormation" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.NiveauFormation" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Le niveau de formation décrit le niveau de formation de l’étudiant, comme demandé par le décret n°2010-701 et complété par le décret n°2011-462." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Le niveau de formation décrit le niveau de formation de l’étudiant, comme demandé par le décret n°2010-701 et complété par le décret n°2011-462." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.NiveauFormation" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Base" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.NiveauFormation.diplome" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.NiveauFormation.diplome" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Diplôme acquis pour les cycles terminés (cas des diplômes de deuxième cycle pour étudiants qui font un troisième cycle) ou diplôme préparé pour les cycles en cours." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Diplôme acquis pour les cycles terminés (cas des diplômes de deuxième cycle pour étudiants qui font un troisième cycle) ou diplôme préparé pour les cycles en cours." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.NiveauFormation.diplome" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Diplome" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.NiveauFormation.natureCycleFormation" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.NiveauFormation.natureCycleFormation" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Nature du cycle de formation:- Deuxième cycle,- Troisième cycle court,- Troisième cycle long/Internat." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Nature du cycle de formation:- Deuxième cycle,- Troisième cycle court,- Troisième cycle long/Internat." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.NiveauFormation.natureCycleFormation" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R223-NatCycleForm/FHIR/TRE-R223-NatCycleForm?vs" ;
+           fhir:link <https://mos.esante.gouv.fr/NOS/TRE_R223-NatCycleForm/FHIR/TRE-R223-NatCycleForm?vs>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.NiveauFormation.niveauFormationAcquis" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.NiveauFormation.niveauFormationAcquis" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Niveau de validité dans le cycle de formation." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Niveau de validité dans le cycle de formation." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.NiveauFormation.niveauFormationAcquis" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R224-NiveauFormAcquis/FHIR/TRE-R224-NiveauFormAcquis?vs" ;
+           fhir:link <https://mos.esante.gouv.fr/NOS/TRE_R224-NiveauFormAcquis/FHIR/TRE-R224-NiveauFormAcquis?vs>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.NiveauFormation.anneeUniversitaire" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.NiveauFormation.anneeUniversitaire" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Année universitaire, exemple : 2015-2016." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Année universitaire, exemple : 2015-2016." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.NiveauFormation.anneeUniversitaire" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R225-AnneeUniversitaire/FHIR/TRE-R225-AnneeUniversitaire?vs" ;
+           fhir:link <https://mos.esante.gouv.fr/NOS/TRE_R225-AnneeUniversitaire/FHIR/TRE-R225-AnneeUniversitaire?vs>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.NiveauFormation.dateFin" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.NiveauFormation.dateFin" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Date à laquelle le niveau de formation n’est plus actif (non visible hormis dans les données historisées). Cette date est renseignée par l’ordre à la clôture de l’exercice professionnel." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Date à laquelle le niveau de formation n’est plus actif (non visible hormis dans les données historisées). Cette date est renseignée par l’ordre à la clôture de l’exercice professionnel." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.NiveauFormation.dateFin" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "date" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.SituationExercice" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.SituationExercice" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe SituationExercice" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe SituationExercice" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.SituationExercice" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/SituationExercice" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.Certificat" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.Certificat" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe Certificat" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe Certificat" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.Certificat" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Certificat" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.SavoirFaire" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.SavoirFaire" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe SavoirFaire" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe SavoirFaire" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.SavoirFaire" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/SavoirFaire" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.CarteProfessionnel" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.CarteProfessionnel" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe CarteProfessionnel" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe CarteProfessionnel" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.CarteProfessionnel" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/CarteProfessionnel" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.Professionnel" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.Professionnel" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe Professionnel" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe Professionnel" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.Professionnel" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Professionnel" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.SituationOperationnelle" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.SituationOperationnelle" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe SituationOperationnelle" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe SituationOperationnelle" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "ExerciceProfessionnel.SituationOperationnelle" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/SituationOperationnelle" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.CDSSituationExercice" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.CDSSituationExercice" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers le concept Situation Exercice" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers le concept Situation Exercice" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cds-exercice-professionnel.CDSSituationExercice" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-situation-exercice" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.CDSProfessionnel" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.CDSProfessionnel" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers le concept Professionnel" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers le concept Professionnel" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cds-exercice-professionnel.CDSProfessionnel" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-professionnel" ]
+       ]
+     ]
+  ] ;
+  fhir:StructureDefinition.differential [
+     fhir:StructureDefinition.differential.element [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Informations décrivant notamment la profession exercée, l’identité d’exercice d’un professionnel et le cadre de son exercice (civil, agent public, etc.).Il peut exister plusieurs exercices professionnels pour une personne à un instant donné." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Informations décrivant notamment la profession exercée, l’identité d’exercice d’un professionnel et le cadre de son exercice (civil, agent public, etc.).Il peut exister plusieurs exercices professionnels pour une personne à un instant donné." ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.civiliteExercice" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.civiliteExercice" ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.nomExercice" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.nomExercice" ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.prenomExercice" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.prenomExercice" ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.profession" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.profession" ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.CDSSituationExercice" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.CDSSituationExercice" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers le concept Situation Exercice" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers le concept Situation Exercice" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-situation-exercice" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-exercice-professionnel.CDSProfessionnel" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-exercice-professionnel.CDSProfessionnel" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers le concept Professionnel" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers le concept Professionnel" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-professionnel" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-exercice-professionnel.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

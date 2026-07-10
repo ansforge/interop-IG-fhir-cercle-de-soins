@@ -1,0 +1,375 @@
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "cds-professionnel",
+  "language" : "fr",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : DéfinitionStructure cds-professionnel</b></p><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Le nom logique de l'élément\">Nom</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Informations sur l'utilisation de l'élément\">Drapeaux</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Nombre minimum et maximum de fois que l'élément peut apparaître dans l'instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Référence au type de l'élément\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Informations supplémentaires sur l'élément\">Description et contraintes</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-professionnel-definitions.html#cds-professionnel\" title=\"Données d’identification pérennes d’une personne physique, qui travaille en tant que professionnel (professionnel enregistré dans RPPS ou ADELI), personnel autorisé ou personnel d’établissement, dans les domaines sanitaire, médico-social et social.\">cds-professionnel</a><a name=\"cds-professionnel\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-Professionnel.html\">Professionnel(0.1.0-ballot)</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Données d’identification pérennes d’une personne physique, qui travaille en tant que professionnel (professionnel enregistré dans RPPS ou ADELI), personnel autorisé ou personnel d’établissement, dans les domaines sanitaire, médico-social et social.<br/><br/>Éléments définis dans les ancêtres :<a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-Professionnel.html\" title=\"Identifiant national de la personne physique:** Pour les professionnels de santé: Numéro RPPS ou ADELI.** Pour les étudiants: Numéro RPPS depuis 2017.** Pour les acteurs non professionnels de santé employés d’une structure : l’identifiant est composé de l’identifiant principal de la structure et de l’identifiant interne attribué par la structure.\">idPP</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-Professionnel.html\" title=\"Type d’identifiant national de la personne physique.\">typeIdNatPP</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-Professionnel.html\" title=\"Identification nationale principale du professionnel initiée pour les besoins du SI-CPS.Cette identification est obtenue par la concaténation du type d'identifiant national de personne (provenant de la nomenclature CodeSystem-TRE-G08-TypeIdentifiantPersonne) et de l'identifiant de la personne physique provenant, selon le type d’identifiant, soit d’un référentiel national, soit d’un référentiel local propre à la structure d’exercice de la personne physique:** 0 + N° ADELI du professionnel    Ex : 0123456789 : identification nationale d’un professionnel identifié par un n° ADELI = 123456789;** 1 + Identifiant cabinet ADELI/identifiant interne du professionnel employé au sein d’un cabinet    Ex : 112345678901/00001 : identification nationale d’un employé dans un cabinet libéral:          - le titulaire du cabinet est un professionnel identifié par un n° ADELI = 123456789          - le cabinet est identifié par un ADELI-rang = 12345678901 (01 = n° de rang du cabinet du même professionnel sur 2 caractères)          - l’identifiant interne de l’employé dans la structure = 00001; ** 3 + N° FINESS/identifiant interne du professionnel employé au sein d’une structure FINESS;** 4 + N° Siren/identifiant interne du professionnel employé au sein d’une structure Siren (NB: pas d'utilisation identifiée de cette construction);** 5 + N° Siret/identifiant interne du professionnel employé au sein d’une structure Siret;** 6 + Identifiant cabinet RPPS/ identifiant interne du professionnel employé au sein d’un cabinet          - le cabinet est identifié par un RPPS-rang à 14 caractères (numéro RPPS du professionnel + rang sur 2 caractères + clé de Luhn);** 8 + N° RPPS du professionnel ou de l’étudiant;    Ex : 810005678901 : identification nationale d’un professionnel ou d’un étudiant identifié par un n° RPPS = 10005678901Le numéro RPPS est un identifiant pérenne, constitué de 11 caractères non significatifs (numéro d’ordre sur 10 caractères + clé de Luhn sur 1 caractère);** 10 + Adresse MSS (adresse MSS d'un professionnel sans identifiant national (assistante sociale, médecin non inscrit, etc.); cet identifiant est utilisé uniquement pour la messagerie sécurisée de santé.Synonyme: PS_IdNat (CI-SIS, appel contextuel pour les applications Web).\">idNatPS</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-Professionnel.html\" title=\"Identité civile du professionnel.\">personne</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-Professionnel.html\" title=\"Diplôme(s) acquis par le professionnel.\">diplomeObtenu</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-Professionnel.html\" title=\"Adresse(s) de correspondance permettant de contacter les professionnels:** lorsque les structures ne sont pas identifiées : cas des remplaçants ou des professionnels venant de s’inscrire mais non encore installés;** hors de leurs lieux d’exercice, s’ils le souhaitent.Remarque système RPPS : La première occurrence correspond aux coordonnées de correspondance du RPPS.\">adresseCorrespondance</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-Professionnel.html\" title=\"Adresse(s) de télécommunication du professionnel (numéro de téléphone, adresse email, URL, etc.).\">telecommunication</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-Professionnel.html\" title=\"Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) au professionnel.\">boiteLettresMSS</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-Professionnel.html\" title=\"Lien vers la classe ExerciceProfessionnel\">ExerciceProfessionnel</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-Professionnel.html\" title=\"Lien vers la classe NoteLiaison\">NoteLiaison</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-Professionnel.html\" title=\"Lien vers la classe Observation\">Observation</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-Professionnel.html\" title=\"Lien vers la classe AutorisationExercice\">AutorisationExercice</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-Professionnel.html\" title=\"Lien vers la classe PersonnePriseCharge\">PersonnePriseCharge</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-Professionnel.html\" title=\"Lien vers la classe Agenda\">Agenda</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-Professionnel.html\" title=\"Lien vers la classe RendezVous\">RendezVous</a></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-professionnel-definitions.html#cds-professionnel.idPP\">idPP</a><a name=\"cds-professionnel.idPP\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Identifiant national de la personne physique:** Pour les professionnels de santé: Numéro RPPS ou ADELI.** Pour les étudiants: Numéro RPPS depuis 2017.** Pour les acteurs non professionnels de santé employés d’une structure : l’identifiant est composé de l’identifiant principal de la structure et de l’identifiant interne attribué par la structure.</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-professionnel-definitions.html#cds-professionnel.typeIdNatPP\">typeIdNatPP</a><a name=\"cds-professionnel.typeIdNatPP\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Coding\">Coding</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Type d’identifiant national de la personne physique.</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-professionnel-definitions.html#cds-professionnel.CDSSituationExercice\" title=\"Lien vers le concept Situation Exercice\">CDSSituationExercice</a><a name=\"cds-professionnel.CDSSituationExercice\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-cds-situation-exercice.html\">cds-situation-exercice</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Lien vers le concept Situation Exercice</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-professionnel-definitions.html#cds-professionnel.CDSPersonnePhysique\" title=\"Lien vers le concept Personne Physique\">CDSPersonnePhysique</a><a name=\"cds-professionnel.CDSPersonnePhysique\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-cds-personne-physique.html\">cds-personne-physique</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Lien vers le concept Personne Physique</td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Légende pour ce format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation pour ce format</a></td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-professionnel",
+  "version" : "2.0.1",
+  "name" : "CDSProfessionnel",
+  "title" : "CDS Professionnel",
+  "status" : "draft",
+  "date" : "2026-07-10T13:11:38+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Données d’identification pérennes d’une personne physique, qui travaille en tant que professionnel (professionnel enregistré dans RPPS ou ADELI), personnel autorisé ou personnel d’établissement, dans les domaines sanitaire, médico-social et social.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "fhirVersion" : "4.0.1",
+  "kind" : "logical",
+  "abstract" : false,
+  "type" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-professionnel",
+  "baseDefinition" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Professionnel|0.1.0-ballot",
+  "derivation" : "specialization",
+  "snapshot" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version",
+      "valueString" : "0.1.0-ballot"
+    }],
+    "element" : [{
+      "id" : "cds-professionnel",
+      "path" : "cds-professionnel",
+      "short" : "Données d’identification pérennes d’une personne physique, qui travaille en tant que professionnel (professionnel enregistré dans RPPS ou ADELI), personnel autorisé ou personnel d’établissement, dans les domaines sanitaire, médico-social et social.",
+      "definition" : "Données d’identification pérennes d’une personne physique, qui travaille en tant que professionnel (professionnel enregistré dans RPPS ou ADELI), personnel autorisé ou personnel d’établissement, dans les domaines sanitaire, médico-social et social.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Base",
+        "min" : 0,
+        "max" : "*"
+      },
+      "isModifier" : false
+    },
+    {
+      "id" : "cds-professionnel.idPP",
+      "path" : "cds-professionnel.idPP",
+      "short" : "Identifiant national de la personne physique:** Pour les professionnels de santé: Numéro RPPS ou ADELI.** Pour les étudiants: Numéro RPPS depuis 2017.** Pour les acteurs non professionnels de santé employés d’une structure : l’identifiant est composé de l’identifiant principal de la structure et de l’identifiant interne attribué par la structure.",
+      "definition" : "Identifiant national de la personne physique:** Pour les professionnels de santé: Numéro RPPS ou ADELI.** Pour les étudiants: Numéro RPPS depuis 2017.** Pour les acteurs non professionnels de santé employés d’une structure : l’identifiant est composé de l’identifiant principal de la structure et de l’identifiant interne attribué par la structure.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Professionnel.idPP",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Identifier"
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "cds-professionnel.typeIdNatPP",
+      "path" : "cds-professionnel.typeIdNatPP",
+      "short" : "Type d’identifiant national de la personne physique.",
+      "definition" : "Type d’identifiant national de la personne physique.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Professionnel.typeIdNatPP",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Coding"
+      }],
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "preferred",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/TRE_G08-TypeIdentifiantPersonne/FHIR/TRE-G08-TypeIdentifiantPersonne?vs"
+      }
+    },
+    {
+      "id" : "cds-professionnel.idNatPS",
+      "path" : "cds-professionnel.idNatPS",
+      "short" : "Identification nationale principale du professionnel initiée pour les besoins du SI-CPS.Cette identification est obtenue par la concaténation du type d'identifiant national de personne (provenant de la nomenclature CodeSystem-TRE-G08-TypeIdentifiantPersonne) et de l'identifiant de la personne physique provenant, selon le type d’identifiant, soit d’un référentiel national, soit d’un référentiel local propre à la structure d’exercice de la personne physique:** 0 + N° ADELI du professionnel    Ex : 0123456789 : identification nationale d’un professionnel identifié par un n° ADELI = 123456789;** 1 + Identifiant cabinet ADELI/identifiant interne du professionnel employé au sein d’un cabinet    Ex : 112345678901/00001 : identification nationale d’un employé dans un cabinet libéral:          - le titulaire du cabinet est un professionnel identifié par un n° ADELI = 123456789          - le cabinet est identifié par un ADELI-rang = 12345678901 (01 = n° de rang du cabinet du même professionnel sur 2 caractères)          - l’identifiant interne de l’employé dans la structure = 00001; ** 3 + N° FINESS/identifiant interne du professionnel employé au sein d’une structure FINESS;** 4 + N° Siren/identifiant interne du professionnel employé au sein d’une structure Siren (NB: pas d'utilisation identifiée de cette construction);** 5 + N° Siret/identifiant interne du professionnel employé au sein d’une structure Siret;** 6 + Identifiant cabinet RPPS/ identifiant interne du professionnel employé au sein d’un cabinet          - le cabinet est identifié par un RPPS-rang à 14 caractères (numéro RPPS du professionnel + rang sur 2 caractères + clé de Luhn);** 8 + N° RPPS du professionnel ou de l’étudiant;    Ex : 810005678901 : identification nationale d’un professionnel ou d’un étudiant identifié par un n° RPPS = 10005678901Le numéro RPPS est un identifiant pérenne, constitué de 11 caractères non significatifs (numéro d’ordre sur 10 caractères + clé de Luhn sur 1 caractère);** 10 + Adresse MSS (adresse MSS d'un professionnel sans identifiant national (assistante sociale, médecin non inscrit, etc.); cet identifiant est utilisé uniquement pour la messagerie sécurisée de santé.Synonyme: PS_IdNat (CI-SIS, appel contextuel pour les applications Web).",
+      "definition" : "Identification nationale principale du professionnel initiée pour les besoins du SI-CPS.Cette identification est obtenue par la concaténation du type d'identifiant national de personne (provenant de la nomenclature CodeSystem-TRE-G08-TypeIdentifiantPersonne) et de l'identifiant de la personne physique provenant, selon le type d’identifiant, soit d’un référentiel national, soit d’un référentiel local propre à la structure d’exercice de la personne physique:** 0 + N° ADELI du professionnel    Ex : 0123456789 : identification nationale d’un professionnel identifié par un n° ADELI = 123456789;** 1 + Identifiant cabinet ADELI/identifiant interne du professionnel employé au sein d’un cabinet    Ex : 112345678901/00001 : identification nationale d’un employé dans un cabinet libéral:          - le titulaire du cabinet est un professionnel identifié par un n° ADELI = 123456789          - le cabinet est identifié par un ADELI-rang = 12345678901 (01 = n° de rang du cabinet du même professionnel sur 2 caractères)          - l’identifiant interne de l’employé dans la structure = 00001; ** 3 + N° FINESS/identifiant interne du professionnel employé au sein d’une structure FINESS;** 4 + N° Siren/identifiant interne du professionnel employé au sein d’une structure Siren (NB: pas d'utilisation identifiée de cette construction);** 5 + N° Siret/identifiant interne du professionnel employé au sein d’une structure Siret;** 6 + Identifiant cabinet RPPS/ identifiant interne du professionnel employé au sein d’un cabinet          - le cabinet est identifié par un RPPS-rang à 14 caractères (numéro RPPS du professionnel + rang sur 2 caractères + clé de Luhn);** 8 + N° RPPS du professionnel ou de l’étudiant;    Ex : 810005678901 : identification nationale d’un professionnel ou d’un étudiant identifié par un n° RPPS = 10005678901Le numéro RPPS est un identifiant pérenne, constitué de 11 caractères non significatifs (numéro d’ordre sur 10 caractères + clé de Luhn sur 1 caractère);** 10 + Adresse MSS (adresse MSS d'un professionnel sans identifiant national (assistante sociale, médecin non inscrit, etc.); cet identifiant est utilisé uniquement pour la messagerie sécurisée de santé.Synonyme: PS_IdNat (CI-SIS, appel contextuel pour les applications Web).",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Professionnel.idNatPS",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Identifier"
+      }]
+    },
+    {
+      "id" : "cds-professionnel.personne",
+      "path" : "cds-professionnel.personne",
+      "short" : "Identité civile du professionnel.",
+      "definition" : "Identité civile du professionnel.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Professionnel.personne",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/PersonnePhysique"
+      }]
+    },
+    {
+      "id" : "cds-professionnel.diplomeObtenu",
+      "path" : "cds-professionnel.diplomeObtenu",
+      "short" : "Diplôme(s) acquis par le professionnel.",
+      "definition" : "Diplôme(s) acquis par le professionnel.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Professionnel.diplomeObtenu",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Diplome"
+      }]
+    },
+    {
+      "id" : "cds-professionnel.adresseCorrespondance",
+      "path" : "cds-professionnel.adresseCorrespondance",
+      "short" : "Adresse(s) de correspondance permettant de contacter les professionnels:** lorsque les structures ne sont pas identifiées : cas des remplaçants ou des professionnels venant de s’inscrire mais non encore installés;** hors de leurs lieux d’exercice, s’ils le souhaitent.Remarque système RPPS : La première occurrence correspond aux coordonnées de correspondance du RPPS.",
+      "definition" : "Adresse(s) de correspondance permettant de contacter les professionnels:** lorsque les structures ne sont pas identifiées : cas des remplaçants ou des professionnels venant de s’inscrire mais non encore installés;** hors de leurs lieux d’exercice, s’ils le souhaitent.Remarque système RPPS : La première occurrence correspond aux coordonnées de correspondance du RPPS.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Professionnel.adresseCorrespondance",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Adresse"
+      }]
+    },
+    {
+      "id" : "cds-professionnel.telecommunication",
+      "path" : "cds-professionnel.telecommunication",
+      "short" : "Adresse(s) de télécommunication du professionnel (numéro de téléphone, adresse email, URL, etc.).",
+      "definition" : "Adresse(s) de télécommunication du professionnel (numéro de téléphone, adresse email, URL, etc.).",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Professionnel.telecommunication",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Telecommunication"
+      }]
+    },
+    {
+      "id" : "cds-professionnel.boiteLettresMSS",
+      "path" : "cds-professionnel.boiteLettresMSS",
+      "short" : "Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) au professionnel.",
+      "definition" : "Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) au professionnel.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Professionnel.boiteLettresMSS",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/BoiteLettreMSS"
+      }]
+    },
+    {
+      "id" : "cds-professionnel.ExerciceProfessionnel",
+      "path" : "cds-professionnel.ExerciceProfessionnel",
+      "short" : "Lien vers la classe ExerciceProfessionnel",
+      "definition" : "Lien vers la classe ExerciceProfessionnel",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Professionnel.ExerciceProfessionnel",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/ExerciceProfessionnel"
+      }]
+    },
+    {
+      "id" : "cds-professionnel.NoteLiaison",
+      "path" : "cds-professionnel.NoteLiaison",
+      "short" : "Lien vers la classe NoteLiaison",
+      "definition" : "Lien vers la classe NoteLiaison",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Professionnel.NoteLiaison",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/NoteLiaison"
+      }]
+    },
+    {
+      "id" : "cds-professionnel.Observation",
+      "path" : "cds-professionnel.Observation",
+      "short" : "Lien vers la classe Observation",
+      "definition" : "Lien vers la classe Observation",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Professionnel.Observation",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Observation"
+      }]
+    },
+    {
+      "id" : "cds-professionnel.AutorisationExercice",
+      "path" : "cds-professionnel.AutorisationExercice",
+      "short" : "Lien vers la classe AutorisationExercice",
+      "definition" : "Lien vers la classe AutorisationExercice",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Professionnel.AutorisationExercice",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/AutorisationExercice"
+      }]
+    },
+    {
+      "id" : "cds-professionnel.PersonnePriseCharge",
+      "path" : "cds-professionnel.PersonnePriseCharge",
+      "short" : "Lien vers la classe PersonnePriseCharge",
+      "definition" : "Lien vers la classe PersonnePriseCharge",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Professionnel.PersonnePriseCharge",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/PersonnePriseCharge"
+      }]
+    },
+    {
+      "id" : "cds-professionnel.Agenda",
+      "path" : "cds-professionnel.Agenda",
+      "short" : "Lien vers la classe Agenda",
+      "definition" : "Lien vers la classe Agenda",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Professionnel.Agenda",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Agenda"
+      }]
+    },
+    {
+      "id" : "cds-professionnel.RendezVous",
+      "path" : "cds-professionnel.RendezVous",
+      "short" : "Lien vers la classe RendezVous",
+      "definition" : "Lien vers la classe RendezVous",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Professionnel.RendezVous",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/RendezVous"
+      }]
+    },
+    {
+      "id" : "cds-professionnel.CDSSituationExercice",
+      "path" : "cds-professionnel.CDSSituationExercice",
+      "short" : "Lien vers le concept Situation Exercice",
+      "definition" : "Lien vers le concept Situation Exercice",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "cds-professionnel.CDSSituationExercice",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-situation-exercice"
+      }]
+    },
+    {
+      "id" : "cds-professionnel.CDSPersonnePhysique",
+      "path" : "cds-professionnel.CDSPersonnePhysique",
+      "short" : "Lien vers le concept Personne Physique",
+      "definition" : "Lien vers le concept Personne Physique",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "cds-professionnel.CDSPersonnePhysique",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-personne-physique"
+      }]
+    }]
+  },
+  "differential" : {
+    "element" : [{
+      "id" : "cds-professionnel",
+      "path" : "cds-professionnel",
+      "short" : "Données d’identification pérennes d’une personne physique, qui travaille en tant que professionnel (professionnel enregistré dans RPPS ou ADELI), personnel autorisé ou personnel d’établissement, dans les domaines sanitaire, médico-social et social.",
+      "definition" : "Données d’identification pérennes d’une personne physique, qui travaille en tant que professionnel (professionnel enregistré dans RPPS ou ADELI), personnel autorisé ou personnel d’établissement, dans les domaines sanitaire, médico-social et social."
+    },
+    {
+      "id" : "cds-professionnel.idPP",
+      "path" : "cds-professionnel.idPP",
+      "mustSupport" : true
+    },
+    {
+      "id" : "cds-professionnel.typeIdNatPP",
+      "path" : "cds-professionnel.typeIdNatPP",
+      "mustSupport" : true
+    },
+    {
+      "id" : "cds-professionnel.CDSSituationExercice",
+      "path" : "cds-professionnel.CDSSituationExercice",
+      "short" : "Lien vers le concept Situation Exercice",
+      "definition" : "Lien vers le concept Situation Exercice",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-situation-exercice"
+      }]
+    },
+    {
+      "id" : "cds-professionnel.CDSPersonnePhysique",
+      "path" : "cds-professionnel.CDSPersonnePhysique",
+      "short" : "Lien vers le concept Personne Physique",
+      "definition" : "Lien vers le concept Personne Physique",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-personne-physique"
+      }]
+    }]
+  }
+}

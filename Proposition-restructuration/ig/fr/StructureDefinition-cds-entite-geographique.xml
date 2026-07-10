@@ -1,0 +1,1339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cds-entite-geographique"/>
+  <language value="fr"/>
+  <text>
+    <status value="extensions"/><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : DéfinitionStructure cds-entite-geographique</b></p><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Le nom logique de l'élément">Nom</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Informations sur l'utilisation de l'élément">Drapeaux</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Nombre minimum et maximum de fois que l'élément peut apparaître dans l'instance">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Référence au type de l'élément">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Informations supplémentaires sur l'élément">Description et contraintes</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-cds-entite-geographique-definitions.html#cds-entite-geographique" title="L’Entité Géographique (EG) correspond à la notion d’établissement : ** Pour les établissements inscrits au FINESS, cette notion d’établissement résulte du croisement de trois critères : - Un critère géographique : Est un établissement tout lieu dont l’implantation d’activité(s) ou d’équipement(s) est géographiquement distincte d’une autre implantation. Ainsi un Centre Hospitalier Régional comprend autant d’établissements que d’implantations géographiques différentes. Un établissement principal et son établissement secondaire situé à 1 km constituent deux établissements distincts dans FINESS. L’implantation géographique peut-être décrite soit avec l’attribut addresseEG soit au travers de la classe Lieu. - Un critère budgétaire : Pour une même implantation géographique, on distingue autant d’établissements du secteur public qu’il y a de budgets distincts (budget général, budget annexe).Ainsi un ESAT et son foyer d’hébergement constituent deux établissements même s’ils sont implantés à la même adresse. - Un critère d’activité : Pour une même implantation géographique et un même budget, on distingue autant d’établissements que de « catégorie d’établissement » décrivant l’activité principale autorisée.Ainsi un centre hospitalier et son EHPAD, financés par le même budget, constituent deux établissements même s’ils sont implantés à la même adresse.** Pour les entreprises inscrites dans le SIRENE, l’EG correspond à un établissement de la personne morale, elle est identifiée par un numéro Siret.Synonymes: Etablissement, structure">cds-entite-geographique</a><a name="cds-entite-geographique"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html">EntiteGeographique(0.1.0-ballot)</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">L’Entité Géographique (EG) correspond à la notion d’établissement : ** Pour les établissements inscrits au FINESS, cette notion d’établissement résulte du croisement de trois critères : - Un critère géographique : Est un établissement tout lieu dont l’implantation d’activité(s) ou d’équipement(s) est géographiquement distincte d’une autre implantation. Ainsi un Centre Hospitalier Régional comprend autant d’établissements que d’implantations géographiques différentes. Un établissement principal et son établissement secondaire situé à 1 km constituent deux établissements distincts dans FINESS. L’implantation géographique peut-être décrite soit avec l’attribut addresseEG soit au travers de la classe Lieu. - Un critère budgétaire : Pour une même implantation géographique, on distingue autant d’établissements du secteur public qu’il y a de budgets distincts (budget général, budget annexe).Ainsi un ESAT et son foyer d’hébergement constituent deux établissements même s’ils sont implantés à la même adresse. - Un critère d’activité : Pour une même implantation géographique et un même budget, on distingue autant d’établissements que de « catégorie d’établissement » décrivant l’activité principale autorisée.Ainsi un centre hospitalier et son EHPAD, financés par le même budget, constituent deux établissements même s’ils sont implantés à la même adresse.** Pour les entreprises inscrites dans le SIRENE, l’EG correspond à un établissement de la personne morale, elle est identifiée par un numéro Siret.Synonymes: Etablissement, structure<br/><br/>Éléments définis dans les ancêtres :<a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Numéro FINESS de l'entité géographique.Le numéro FINESS étant porteur intrinsèquement de liens avec le domaine sanitaire ou le domaine médico-social, il est, s'il existe, à privilégier pour l’identification des entités géographiques en tant qu’acteurs sanitaires et médico-sociaux par rapport au numéro SIRET (Référentiel d’identification des acteurs sanitaires et médico-sociaux - Politique Générale de Sécurité des Systèmes d’Information de Santé (PGSSI-S)).A chaque EG (établissement) est attribué un numéro FINESS qui est composé de 9 caractères numériques, tels que :** Position 1-2 : numéro du département d'implantation (&quot;2A&quot;, &quot;2B&quot; pour la Corse; &quot;97&quot; pour les départements d’Outre-mer; &quot;98&quot; pour Mayotte);** Position 3 : &quot;0&quot;;** Position 4-8: &quot;1&quot; pour Guadeloupe, &quot;2&quot; pour Martinique, &quot;3&quot; pour Guyane, &quot;4&quot; pour Réunion, &quot;5&quot; pour Saint-Pierre-et-Miquelon + numéro d'ordre de 4 chiffres;** Position 4-8 : numéro d’ordre de 5 chiffres pour tous les autres départements;** Position 9 : clé de Luhn calculée automatiquement.">numFINESS</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Le numéro Siret est le numéro unique d'identification, attribué par l'INSEE, à chaque entité géographique.Ce numéro est un simple numéro d'ordre, composé de 14 chiffres non significatifs:   ** les 9 chiffres du numéro Siren de l'entreprise dont l'établissement dépend, suivis des 5 chiffres du numéro interne de classement (NIC), lui-même constitué de 4 chiffres complétés d'une clé de Luhn.Le numéro Siret n'a aucun lien avec les caractéristiques de l'établissement. Il est fermé quand l'activité cesse dans l'établissement concerné ou lorsque l'établissement change d'adresse.">numSiret</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Identifiant spécifique généré par le RPPS ou ADELI lors de la création d'une structure d'exercice pour un cabinet individuel et un cabinet de groupe. Il est communément connu sous le nom de RPPS-rang ou ADELI-rang :- le RPPS-rang, de 14 caractères, est formé des 11 caractères de l’identifiant RPPS du titulaire du cabinet, suivi d’un numéro d’ordre sur 2 caractères et d’une clé de Luhn (1 caractère) ;- l’ADELI-rang, de 11 caractères, est formé des 9 caractères du numéro ADELI du titulaire du cabinet suivi d’un numéro d’ordre sur 2 caractères.Cet identifiant est utilisé dans les échanges techniques entre le RPPS ou ADELI avec le FNPS de la CNAM, se substituant ainsi au numéro de SIRET dans le cas où ce dernier n'est pas encore connu du RPPS ou d’ADELI.Synonyme : numEG_RPPS_ADELI">identifiantEG</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Identification nationale de l'Entité géographique initiée pour les besoins du SI-CPS.Cette identification est obtenue par la concaténation du type d'identifiant national de structure (provenant de la nomenclature CodeSystem-TRE-G07-TypeIdentifiantStructure) et de l'identifiant de la structure:** 0 + Identifiant cabinet ADELI (identifiantEG);** 1 + N° FINESS (entité juridique et entité géographique indéterminées);** 3 + N° SIRET;** 4 + Identifiant cabinet RPPS (identifiantEG).Synonyme : Struct_IdNat (CI-SIS)">idNatStruct</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Type d’identifiant national de la structure.">typeIdNatStruct</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Le &quot;numéro éducation nationale de l'établissement&quot; est un numéro associé délivré par l’Éducation nationale, pour tous les établissements et services pour enfants et adolescents handicapés qui emploient du personnel de l’Education nationale.">numeroEducationNationale</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Le nom opérationnel est l’appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique, indépendamment des référentiels nationaux.">nomOperationnel</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Nom sous lequel l'entité géographique exerce son activité. Il s’agit, par exemple, de l’enseigne commerciale pour les pharmacies. Dans le cas d'un établissement enregistré dans le FINESS, cet attribut correspond à la notion de &quot;raison sociale d'un établissement&quot; renseignée dans le FINESS.">denominationEG</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Nom, sous sa forme la plus longue et complète, sous lequel l'entité géographique exerce son activité (acronymes, sigles ou abréviations développés).">denominationEGLongue</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Suite de la dénomination de l'entité géographique, si elle existe. Ce complément peut contenir notamment des informations facilitant l'adressage d'un courrier aux structures.">complementDenominationEG</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Champ(s) de l’activité des établissements de santé publics et privés français, notamment : - médecine, chirurgie, obstétrique (MCO),- soins de suite et de réadaptation (SSR), - psychiatrie (PSY).Ces champs d'activité seront enrichis avec l'intégration des établissements du secteur médico-social.">champActivite</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Le type d’établissement détermine si c'est un établissement principal ou secondaire.">typeEtablissement</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Dans le cas d’un établissement secondaire : Numéro FINESS de l’établissement principal dont dépend l’établissement.">etablissementPrincipal</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Un secteur d'activité regroupe les établissements partageant la même activité de santé. Exemples (établissement public de santé, maison de santé, etc.)">secteurActivite</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="La catégorie d'établissement est le cadre réglementaire dans lequel s'exerce l'activité de l'entité géographique. Les catégories d'établissement sont elles-mêmes classifiées en grands agrégats qui sont :** Etablissements relevant de la loi hospitalière,** Autres établissements de soins et de prévention,** Autres établissements à caractère sanitaire,** Etablissements et services sociaux d'accueil, hébergement, assistance, réadaptation,** Etablissements et services sociaux d'aide à la famille,** Etablissements de formation des personnels sanitaires et sociauxCette catégorie recouvre également des établissements qui ne sont pas encore enregistrés dans FINESS, tels que les dispositifs d’appui à la coordination.">categorieEtablissement</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Agrégat de catégories d'établissements de niveau 1. L'agrégat de niveau 1 représente des regroupements d'agrégat de niveau 2. Par exemple, le code 1000 &quot;Etablissement relevant de la loi hospitalière&quot; regroupe les codes d'agrégat de niveau 2 1100 et 1200.">agregatCategorieEtablissementNiv1</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Agrégat de catégories d'établissements de niveau 2. L'agrégat de niveau 2 représente des regroupements d'agrégats de niveau 3. Par exemple, le code 1100 &quot;Etablissement hospitaliers&quot; regroupe les codes d'agrégat de niveau 3 1101, 1102, etc.">agregatCategorieEtablissementNiv2</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Agrégat de catégories d'établissements de niveau 3. L'agrégat de niveau 3 représente des regroupements de catégories d'établissement. Par exemple, le code 1101 &quot;Centres hospitaliers régionaux&quot; regroupe les catégories d'établissement 101, 106 etc.">agregatCategorieEtablissementNiv3</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Toute entité juridique et chacun de ses établissements (EG) se voit attribuer par l'Insee, lors de son inscription au répertoire SIRENE, un code caractérisant son activité principale par référence à la nomenclature d'activités française (NAF rév. 2).Plus précisément, on distingue le code APET pour les EG.">codeAPET</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Le mode de tarification détermine l'autorité responsable de la fixation du tarif principal de l'établissement et la procédure utilisée. Il est unique pour un établissement FINESS donné.">modeFixationTarif</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Modalités de participation au service public hospitalier.">modaliteParticipationSPH</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Nature du budget alloué à l'établissement dont les valeurs sont &quot;G&quot; pour général et &quot;A&quot; pour annexe.">natureEtablissement</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Habilitation ou conventionnement de l'entité géographique permettant aux personnes accueillies de bénéficier des aides financières, si elles remplissent les conditions.">aideFinanciere</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="L'habilitation aux soins sans consentement traduit que l'établissement est autorisé à prendre en charge des patients sans leur consentement. Cette autorisation est donnée par le directeur général de l’ARS après avis du préfet.Valeurs possibles : 0 = L'établissement ne possède pas d'autorisation aux soins sans consentement 1 = L'établissement possède une autorisation aux soins sans consentement">habilitationSoinSansConsentement</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="L’indicateur hébergement des familles précise si l'établissement peut héberger les familles des personnes prises en charge. Valeurs possibles :0 = L'établissement ne peut pas héberger les familles des personnes prises en charge1 = L'établissement peut héberger les familles des personnes prises en charge">hebergementFamille</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Date de modification du numéro SIRET.">dateModificationSIRET</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Origine/nature de modification du SIRET (motif de modification de l’identifiant).">origineModificationSIRET</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Indicateur de l’activité de l'entité géographique, si celle-ci est active (ou ouverte) ou inactive (ou fermée).">actif</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Date d’ouverture réelle de fonctionnement de l’établissement.Pour les établissements soumis à autorisation, elle est constatée par la première visite de conformité du premier équipement autorisé. La date d’ouverture doit être supérieure ou égale à la date d’autorisation.">dateOuverture</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="La date de caducité indique la limite autorisant la réalisation de l’opération pour laquelle il y a autorisation. Elle est calculée automatiquement lorsque la date d’autorisation est renseignée. Elle disparait lorsque la date d’ouverture est renseignée.Par défaut, la date de caducité calculée automatiquement dans FINESS est de trois ans. En cas de début de travaux, une quatrième année est autorisée par les textes.">dateCaducite</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Indicateur de caducité de l'établissement:- « N » par défaut, lorsque l’établissement est autorisé non ouvert (la date d’ouverture n’est pas renseignée);- « O » à indiquer lorsqu’un constat de caducité a été relevé sur l'établissement.">constatCaducite</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Date de fermeture de l'entité géographique. La date doit être supérieure à la date d’ouverture.">dateFermeture</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Type de fermeture de l'entité géographique, au sens des règles de gestion du SI FINESS (par exemple: fermeture définitive, fermeture provisoire), obligatoire lors de la fermeture de l'entité.">typeFermeture</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Date d’autorisation qui correspond à la date de l’arrêté autorisant la création d’un établissement ou de la première autorisation délivrée pour des équipements.">dateAutorisation</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Information précisant dans quelle mesure le lieu est conforme aux dispositions règlementaires relatives à l’accessibilité des établissements recevant du public (ex : accessible, non accessible, sur demande, non communiqué, etc.).Rappel sur l'obligation d'accessibilité des établissements recevant du public (ERP) aux personnes handicapées (service-public.fr):Les établissements ouverts au public (magasin, bureau, hôtel, etc.) doivent être accessibles aux personnes handicapées. Les établissements recevant du public (ERP) non conformes aux règles d'accessibilité sont tenus de s'inscrire à un Agenda d'Accessibilité Programmée (Ad'AP) qui permet d'engager les travaux nécessaires dans un délai limité.Règles d'accessibilité:Les normes d'accessibilité doivent permettre aux personnes handicapées de circuler avec la plus grande autonomie possible, d'accéder aux locaux et équipements, d'utiliser les équipements et les prestations, de se repérer et de communiquer.L'accès concerne tout type de handicap (moteur, visuel, auditif, mental...).Les conditions d'accès doivent être les mêmes que pour les personnes valides ou, à défaut, présenter une qualité d'usage équivalente.L'accessibilité de ces établissements et de leurs abords concerne :** les cheminements extérieurs,** le stationnement des véhicules,** les conditions d'accès et d'accueil dans les bâtiments,** les circulations horizontales et verticales à l'intérieur des bâtiments,** les locaux intérieurs et les sanitaires ouverts au public,** les portes, les sas intérieurs et les sorties,** les revêtements des sols et des parois,** les équipements et mobiliers intérieurs et extérieurs susceptibles d'y être installés (dispositifs d'éclairage et d'information des usagers, par exemple).">accessibiliteLieu</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Indicateur portant sur l'existence d'une zone de poser pour hélicoptère sur le site même.Valeurs possibles: 0 = Pas de zone de poser 1 = Existence d'une zone de poser">zonePoser</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Le niveau de recours ORSAN correspond à une hiérarchisation fonctionnelle de la mobilisation des établissements pour accueillir les patients après régulation par le SAMU.">niveauRecoursORSAN</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="URL du site de vente en ligne">venteLigneURL</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Il s'agit du nombre de places temporaires dédiées à l'aide sociale dans l'établissement.">nbPlaceAideSocialeTemporaire</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Il s'agit du nombre de places permanentes dédiées à l'aide sociale dans l'établissement.">nbPlaceAideSocialePermanent</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Adresse(s) géopostale(s) de l'entité géographique en fonction de l'usage (adresse administrative, adresse entrée des véhicules, adresse entrée piétonne, etc.).L'implantation géographique peut également être décrite au travers de la classe Lieu.">adresseEG</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Implantation géographique de l’EG sur un lieu connu.">implantationGeographique</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lieu à l'intérieur d'une EG tels que l'entrée A, pavillon des violettes, etcUn lieu peut notamment être décrit par une adresse et des coordonnées géographiques.">lieuEG</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Division(s) territoriale(s) (commune, département, etc.) où est située l'entité géographique.">divisionTerritoriale</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Point(s) de contact de l'entité géographique.Par exemple, ce sont les informations permettant de contacter l'accueil ou le secrétariat de l'entité géographique.Les contacts du directeur et de la cellule d'alerte peuvent être inclus dans cette liste de contacts.">contact</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Adresse(s) de télécommunication de l'entité géographique (numéro de téléphone, adresse email, URL, etc.).">telecommunication</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'entité géographique.">boiteLettresMSS</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Commentaire qui permet à la structure de donner des informations complémentaires.">commentaire</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lien vers la classe SituationExercice">SituationExercice</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lien vers la classe Certificat">Certificat</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lien vers la classe EntiteJuridique">EntiteJuridique</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lien vers la classe Lieu">Lieu</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lien vers la classe Convention">Convention</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lien vers la classe EquipementMaterielLourd">EquipementMaterielLourd</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lien vers la classe LicenceExploitation">LicenceExploitation</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lien vers la classe ActiviteEnseignement">ActiviteEnseignement</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lien vers la classe TarifPrestation">TarifPrestation</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lien vers la classe ActiviteSoinAutorisee">ActiviteSoinAutorisee</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lien vers la classe AutreActiviteSoumiseAutorisation">AutreActiviteSoumiseAutorisation</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lien vers la classe ActiviteSoumiseReconnaissance">ActiviteSoumiseReconnaissance</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lien vers la classe ActiviteSociale">ActiviteSociale</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lien vers la classe CapaciteActiviteExercee">CapaciteActiviteExercee</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lien vers la classe OffreOperationnelle">OffreOperationnelle</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lien vers la classe OrganisationInterne">OrganisationInterne</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lien vers la classe Emploi">Emploi</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lien vers la classe AidantDemarche">AidantDemarche</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lien vers la classe MesureProtection">MesureProtection</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lien vers la classe NoteLiaison">NoteLiaison</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lien vers la classe Agenda">Agenda</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lien vers la classe RendezVous">RendezVous</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lien vers la classe CapaciteAccueil">CapaciteAccueil</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html" title="Lien vers la classe CapaciteHabitation">CapaciteHabitation</a></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-cds-entite-geographique-definitions.html#cds-entite-geographique.numFINESS">numFINESS</a><a name="cds-entite-geographique.numFINESS"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="Cet élément doit être pris en charge">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Numéro FINESS de l'entité géographique.Le numéro FINESS étant porteur intrinsèquement de liens avec le domaine sanitaire ou le domaine médico-social, il est, s'il existe, à privilégier pour l’identification des entités géographiques en tant qu’acteurs sanitaires et médico-sociaux par rapport au numéro SIRET (Référentiel d’identification des acteurs sanitaires et médico-sociaux - Politique Générale de Sécurité des Systèmes d’Information de Santé (PGSSI-S)).A chaque EG (établissement) est attribué un numéro FINESS qui est composé de 9 caractères numériques, tels que :** Position 1-2 : numéro du département d'implantation (&quot;2A&quot;, &quot;2B&quot; pour la Corse; &quot;97&quot; pour les départements d’Outre-mer; &quot;98&quot; pour Mayotte);** Position 3 : &quot;0&quot;;** Position 4-8: &quot;1&quot; pour Guadeloupe, &quot;2&quot; pour Martinique, &quot;3&quot; pour Guyane, &quot;4&quot; pour Réunion, &quot;5&quot; pour Saint-Pierre-et-Miquelon + numéro d'ordre de 4 chiffres;** Position 4-8 : numéro d’ordre de 5 chiffres pour tous les autres départements;** Position 9 : clé de Luhn calculée automatiquement.</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-cds-entite-geographique-definitions.html#cds-entite-geographique.numSiret">numSiret</a><a name="cds-entite-geographique.numSiret"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="Cet élément doit être pris en charge">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Le numéro Siret est le numéro unique d'identification, attribué par l'INSEE, à chaque entité géographique.Ce numéro est un simple numéro d'ordre, composé de 14 chiffres non significatifs:   ** les 9 chiffres du numéro Siren de l'entreprise dont l'établissement dépend, suivis des 5 chiffres du numéro interne de classement (NIC), lui-même constitué de 4 chiffres complétés d'une clé de Luhn.Le numéro Siret n'a aucun lien avec les caractéristiques de l'établissement. Il est fermé quand l'activité cesse dans l'établissement concerné ou lorsque l'établissement change d'adresse.</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-cds-entite-geographique-definitions.html#cds-entite-geographique.identifiantEG">identifiantEG</a><a name="cds-entite-geographique.identifiantEG"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="Cet élément doit être pris en charge">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Identifiant spécifique généré par le RPPS ou ADELI lors de la création d'une structure d'exercice pour un cabinet individuel et un cabinet de groupe. Il est communément connu sous le nom de RPPS-rang ou ADELI-rang :- le RPPS-rang, de 14 caractères, est formé des 11 caractères de l’identifiant RPPS du titulaire du cabinet, suivi d’un numéro d’ordre sur 2 caractères et d’une clé de Luhn (1 caractère) ;- l’ADELI-rang, de 11 caractères, est formé des 9 caractères du numéro ADELI du titulaire du cabinet suivi d’un numéro d’ordre sur 2 caractères.Cet identifiant est utilisé dans les échanges techniques entre le RPPS ou ADELI avec le FNPS de la CNAM, se substituant ainsi au numéro de SIRET dans le cas où ce dernier n'est pas encore connu du RPPS ou d’ADELI.Synonyme : numEG_RPPS_ADELI</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-cds-entite-geographique-definitions.html#cds-entite-geographique.idNatStruct">idNatStruct</a><a name="cds-entite-geographique.idNatStruct"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="Cet élément doit être pris en charge">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Identification nationale de l'Entité géographique initiée pour les besoins du SI-CPS.Cette identification est obtenue par la concaténation du type d'identifiant national de structure (provenant de la nomenclature CodeSystem-TRE-G07-TypeIdentifiantStructure) et de l'identifiant de la structure:** 0 + Identifiant cabinet ADELI (identifiantEG);** 1 + N° FINESS (entité juridique et entité géographique indéterminées);** 3 + N° SIRET;** 4 + Identifiant cabinet RPPS (identifiantEG).Synonyme : Struct_IdNat (CI-SIS)</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-cds-entite-geographique-definitions.html#cds-entite-geographique.denominationEG">denominationEG</a><a name="cds-entite-geographique.denominationEG"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="Cet élément doit être pris en charge">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Nom sous lequel l'entité géographique exerce son activité. Il s’agit, par exemple, de l’enseigne commerciale pour les pharmacies. Dans le cas d'un établissement enregistré dans le FINESS, cet attribut correspond à la notion de &quot;raison sociale d'un établissement&quot; renseignée dans le FINESS.</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-cds-entite-geographique-definitions.html#cds-entite-geographique.boiteLettresMSS">boiteLettresMSS</a><a name="cds-entite-geographique.boiteLettresMSS"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="Cet élément doit être pris en charge">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-BoiteLettreMSS.html">BoiteLettreMSS</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'entité géographique.</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Ressource" class="hierarchy"/> <a href="StructureDefinition-cds-entite-geographique-definitions.html#cds-entite-geographique.CDSMembreCercleSoins" title="Lien vers le concept Membre Cercle Soins">CDSMembreCercleSoins</a><a name="cds-entite-geographique.CDSMembreCercleSoins"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-cds-membre-cercle-soins.html">cds-membre-cercle-soins</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Lien vers le concept Membre Cercle Soins</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Ressource" class="hierarchy"/> <a href="StructureDefinition-cds-entite-geographique-definitions.html#cds-entite-geographique.CDSOrganisationInterne" title="Lien vers le concept Organisation Interne">CDSOrganisationInterne</a><a name="cds-entite-geographique.CDSOrganisationInterne"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-cds-organisation-interne.html">cds-organisation-interne</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Lien vers le concept Organisation Interne<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Ressource" class="hierarchy"/> <a href="StructureDefinition-cds-entite-geographique-definitions.html#cds-entite-geographique.CDSSituationExercice" title="Lien vers le concept Situation exercice">CDSSituationExercice</a><a name="cds-entite-geographique.CDSSituationExercice"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-cds-situation-exercice.html">cds-situation-exercice</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Lien vers le concept Situation exercice<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Ressource" class="hierarchy"/> <a href="StructureDefinition-cds-entite-geographique-definitions.html#cds-entite-geographique.CDSEntiteJuridique" title="Lien vers le concept Entité Juridique">CDSEntiteJuridique</a><a name="cds-entite-geographique.CDSEntiteJuridique"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-cds-entite-juridique.html">cds-entite-juridique</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Lien vers le concept Entité Juridique</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Légende pour ce format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation pour ce format</a></td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-entite-geographique"/>
+  <version value="2.0.1"/>
+  <name value="CDSEntiteGeographique"/>
+  <title value="CDS Entite Geographique"/>
+  <status value="draft"/>
+  <date value="2026-07-10T13:11:38+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="L’Entité Géographique (EG) correspond à la notion d’établissement : ** Pour les établissements inscrits au FINESS, cette notion d’établissement résulte du croisement de trois critères : - Un critère géographique : Est un établissement tout lieu dont l’implantation d’activité(s) ou d’équipement(s) est géographiquement distincte d’une autre implantation. Ainsi un Centre Hospitalier Régional comprend autant d’établissements que d’implantations géographiques différentes. Un établissement principal et son établissement secondaire situé à 1 km constituent deux établissements distincts dans FINESS. L’implantation géographique peut-être décrite soit avec l’attribut addresseEG soit au travers de la classe Lieu. - Un critère budgétaire : Pour une même implantation géographique, on distingue autant d’établissements du secteur public qu’il y a de budgets distincts (budget général, budget annexe).Ainsi un ESAT et son foyer d’hébergement constituent deux établissements même s’ils sont implantés à la même adresse. - Un critère d’activité : Pour une même implantation géographique et un même budget, on distingue autant d’établissements que de « catégorie d’établissement » décrivant l’activité principale autorisée.Ainsi un centre hospitalier et son EHPAD, financés par le même budget, constituent deux établissements même s’ils sont implantés à la même adresse.** Pour les entreprises inscrites dans le SIRENE, l’EG correspond à un établissement de la personne morale, elle est identifiée par un numéro Siret.Synonymes: Etablissement, structure"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="4.0.1"/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-entite-geographique"/>
+  <baseDefinition value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/EntiteGeographique|0.1.0-ballot"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version">
+      <valueString value="0.1.0-ballot"/>
+    </extension>
+    <element id="cds-entite-geographique">
+      <path value="cds-entite-geographique"/>
+      <short value="L’Entité Géographique (EG) correspond à la notion d’établissement : ** Pour les établissements inscrits au FINESS, cette notion d’établissement résulte du croisement de trois critères : - Un critère géographique : Est un établissement tout lieu dont l’implantation d’activité(s) ou d’équipement(s) est géographiquement distincte d’une autre implantation. Ainsi un Centre Hospitalier Régional comprend autant d’établissements que d’implantations géographiques différentes. Un établissement principal et son établissement secondaire situé à 1 km constituent deux établissements distincts dans FINESS. L’implantation géographique peut-être décrite soit avec l’attribut addresseEG soit au travers de la classe Lieu. - Un critère budgétaire : Pour une même implantation géographique, on distingue autant d’établissements du secteur public qu’il y a de budgets distincts (budget général, budget annexe).Ainsi un ESAT et son foyer d’hébergement constituent deux établissements même s’ils sont implantés à la même adresse. - Un critère d’activité : Pour une même implantation géographique et un même budget, on distingue autant d’établissements que de « catégorie d’établissement » décrivant l’activité principale autorisée.Ainsi un centre hospitalier et son EHPAD, financés par le même budget, constituent deux établissements même s’ils sont implantés à la même adresse.** Pour les entreprises inscrites dans le SIRENE, l’EG correspond à un établissement de la personne morale, elle est identifiée par un numéro Siret.Synonymes: Etablissement, structure"/>
+      <definition value="L’Entité Géographique (EG) correspond à la notion d’établissement : ** Pour les établissements inscrits au FINESS, cette notion d’établissement résulte du croisement de trois critères : - Un critère géographique : Est un établissement tout lieu dont l’implantation d’activité(s) ou d’équipement(s) est géographiquement distincte d’une autre implantation. Ainsi un Centre Hospitalier Régional comprend autant d’établissements que d’implantations géographiques différentes. Un établissement principal et son établissement secondaire situé à 1 km constituent deux établissements distincts dans FINESS. L’implantation géographique peut-être décrite soit avec l’attribut addresseEG soit au travers de la classe Lieu. - Un critère budgétaire : Pour une même implantation géographique, on distingue autant d’établissements du secteur public qu’il y a de budgets distincts (budget général, budget annexe).Ainsi un ESAT et son foyer d’hébergement constituent deux établissements même s’ils sont implantés à la même adresse. - Un critère d’activité : Pour une même implantation géographique et un même budget, on distingue autant d’établissements que de « catégorie d’établissement » décrivant l’activité principale autorisée.Ainsi un centre hospitalier et son EHPAD, financés par le même budget, constituent deux établissements même s’ils sont implantés à la même adresse.** Pour les entreprises inscrites dans le SIRENE, l’EG correspond à un établissement de la personne morale, elle est identifiée par un numéro Siret.Synonymes: Etablissement, structure"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Base"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <isModifier value="false"/>
+    </element>
+    <element id="cds-entite-geographique.numFINESS">
+      <path value="cds-entite-geographique.numFINESS"/>
+      <short value="Numéro FINESS de l'entité géographique.Le numéro FINESS étant porteur intrinsèquement de liens avec le domaine sanitaire ou le domaine médico-social, il est, s'il existe, à privilégier pour l’identification des entités géographiques en tant qu’acteurs sanitaires et médico-sociaux par rapport au numéro SIRET (Référentiel d’identification des acteurs sanitaires et médico-sociaux - Politique Générale de Sécurité des Systèmes d’Information de Santé (PGSSI-S)).A chaque EG (établissement) est attribué un numéro FINESS qui est composé de 9 caractères numériques, tels que :** Position 1-2 : numéro du département d'implantation (&quot;2A&quot;, &quot;2B&quot; pour la Corse; &quot;97&quot; pour les départements d’Outre-mer; &quot;98&quot; pour Mayotte);** Position 3 : &quot;0&quot;;** Position 4-8: &quot;1&quot; pour Guadeloupe, &quot;2&quot; pour Martinique, &quot;3&quot; pour Guyane, &quot;4&quot; pour Réunion, &quot;5&quot; pour Saint-Pierre-et-Miquelon + numéro d'ordre de 4 chiffres;** Position 4-8 : numéro d’ordre de 5 chiffres pour tous les autres départements;** Position 9 : clé de Luhn calculée automatiquement."/>
+      <definition value="Numéro FINESS de l'entité géographique.Le numéro FINESS étant porteur intrinsèquement de liens avec le domaine sanitaire ou le domaine médico-social, il est, s'il existe, à privilégier pour l’identification des entités géographiques en tant qu’acteurs sanitaires et médico-sociaux par rapport au numéro SIRET (Référentiel d’identification des acteurs sanitaires et médico-sociaux - Politique Générale de Sécurité des Systèmes d’Information de Santé (PGSSI-S)).A chaque EG (établissement) est attribué un numéro FINESS qui est composé de 9 caractères numériques, tels que :** Position 1-2 : numéro du département d'implantation (&quot;2A&quot;, &quot;2B&quot; pour la Corse; &quot;97&quot; pour les départements d’Outre-mer; &quot;98&quot; pour Mayotte);** Position 3 : &quot;0&quot;;** Position 4-8: &quot;1&quot; pour Guadeloupe, &quot;2&quot; pour Martinique, &quot;3&quot; pour Guyane, &quot;4&quot; pour Réunion, &quot;5&quot; pour Saint-Pierre-et-Miquelon + numéro d'ordre de 4 chiffres;** Position 4-8 : numéro d’ordre de 5 chiffres pour tous les autres départements;** Position 9 : clé de Luhn calculée automatiquement."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.numFINESS"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-entite-geographique.numSiret">
+      <path value="cds-entite-geographique.numSiret"/>
+      <short value="Le numéro Siret est le numéro unique d'identification, attribué par l'INSEE, à chaque entité géographique.Ce numéro est un simple numéro d'ordre, composé de 14 chiffres non significatifs:   ** les 9 chiffres du numéro Siren de l'entreprise dont l'établissement dépend, suivis des 5 chiffres du numéro interne de classement (NIC), lui-même constitué de 4 chiffres complétés d'une clé de Luhn.Le numéro Siret n'a aucun lien avec les caractéristiques de l'établissement. Il est fermé quand l'activité cesse dans l'établissement concerné ou lorsque l'établissement change d'adresse."/>
+      <definition value="Le numéro Siret est le numéro unique d'identification, attribué par l'INSEE, à chaque entité géographique.Ce numéro est un simple numéro d'ordre, composé de 14 chiffres non significatifs:   ** les 9 chiffres du numéro Siren de l'entreprise dont l'établissement dépend, suivis des 5 chiffres du numéro interne de classement (NIC), lui-même constitué de 4 chiffres complétés d'une clé de Luhn.Le numéro Siret n'a aucun lien avec les caractéristiques de l'établissement. Il est fermé quand l'activité cesse dans l'établissement concerné ou lorsque l'établissement change d'adresse."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.numSiret"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-entite-geographique.identifiantEG">
+      <path value="cds-entite-geographique.identifiantEG"/>
+      <short value="Identifiant spécifique généré par le RPPS ou ADELI lors de la création d'une structure d'exercice pour un cabinet individuel et un cabinet de groupe. Il est communément connu sous le nom de RPPS-rang ou ADELI-rang :- le RPPS-rang, de 14 caractères, est formé des 11 caractères de l’identifiant RPPS du titulaire du cabinet, suivi d’un numéro d’ordre sur 2 caractères et d’une clé de Luhn (1 caractère) ;- l’ADELI-rang, de 11 caractères, est formé des 9 caractères du numéro ADELI du titulaire du cabinet suivi d’un numéro d’ordre sur 2 caractères.Cet identifiant est utilisé dans les échanges techniques entre le RPPS ou ADELI avec le FNPS de la CNAM, se substituant ainsi au numéro de SIRET dans le cas où ce dernier n'est pas encore connu du RPPS ou d’ADELI.Synonyme : numEG_RPPS_ADELI"/>
+      <definition value="Identifiant spécifique généré par le RPPS ou ADELI lors de la création d'une structure d'exercice pour un cabinet individuel et un cabinet de groupe. Il est communément connu sous le nom de RPPS-rang ou ADELI-rang :- le RPPS-rang, de 14 caractères, est formé des 11 caractères de l’identifiant RPPS du titulaire du cabinet, suivi d’un numéro d’ordre sur 2 caractères et d’une clé de Luhn (1 caractère) ;- l’ADELI-rang, de 11 caractères, est formé des 9 caractères du numéro ADELI du titulaire du cabinet suivi d’un numéro d’ordre sur 2 caractères.Cet identifiant est utilisé dans les échanges techniques entre le RPPS ou ADELI avec le FNPS de la CNAM, se substituant ainsi au numéro de SIRET dans le cas où ce dernier n'est pas encore connu du RPPS ou d’ADELI.Synonyme : numEG_RPPS_ADELI"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.identifiantEG"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-entite-geographique.idNatStruct">
+      <path value="cds-entite-geographique.idNatStruct"/>
+      <short value="Identification nationale de l'Entité géographique initiée pour les besoins du SI-CPS.Cette identification est obtenue par la concaténation du type d'identifiant national de structure (provenant de la nomenclature CodeSystem-TRE-G07-TypeIdentifiantStructure) et de l'identifiant de la structure:** 0 + Identifiant cabinet ADELI (identifiantEG);** 1 + N° FINESS (entité juridique et entité géographique indéterminées);** 3 + N° SIRET;** 4 + Identifiant cabinet RPPS (identifiantEG).Synonyme : Struct_IdNat (CI-SIS)"/>
+      <definition value="Identification nationale de l'Entité géographique initiée pour les besoins du SI-CPS.Cette identification est obtenue par la concaténation du type d'identifiant national de structure (provenant de la nomenclature CodeSystem-TRE-G07-TypeIdentifiantStructure) et de l'identifiant de la structure:** 0 + Identifiant cabinet ADELI (identifiantEG);** 1 + N° FINESS (entité juridique et entité géographique indéterminées);** 3 + N° SIRET;** 4 + Identifiant cabinet RPPS (identifiantEG).Synonyme : Struct_IdNat (CI-SIS)"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.idNatStruct"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-entite-geographique.typeIdNatStruct">
+      <path value="cds-entite-geographique.typeIdNatStruct"/>
+      <short value="Type d’identifiant national de la structure."/>
+      <definition value="Type d’identifiant national de la structure."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.typeIdNatStruct"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure?vs"/>
+      </binding>
+    </element>
+    <element id="cds-entite-geographique.numeroEducationNationale">
+      <path value="cds-entite-geographique.numeroEducationNationale"/>
+      <short value="Le &quot;numéro éducation nationale de l'établissement&quot; est un numéro associé délivré par l’Éducation nationale, pour tous les établissements et services pour enfants et adolescents handicapés qui emploient du personnel de l’Education nationale."/>
+      <definition value="Le &quot;numéro éducation nationale de l'établissement&quot; est un numéro associé délivré par l’Éducation nationale, pour tous les établissements et services pour enfants et adolescents handicapés qui emploient du personnel de l’Education nationale."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.numeroEducationNationale"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.nomOperationnel">
+      <path value="cds-entite-geographique.nomOperationnel"/>
+      <short value="Le nom opérationnel est l’appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique, indépendamment des référentiels nationaux."/>
+      <definition value="Le nom opérationnel est l’appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique, indépendamment des référentiels nationaux."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.nomOperationnel"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.denominationEG">
+      <path value="cds-entite-geographique.denominationEG"/>
+      <short value="Nom sous lequel l'entité géographique exerce son activité. Il s’agit, par exemple, de l’enseigne commerciale pour les pharmacies. Dans le cas d'un établissement enregistré dans le FINESS, cet attribut correspond à la notion de &quot;raison sociale d'un établissement&quot; renseignée dans le FINESS."/>
+      <definition value="Nom sous lequel l'entité géographique exerce son activité. Il s’agit, par exemple, de l’enseigne commerciale pour les pharmacies. Dans le cas d'un établissement enregistré dans le FINESS, cet attribut correspond à la notion de &quot;raison sociale d'un établissement&quot; renseignée dans le FINESS."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.denominationEG"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-entite-geographique.denominationEGLongue">
+      <path value="cds-entite-geographique.denominationEGLongue"/>
+      <short value="Nom, sous sa forme la plus longue et complète, sous lequel l'entité géographique exerce son activité (acronymes, sigles ou abréviations développés)."/>
+      <definition value="Nom, sous sa forme la plus longue et complète, sous lequel l'entité géographique exerce son activité (acronymes, sigles ou abréviations développés)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.denominationEGLongue"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.complementDenominationEG">
+      <path value="cds-entite-geographique.complementDenominationEG"/>
+      <short value="Suite de la dénomination de l'entité géographique, si elle existe. Ce complément peut contenir notamment des informations facilitant l'adressage d'un courrier aux structures."/>
+      <definition value="Suite de la dénomination de l'entité géographique, si elle existe. Ce complément peut contenir notamment des informations facilitant l'adressage d'un courrier aux structures."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.complementDenominationEG"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.champActivite">
+      <path value="cds-entite-geographique.champActivite"/>
+      <short value="Champ(s) de l’activité des établissements de santé publics et privés français, notamment : - médecine, chirurgie, obstétrique (MCO),- soins de suite et de réadaptation (SSR), - psychiatrie (PSY).Ces champs d'activité seront enrichis avec l'intégration des établissements du secteur médico-social."/>
+      <definition value="Champ(s) de l’activité des établissements de santé publics et privés français, notamment : - médecine, chirurgie, obstétrique (MCO),- soins de suite et de réadaptation (SSR), - psychiatrie (PSY).Ces champs d'activité seront enrichis avec l'intégration des établissements du secteur médico-social."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.champActivite"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite?vs"/>
+      </binding>
+    </element>
+    <element id="cds-entite-geographique.typeEtablissement">
+      <path value="cds-entite-geographique.typeEtablissement"/>
+      <short value="Le type d’établissement détermine si c'est un établissement principal ou secondaire."/>
+      <definition value="Le type d’établissement détermine si c'est un établissement principal ou secondaire."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.typeEtablissement"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.etablissementPrincipal">
+      <path value="cds-entite-geographique.etablissementPrincipal"/>
+      <short value="Dans le cas d’un établissement secondaire : Numéro FINESS de l’établissement principal dont dépend l’établissement."/>
+      <definition value="Dans le cas d’un établissement secondaire : Numéro FINESS de l’établissement principal dont dépend l’établissement."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.etablissementPrincipal"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.secteurActivite">
+      <path value="cds-entite-geographique.secteurActivite"/>
+      <short value="Un secteur d'activité regroupe les établissements partageant la même activité de santé. Exemples (établissement public de santé, maison de santé, etc.)"/>
+      <definition value="Un secteur d'activité regroupe les établissements partageant la même activité de santé. Exemples (établissement public de santé, maison de santé, etc.)"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.secteurActivite"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://interop.esante.gouv.fr/ig/mos/ValueSet/secteurActivite-vs|0.1.0-ballot"/>
+      </binding>
+    </element>
+    <element id="cds-entite-geographique.categorieEtablissement">
+      <path value="cds-entite-geographique.categorieEtablissement"/>
+      <short value="La catégorie d'établissement est le cadre réglementaire dans lequel s'exerce l'activité de l'entité géographique. Les catégories d'établissement sont elles-mêmes classifiées en grands agrégats qui sont :** Etablissements relevant de la loi hospitalière,** Autres établissements de soins et de prévention,** Autres établissements à caractère sanitaire,** Etablissements et services sociaux d'accueil, hébergement, assistance, réadaptation,** Etablissements et services sociaux d'aide à la famille,** Etablissements de formation des personnels sanitaires et sociauxCette catégorie recouvre également des établissements qui ne sont pas encore enregistrés dans FINESS, tels que les dispositifs d’appui à la coordination."/>
+      <definition value="La catégorie d'établissement est le cadre réglementaire dans lequel s'exerce l'activité de l'entité géographique. Les catégories d'établissement sont elles-mêmes classifiées en grands agrégats qui sont :** Etablissements relevant de la loi hospitalière,** Autres établissements de soins et de prévention,** Autres établissements à caractère sanitaire,** Etablissements et services sociaux d'accueil, hébergement, assistance, réadaptation,** Etablissements et services sociaux d'aide à la famille,** Etablissements de formation des personnels sanitaires et sociauxCette catégorie recouvre également des établissements qui ne sont pas encore enregistrés dans FINESS, tels que les dispositifs d’appui à la coordination."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.categorieEtablissement"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://interop.esante.gouv.fr/ig/mos/ValueSet/categorieEtablissement-vs|0.1.0-ballot"/>
+      </binding>
+    </element>
+    <element id="cds-entite-geographique.agregatCategorieEtablissementNiv1">
+      <path value="cds-entite-geographique.agregatCategorieEtablissementNiv1"/>
+      <short value="Agrégat de catégories d'établissements de niveau 1. L'agrégat de niveau 1 représente des regroupements d'agrégat de niveau 2. Par exemple, le code 1000 &quot;Etablissement relevant de la loi hospitalière&quot; regroupe les codes d'agrégat de niveau 2 1100 et 1200."/>
+      <definition value="Agrégat de catégories d'établissements de niveau 1. L'agrégat de niveau 1 représente des regroupements d'agrégat de niveau 2. Par exemple, le code 1000 &quot;Etablissement relevant de la loi hospitalière&quot; regroupe les codes d'agrégat de niveau 2 1100 et 1200."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.agregatCategorieEtablissementNiv1"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_R63-AgregatCategorieEtablissementNiv1/FHIR/TRE-R63-AgregatCategorieEtablissementNiv1?vs"/>
+      </binding>
+    </element>
+    <element id="cds-entite-geographique.agregatCategorieEtablissementNiv2">
+      <path value="cds-entite-geographique.agregatCategorieEtablissementNiv2"/>
+      <short value="Agrégat de catégories d'établissements de niveau 2. L'agrégat de niveau 2 représente des regroupements d'agrégats de niveau 3. Par exemple, le code 1100 &quot;Etablissement hospitaliers&quot; regroupe les codes d'agrégat de niveau 3 1101, 1102, etc."/>
+      <definition value="Agrégat de catégories d'établissements de niveau 2. L'agrégat de niveau 2 représente des regroupements d'agrégats de niveau 3. Par exemple, le code 1100 &quot;Etablissement hospitaliers&quot; regroupe les codes d'agrégat de niveau 3 1101, 1102, etc."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.agregatCategorieEtablissementNiv2"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_R64-AgregatCategorieEtablissementNiv2/FHIR/TRE-R64-AgregatCategorieEtablissementNiv2?vs"/>
+      </binding>
+    </element>
+    <element id="cds-entite-geographique.agregatCategorieEtablissementNiv3">
+      <path value="cds-entite-geographique.agregatCategorieEtablissementNiv3"/>
+      <short value="Agrégat de catégories d'établissements de niveau 3. L'agrégat de niveau 3 représente des regroupements de catégories d'établissement. Par exemple, le code 1101 &quot;Centres hospitaliers régionaux&quot; regroupe les catégories d'établissement 101, 106 etc."/>
+      <definition value="Agrégat de catégories d'établissements de niveau 3. L'agrégat de niveau 3 représente des regroupements de catégories d'établissement. Par exemple, le code 1101 &quot;Centres hospitaliers régionaux&quot; regroupe les catégories d'établissement 101, 106 etc."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.agregatCategorieEtablissementNiv3"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_R65-AgregatCategorieEtablissement/FHIR/TRE-R65-AgregatCategorieEtablissement?vs"/>
+      </binding>
+    </element>
+    <element id="cds-entite-geographique.codeAPET">
+      <path value="cds-entite-geographique.codeAPET"/>
+      <short value="Toute entité juridique et chacun de ses établissements (EG) se voit attribuer par l'Insee, lors de son inscription au répertoire SIRENE, un code caractérisant son activité principale par référence à la nomenclature d'activités française (NAF rév. 2).Plus précisément, on distingue le code APET pour les EG."/>
+      <definition value="Toute entité juridique et chacun de ses établissements (EG) se voit attribuer par l'Insee, lors de son inscription au répertoire SIRENE, un code caractérisant son activité principale par référence à la nomenclature d'activités française (NAF rév. 2).Plus précisément, on distingue le code APET pour les EG."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.codeAPET"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_R75-InseeNAFrev2Niveau5/FHIR/TRE-R75-InseeNAFrev2Niveau5?vs"/>
+      </binding>
+    </element>
+    <element id="cds-entite-geographique.modeFixationTarif">
+      <path value="cds-entite-geographique.modeFixationTarif"/>
+      <short value="Le mode de tarification détermine l'autorité responsable de la fixation du tarif principal de l'établissement et la procédure utilisée. Il est unique pour un établissement FINESS donné."/>
+      <definition value="Le mode de tarification détermine l'autorité responsable de la fixation du tarif principal de l'établissement et la procédure utilisée. Il est unique pour un établissement FINESS donné."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.modeFixationTarif"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_R74-ModeFixationTarifaire/FHIR/TRE-R74-ModeFixationTarifaire?vs|20260330120000"/>
+      </binding>
+    </element>
+    <element id="cds-entite-geographique.modaliteParticipationSPH">
+      <path value="cds-entite-geographique.modaliteParticipationSPH"/>
+      <short value="Modalités de participation au service public hospitalier."/>
+      <definition value="Modalités de participation au service public hospitalier."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.modaliteParticipationSPH"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_R73-ESPIC/FHIR/TRE-R73-ESPIC?vs|20260223120000"/>
+      </binding>
+    </element>
+    <element id="cds-entite-geographique.natureEtablissement">
+      <path value="cds-entite-geographique.natureEtablissement"/>
+      <short value="Nature du budget alloué à l'établissement dont les valeurs sont &quot;G&quot; pour général et &quot;A&quot; pour annexe."/>
+      <definition value="Nature du budget alloué à l'établissement dont les valeurs sont &quot;G&quot; pour général et &quot;A&quot; pour annexe."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.natureEtablissement"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.aideFinanciere">
+      <path value="cds-entite-geographique.aideFinanciere"/>
+      <short value="Habilitation ou conventionnement de l'entité géographique permettant aux personnes accueillies de bénéficier des aides financières, si elles remplissent les conditions."/>
+      <definition value="Habilitation ou conventionnement de l'entité géographique permettant aux personnes accueillies de bénéficier des aides financières, si elles remplissent les conditions."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.aideFinanciere"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_R241-AideFinanciere/FHIR/TRE-R241-AideFinanciere?vs"/>
+      </binding>
+    </element>
+    <element id="cds-entite-geographique.habilitationSoinSansConsentement">
+      <path value="cds-entite-geographique.habilitationSoinSansConsentement"/>
+      <short value="L'habilitation aux soins sans consentement traduit que l'établissement est autorisé à prendre en charge des patients sans leur consentement. Cette autorisation est donnée par le directeur général de l’ARS après avis du préfet.Valeurs possibles : 0 = L'établissement ne possède pas d'autorisation aux soins sans consentement 1 = L'établissement possède une autorisation aux soins sans consentement"/>
+      <definition value="L'habilitation aux soins sans consentement traduit que l'établissement est autorisé à prendre en charge des patients sans leur consentement. Cette autorisation est donnée par le directeur général de l’ARS après avis du préfet.Valeurs possibles : 0 = L'établissement ne possède pas d'autorisation aux soins sans consentement 1 = L'établissement possède une autorisation aux soins sans consentement"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.habilitationSoinSansConsentement"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.hebergementFamille">
+      <path value="cds-entite-geographique.hebergementFamille"/>
+      <short value="L’indicateur hébergement des familles précise si l'établissement peut héberger les familles des personnes prises en charge. Valeurs possibles :0 = L'établissement ne peut pas héberger les familles des personnes prises en charge1 = L'établissement peut héberger les familles des personnes prises en charge"/>
+      <definition value="L’indicateur hébergement des familles précise si l'établissement peut héberger les familles des personnes prises en charge. Valeurs possibles :0 = L'établissement ne peut pas héberger les familles des personnes prises en charge1 = L'établissement peut héberger les familles des personnes prises en charge"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.hebergementFamille"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.dateModificationSIRET">
+      <path value="cds-entite-geographique.dateModificationSIRET"/>
+      <short value="Date de modification du numéro SIRET."/>
+      <definition value="Date de modification du numéro SIRET."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.dateModificationSIRET"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="date"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.origineModificationSIRET">
+      <path value="cds-entite-geographique.origineModificationSIRET"/>
+      <short value="Origine/nature de modification du SIRET (motif de modification de l’identifiant)."/>
+      <definition value="Origine/nature de modification du SIRET (motif de modification de l’identifiant)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.origineModificationSIRET"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.actif">
+      <path value="cds-entite-geographique.actif"/>
+      <short value="Indicateur de l’activité de l'entité géographique, si celle-ci est active (ou ouverte) ou inactive (ou fermée)."/>
+      <definition value="Indicateur de l’activité de l'entité géographique, si celle-ci est active (ou ouverte) ou inactive (ou fermée)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.actif"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.dateOuverture">
+      <path value="cds-entite-geographique.dateOuverture"/>
+      <short value="Date d’ouverture réelle de fonctionnement de l’établissement.Pour les établissements soumis à autorisation, elle est constatée par la première visite de conformité du premier équipement autorisé. La date d’ouverture doit être supérieure ou égale à la date d’autorisation."/>
+      <definition value="Date d’ouverture réelle de fonctionnement de l’établissement.Pour les établissements soumis à autorisation, elle est constatée par la première visite de conformité du premier équipement autorisé. La date d’ouverture doit être supérieure ou égale à la date d’autorisation."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.dateOuverture"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="date"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.dateCaducite">
+      <path value="cds-entite-geographique.dateCaducite"/>
+      <short value="La date de caducité indique la limite autorisant la réalisation de l’opération pour laquelle il y a autorisation. Elle est calculée automatiquement lorsque la date d’autorisation est renseignée. Elle disparait lorsque la date d’ouverture est renseignée.Par défaut, la date de caducité calculée automatiquement dans FINESS est de trois ans. En cas de début de travaux, une quatrième année est autorisée par les textes."/>
+      <definition value="La date de caducité indique la limite autorisant la réalisation de l’opération pour laquelle il y a autorisation. Elle est calculée automatiquement lorsque la date d’autorisation est renseignée. Elle disparait lorsque la date d’ouverture est renseignée.Par défaut, la date de caducité calculée automatiquement dans FINESS est de trois ans. En cas de début de travaux, une quatrième année est autorisée par les textes."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.dateCaducite"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="date"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.constatCaducite">
+      <path value="cds-entite-geographique.constatCaducite"/>
+      <short value="Indicateur de caducité de l'établissement:- « N » par défaut, lorsque l’établissement est autorisé non ouvert (la date d’ouverture n’est pas renseignée);- « O » à indiquer lorsqu’un constat de caducité a été relevé sur l'établissement."/>
+      <definition value="Indicateur de caducité de l'établissement:- « N » par défaut, lorsque l’établissement est autorisé non ouvert (la date d’ouverture n’est pas renseignée);- « O » à indiquer lorsqu’un constat de caducité a été relevé sur l'établissement."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.constatCaducite"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.dateFermeture">
+      <path value="cds-entite-geographique.dateFermeture"/>
+      <short value="Date de fermeture de l'entité géographique. La date doit être supérieure à la date d’ouverture."/>
+      <definition value="Date de fermeture de l'entité géographique. La date doit être supérieure à la date d’ouverture."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.dateFermeture"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="date"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.typeFermeture">
+      <path value="cds-entite-geographique.typeFermeture"/>
+      <short value="Type de fermeture de l'entité géographique, au sens des règles de gestion du SI FINESS (par exemple: fermeture définitive, fermeture provisoire), obligatoire lors de la fermeture de l'entité."/>
+      <definition value="Type de fermeture de l'entité géographique, au sens des règles de gestion du SI FINESS (par exemple: fermeture définitive, fermeture provisoire), obligatoire lors de la fermeture de l'entité."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.typeFermeture"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_R286-TypeFermeture/FHIR/TRE-R286-TypeFermeture?vs"/>
+      </binding>
+    </element>
+    <element id="cds-entite-geographique.dateAutorisation">
+      <path value="cds-entite-geographique.dateAutorisation"/>
+      <short value="Date d’autorisation qui correspond à la date de l’arrêté autorisant la création d’un établissement ou de la première autorisation délivrée pour des équipements."/>
+      <definition value="Date d’autorisation qui correspond à la date de l’arrêté autorisant la création d’un établissement ou de la première autorisation délivrée pour des équipements."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.dateAutorisation"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="date"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.accessibiliteLieu">
+      <path value="cds-entite-geographique.accessibiliteLieu"/>
+      <short value="Information précisant dans quelle mesure le lieu est conforme aux dispositions règlementaires relatives à l’accessibilité des établissements recevant du public (ex : accessible, non accessible, sur demande, non communiqué, etc.).Rappel sur l'obligation d'accessibilité des établissements recevant du public (ERP) aux personnes handicapées (service-public.fr):Les établissements ouverts au public (magasin, bureau, hôtel, etc.) doivent être accessibles aux personnes handicapées. Les établissements recevant du public (ERP) non conformes aux règles d'accessibilité sont tenus de s'inscrire à un Agenda d'Accessibilité Programmée (Ad'AP) qui permet d'engager les travaux nécessaires dans un délai limité.Règles d'accessibilité:Les normes d'accessibilité doivent permettre aux personnes handicapées de circuler avec la plus grande autonomie possible, d'accéder aux locaux et équipements, d'utiliser les équipements et les prestations, de se repérer et de communiquer.L'accès concerne tout type de handicap (moteur, visuel, auditif, mental...).Les conditions d'accès doivent être les mêmes que pour les personnes valides ou, à défaut, présenter une qualité d'usage équivalente.L'accessibilité de ces établissements et de leurs abords concerne :** les cheminements extérieurs,** le stationnement des véhicules,** les conditions d'accès et d'accueil dans les bâtiments,** les circulations horizontales et verticales à l'intérieur des bâtiments,** les locaux intérieurs et les sanitaires ouverts au public,** les portes, les sas intérieurs et les sorties,** les revêtements des sols et des parois,** les équipements et mobiliers intérieurs et extérieurs susceptibles d'y être installés (dispositifs d'éclairage et d'information des usagers, par exemple)."/>
+      <definition value="Information précisant dans quelle mesure le lieu est conforme aux dispositions règlementaires relatives à l’accessibilité des établissements recevant du public (ex : accessible, non accessible, sur demande, non communiqué, etc.).Rappel sur l'obligation d'accessibilité des établissements recevant du public (ERP) aux personnes handicapées (service-public.fr):Les établissements ouverts au public (magasin, bureau, hôtel, etc.) doivent être accessibles aux personnes handicapées. Les établissements recevant du public (ERP) non conformes aux règles d'accessibilité sont tenus de s'inscrire à un Agenda d'Accessibilité Programmée (Ad'AP) qui permet d'engager les travaux nécessaires dans un délai limité.Règles d'accessibilité:Les normes d'accessibilité doivent permettre aux personnes handicapées de circuler avec la plus grande autonomie possible, d'accéder aux locaux et équipements, d'utiliser les équipements et les prestations, de se repérer et de communiquer.L'accès concerne tout type de handicap (moteur, visuel, auditif, mental...).Les conditions d'accès doivent être les mêmes que pour les personnes valides ou, à défaut, présenter une qualité d'usage équivalente.L'accessibilité de ces établissements et de leurs abords concerne :** les cheminements extérieurs,** le stationnement des véhicules,** les conditions d'accès et d'accueil dans les bâtiments,** les circulations horizontales et verticales à l'intérieur des bâtiments,** les locaux intérieurs et les sanitaires ouverts au public,** les portes, les sas intérieurs et les sorties,** les revêtements des sols et des parois,** les équipements et mobiliers intérieurs et extérieurs susceptibles d'y être installés (dispositifs d'éclairage et d'information des usagers, par exemple)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.accessibiliteLieu"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_R202-AccessibiliteLieu/FHIR/TRE-R202-AccessibiliteLieu?vs"/>
+      </binding>
+    </element>
+    <element id="cds-entite-geographique.zonePoser">
+      <path value="cds-entite-geographique.zonePoser"/>
+      <short value="Indicateur portant sur l'existence d'une zone de poser pour hélicoptère sur le site même.Valeurs possibles: 0 = Pas de zone de poser 1 = Existence d'une zone de poser"/>
+      <definition value="Indicateur portant sur l'existence d'une zone de poser pour hélicoptère sur le site même.Valeurs possibles: 0 = Pas de zone de poser 1 = Existence d'une zone de poser"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.zonePoser"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.niveauRecoursORSAN">
+      <path value="cds-entite-geographique.niveauRecoursORSAN"/>
+      <short value="Le niveau de recours ORSAN correspond à une hiérarchisation fonctionnelle de la mobilisation des établissements pour accueillir les patients après régulation par le SAMU."/>
+      <definition value="Le niveau de recours ORSAN correspond à une hiérarchisation fonctionnelle de la mobilisation des établissements pour accueillir les patients après régulation par le SAMU."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.niveauRecoursORSAN"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <binding>
+        <strength value="preferred"/>
+        <valueSet value="https://mos.esante.gouv.fr/NOS/TRE_R284-NiveauRecoursORSAN/FHIR/TRE-R284-NiveauRecoursORSAN?vs"/>
+      </binding>
+    </element>
+    <element id="cds-entite-geographique.venteLigneURL">
+      <path value="cds-entite-geographique.venteLigneURL"/>
+      <short value="URL du site de vente en ligne"/>
+      <definition value="URL du site de vente en ligne"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.venteLigneURL"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.nbPlaceAideSocialeTemporaire">
+      <path value="cds-entite-geographique.nbPlaceAideSocialeTemporaire"/>
+      <short value="Il s'agit du nombre de places temporaires dédiées à l'aide sociale dans l'établissement."/>
+      <definition value="Il s'agit du nombre de places temporaires dédiées à l'aide sociale dans l'établissement."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.nbPlaceAideSocialeTemporaire"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="integer"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.nbPlaceAideSocialePermanent">
+      <path value="cds-entite-geographique.nbPlaceAideSocialePermanent"/>
+      <short value="Il s'agit du nombre de places permanentes dédiées à l'aide sociale dans l'établissement."/>
+      <definition value="Il s'agit du nombre de places permanentes dédiées à l'aide sociale dans l'établissement."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.nbPlaceAideSocialePermanent"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="integer"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.adresseEG">
+      <path value="cds-entite-geographique.adresseEG"/>
+      <short value="Adresse(s) géopostale(s) de l'entité géographique en fonction de l'usage (adresse administrative, adresse entrée des véhicules, adresse entrée piétonne, etc.).L'implantation géographique peut également être décrite au travers de la classe Lieu."/>
+      <definition value="Adresse(s) géopostale(s) de l'entité géographique en fonction de l'usage (adresse administrative, adresse entrée des véhicules, adresse entrée piétonne, etc.).L'implantation géographique peut également être décrite au travers de la classe Lieu."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.adresseEG"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Adresse"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.implantationGeographique">
+      <path value="cds-entite-geographique.implantationGeographique"/>
+      <short value="Implantation géographique de l’EG sur un lieu connu."/>
+      <definition value="Implantation géographique de l’EG sur un lieu connu."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.implantationGeographique"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Lieu"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.lieuEG">
+      <path value="cds-entite-geographique.lieuEG"/>
+      <short value="Lieu à l'intérieur d'une EG tels que l'entrée A, pavillon des violettes, etcUn lieu peut notamment être décrit par une adresse et des coordonnées géographiques."/>
+      <definition value="Lieu à l'intérieur d'une EG tels que l'entrée A, pavillon des violettes, etcUn lieu peut notamment être décrit par une adresse et des coordonnées géographiques."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.lieuEG"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Lieu"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.divisionTerritoriale">
+      <path value="cds-entite-geographique.divisionTerritoriale"/>
+      <short value="Division(s) territoriale(s) (commune, département, etc.) où est située l'entité géographique."/>
+      <definition value="Division(s) territoriale(s) (commune, département, etc.) où est située l'entité géographique."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.divisionTerritoriale"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/DivisionTerritoriale"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.contact">
+      <path value="cds-entite-geographique.contact"/>
+      <short value="Point(s) de contact de l'entité géographique.Par exemple, ce sont les informations permettant de contacter l'accueil ou le secrétariat de l'entité géographique.Les contacts du directeur et de la cellule d'alerte peuvent être inclus dans cette liste de contacts."/>
+      <definition value="Point(s) de contact de l'entité géographique.Par exemple, ce sont les informations permettant de contacter l'accueil ou le secrétariat de l'entité géographique.Les contacts du directeur et de la cellule d'alerte peuvent être inclus dans cette liste de contacts."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.contact"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Contact"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.telecommunication">
+      <path value="cds-entite-geographique.telecommunication"/>
+      <short value="Adresse(s) de télécommunication de l'entité géographique (numéro de téléphone, adresse email, URL, etc.)."/>
+      <definition value="Adresse(s) de télécommunication de l'entité géographique (numéro de téléphone, adresse email, URL, etc.)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.telecommunication"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Telecommunication"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.boiteLettresMSS">
+      <path value="cds-entite-geographique.boiteLettresMSS"/>
+      <short value="Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'entité géographique."/>
+      <definition value="Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'entité géographique."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.boiteLettresMSS"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/BoiteLettreMSS"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-entite-geographique.commentaire">
+      <path value="cds-entite-geographique.commentaire"/>
+      <short value="Commentaire qui permet à la structure de donner des informations complémentaires."/>
+      <definition value="Commentaire qui permet à la structure de donner des informations complémentaires."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.commentaire"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.SituationExercice">
+      <path value="cds-entite-geographique.SituationExercice"/>
+      <short value="Lien vers la classe SituationExercice"/>
+      <definition value="Lien vers la classe SituationExercice"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.SituationExercice"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/SituationExercice"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.Certificat">
+      <path value="cds-entite-geographique.Certificat"/>
+      <short value="Lien vers la classe Certificat"/>
+      <definition value="Lien vers la classe Certificat"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.Certificat"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Certificat"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.EntiteJuridique">
+      <path value="cds-entite-geographique.EntiteJuridique"/>
+      <short value="Lien vers la classe EntiteJuridique"/>
+      <definition value="Lien vers la classe EntiteJuridique"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.EntiteJuridique"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/EntiteJuridique"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.Lieu">
+      <path value="cds-entite-geographique.Lieu"/>
+      <short value="Lien vers la classe Lieu"/>
+      <definition value="Lien vers la classe Lieu"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.Lieu"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Lieu"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.Convention">
+      <path value="cds-entite-geographique.Convention"/>
+      <short value="Lien vers la classe Convention"/>
+      <definition value="Lien vers la classe Convention"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.Convention"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Convention"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.EquipementMaterielLourd">
+      <path value="cds-entite-geographique.EquipementMaterielLourd"/>
+      <short value="Lien vers la classe EquipementMaterielLourd"/>
+      <definition value="Lien vers la classe EquipementMaterielLourd"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.EquipementMaterielLourd"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/EquipementMaterielLourd"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.LicenceExploitation">
+      <path value="cds-entite-geographique.LicenceExploitation"/>
+      <short value="Lien vers la classe LicenceExploitation"/>
+      <definition value="Lien vers la classe LicenceExploitation"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.LicenceExploitation"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/LicenceExploitation"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.ActiviteEnseignement">
+      <path value="cds-entite-geographique.ActiviteEnseignement"/>
+      <short value="Lien vers la classe ActiviteEnseignement"/>
+      <definition value="Lien vers la classe ActiviteEnseignement"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.ActiviteEnseignement"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/ActiviteEnseignement"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.TarifPrestation">
+      <path value="cds-entite-geographique.TarifPrestation"/>
+      <short value="Lien vers la classe TarifPrestation"/>
+      <definition value="Lien vers la classe TarifPrestation"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.TarifPrestation"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/TarifPrestation"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.ActiviteSoinAutorisee">
+      <path value="cds-entite-geographique.ActiviteSoinAutorisee"/>
+      <short value="Lien vers la classe ActiviteSoinAutorisee"/>
+      <definition value="Lien vers la classe ActiviteSoinAutorisee"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.ActiviteSoinAutorisee"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/ActiviteSoinAutorisee"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.AutreActiviteSoumiseAutorisation">
+      <path value="cds-entite-geographique.AutreActiviteSoumiseAutorisation"/>
+      <short value="Lien vers la classe AutreActiviteSoumiseAutorisation"/>
+      <definition value="Lien vers la classe AutreActiviteSoumiseAutorisation"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.AutreActiviteSoumiseAutorisation"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/AutreActiviteSoumiseAutorisation"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.ActiviteSoumiseReconnaissance">
+      <path value="cds-entite-geographique.ActiviteSoumiseReconnaissance"/>
+      <short value="Lien vers la classe ActiviteSoumiseReconnaissance"/>
+      <definition value="Lien vers la classe ActiviteSoumiseReconnaissance"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.ActiviteSoumiseReconnaissance"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/ActiviteSoumiseReconnaissance"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.ActiviteSociale">
+      <path value="cds-entite-geographique.ActiviteSociale"/>
+      <short value="Lien vers la classe ActiviteSociale"/>
+      <definition value="Lien vers la classe ActiviteSociale"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.ActiviteSociale"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/ActiviteSociale"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.CapaciteActiviteExercee">
+      <path value="cds-entite-geographique.CapaciteActiviteExercee"/>
+      <short value="Lien vers la classe CapaciteActiviteExercee"/>
+      <definition value="Lien vers la classe CapaciteActiviteExercee"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.CapaciteActiviteExercee"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/CapaciteActiviteExercee"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.OffreOperationnelle">
+      <path value="cds-entite-geographique.OffreOperationnelle"/>
+      <short value="Lien vers la classe OffreOperationnelle"/>
+      <definition value="Lien vers la classe OffreOperationnelle"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.OffreOperationnelle"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/OffreOperationnelle"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.OrganisationInterne">
+      <path value="cds-entite-geographique.OrganisationInterne"/>
+      <short value="Lien vers la classe OrganisationInterne"/>
+      <definition value="Lien vers la classe OrganisationInterne"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.OrganisationInterne"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/OrganisationInterne"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.Emploi">
+      <path value="cds-entite-geographique.Emploi"/>
+      <short value="Lien vers la classe Emploi"/>
+      <definition value="Lien vers la classe Emploi"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.Emploi"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Emploi"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.AidantDemarche">
+      <path value="cds-entite-geographique.AidantDemarche"/>
+      <short value="Lien vers la classe AidantDemarche"/>
+      <definition value="Lien vers la classe AidantDemarche"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.AidantDemarche"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/AidantDemarche"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.MesureProtection">
+      <path value="cds-entite-geographique.MesureProtection"/>
+      <short value="Lien vers la classe MesureProtection"/>
+      <definition value="Lien vers la classe MesureProtection"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.MesureProtection"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/MesureProtection"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.NoteLiaison">
+      <path value="cds-entite-geographique.NoteLiaison"/>
+      <short value="Lien vers la classe NoteLiaison"/>
+      <definition value="Lien vers la classe NoteLiaison"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.NoteLiaison"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/NoteLiaison"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.Agenda">
+      <path value="cds-entite-geographique.Agenda"/>
+      <short value="Lien vers la classe Agenda"/>
+      <definition value="Lien vers la classe Agenda"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.Agenda"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Agenda"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.RendezVous">
+      <path value="cds-entite-geographique.RendezVous"/>
+      <short value="Lien vers la classe RendezVous"/>
+      <definition value="Lien vers la classe RendezVous"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.RendezVous"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/RendezVous"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.CapaciteAccueil">
+      <path value="cds-entite-geographique.CapaciteAccueil"/>
+      <short value="Lien vers la classe CapaciteAccueil"/>
+      <definition value="Lien vers la classe CapaciteAccueil"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="EntiteGeographique.CapaciteAccueil"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/CapaciteAccueil"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.CapaciteHabitation">
+      <path value="cds-entite-geographique.CapaciteHabitation"/>
+      <short value="Lien vers la classe CapaciteHabitation"/>
+      <definition value="Lien vers la classe CapaciteHabitation"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="EntiteGeographique.CapaciteHabitation"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/CapaciteHabitation"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.CDSMembreCercleSoins">
+      <path value="cds-entite-geographique.CDSMembreCercleSoins"/>
+      <short value="Lien vers le concept Membre Cercle Soins"/>
+      <definition value="Lien vers le concept Membre Cercle Soins"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cds-entite-geographique.CDSMembreCercleSoins"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-membre-cercle-soins"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.CDSOrganisationInterne">
+      <path value="cds-entite-geographique.CDSOrganisationInterne"/>
+      <short value="Lien vers le concept Organisation Interne"/>
+      <definition value="Lien vers le concept Organisation Interne"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cds-entite-geographique.CDSOrganisationInterne"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-organisation-interne"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.CDSSituationExercice">
+      <path value="cds-entite-geographique.CDSSituationExercice"/>
+      <short value="Lien vers le concept Situation exercice"/>
+      <definition value="Lien vers le concept Situation exercice"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="cds-entite-geographique.CDSSituationExercice"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-situation-exercice"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.CDSEntiteJuridique">
+      <path value="cds-entite-geographique.CDSEntiteJuridique"/>
+      <short value="Lien vers le concept Entité Juridique"/>
+      <definition value="Lien vers le concept Entité Juridique"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cds-entite-geographique.CDSEntiteJuridique"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-entite-juridique"/>
+      </type>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cds-entite-geographique">
+      <path value="cds-entite-geographique"/>
+      <short value="L’Entité Géographique (EG) correspond à la notion d’établissement : ** Pour les établissements inscrits au FINESS, cette notion d’établissement résulte du croisement de trois critères : - Un critère géographique : Est un établissement tout lieu dont l’implantation d’activité(s) ou d’équipement(s) est géographiquement distincte d’une autre implantation. Ainsi un Centre Hospitalier Régional comprend autant d’établissements que d’implantations géographiques différentes. Un établissement principal et son établissement secondaire situé à 1 km constituent deux établissements distincts dans FINESS. L’implantation géographique peut-être décrite soit avec l’attribut addresseEG soit au travers de la classe Lieu. - Un critère budgétaire : Pour une même implantation géographique, on distingue autant d’établissements du secteur public qu’il y a de budgets distincts (budget général, budget annexe).Ainsi un ESAT et son foyer d’hébergement constituent deux établissements même s’ils sont implantés à la même adresse. - Un critère d’activité : Pour une même implantation géographique et un même budget, on distingue autant d’établissements que de « catégorie d’établissement » décrivant l’activité principale autorisée.Ainsi un centre hospitalier et son EHPAD, financés par le même budget, constituent deux établissements même s’ils sont implantés à la même adresse.** Pour les entreprises inscrites dans le SIRENE, l’EG correspond à un établissement de la personne morale, elle est identifiée par un numéro Siret.Synonymes: Etablissement, structure"/>
+      <definition value="L’Entité Géographique (EG) correspond à la notion d’établissement : ** Pour les établissements inscrits au FINESS, cette notion d’établissement résulte du croisement de trois critères : - Un critère géographique : Est un établissement tout lieu dont l’implantation d’activité(s) ou d’équipement(s) est géographiquement distincte d’une autre implantation. Ainsi un Centre Hospitalier Régional comprend autant d’établissements que d’implantations géographiques différentes. Un établissement principal et son établissement secondaire situé à 1 km constituent deux établissements distincts dans FINESS. L’implantation géographique peut-être décrite soit avec l’attribut addresseEG soit au travers de la classe Lieu. - Un critère budgétaire : Pour une même implantation géographique, on distingue autant d’établissements du secteur public qu’il y a de budgets distincts (budget général, budget annexe).Ainsi un ESAT et son foyer d’hébergement constituent deux établissements même s’ils sont implantés à la même adresse. - Un critère d’activité : Pour une même implantation géographique et un même budget, on distingue autant d’établissements que de « catégorie d’établissement » décrivant l’activité principale autorisée.Ainsi un centre hospitalier et son EHPAD, financés par le même budget, constituent deux établissements même s’ils sont implantés à la même adresse.** Pour les entreprises inscrites dans le SIRENE, l’EG correspond à un établissement de la personne morale, elle est identifiée par un numéro Siret.Synonymes: Etablissement, structure"/>
+    </element>
+    <element id="cds-entite-geographique.numFINESS">
+      <path value="cds-entite-geographique.numFINESS"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-entite-geographique.numSiret">
+      <path value="cds-entite-geographique.numSiret"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-entite-geographique.identifiantEG">
+      <path value="cds-entite-geographique.identifiantEG"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-entite-geographique.idNatStruct">
+      <path value="cds-entite-geographique.idNatStruct"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-entite-geographique.denominationEG">
+      <path value="cds-entite-geographique.denominationEG"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-entite-geographique.boiteLettresMSS">
+      <path value="cds-entite-geographique.boiteLettresMSS"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-entite-geographique.CDSMembreCercleSoins">
+      <path value="cds-entite-geographique.CDSMembreCercleSoins"/>
+      <short value="Lien vers le concept Membre Cercle Soins"/>
+      <definition value="Lien vers le concept Membre Cercle Soins"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-membre-cercle-soins"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.CDSOrganisationInterne">
+      <path value="cds-entite-geographique.CDSOrganisationInterne"/>
+      <short value="Lien vers le concept Organisation Interne"/>
+      <definition value="Lien vers le concept Organisation Interne"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-organisation-interne"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.CDSSituationExercice">
+      <path value="cds-entite-geographique.CDSSituationExercice"/>
+      <short value="Lien vers le concept Situation exercice"/>
+      <definition value="Lien vers le concept Situation exercice"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-situation-exercice"/>
+      </type>
+    </element>
+    <element id="cds-entite-geographique.CDSEntiteJuridique">
+      <path value="cds-entite-geographique.CDSEntiteJuridique"/>
+      <short value="Lien vers le concept Entité Juridique"/>
+      <definition value="Lien vers le concept Entité Juridique"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-entite-juridique"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

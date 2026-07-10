@@ -106,36 +106,39 @@
   <li>
     <a href="index.html">Accueil</a>
   </li>
-  <li>
-    <a href="specifications_fonctionnelles.html">Vol 1 - Etude fonctionnelle</a>
-  </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Vol 2 - Détail des transactions
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Spécifications
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="interaction_restful.html">Interactions RESTful</a>
+        <a href="spe_synthese.html">Synthèse</a>
       </li>
       <li>
-        <a href="interaction_transaction.html">Interactions transaction</a>
+        <a href="spe_creation_cercle_soins.html">Création du cercle de soins</a>
       </li>
       <li>
-        <a href="recherche_recuperation_cds.html">Recherche CDS</a>
+        <a href="spe_consultation_cercle_soins.html">Consultation du cercle de soins</a>
       </li>
       <li>
-        <a href="correspondances_metier.html">Correspondances métier</a>
+        <a href="spe_mise_jour_cercle_soins.html">Mise à jour du cercle de soins</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="artifacts.html">Ressources de conformité</a>
   </li>
+  <li>
+    <a href="tests.html">Tests</a>
+  </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Annexes
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
+      <li>
+        <a href="translationinfo.html">Informations sur la traduction</a>
+      </li>
       <li>
         <a href="downloads.html">Téléchargements et usage</a>
       </li>
@@ -191,7 +194,7 @@
 
             <a href="#bottom">bas de page</a>
 
-          | <a href="CapabilityStatement-CDSConsommateur.html">suivant &gt;</a>
+          | <a href="ActorDefinition-CDS-Consommateur-Actor.html">suivant &gt;</a>
 
           </span>
 
@@ -227,19 +230,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
    <p>Contenu:</p>
    <ul>
       <li>
-         <a href="#1">Comportement: Déclarations de capacités (CapabilityStatement)</a>
+         <a href="#1">Exigences: Définitions des acteurs</a>
       </li>
       <li>
-         <a href="#2">Comportement: Paramètres de recherche (SearchParameter)</a>
+         <a href="#2">Comportement: Déclarations de capacités (CapabilityStatement)</a>
       </li>
       <li>
-         <a href="#3">Structures: Profils de ressources</a>
+         <a href="#3">Comportement: Paramètres de recherche (SearchParameter)</a>
       </li>
       <li>
-         <a href="#4">Terminologie: Jeux de valeurs (ValueSets)</a>
+         <a href="#4">Structures: Modèles logiques</a>
       </li>
       <li>
-         <a href="#5">Exemple: Exemples d'instances</a>
+         <a href="#5">Structures: Profils de ressources</a>
+      </li>
+      <li>
+         <a href="#6">Terminologie: Jeux de valeurs (ValueSets)</a>
+      </li>
+      <li>
+         <a href="#7">Exemple: Exemples d'instances</a>
       </li>
    </ul>
 </div>
@@ -249,6 +258,50 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
      data-fhir="generated">
    <p>Cette page fournit une liste des artefacts FHIR définis dans le cadre de ce guide de mise en œuvre.</p>
    <a name="1"> </a>
+   <h3>Exigences: Définitions des acteurs </h3>
+    <p>Les artefacts suivants définissent les types de personnes et/ou de systèmes qui interagiront dans le cadre des cas d'utilisation couverts par le présent guide d'implémentation.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ActorDefinition-CDS-Consommateur-Actor.html"
+                  title="ActorDefinition/CDS-Consommateur-Actor">
+                  <span title="ActorDefinition/CDS-Consommateur-Actor">CDS Consommateur
+</span>
+               </a>
+            </td>
+            <td>
+<p>Le rôle de consommateur incarné par un système, peut consulter un cercle de soins.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ActorDefinition-CDS-Createur-Actor.html"
+                  title="ActorDefinition/CDS-Createur-Actor">
+                  <span title="ActorDefinition/CDS-Createur-Actor">CDS Créateur
+</span>
+               </a>
+            </td>
+            <td>
+<p>Le rôle de créateur incarné par un système peut créer ou mettre à jour le cercle de soins d'une personne.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ActorDefinition-CDS-Gestionnaire-Actor.html"
+                  title="ActorDefinition/CDS-Gestionnaire-Actor">
+                  <span title="ActorDefinition/CDS-Gestionnaire-Actor">CDS Gestionnaire
+</span>
+               </a>
+            </td>
+            <td>
+<p>Le rôle de gestionnaire incarné par un système, gère et stocke le cercle de soins, donne accès aux informations en cas de consultation.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
    <h3>Comportement: Déclarations de capacités (CapabilityStatement) </h3>
     <p>Les artefacts suivants définissent les capacités spécifiques que les différents types de systèmes sont censés posséder pour se conformer au présent guide d'implémentation.  Les systèmes conformes à ce guide d'implémentation sont censés déclarer leur conformité à une ou plusieurs des déclarations de capacité suivantes.</p>
 <table class="grid">
@@ -275,7 +328,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </a>
             </td>
             <td>
-<p>Le rôle de créateur incarné par un système peut créer ou mettre à jour le cercle de soins d'une personne</p>
+<p>Le rôle de créateur incarné par un système peut créer ou mettre à jour le cercle
+de soins d'une personne</p>
 </td>
          </tr>
          <tr>
@@ -287,7 +341,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </a>
             </td>
             <td>
-<p>Le rôle de créateur incarné par un système peut créer ou mettre à jour le cercle de soins d'une personne</p>
+<p>Le rôle de créateur incarné par un système peut créer ou mettre à jour le cercle
+de soins d'une personne</p>
 </td>
          </tr>
          <tr>
@@ -299,12 +354,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </a>
             </td>
             <td>
-<p>Le rôle de gestionnaire incarné par un système, gère et stocke le cercle de soins,donne accès aux informations en cas de consultation.</p>
+<p>Le rôle de gestionnaire incarné par un système, gère et stocke le cercle de soins,
+donne accès aux informations en cas de consultation.</p>
 </td>
          </tr>
       </tbody>
    </table>
-   <a name="2"> </a>
+   <a name="3"> </a>
    <h3>Comportement: Paramètres de recherche (SearchParameter) </h3>
     <p>Ils définissent les propriétés permettant d'effectuer des recherches dans un serveur RESTful. Elles peuvent également être utilisées pour trier et inclure des ressources connexes.</p>
 <table class="grid">
@@ -384,7 +440,147 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="3"> </a>
+   <a name="4"> </a>
+   <h3>Structures: Modèles logiques </h3>
+    <p>Ils définissent des modèles de données qui représentent le domaine couvert par ce guide d'implémentation en termes plus conviviaux que les ressources FHIR sous-jacentes.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cds-cercle-soins.html"
+                  title="StructureDefinition/cds-cercle-soins">
+                  <span title="StructureDefinition/cds-cercle-soins">CDS Cercle Soins
+</span>
+               </a>
+            </td>
+            <td>
+<p>Le cercle de soins est l'agrégation de membres qui participent à la prise en charge et aux actions de coordination du parcours de santé d’une personne.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cds-contact.html"
+                  title="StructureDefinition/cds-contact">
+                  <span title="StructureDefinition/cds-contact">CDS Contact
+</span>
+               </a>
+            </td>
+            <td>
+<p>Un contact peut être un membre de la famille ou un proche de l’Usager. Il peut s’agir par exemple d’un aidant, de la personne de confiance de l’Usager</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cds-entite-geographique.html"
+                  title="StructureDefinition/cds-entite-geographique">
+                  <span title="StructureDefinition/cds-entite-geographique">CDS Entite Geographique
+</span>
+               </a>
+            </td>
+            <td>
+<p>L’Entité Géographique (EG) correspond à la notion d’établissement : ** Pour les établissements inscrits au FINESS, cette notion d’établissement résulte du croisement de trois critères : - Un critère géographique : Est un établissement tout lieu dont l’implantation d’activité(s) ou d’équipement(s) est géographiquement distincte d’une autre implantation. Ainsi un Centre Hospitalier Régional comprend autant d’établissements que d’implantations géographiques différentes. Un établissement principal et son établissement secondaire situé à 1 km constituent deux établissements distincts dans FINESS. L’implantation géographique peut-être décrite soit avec l’attribut addresseEG soit au travers de la classe Lieu. - Un critère budgétaire : Pour une même implantation géographique, on distingue autant d’établissements du secteur public qu’il y a de budgets distincts (budget général, budget annexe).Ainsi un ESAT et son foyer d’hébergement constituent deux établissements même s’ils sont implantés à la même adresse. - Un critère d’activité : Pour une même implantation géographique et un même budget, on distingue autant d’établissements que de « catégorie d’établissement » décrivant l’activité principale autorisée.Ainsi un centre hospitalier et son EHPAD, financés par le même budget, constituent deux établissements même s’ils sont implantés à la même adresse.** Pour les entreprises inscrites dans le SIRENE, l’EG correspond à un établissement de la personne morale, elle est identifiée par un numéro Siret.Synonymes: Etablissement, structure</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cds-entite-juridique.html"
+                  title="StructureDefinition/cds-entite-juridique">
+                  <span title="StructureDefinition/cds-entite-juridique">CDS Entite Juridique
+</span>
+               </a>
+            </td>
+            <td>
+<p>L’Entité Juridique (EJ) correspond à la notion de personne morale :** Pour les établissements sanitaires, sociaux, médico-sociaux et de formation aux professions de ces secteurs enregistrés dans le FINESS, une EJ détient des droits (autorisations, agréments, conventions, etc.) lui permettant d’exercer ses activités dans des établissements; chaque EJ dispose d’un statut juridique de la personne morale;** Pour les autres types de structures, une EJ est une personne morale inscrite dans le SIRENE, identifiée par son numéro Siren.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cds-exercice-professionnel.html"
+                  title="StructureDefinition/cds-exercice-professionnel">
+                  <span title="StructureDefinition/cds-exercice-professionnel">CDS Exercice Professionnel
+</span>
+               </a>
+            </td>
+            <td>
+<p>Informations décrivant notamment la profession exercée, l’identité d’exercice d’un professionnel et le cadre de son exercice (civil, agent public, etc.).Il peut exister plusieurs exercices professionnels pour une personne à un instant donné.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cds-membre-cercle-soins.html"
+                  title="StructureDefinition/cds-membre-cercle-soins">
+                  <span title="StructureDefinition/cds-membre-cercle-soins">CDS Membre Cercle Soins
+</span>
+               </a>
+            </td>
+            <td>
+<p>Un membre du cercle de soins est une personne (Professionnel ou Personne Tierce) ou une Entité qui fait partie du Cercle de Soins d’un Usager.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cds-organisation-interne.html"
+                  title="StructureDefinition/cds-organisation-interne">
+                  <span title="StructureDefinition/cds-organisation-interne">CDS Organisation Interne
+</span>
+               </a>
+            </td>
+            <td>
+<p>La classe Organisation Interne est une classe abstraite qui contient les attributs inhérents et communs aux classes décrivant l’organisation opérationnelle interne d’une EG permettant de délivrer la prestation.Une organisation interne peut être composée d’autres organisations internes. Par exemple, les unités fonctionnelles peuvent être regroupées au sein de services qui peuvent être regroupés en pôles.La description de cette organisation interne de l’EG n’est pas obligatoire. Lorsqu’elle est décrite cette organisation porte les ressources opérationnelles.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cds-personne-physique.html"
+                  title="StructureDefinition/cds-personne-physique">
+                  <span title="StructureDefinition/cds-personne-physique">CDS Personne Physique
+</span>
+               </a>
+            </td>
+            <td>
+<p>Une personne physique est un individu titulaire de droits et d'obligations caractérisé par une identité civile.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cds-personne-prise-charge.html"
+                  title="StructureDefinition/cds-personne-prise-charge">
+                  <span title="StructureDefinition/cds-personne-prise-charge">CDS Personne Prise Charge
+</span>
+               </a>
+            </td>
+            <td>
+<p>Personne physique bénéficiaire de soins, d'examens, d'actes de prévention ou de services. Selon le contexte, la personne prise en charge peut être un patient ou un usager.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cds-professionnel.html"
+                  title="StructureDefinition/cds-professionnel">
+                  <span title="StructureDefinition/cds-professionnel">CDS Professionnel
+</span>
+               </a>
+            </td>
+            <td>
+<p>Données d’identification pérennes d’une personne physique, qui travaille en tant que professionnel (professionnel enregistré dans RPPS ou ADELI), personnel autorisé ou personnel d’établissement, dans les domaines sanitaire, médico-social et social.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cds-situation-exercice.html"
+                  title="StructureDefinition/cds-situation-exercice">
+                  <span title="StructureDefinition/cds-situation-exercice">CDS Situation Exercice
+</span>
+               </a>
+            </td>
+            <td>
+<p>Caractéristiques de l’exercice d’un professionnel pendant une période déterminée et dans une structure déterminée (à l’exception des remplaçants). Synonymes : Activité (RPPS).</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
    <h3>Structures: Profils de ressources </h3>
     <p>Ils définissent les contraintes sur les ressources FHIR pour les systèmes conformes à ce guide d'implémentation.</p>
 <table class="grid">
@@ -466,7 +662,7 @@ Il s'agit d'un bundle de type "transaction" permettant d'organiser le contenu du
          </tr>
       </tbody>
    </table>
-   <a name="4"> </a>
+   <a name="6"> </a>
    <h3>Terminologie: Jeux de valeurs (ValueSets) </h3>
     <p>Ils définissent des ensembles de codes utilisés par les systèmes conformes au présent guide d'implémentation.</p>
 <table class="grid">
@@ -486,7 +682,7 @@ Il s'agit d'un bundle de type "transaction" permettant d'organiser le contenu du
          </tr>
       </tbody>
    </table>
-   <a name="5"> </a>
+   <a name="7"> </a>
    <h3>Exemple: Exemples d'instances </h3>
     <p>Il s'agit d'exemples d'instances qui montrent à quoi peuvent ressembler les données produites et consommées par des systèmes conformes au présent guide d'implémentation.</p>
 <table class="grid">
@@ -571,7 +767,7 @@ Il s'agit d'un bundle de type "transaction" permettant d'organiser le contenu du
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 
-                <a href="CapabilityStatement-CDSConsommateur.html">suivant ></a>
+                <a href="ActorDefinition-CDS-Consommateur-Actor.html">suivant ></a>
 
               </td>
             </tr>
@@ -587,7 +783,7 @@ Il s'agit d'un bundle de type "transaction" permettant d'organiser le contenu du
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  
           Le package ans.fhir.fr.cds#2.0.1 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-07-10 12:59:00 +0000">
+  <span title="2026-07-10 13:11:00 +0000">
     2026-07-10
   </span>
 

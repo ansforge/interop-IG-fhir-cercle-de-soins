@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Création du cercle de soins - Cercle De Soins v2.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/style-ans.css"/>
+    <link rel="stylesheet" href="assets/css/style-add-ans.css"/>
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2.2"}
+    h3,h4,h5,h6{--heading-prefix:"2.2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+<div id="family-nav">
+    <a id="hl7-search-lnk" data-no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+  </div>
+  <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
+    <a id="hl7-logo" data-no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+    <a id="hl7-search-lnk" data-no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+  </div>
+
+  <div id="ig-search">
+ </div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Cercle De Soins</span>
+            <br/>
+            <span style="display:inline-block;">2.0.1 - final-text
+
+
+
+
+
+  <img alt="France (la) flag" src="../assets/images/fra.svg" height="16" title="France (la)"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Accueil</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Spécifications
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="spe_synthese.html">Synthèse</a>
+      </li>
+      <li>
+        <a href="spe_creation_cercle_soins.html">Création du cercle de soins</a>
+      </li>
+      <li>
+        <a href="spe_consultation_cercle_soins.html">Consultation du cercle de soins</a>
+      </li>
+      <li>
+        <a href="spe_mise_jour_cercle_soins.html">Mise à jour du cercle de soins</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
+  </li>
+  <li>
+    <a href="tests.html">Tests</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Annexes
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="translationinfo.html">Informations sur la traduction</a>
+      </li>
+      <li>
+        <a href="downloads.html">Téléchargements et usage</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">Spécifications FHIR </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://esante.gouv.fr/">Site de l&apos;ANS </a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/">Documentation</a>
+  </li>
+  <li>
+    <a href="changes.html">Historique</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+
+    <div><a href="../fr/spe_creation_cercle_soins.html"><img class="flag" src="assets/images/lang-fr.png" alt="flag fr"/>Français</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='specifications.html'><b>Specifications</b></a></li><li><b>Création du cercle de soins</b></li>
+
+          <span style="float: var(--ig-right);">
+
+            <a href="spe_synthese.html">&lt; prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="spe_consultation_cercle_soins.html">next &gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Cercle De Soins - Local Development build (v2.0.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://interop.esante.gouv.fr/ig/fhir/cds/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Création du cercle de soins</h2>
+  
+
+
+
+
+<p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;">
+
+<p>There is no translation page available for the current page, so it has been rendered in the default language</p>
+
+
+</p>
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#etude-fonctionnelle" id="markdown-toc-etude-fonctionnelle">Etude fonctionnelle</a></li>
+  <li><a href="#spécifications-techniques" id="markdown-toc-spécifications-techniques">Spécifications techniques</a></li>
+</ul>
+
+</div>
+<!-- CSS pour les contrôles SVG interactifs -->
+<style>
+/* ===========================
+   CONTENEUR SVG - MODE NORMAL
+   =========================== */
+.svg-wrap {
+  position: relative;
+  cursor: default;
+  overflow: visible !important;
+  text-align: center;
+}
+
+.svg-wrap > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.svg-wrap svg {
+  transition: transform 0.1s ease-out;
+  display: block;
+  margin: 0 auto;
+  max-width: 100% !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+/* ===========================
+   CONTENEUR SVG - FULLSCREEN
+   =========================== */
+.svg-wrap:is(:fullscreen, :-webkit-full-screen, :-moz-full-screen) {
+  background: white;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.svg-wrap:is(:fullscreen, :-webkit-full-screen, :-moz-full-screen) > p {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg-wrap:is(:fullscreen, :-webkit-full-screen, :-moz-full-screen) svg {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain;
+}
+
+/* Curseur grabbing pendant le drag */
+.svg-wrap:is(:fullscreen, :-webkit-full-screen, :-moz-full-screen).grabbing {
+  cursor: grabbing;
+}
+
+.svg-wrap:is(:fullscreen, :-webkit-full-screen, :-moz-full-screen).grabbing * {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+/* ===========================
+   BOUTONS DE CONTRÔLE
+   =========================== */
+.svg-controls {
+  z-index: 99999 !important;
+  position: absolute !important;
+  top: 8px !important;
+  right: 8px !important;
+}
+
+.svg-controls .btn {
+  opacity: 0.9;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+  transition: none !important;
+  z-index: 99999 !important;
+  border-radius: 0.25rem !important;
+  position: relative;
+  background: white;
+  color: var(--body-color);
+}
+
+/* Surcharge Bootstrap btn-group-vertical */
+.svg-controls.btn-group-vertical .btn {
+  border-radius: 0.25rem !important;
+  margin-top: 2px;
+}
+
+/* Boutons zoom cachés en mode normal */
+.svg-controls .svg-zoom-in,
+.svg-controls .svg-zoom-out,
+.svg-controls .svg-zoom-reset {
+  display: none;
+}
+
+/* Boutons zoom visibles en fullscreen */
+.svg-wrap:is(:fullscreen, :-webkit-full-screen, :-moz-full-screen) .svg-controls .svg-zoom-in,
+.svg-wrap:is(:fullscreen, :-webkit-full-screen, :-moz-full-screen) .svg-controls .svg-zoom-out,
+.svg-wrap:is(:fullscreen, :-webkit-full-screen, :-moz-full-screen) .svg-controls .svg-zoom-reset {
+  display: block;
+}
+
+/* Z-index élevé pour les contrôles en fullscreen */
+.svg-wrap:is(:fullscreen, :-webkit-full-screen, :-moz-full-screen) .svg-controls {
+  z-index: 99999 !important;
+}
+
+.svg-wrap:is(:fullscreen, :-webkit-full-screen, :-moz-full-screen) .svg-controls .btn {
+  z-index: 99999 !important;
+}
+
+.svg-wrap:is(:fullscreen, :-webkit-full-screen, :-moz-full-screen) .svg-controls .btn:is(:hover, :focus, :active) {
+  z-index: 99999 !important;
+}
+</style>
+
+<style>
+body {
+  counter-reset: figures;
+}
+
+/* On incrémente seulement les figures qui ont une légende */
+figure:has(figcaption) {
+  counter-increment: figures;
+  margin: 1.5em 0;
+}
+
+/* Légende */
+
+figure figcaption {
+  text-align: center;
+  margin-top: 0.6em;
+  font-style: italic;
+  color: #555;
+  font-size: 0.95em;
+}
+
+figure figcaption:before {
+  content: 'Figure ' counter(figures) ' : ';
+  font-weight: bold;
+  font-style: normal;
+  color: #222;
+}
+</style>
+
+<h3 id="etude-fonctionnelle">Etude fonctionnelle</h3>
+
+<p>Le créateur du cercle de soins envoie au gestionnaire du cercle de soins une demande de création du cercle de soins de la personne.</p>
+
+<h4 id="définition-du-processus-collaboratif">Définition du processus collaboratif</h4>
+
+<p><strong>Pré-conditions :</strong></p>
+
+<p>Le créateur du cercle de soins doit au préalable :</p>
+
+<ul>
+  <li>Être habilité ;</li>
+  <li>Vérifier l’absence du cercle de soins de la personne par le gestionnaire du cercle de soins via une demande de consultation ;</li>
+  <li>Disposer des paramètres de création de cercle de soins (et en particulier de l’identifiant du patient).</li>
+</ul>
+
+<p><strong>Description des actions</strong> :</p>
+
+<figure style="text-align:center">
+<?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="284px" preserveAspectRatio="none" style="width:383px;height:284px;background:#FCF6EB;" version="1.1" viewBox="0 0 383 284" width="383px" zoomAndPan="magnify"><defs /><g><rect fill="#FCF6EB" height="284" style="stroke:none;stroke-width:1.0;" width="383" x="0" y="0" /><rect fill="none" height="13.9688" style="stroke:none;stroke-width:1.0;" width="350" x="15" y="11.3301" /><ellipse cx="105" cy="40.2988" fill="#222222" rx="10" ry="10" style="stroke:#222222;stroke-width:1.0;" /><rect fill="#EFD9FC" height="33.9688" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:0.5;" width="168" x="21" y="70.2988" /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="148" x="31" y="91.4375">Saisir le cercle de soins</text><rect fill="#EFD9FC" height="33.9688" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:0.5;" width="147" x="31.5" y="124.2676" /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="127" x="41.5" y="145.4063">Envoyer la demande</text><line style="stroke:#000000;stroke-width:1.5;" x1="15" x2="15" y1="11.3301" y2="272.1016" /><rect fill="#EFD9FC" height="33.9688" rx="12.5" ry="12.5" style="stroke:#000000;stroke-width:0.5;" width="161" x="199" y="196.1328" /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="141" x="209" y="217.2715">Cr&#233;er le cercle de soin</text><ellipse cx="279.5" cy="261.1016" fill="none" rx="11" ry="11" style="stroke:#222222;stroke-width:1.0;" /><ellipse cx="279.5" cy="261.1016" fill="#222222" rx="6" ry="6" style="stroke:#111111;stroke-width:1.0;" /><line style="stroke:#000000;stroke-width:1.5;" x1="193" x2="193" y1="11.3301" y2="272.1016" /><line style="stroke:#000000;stroke-width:1.5;" x1="364" x2="364" y1="11.3301" y2="272.1016" /><line style="stroke:#181818;stroke-width:1.0;" x1="105" x2="105" y1="50.2988" y2="70.2988" /><polygon fill="#181818" points="101,60.2988,105,70.2988,109,60.2988,105,64.2988" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="105" x2="105" y1="104.2676" y2="124.2676" /><polygon fill="#181818" points="101,114.2676,105,124.2676,109,114.2676,105,118.2676" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="279.5" x2="279.5" y1="230.1016" y2="250.1016" /><polygon fill="#181818" points="275.5,240.1016,279.5,250.1016,283.5,240.1016,279.5,244.1016" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.5;stroke-dasharray:7.0,7.0;" x1="105" x2="105" y1="158.2363" y2="181.1328" /><line style="stroke:#181818;stroke-width:1.5;stroke-dasharray:7.0,7.0;" x1="105" x2="279.5" y1="181.1328" y2="181.1328" /><line style="stroke:#181818;stroke-width:1.5;stroke-dasharray:7.0,7.0;" x1="279.5" x2="279.5" y1="181.1328" y2="196.1328" /><polygon fill="#181818" points="275.5,186.1328,279.5,196.1328,283.5,186.1328,279.5,190.1328" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="41" x="109" y="174.6328">flux 1 -</text><text fill="#000000" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="144" x="154" y="174.6328">CreationCercleSoins</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="55" x="76.5" y="22.4688">Cr&#233;ateur</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="80" x="238.5" y="22.4688">Gestionnaire</text></g></svg>
+<figcaption> Processus collaboratif "Création du cercle de soins" </figcaption>
+</figure>
+
+<table>
+  <thead>
+    <tr>
+      <th>Action</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Saisir le cercle de soins</td>
+      <td>Le créateur du cercle de soins saisit les informations relatives au cercle de soins qui ont vocation à être partagées.</td>
+    </tr>
+    <tr>
+      <td>Envoyer la demande</td>
+      <td>Après validation de la saisie, le créateur du cercle de soins soumet au gestionnaire du cercle de soins une demande de création du cercle de soins.</td>
+    </tr>
+    <tr>
+      <td>Créer le cercle de soins</td>
+      <td>Le cercle de soins est créé par le gestionnaire du cercle de soins.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="concepts-métiers-utilisés-dans-le-flux-1---creationcerclesoins">Concepts métiers utilisés dans le flux 1 - CreationCercleSoins</h4>
+
+<p>Les concepts véhiculés dans ce flux ainsi qu'une correspondance avec les objets du MOS sont présentés ci-dessous :</p>
+
+<figure class="figure svg-wrap" style="width:100%;">
+ <div class="btn-group-vertical position-absolute top-0 end-0 p-2 svg-controls">
+ <button class="btn btn-light btn-sm svg-zoom-in">🔍+</button>
+ <button class="btn btn-light btn-sm svg-zoom-out">🔍−</button>
+ <button class="btn btn-light btn-sm svg-zoom-reset">↻</button>
+ <button class="btn btn-light btn-sm svg-fullscreen">⛶</button>
+ </div>
+ <p style="margin: 0; padding: 0;">
+    <?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="691px" preserveAspectRatio="none" style="width:1133px;height:691px;" version="1.1" viewBox="0 0 1133 691" width="1133px" zoomAndPan="magnify"><defs /><g><!--entity CDSCercleSoins--><g id="elem_CDSCercleSoins"><rect fill="#FFC0CB" height="37.9688" style="stroke:#C6C6C6;stroke-width:1.0;" width="122" x="792" y="7" /><a href="StructureDefinition-cds-cercle-soins.html" target="_top" title="StructureDefinition-cds-cercle-soins.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-cds-cercle-soins.html" xlink:show="new" xlink:title="StructureDefinition-cds-cercle-soins.html" xlink:type="simple"><text fill="#0000FF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" text-decoration="underline" textLength="98" x="804" y="30.1387">CDSCercleSoins</text></a></g><!--entity CDSMembreCercleSoins--><g id="elem_CDSMembreCercleSoins"><rect fill="#FFC0CB" height="37.9688" style="stroke:#C6C6C6;stroke-width:1.0;" width="172" x="453" y="102" /><a href="StructureDefinition-cds-membre-cercle-soins.html" target="_top" title="StructureDefinition-cds-membre-cercle-soins.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-cds-membre-cercle-soins.html" xlink:show="new" xlink:title="StructureDefinition-cds-membre-cercle-soins.html" xlink:type="simple"><text fill="#0000FF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" text-decoration="underline" textLength="148" x="465" y="125.1387">CDSMembreCercleSoins</text></a></g><g id="elem_GMN4"><path d="M675,95 L675,117 L625.06,121 L675,125 L675,147.4141 A0,0 0 0 0 675,147.4141 L959,147.4141 A0,0 0 0 0 959,147.4141 L959,105 L949,95 L675,95 A0,0 0 0 0 675,95 " fill="#FFFFFF" style="stroke:#262626;stroke-width:1.0;" /><path d="M949,95 L949,105 L959,105 L949,95 " fill="#FFFFFF" style="stroke:#262626;stroke-width:1.0;" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="11" lengthAdjust="spacing" textLength="259" x="683" y="112.2104">Le membre est soit une entit&#233; g&#233;ographique,</text><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="11" lengthAdjust="spacing" textLength="169" x="687" y="125.0151">soit une organisation interne,</text><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="11" lengthAdjust="spacing" textLength="242" x="683" y="137.8198">soit une situation exercice, soit un contact</text></g><!--entity CDSContact--><g id="elem_CDSContact"><rect fill="#FFDAB9" height="51.9375" style="stroke:#C6C6C6;stroke-width:1.0;" width="98" x="676" y="197" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="49" x="688" y="220.1387">Contact</text><a href="StructureDefinition-cds-contact.html" target="_top" title="StructureDefinition-cds-contact.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-cds-contact.html" xlink:show="new" xlink:title="StructureDefinition-cds-contact.html" xlink:type="simple"><text fill="#0000FF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" text-decoration="underline" textLength="74" x="688" y="234.1074">CDSContact</text></a></g><g id="elem_GMN8"><path d="M824.5,197 L824.5,219 L774.15,223 L824.5,227 L824.5,249.4141 A0,0 0 0 0 824.5,249.4141 L1091.5,249.4141 A0,0 0 0 0 1091.5,249.4141 L1091.5,207 L1081.5,197 L824.5,197 A0,0 0 0 0 824.5,197 " fill="#FFFFFF" style="stroke:#262626;stroke-width:1.0;" /><path d="M1081.5,197 L1081.5,207 L1091.5,207 L1081.5,197 " fill="#FFFFFF" style="stroke:#262626;stroke-width:1.0;" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="11" lengthAdjust="spacing" textLength="236" x="832.5" y="214.2104">Lorsque la PersonnePhysique repr&#233;sente</text><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="11" lengthAdjust="spacing" textLength="169" x="836.5" y="227.0151">un Contact seuls les attributs</text><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="11" lengthAdjust="spacing" textLength="238" x="836.5" y="239.8198">civilite, nomFamille et pr&#233;nom sont repris</text></g><!--entity CDSEntiteGeographique--><g id="elem_CDSEntiteGeographique"><rect fill="#FFDAB9" height="51.9375" style="stroke:#C6C6C6;stroke-width:1.0;" width="175" x="226.5" y="197" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="126" x="238.5" y="220.1387">EntiteGeographique</text><a href="StructureDefinition-cds-entite-geographique.html" target="_top" title="StructureDefinition-cds-entite-geographique.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-cds-entite-geographique.html" xlink:show="new" xlink:title="StructureDefinition-cds-entite-geographique.html" xlink:type="simple"><text fill="#0000FF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" text-decoration="underline" textLength="151" x="238.5" y="234.1074">CDSEntiteGeographique</text></a></g><!--entity CDSEntiteJuridique--><g id="elem_CDSEntiteJuridique"><rect fill="#FFDAB9" height="51.9375" style="stroke:#C6C6C6;stroke-width:1.0;" width="140" x="244" y="299" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="91" x="256" y="322.1387">EntiteJuridique</text><a href="StructureDefinition-cds-entite-juridique.html" target="_top" title="StructureDefinition-cds-entite-juridique.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-cds-entite-juridique.html" xlink:show="new" xlink:title="StructureDefinition-cds-entite-juridique.html" xlink:type="simple"><text fill="#0000FF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" text-decoration="underline" textLength="116" x="256" y="336.1074">CDSEntiteJuridique</text></a></g><!--entity CDSExerciceProfessionnel--><g id="elem_CDSExerciceProfessionnel"><rect fill="#FFDAB9" height="51.9375" style="stroke:#C6C6C6;stroke-width:1.0;" width="186" x="7" y="299" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="137" x="19" y="322.1387">ExerciceProfessionnel</text><a href="StructureDefinition-cds-exercice-professionnel.html" target="_top" title="StructureDefinition-cds-exercice-professionnel.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-cds-exercice-professionnel.html" xlink:show="new" xlink:title="StructureDefinition-cds-exercice-professionnel.html" xlink:type="simple"><text fill="#0000FF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" text-decoration="underline" textLength="162" x="19" y="336.1074">CDSExerciceProfessionnel</text></a></g><!--entity CDSOrganisationInterne--><g id="elem_CDSOrganisationInterne"><rect fill="#FFDAB9" height="51.9375" style="stroke:#C6C6C6;stroke-width:1.0;" width="174" x="452" y="197" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="125" x="464" y="220.1387">OrganisationInterne</text><a href="StructureDefinition-cds-organisation-interne.html" target="_top" title="StructureDefinition-cds-organisation-interne.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-cds-organisation-interne.html" xlink:show="new" xlink:title="StructureDefinition-cds-organisation-interne.html" xlink:type="simple"><text fill="#0000FF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" text-decoration="underline" textLength="150" x="464" y="234.1074">CDSOrganisationInterne</text></a></g><!--entity CDSPersonnePhysique--><g id="elem_CDSPersonnePhysique"><rect fill="#E6E6FA" height="51.9375" style="stroke:#C6C6C6;stroke-width:1.0;" width="165" x="642.5" y="503" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="116" x="654.5" y="526.1387">PersonnePhysique</text><a href="StructureDefinition-cds-personne-physique.html" target="_top" title="StructureDefinition-cds-personne-physique.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-cds-personne-physique.html" xlink:show="new" xlink:title="StructureDefinition-cds-personne-physique.html" xlink:type="simple"><text fill="#0000FF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" text-decoration="underline" textLength="141" x="654.5" y="540.1074">CDSPersonnePhysique</text></a></g><!--entity CDSPersonnePriseCharge--><g id="elem_CDSPersonnePriseCharge"><rect fill="#E6E6FA" height="51.9375" style="stroke:#C6C6C6;stroke-width:1.0;" width="185" x="938.5" y="299" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="136" x="950.5" y="322.1387">PersonnePriseCharge</text><a href="StructureDefinition-cds-personne-prise-charge.html" target="_top" title="StructureDefinition-cds-personne-prise-charge.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-cds-personne-prise-charge.html" xlink:show="new" xlink:title="StructureDefinition-cds-personne-prise-charge.html" xlink:type="simple"><text fill="#0000FF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" text-decoration="underline" textLength="161" x="950.5" y="336.1074">CDSPersonnePriseCharge</text></a></g><!--entity CDSProfessionnel--><g id="elem_CDSProfessionnel"><rect fill="#FFDAB9" height="51.9375" style="stroke:#C6C6C6;stroke-width:1.0;" width="134" x="94" y="401" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="85" x="106" y="424.1387">Professionnel</text><a href="StructureDefinition-cds-professionnel.html" target="_top" title="StructureDefinition-cds-professionnel.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-cds-professionnel.html" xlink:show="new" xlink:title="StructureDefinition-cds-professionnel.html" xlink:type="simple"><text fill="#0000FF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" text-decoration="underline" textLength="110" x="106" y="438.1074">CDSProfessionnel</text></a></g><g id="elem_GMN18"><path d="M278,401 L278,423 L228.2,427 L278,431 L278,453.4141 A0,0 0 0 0 278,453.4141 L588,453.4141 A0,0 0 0 0 588,453.4141 L588,411 L578,401 L278,401 A0,0 0 0 0 278,401 " fill="#FFFFFF" style="stroke:#262626;stroke-width:1.0;" /><path d="M578,401 L578,411 L588,411 L578,401 " fill="#FFFFFF" style="stroke:#262626;stroke-width:1.0;" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="11" lengthAdjust="spacing" textLength="240" x="286" y="418.2104">Lorsque la PersonnePhysique repr&#233;sente,</text><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="11" lengthAdjust="spacing" textLength="281" x="290" y="431.0151">un Professionnel, ne pas consid&#233;rer les attributs</text><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="11" lengthAdjust="spacing" textLength="279" x="290" y="443.8198">situationFamiliale, lieuNaissance, paysResidence</text></g><!--entity CDSSituationExercice--><g id="elem_CDSSituationExercice"><rect fill="#FFDAB9" height="51.9375" style="stroke:#C6C6C6;stroke-width:1.0;" width="157" x="19.5" y="197" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="108" x="31.5" y="220.1387">SituationExercice</text><a href="StructureDefinition-cds-situation-exercice.html" target="_top" title="StructureDefinition-cds-situation-exercice.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-cds-situation-exercice.html" xlink:show="new" xlink:title="StructureDefinition-cds-situation-exercice.html" xlink:type="simple"><text fill="#0000FF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" text-decoration="underline" textLength="133" x="31.5" y="234.1074">CDSSituationExercice</text></a></g><!--link CDSCercleSoins to CDSPersonnePriseCharge--><g id="link_CDSCercleSoins_CDSPersonnePriseCharge"><path d="M912.33,45.01 C976.85,68.27 1076.1,115.74 1116,197 C1126.19,217.75 1125.51,227.93 1116,249 C1106.85,269.27 1089.22,286.26 1072.37,298.91 " fill="none" id="CDSCercleSoins-CDSPersonnePriseCharge" style="stroke:#C6C6C6;stroke-width:1.0;" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="8" x="917.3291" y="66.0265">1</text><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="8" x="1071.4336" y="286.3171">1</text></g><!--reverse link CDSCercleSoins to CDSMembreCercleSoins--><g id="link_CDSCercleSoins_CDSMembreCercleSoins"><path d="M779.35,48.81 C724.79,64.97 651.31,86.74 600.01,101.93 " fill="none" id="CDSCercleSoins-backto-CDSMembreCercleSoins" style="stroke:#C6C6C6;stroke-width:1.0;" /><polygon fill="#C6C6C6" points="792.09,45.04,785.2024,42.9045,780.582,48.441,787.4697,50.5765,792.09,45.04" style="stroke:#C6C6C6;stroke-width:1.0;" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="8" x="773.9353" y="61.596">1</text><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="8" x="608.2321" y="89.1017">1</text></g><!--link CDSMembreCercleSoins to CDSSituationExercice--><g id="link_CDSMembreCercleSoins_CDSSituationExercice"><path d="M442.79,142.82 C375.09,157.6 282.41,178.09 201,197 C197.18,197.89 193.28,198.8 189.35,199.73 " fill="none" id="CDSMembreCercleSoins-CDSSituationExercice" style="stroke:#C6C6C6;stroke-width:1.0;" /><polygon fill="#C6C6C6" points="455.55,140.04,448.8351,137.4112,443.8259,142.5985,450.5408,145.2273,455.55,140.04" style="stroke:#C6C6C6;stroke-width:1.0;" /><polygon fill="#C6C6C6" points="176.69,202.73,186.3699,204.5465,181.5552,201.5768,184.5249,196.7622,176.69,202.73" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="181.5552" x2="189.34" y1="201.5768" y2="199.73" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="8" x="435.2073" y="156.4208">1</text><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="24" x="186.3659" y="196.5289">0..1</text></g><!--link CDSMembreCercleSoins to CDSEntiteGeographique--><g id="link_CDSMembreCercleSoins_CDSEntiteGeographique"><path d="M485.98,145.56 C455.06,159.31 415.72,176.79 382.47,191.57 " fill="none" id="CDSMembreCercleSoins-CDSEntiteGeographique" style="stroke:#C6C6C6;stroke-width:1.0;" /><polygon fill="#C6C6C6" points="498.25,140.11,491.1435,138.886,487.2805,144.9751,494.3869,146.1991,498.25,140.11" style="stroke:#C6C6C6;stroke-width:1.0;" /><polygon fill="#C6C6C6" points="370.52,196.88,380.3689,196.8778,375.0886,194.8483,377.1181,189.568,370.52,196.88" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="375.0886" x2="382.4" y1="194.8483" y2="191.6" /></g><!--link CDSMembreCercleSoins to CDSOrganisationInterne--><g id="link_CDSMembreCercleSoins_CDSOrganisationInterne"><path d="M539,153.43 C539,163.08 539,173.82 539,183.87 " fill="none" id="CDSMembreCercleSoins-CDSOrganisationInterne" style="stroke:#C6C6C6;stroke-width:1.0;" /><polygon fill="#C6C6C6" points="539,140.34,535,146.34,539,152.34,543,146.34,539,140.34" style="stroke:#C6C6C6;stroke-width:1.0;" /><polygon fill="#C6C6C6" points="539,197,543,188,539,192,535,188,539,197" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="539" x2="539" y1="192" y2="184" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="8" x="527.3875" y="161.095">1</text><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="24" x="509.2375" y="184.0054">0..1</text></g><!--link CDSMembreCercleSoins to CDSContact--><g id="link_CDSMembreCercleSoins_CDSContact"><path d="M584.35,146.38 C609.17,159.73 640.2,176.41 666.8,190.71 " fill="none" id="CDSMembreCercleSoins-CDSContact" style="stroke:#C6C6C6;stroke-width:1.0;" /><polygon fill="#C6C6C6" points="572.68,140.11,576.0683,146.4755,583.2473,145.7961,579.859,139.4306,572.68,140.11" style="stroke:#C6C6C6;stroke-width:1.0;" /><polygon fill="#C6C6C6" points="678.28,196.88,672.2498,189.093,673.8769,194.5108,668.4591,196.1379,678.28,196.88" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="673.8769" x2="666.825" y1="194.5108" y2="190.725" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="8" x="570.465" y="161.1546">1</text><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="24" x="641.8438" y="187.157">0..1</text></g><!--link CDSSituationExercice to CDSExerciceProfessionnel--><g id="link_CDSSituationExercice_CDSExerciceProfessionnel"><path d="M98.5,249.23 C98.81,264.39 99.19,283.62 99.5,298.77 " fill="none" id="CDSSituationExercice-CDSExerciceProfessionnel" style="stroke:#C6C6C6;stroke-width:1.0;" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="8" x="87.2969" y="270.0787">1</text><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="8" x="87.8344" y="286.1412">1</text></g><!--link CDSSituationExercice to CDSEntiteGeographique--><g id="link_CDSSituationExercice_CDSEntiteGeographique"><path d="M176.89,223 C191.73,223 206.56,223 221.4,223 " fill="none" id="CDSSituationExercice-to-CDSEntiteGeographique" style="stroke:#C6C6C6;stroke-width:1.0;" /><polygon fill="#C6C6C6" points="226.43,223,217.43,219,221.43,223,217.43,227,226.43,223" style="stroke:#C6C6C6;stroke-width:1.0;" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="8" x="186.4505" y="218.4276">1</text><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="24" x="192.6535" y="218.5274">0..1</text></g><!--reverse link CDSEntiteGeographique to CDSOrganisationInterne--><g id="link_CDSEntiteGeographique_CDSOrganisationInterne"><path d="M406.98,223 C421.97,223 436.97,223 451.97,223 " fill="none" id="CDSEntiteGeographique-backto-CDSOrganisationInterne" style="stroke:#C6C6C6;stroke-width:1.0;" /><polygon fill="#C6C6C6" points="401.89,223,410.89,227,406.89,223,410.89,219,401.89,223" style="stroke:#C6C6C6;stroke-width:1.0;" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="8" x="411.3719" y="218.5024">1</text><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="8" x="433.9752" y="218.4525">1</text></g><!--link CDSExerciceProfessionnel to CDSProfessionnel--><g id="link_CDSExerciceProfessionnel_CDSProfessionnel"><path d="M115.39,351.23 C124.64,366.39 136.37,385.62 145.61,400.77 " fill="none" id="CDSExerciceProfessionnel-CDSProfessionnel" style="stroke:#C6C6C6;stroke-width:1.0;" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="8" x="107.4441" y="372.0787">1</text><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="8" x="130.1288" y="388.1412">1</text></g><!--link CDSProfessionnel to CDSPersonnePhysique--><g id="link_CDSProfessionnel_CDSPersonnePhysique"><path d="M228.12,447.14 C236.47,449.25 244.91,451.26 253,453 C388.27,482.04 547.58,505.07 642.22,517.6 " fill="none" id="CDSProfessionnel-CDSPersonnePhysique" style="stroke:#C6C6C6;stroke-width:1.0;" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="8" x="238.1175" y="444.6082">1</text><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="8" x="624.5905" y="512.0728">1</text></g><!--link CDSPersonnePriseCharge to CDSPersonnePhysique--><g id="link_CDSPersonnePriseCharge_CDSPersonnePhysique"><path d="M992.86,351.18 C934.07,389.99 821.93,464.01 763.14,502.83 " fill="none" id="CDSPersonnePriseCharge-CDSPersonnePhysique" style="stroke:#C6C6C6;stroke-width:1.0;" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="8" x="973.2044" y="372.0177">1</text><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="8" x="761.3759" y="490.2166">1</text></g><!--link CDSEntiteGeographique to CDSEntiteJuridique--><g id="link_CDSEntiteGeographique_CDSEntiteJuridique"><path d="M314,249.23 C314,264.39 314,283.62 314,298.77 " fill="none" id="CDSEntiteGeographique-CDSEntiteJuridique" style="stroke:#C6C6C6;stroke-width:1.0;" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="8" x="302.6875" y="270.0787">1</text><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="8" x="302.4625" y="286.1412">1</text></g><!--link CDSContact to CDSPersonnePhysique--><g id="link_CDSContact_CDSPersonnePhysique"><path d="M725,249.14 C725,306.32 725,445.62 725,502.83 " fill="none" id="CDSContact-CDSPersonnePhysique" style="stroke:#C6C6C6;stroke-width:1.0;" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="22" x="698.1563" y="269.969">1..*</text><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="8" x="713.4625" y="490.2166">1</text></g><rect fill="#FFFFFF" height="99.1875" id="_legend" style="stroke:#262626;stroke-width:1.0;" width="278" x="829.19" y="571.9375" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="69" x="843.19" y="595.9326">L&#233;gende</text><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="172" x="921.19" y="595.9326">Correspondance MOS</text><rect fill="#FFC0CB" height="20.2969" style="stroke:none;stroke-width:1.0;" width="78" x="836.19" y="601.2344" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="14" lengthAdjust="spacing" textLength="4" x="838.19" y="616.2295">&#160;</text><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="14" lengthAdjust="spacing" textLength="68" x="920.19" y="616.2295">extension</text><rect fill="#FFDAB9" height="20.2969" style="stroke:none;stroke-width:1.0;" width="78" x="836.19" y="621.5313" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="14" lengthAdjust="spacing" textLength="4" x="838.19" y="636.5264">&#160;</text><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="14" lengthAdjust="spacing" textLength="69" x="920.19" y="636.5264">restriction</text><rect fill="#E6E6FA" height="20.2969" style="stroke:none;stroke-width:1.0;" width="78" x="836.19" y="641.8281" /><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="14" lengthAdjust="spacing" textLength="4" x="838.19" y="656.8232">&#160;</text><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="14" lengthAdjust="spacing" textLength="83" x="920.19" y="656.8232">&#233;quivalence</text><line style="stroke:#262626;stroke-width:1.0;" x1="836.19" x2="1100.19" y1="580.9375" y2="580.9375" /><line style="stroke:#262626;stroke-width:1.0;" x1="836.19" x2="1100.19" y1="601.2344" y2="601.2344" /><line style="stroke:#262626;stroke-width:1.0;" x1="836.19" x2="1100.19" y1="621.5313" y2="621.5313" /><line style="stroke:#262626;stroke-width:1.0;" x1="836.19" x2="1100.19" y1="641.8281" y2="641.8281" /><line style="stroke:#262626;stroke-width:1.0;" x1="836.19" x2="1100.19" y1="662.125" y2="662.125" /><line style="stroke:#262626;stroke-width:1.0;" x1="836.19" x2="836.19" y1="580.9375" y2="662.125" /><line style="stroke:#262626;stroke-width:1.0;" x1="914.19" x2="914.19" y1="580.9375" y2="662.125" /><line style="stroke:#262626;stroke-width:1.0;" x1="1100.19" x2="1100.19" y1="580.9375" y2="662.125" /></g></svg>
+ </p>
+ <figcaption> Diagramme des concepts contenus dans le flux 1 </figcaption>
+</figure>
+
+<h3 id="spécifications-techniques">Spécifications techniques</h3>
+
+<h4 id="interactions-restful">Interactions RESTFUL</h4>
+
+<h5 id="gestion-des-acteurs">Gestion des acteurs</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Plus d'informations sur les requêtes HTTP en FHIR sur la documentation officielle
+https://www.hl7.org/fhir/R4/http.html
+</code></pre></div></div>
+
+<p>Les flux de gestion des ressources représentant les acteurs de cercle de soins sont des flux de création et de mise à jour des acteurs respectivement opérés par les requêtes HTTP POST et HTTP PUT</p>
+
+<ul>
+  <li>
+    <p>Le flux 1a de création d’un acteur est une requête HTTP POST reposant sur l’interaction « create » de FHIR sur les ressources FHIR « Patient », « Practitioner », « PractitionerRole », « RelatedPerson » et « Organization » :</p>
+  </li>
+  <li>Il est fortement recommandé de s’appuyer sur les données de l’Annuaire Santé, rassemblant les données d’identification des professionnels et des structures de santé issues des différents référentiels nationaux.</li>
+  <li>la ressource Patient respectant le profil FrCorePatientProfile doit contenir de préférence un identifier, un telecom et une address</li>
+</ul>
+
+<p>Ces requêtes sont envoyées au gestionnaire :</p>
+
+<figure style="text-align:center">
+<?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="136px" preserveAspectRatio="none" style="width:433px;height:136px;background:#FFFFFF;" version="1.1" viewBox="0 0 433 136" width="433px" zoomAndPan="magnify"><defs /><g><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="42" x2="42" y1="36.2969" y2="129.6953" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="376" x2="376" y1="36.2969" y2="129.6953" /><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="74" x="5" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60" x="12" y="24.9951">Cr&#233;ateur</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="102" x="325" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88" x="332" y="24.9951">Gestionnaire</text><polygon fill="#181818" points="364,78.5625,374,82.5625,364,86.5625,368,82.5625" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="42" x2="370" y1="82.5625" y2="82.5625" /><a href="spe_creation_cercle_soins.html#gestion-des-acteurs" target="_top" title="spe_creation_cercle_soins.html#gestion-des-acteurs" xlink:actuate="onRequest" xlink:href="spe_creation_cercle_soins.html#gestion-des-acteurs" xlink:show="new" xlink:title="spe_creation_cercle_soins.html#gestion-des-acteurs" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="201" x="49" y="62.3638">Flux 1a - CreationActeurRESTful</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="250" y="62.3638">&#160;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="302" x="57" y="77.4966">POST [Lien vers le serveur] / [RessourceActeur]</text><polygon fill="#181818" points="53,107.6953,43,111.6953,53,115.6953,49,111.6953" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="47" x2="375" y1="111.6953" y2="111.6953" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="113" x="59" y="106.6294">HTTP 201 created</text></g></svg>
+<figcaption> Flux 1a - création d'un acteur </figcaption>
+</figure>
+
+<p>Si la création de l’acteur est correctement effectuée, un code HTTP 201 created est retourné.</p>
+
+<h5 id="gestion-du-cercle-de-soins">Gestion du cercle de soins</h5>
+
+<ul>
+  <li>Le flux 1b de création du cercle de soins sera assuré par une ou plusieurs requêtes HTTP POST.</li>
+</ul>
+
+<p>Comme indiqué précédemment, le pré-requis à la création d’un cercle de soins est la recherche de ce cercle de soins. Si le cercle de soins n’existe pas, il est créé (flux 1b), sinon, il est mis à jour (<a href="spe_mise_jour_cercle_soins.html#spécifications-techniques">flux 4b</a>)</p>
+
+<p><strong>Flux 1b : Création d’un cercle de soins</strong></p>
+
+<p>Le flux de création de la ressource « CareTeam » est une requête HTTP POST reposant sur l’interaction « create » de FHIR. La ressource « CareTeam » constitue le corps de la requête. Ce flux se base sur la requête de la transaction IHE « Update Care Team » [PCC-45] du profil DCTM.
+Si la création du cercle de soins est correctement effectuée, un code HTTP 201 created est retourné.</p>
+
+<h4 id="interaction-transaction">Interaction transaction</h4>
+
+<p>La première étape de la construction de ce flux de création du cercle de soins consiste à organiser son contenu. Plusieurs types de ressources sont présents :</p>
+
+<ul>
+  <li>La ressource CareTeam (profil <a href="StructureDefinition-cds-ihe-careteam.html">CDS_IHECareTeam</a>),</li>
+  <li>La ressource référencée en tant que sujet du Cercle de Soins : la ressource Patient respectant le profil FrCorePatientProfile, contenant de préférence un identifier, un telecom et une address,</li>
+  <li>La ou les ressources référencées comme membres du Cercle de Soins, et celles qu’elles référencent, parmi les ressources suivantes :
+    <ul>
+      <li>PractitionerRole (profil ASPractitionerRole) pour représenter la situation d’exercice particulière d’un professionnel.
+        <ul>
+          <li>Avec Practitioner (profil ASPractitioner) référencée depuis PractitionerRole.practitioner (Exercice professionnel).</li>
+        </ul>
+      </li>
+      <li>RelatedPerson (profil <a href="StructureDefinition-cds-fr-related-person.html">CDS_FrRelatedperson</a>) pour représenter une personne tierce,</li>
+      <li>Organization (profil CDSAsOrganization) pour représenter une entité géographique (EG), une entité juridique (EJ) ou une organisation interne (OI)</li>
+      <li>Ou aucune si le seul membre est la personne prise en charge déjà référencée comme sujet du Cercle de Soins.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Ces ressources sont encapsulées dans une ressource « Bundle » de type « transaction » conforme au profil <a href="StructureDefinition-cds-bundle-transaction-creation.html">CDS_BundleTransactionCreation</a>. Le Bundle contient à minima une ressource CareTeam. Ce Bundle constitue le corps de la requête HTTP POST.</p>
+
+<div class="figure" style="width:100%;">
+    <p><?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="164px" preserveAspectRatio="none" style="width:388px;height:164px;background:#FFFFFF;" version="1.1" viewBox="0 0 388 164" width="388px" zoomAndPan="magnify"><defs /><g><rect fill="#FFFFFF" height="65.3984" style="stroke:#181818;stroke-width:1.0;" width="10" x="37" y="46.2969" /><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="326" y="82.5625" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="42" x2="42" y1="36.2969" y2="129.6953" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="331" x2="331" y1="36.2969" y2="129.6953" /><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="74" x="5" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60" x="12" y="24.9951">Cr&#233;ateur</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="74" x="5" y="128.6953" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60" x="12" y="148.6904">Cr&#233;ateur</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="102" x="280" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88" x="287" y="24.9951">Gestionnaire</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="102" x="280" y="128.6953" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88" x="287" y="148.6904">Gestionnaire</text><rect fill="#FFFFFF" height="65.3984" style="stroke:#181818;stroke-width:1.0;" width="10" x="37" y="46.2969" /><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="326" y="82.5625" /><polygon fill="#181818" points="314,78.5625,324,82.5625,314,86.5625,318,82.5625" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="47" x2="320" y1="82.5625" y2="82.5625" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="260" x="54" y="62.3638">Flux 1c - CreationCercleSoinsTransaction</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="212" x="54" y="77.4966">HTTP POST [Lien vers le serveur]/</text><polygon fill="#181818" points="53,107.6953,43,111.6953,53,115.6953,49,111.6953" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="47" x2="330" y1="111.6953" y2="111.6953" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="82" x="59" y="106.6294">HTTP 200 OK</text></g></svg></p>
+</div>
+
+<p>Pour chaque élément entry de la ressource Bundle, le paramètre request.method sera positionné à POST pour les nouvelles ressources à poster sur le serveur :</p>
+
+<ul>
+  <li>Pour la ressource CareTeam, l’attribut request.method sera positionné à POST,</li>
+  <li>Pour les ressources référencées dans CareTeam comme sujet et membres du cercle de soins, elles seront inclues dans le Bundle si elles n’existent pas sur le serveur ; l’attribut request.method sera positionné à POST.</li>
+</ul>
+
+<p>La gestion des droits de création et de modification des acteurs est à la charge du gestionnaire.</p>
+
+<p>Si la transaction a été correctement effectuée et donc que la création du cercle de soins est correctement effectuée, un code HTTP 200 ok est retourné . Un Bundle de type transaction-response doit être renvoyé dans le corps de la réponse . Ce dernier doit contenir les ressources telles qu’elles ont été créées par le gestionnaire ou, à minima, les identifiants logiques des ressources ayant été attribués par le gestionnaire (dans Bundle.entry.fullUrl et/ou Bundle.entry.resource.id). 
+Sinon, un code HTTP 500 Internal Server Error est retourné avec une ressource OperationOutcome contenant le détail des erreurs et avertissements résultant du traitement des entrées du Bundle.</p>
+
+<!-- Script pour les contrôles SVG interactifs -->
+<script>
+(function() {
+  // Attendre que le DOM soit complètement chargé
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAllSvgWrappers);
+  } else {
+    initAllSvgWrappers();
+  }
+
+  function initAllSvgWrappers() {
+    // Initialiser tous les wrappers SVG sur la page
+    const wrappers = document.querySelectorAll('.svg-wrap');
+    wrappers.forEach(wrap => initSvgWrapper(wrap));
+  }
+
+  function initSvgWrapper(wrap) {
+    if (!wrap) return;
+
+    // Trouver le SVG inclus
+    const svg = wrap.querySelector('svg');
+    if (!svg) {
+      console.warn('SVG non trouvé dans', wrap);
+      return;
+    }
+
+    let scale = 1;
+    let translateX = 0;
+    let translateY = 0;
+    const zoomStep = 0.15;
+    const minScale = 0.3;
+    const maxScale = 5;
+    const panSpeed = 1;
+
+    let isPanning = false;
+    let startX = 0;
+    let startY = 0;
+
+    // Fonction pour vérifier si on est en fullscreen
+    function isFullscreen() {
+      return document.fullscreenElement === wrap;
+    }
+
+    function applyTransform() {
+      if (isFullscreen()) {
+        svg.style.transformOrigin = "center center";
+        svg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+      } else {
+        // En mode normal, pas de transformation
+        svg.style.transform = '';
+      }
+    }
+
+    // Récupérer les boutons de contrôle pour ce wrapper spécifique
+    const zoomInBtn = wrap.querySelector('.svg-zoom-in');
+    const zoomOutBtn = wrap.querySelector('.svg-zoom-out');
+    const zoomResetBtn = wrap.querySelector('.svg-zoom-reset');
+    const fsBtn = wrap.querySelector('.svg-fullscreen');
+
+    /* ZOOM PAR BOUTONS */
+    if (zoomInBtn) {
+      zoomInBtn.addEventListener('click', (e) => {
+        if (!isFullscreen()) return; // Actif uniquement en fullscreen
+        e.preventDefault();
+        e.stopPropagation();
+        scale = Math.min(maxScale, scale + zoomStep);
+        applyTransform();
+      });
+    }
+
+    if (zoomOutBtn) {
+      zoomOutBtn.addEventListener('click', (e) => {
+        if (!isFullscreen()) return; // Actif uniquement en fullscreen
+        e.preventDefault();
+        e.stopPropagation();
+        scale = Math.max(minScale, scale - zoomStep);
+        applyTransform();
+      });
+    }
+
+    if (zoomResetBtn) {
+      zoomResetBtn.addEventListener('click', (e) => {
+        if (!isFullscreen()) return; // Actif uniquement en fullscreen
+        e.preventDefault();
+        e.stopPropagation();
+        scale = 1;
+        translateX = 0;
+        translateY = 0;
+        applyTransform();
+      });
+    }
+
+    /* ZOOM À LA MOLETTE */
+    wrap.addEventListener('wheel', (e) => {
+      if (!isFullscreen()) return; // Actif uniquement en fullscreen
+      e.preventDefault();
+      const delta = e.deltaY < 0 ? zoomStep : -zoomStep;
+      scale = Math.min(maxScale, Math.max(minScale, scale + delta));
+      applyTransform();
+    }, { passive: false });
+
+    /* PAN (déplacement à la souris) */
+    wrap.addEventListener('mousedown', (e) => {
+      if (!isFullscreen()) return; // Actif uniquement en fullscreen
+
+      // Ignorer si clic sur les boutons de contrôle
+      if (e.target.closest('.svg-controls')) return;
+
+      // Ignorer si clic sur un lien ou élément cliquable dans le SVG
+      if (e.target.tagName === 'A' || e.target.closest('a')) return;
+      if (e.target.hasAttribute('href') || e.target.getAttribute('xlink:href')) return;
+
+      // Ignorer si ce n'est pas le bouton gauche
+      if (e.button !== 0) return;
+
+      e.preventDefault();
+      isPanning = true;
+      startX = e.clientX - (translateX / panSpeed);
+      startY = e.clientY - (translateY / panSpeed);
+      wrap.classList.add('grabbing');
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (!isPanning) return;
+      e.preventDefault();
+      const deltaX = (e.clientX - startX) * panSpeed;
+      const deltaY = (e.clientY - startY) * panSpeed;
+      translateX = deltaX;
+      translateY = deltaY;
+      applyTransform();
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      if (isPanning) {
+        isPanning = false;
+        wrap.classList.remove('grabbing');
+      }
+    });
+
+    document.addEventListener('mouseleave', () => {
+      if (isPanning) {
+        isPanning = false;
+        wrap.classList.remove('grabbing');
+      }
+    });
+
+    /* PINCH ZOOM (mobile) */
+    let touchDistance = null;
+    let lastTouchX = 0;
+    let lastTouchY = 0;
+
+    wrap.addEventListener('touchstart', (e) => {
+      if (!isFullscreen()) return; // Actif uniquement en fullscreen
+      if (e.touches.length === 2) {
+        const dx = e.touches[0].clientX - e.touches[1].clientX;
+        const dy = e.touches[0].clientY - e.touches[1].clientY;
+        touchDistance = Math.sqrt(dx*dx + dy*dy);
+
+        lastTouchX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
+        lastTouchY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
+      } else if (e.touches.length === 1) {
+        lastTouchX = e.touches[0].clientX;
+        lastTouchY = e.touches[0].clientY;
+      }
+    });
+
+    wrap.addEventListener('touchmove', (e) => {
+      if (!isFullscreen()) return; // Actif uniquement en fullscreen
+      if (e.touches.length === 2) {
+        e.preventDefault();
+
+        const dx = e.touches[0].clientX - e.touches[1].clientX;
+        const dy = e.touches[0].clientY - e.touches[1].clientY;
+        const newDist = Math.sqrt(dx*dx + dy*dy);
+
+        if (touchDistance) {
+          const diff = newDist - touchDistance;
+          scale += diff * 0.005;
+          scale = Math.min(maxScale, Math.max(minScale, scale));
+          applyTransform();
+        }
+
+        touchDistance = newDist;
+      } else if (e.touches.length === 1 && scale > 1) {
+        e.preventDefault();
+        const touchX = e.touches[0].clientX;
+        const touchY = e.touches[0].clientY;
+
+        translateX += touchX - lastTouchX;
+        translateY += touchY - lastTouchY;
+        applyTransform();
+
+        lastTouchX = touchX;
+        lastTouchY = touchY;
+      }
+    }, { passive: false });
+
+    wrap.addEventListener('touchend', () => {
+      touchDistance = null;
+    });
+
+    /* FULLSCREEN */
+    if (fsBtn) {
+      fsBtn.addEventListener('click', async (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        try {
+          if (!document.fullscreenElement) {
+            // Réinitialiser zoom/pan avant fullscreen
+            scale = 1;
+            translateX = 0;
+            translateY = 0;
+            applyTransform();
+            await wrap.requestFullscreen();
+          } else {
+            await document.exitFullscreen();
+          }
+        } catch (err) {
+          console.error('Erreur fullscreen:', err);
+        }
+      });
+    }
+
+    // Gérer fullscreenchange pour réinitialiser quand on sort du fullscreen
+    document.addEventListener('fullscreenchange', () => {
+      if (!isFullscreen()) {
+        // Sortie du fullscreen : réinitialiser le zoom/pan
+        scale = 1;
+        translateX = 0;
+        translateY = 0;
+        applyTransform();
+      }
+    });
+  }
+})();
+</script>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:var(--ig-left);">&#xA0;
+
+                <a href="spe_synthese.html">&lt; prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:var(--ig-right);">&#xA0;
+
+                <a href="spe_consultation_cercle_soins.html">next ></a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  
+          Package ans.fhir.fr.cds#2.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-07-10 13:11:00 +0000">
+    2026-07-10
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a> |
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/fhir/cds/history.html">Historique des versions</a>
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/documentation">Documentation</a>
+ | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/ansforge/IG-fhir-cercle-de-soins/issues/new">New issue</a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+
+  <!-- Ajout ANS -->
+  <script src="assets/js/app.js" type="text/javascript"> </script>
+  <script src="assets/js/vendor.js" type="text/javascript"> </script>
+  <!-- Fin ajout ANS -->
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  <!-- AJOUT ANS -->
+
+<footer class="footer footer-principal" role="contentinfo">
+  <div class="footer__region1">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4 text-center text-md-left">
+          <div class="logos">        
+            <div class="logo logo--0">
+              <a href="https://solidarites-sante.gouv.fr" title="Ministère des Solidarités et de la Santé (nouvelle fenêtre)" target="_blank" rel="nofollow">
+                
+                <img src="assets/images/logo-ministere.svg" alt="Ministère des Solidarités et de la Santé" width="133" height="77" loading="lazy" />
+                
+              </a>
+            </div>
+        
+            <div class="logo logo--1">
+              <a href="https://esante.gouv.fr/" title="Agence du numérique en santé (nouvelle fenêtre)" target="_blank" rel="nofollow">
+                
+                <img src="assets/images/logo-ANS-footer.svg" alt="Agence du numérique en santé" width="106" height="74" loading="lazy" />
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 text-center text-md-left">
+          <p class="footer__title">Agence du Numérique en Santé</p>
+          <p>2-10 Rue d'Oradour-sur-Glane 75015 Paris</p>
+
+          <!-- <div class="m-social">
+            <ul class="m-social__list">        
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://www.linkedin.com/company/agence-du-numerique-en-sante/" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-linkedin" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#linkedin"></use></svg>
+                  </div>
+                  <span class="sr-only">linkedin</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://twitter.com/esante_gouv_fr" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-twitter" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#twitter"></use></svg>
+                  </div>
+                  <span class="sr-only">twitter</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://www.youtube.com/channel/UCd1zuSaU5cE1lRCpwv_HSMA" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-youtube" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#youtube"></use></svg>
+                  </div>
+                  <span class="sr-only">youtube</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://esante.gouv.fr/rss.xml" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-rss" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#rss"></use></svg>
+                  </div>
+                  <span class="sr-only">rss</span>
+                </a>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+        
+        <div class="col-6 col-lg-4">
+          <ul class="footer-list">
+            <li class="footer-list__item footer-list__item--hasIcon">
+              <a href="mailto:ci-sis@esante.gouv.fr" class="mailto-link">
+                <svg class="svg-icon svg-angle-right" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#angle-right"></use></svg>Contact</a>
+              </li>
+              <!-- <li class="footer-list__item">
+                <a href="https://interop-pprod.esante.gouv.fr/ci-sis-specifications/wp-content/uploads/CGU_espace_de_tests_v1.1.pdf" class="file-link">Mentions légales</a>
+              </li>
+               -->
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    <!-- <div class="footer__region2">
+      <div class="container">
+        <div class="footer-contentinfo">
+          <ul class="footer-list footer-list--inline">
+
+          </ul>
+        </div>
+      </div>
+    </div> -->
+  </footer>
+  </body>
+</html>
+

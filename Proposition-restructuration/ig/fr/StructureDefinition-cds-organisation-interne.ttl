@@ -1,0 +1,417 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-organisation-interne> a fhir:StructureDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "cds-organisation-interne"] ;
+  fhir:Resource.language [ fhir:value "fr"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : DéfinitionStructure cds-organisation-interne</b></p><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Le nom logique de l'élément\">Nom</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Informations sur l'utilisation de l'élément\">Drapeaux</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Nombre minimum et maximum de fois que l'élément peut apparaître dans l'instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Référence au type de l'élément\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Informations supplémentaires sur l'élément\">Description et contraintes</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-organisation-interne-definitions.html#cds-organisation-interne\" title=\"La classe Organisation Interne est une classe abstraite qui contient les attributs inhérents et communs aux classes décrivant l’organisation opérationnelle interne d’une EG permettant de délivrer la prestation.Une organisation interne peut être composée d’autres organisations internes. Par exemple, les unités fonctionnelles peuvent être regroupées au sein de services qui peuvent être regroupés en pôles.La description de cette organisation interne de l’EG n’est pas obligatoire. Lorsqu’elle est décrite cette organisation porte les ressources opérationnelles.\">cds-organisation-interne</a><a name=\"cds-organisation-interne\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\">OrganisationInterne(0.1.0-ballot)</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">La classe Organisation Interne est une classe abstraite qui contient les attributs inhérents et communs aux classes décrivant l’organisation opérationnelle interne d’une EG permettant de délivrer la prestation.Une organisation interne peut être composée d’autres organisations internes. Par exemple, les unités fonctionnelles peuvent être regroupées au sein de services qui peuvent être regroupés en pôles.La description de cette organisation interne de l’EG n’est pas obligatoire. Lorsqu’elle est décrite cette organisation porte les ressources opérationnelles.<br/><br/>Éléments définis dans les ancêtres :<a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"Identifiant de l'organisation interne, unique et persistant au niveau national.\">identifiantOI</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"Nom de l'organisation interne.\">nomOI</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"Type d'organisation interne (pôle, structure interne ou service, unité fonctionnelle, unité élémentaire, etc.).\">typeOI</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"Personne ou service qui agit comme point de contact auprès d'une autre personne ou d'un autre service. Les moyens de contact sont précisés (numéro de téléphone, fax, email, site internet).\">contact</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'organisation interne.\">boiteLettresMSS</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"Date d'ouverture administrative de l'organisation interne.\">dateOuverture</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"La date de fermeture d'un niveau organisationnel correspond à la date à partir de laquelle un niveau organisationnel n'assure plus aucune prestation. Cette date de fermeture est caractérisée par un type de fermeture. A partir de cette date, les prestations des niveaux organisationnels inférieurs ne sont plus assurées. Lorsqu'il s'agit d'une fermeture temporaire, la date est remise à nulle lorsque le niveau organisationnel est ouvert de nouveau.\">dateFermeture</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"Le type de fermeture d'un niveau organisationnel indique la temporalité de la fermeture. Le type de fermeture s'applique au niveau organisationnel sur lequel la fermeture est déclarée, ainsi que tous les niveaux inférieurs rattachés à ce niveau organisationnel. Par exemple, si un service est fermé temporairement, toutes les unités fonctionnelles qui lui sont rattachées sont également fermées temporairement.\">typeFermeture</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"La date de réouverture correspond à la date prévisionnelle à partir de laquelle la prestation sera de nouveau assurée. Elle s'applique lors d'une période de fermeture temporaire.\">datePrevisionnelleReouverture</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"Lien vers la classe EntiteGeographique\">EntiteGeographique</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"Lien vers la classe OrganisationInterne\">OrganisationInterne</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"Lien vers la classe OffreOperationnelle\">OffreOperationnelle</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"Lien vers la classe Agenda\">Agenda</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"Lien vers la classe RendezVous\">RendezVous</a></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-organisation-interne-definitions.html#cds-organisation-interne.identifiantOI\">identifiantOI</a><a name=\"cds-organisation-interne.identifiantOI\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Identifiant de l'organisation interne, unique et persistant au niveau national.</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-organisation-interne-definitions.html#cds-organisation-interne.nomOI\">nomOI</a><a name=\"cds-organisation-interne.nomOI\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Nom de l'organisation interne.</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-organisation-interne-definitions.html#cds-organisation-interne.boiteLettresMSS\">boiteLettresMSS</a><a name=\"cds-organisation-interne.boiteLettresMSS\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-BoiteLettreMSS.html\">BoiteLettreMSS</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'organisation interne.</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-organisation-interne-definitions.html#cds-organisation-interne.CDSEntiteGeographique\" title=\"Lien vers le concept Entité Géographique\">CDSEntiteGeographique</a><a name=\"cds-organisation-interne.CDSEntiteGeographique\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-cds-entite-geographique.html\">cds-entite-geographique</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Lien vers le concept Entité Géographique</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-organisation-interne-definitions.html#cds-organisation-interne.CDSMembreCercleSoins\" title=\"Lien vers le concept Membre Cercle Soins\">CDSMembreCercleSoins</a><a name=\"cds-organisation-interne.CDSMembreCercleSoins\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-cds-membre-cercle-soins.html\">cds-membre-cercle-soins</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Lien vers le concept Membre Cercle Soins</td></tr>#xD;\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Légende pour ce format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation pour ce format</a></td></tr></table></div>"
+  ] ;
+  fhir:StructureDefinition.url [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-organisation-interne"] ;
+  fhir:StructureDefinition.version [ fhir:value "2.0.1"] ;
+  fhir:StructureDefinition.name [ fhir:value "CDSOrganisationInterne"] ;
+  fhir:StructureDefinition.title [ fhir:value "CDS Organisation Interne"] ;
+  fhir:StructureDefinition.status [ fhir:value "draft"] ;
+  fhir:StructureDefinition.date [ fhir:value "2026-07-10T13:11:38+00:00"^^xsd:dateTime] ;
+  fhir:StructureDefinition.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
+  fhir:StructureDefinition.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
+     ]
+  ] ;
+  fhir:StructureDefinition.description [ fhir:value "La classe Organisation Interne est une classe abstraite qui contient les attributs inhérents et communs aux classes décrivant l’organisation opérationnelle interne d’une EG permettant de délivrer la prestation.Une organisation interne peut être composée d’autres organisations internes. Par exemple, les unités fonctionnelles peuvent être regroupées au sein de services qui peuvent être regroupés en pôles.La description de cette organisation interne de l’EG n’est pas obligatoire. Lorsqu’elle est décrite cette organisation porte les ressources opérationnelles."] ;
+  fhir:StructureDefinition.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "France (la)" ]
+     ]
+  ] ;
+  fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"] ;
+  fhir:StructureDefinition.kind [ fhir:value "logical"] ;
+  fhir:StructureDefinition.abstract [ fhir:value "false"^^xsd:boolean] ;
+  fhir:StructureDefinition.type [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-organisation-interne"] ;
+  fhir:StructureDefinition.baseDefinition [
+     fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/OrganisationInterne|0.1.0-ballot" ;
+     fhir:link <https://interop.esante.gouv.fr/ig/mos/StructureDefinition/OrganisationInterne|0.1.0-ballot>
+  ] ;
+  fhir:StructureDefinition.derivation [ fhir:value "specialization"] ;
+  fhir:StructureDefinition.snapshot [
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version" ] ;
+       fhir:Extension.valueString [ fhir:value "0.1.0-ballot" ]
+     ] ;
+     fhir:StructureDefinition.snapshot.element [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-organisation-interne" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-organisation-interne" ] ;
+       fhir:ElementDefinition.short [ fhir:value "La classe Organisation Interne est une classe abstraite qui contient les attributs inhérents et communs aux classes décrivant l’organisation opérationnelle interne d’une EG permettant de délivrer la prestation.Une organisation interne peut être composée d’autres organisations internes. Par exemple, les unités fonctionnelles peuvent être regroupées au sein de services qui peuvent être regroupés en pôles.La description de cette organisation interne de l’EG n’est pas obligatoire. Lorsqu’elle est décrite cette organisation porte les ressources opérationnelles." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "La classe Organisation Interne est une classe abstraite qui contient les attributs inhérents et communs aux classes décrivant l’organisation opérationnelle interne d’une EG permettant de délivrer la prestation.Une organisation interne peut être composée d’autres organisations internes. Par exemple, les unités fonctionnelles peuvent être regroupées au sein de services qui peuvent être regroupés en pôles.La description de cette organisation interne de l’EG n’est pas obligatoire. Lorsqu’elle est décrite cette organisation porte les ressources opérationnelles." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Base" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-organisation-interne.identifiantOI" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-organisation-interne.identifiantOI" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Identifiant de l'organisation interne, unique et persistant au niveau national." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identifiant de l'organisation interne, unique et persistant au niveau national." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "OrganisationInterne.identifiantOI" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-organisation-interne.nomOI" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-organisation-interne.nomOI" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Nom de l'organisation interne." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Nom de l'organisation interne." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "OrganisationInterne.nomOI" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-organisation-interne.typeOI" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-organisation-interne.typeOI" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Type d'organisation interne (pôle, structure interne ou service, unité fonctionnelle, unité élémentaire, etc.)." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Type d'organisation interne (pôle, structure interne ou service, unité fonctionnelle, unité élémentaire, etc.)." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "OrganisationInterne.typeOI" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R207-TypeOrganisationInterne/FHIR/TRE-R207-TypeOrganisationInterne?vs" ;
+           fhir:link <https://mos.esante.gouv.fr/NOS/TRE_R207-TypeOrganisationInterne/FHIR/TRE-R207-TypeOrganisationInterne?vs>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-organisation-interne.contact" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-organisation-interne.contact" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Personne ou service qui agit comme point de contact auprès d'une autre personne ou d'un autre service. Les moyens de contact sont précisés (numéro de téléphone, fax, email, site internet)." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Personne ou service qui agit comme point de contact auprès d'une autre personne ou d'un autre service. Les moyens de contact sont précisés (numéro de téléphone, fax, email, site internet)." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "OrganisationInterne.contact" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Contact" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-organisation-interne.boiteLettresMSS" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-organisation-interne.boiteLettresMSS" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'organisation interne." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'organisation interne." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "OrganisationInterne.boiteLettresMSS" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/BoiteLettreMSS" ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-organisation-interne.dateOuverture" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-organisation-interne.dateOuverture" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Date d'ouverture administrative de l'organisation interne." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Date d'ouverture administrative de l'organisation interne." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "OrganisationInterne.dateOuverture" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "date" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-organisation-interne.dateFermeture" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-organisation-interne.dateFermeture" ] ;
+       fhir:ElementDefinition.short [ fhir:value "La date de fermeture d'un niveau organisationnel correspond à la date à partir de laquelle un niveau organisationnel n'assure plus aucune prestation. Cette date de fermeture est caractérisée par un type de fermeture. A partir de cette date, les prestations des niveaux organisationnels inférieurs ne sont plus assurées. Lorsqu'il s'agit d'une fermeture temporaire, la date est remise à nulle lorsque le niveau organisationnel est ouvert de nouveau." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "La date de fermeture d'un niveau organisationnel correspond à la date à partir de laquelle un niveau organisationnel n'assure plus aucune prestation. Cette date de fermeture est caractérisée par un type de fermeture. A partir de cette date, les prestations des niveaux organisationnels inférieurs ne sont plus assurées. Lorsqu'il s'agit d'une fermeture temporaire, la date est remise à nulle lorsque le niveau organisationnel est ouvert de nouveau." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "OrganisationInterne.dateFermeture" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "date" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-organisation-interne.typeFermeture" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-organisation-interne.typeFermeture" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Le type de fermeture d'un niveau organisationnel indique la temporalité de la fermeture. Le type de fermeture s'applique au niveau organisationnel sur lequel la fermeture est déclarée, ainsi que tous les niveaux inférieurs rattachés à ce niveau organisationnel. Par exemple, si un service est fermé temporairement, toutes les unités fonctionnelles qui lui sont rattachées sont également fermées temporairement." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Le type de fermeture d'un niveau organisationnel indique la temporalité de la fermeture. Le type de fermeture s'applique au niveau organisationnel sur lequel la fermeture est déclarée, ainsi que tous les niveaux inférieurs rattachés à ce niveau organisationnel. Par exemple, si un service est fermé temporairement, toutes les unités fonctionnelles qui lui sont rattachées sont également fermées temporairement." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "OrganisationInterne.typeFermeture" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R286-TypeFermeture/FHIR/TRE-R286-TypeFermeture?vs" ;
+           fhir:link <https://mos.esante.gouv.fr/NOS/TRE_R286-TypeFermeture/FHIR/TRE-R286-TypeFermeture?vs>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-organisation-interne.datePrevisionnelleReouverture" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-organisation-interne.datePrevisionnelleReouverture" ] ;
+       fhir:ElementDefinition.short [ fhir:value "La date de réouverture correspond à la date prévisionnelle à partir de laquelle la prestation sera de nouveau assurée. Elle s'applique lors d'une période de fermeture temporaire." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "La date de réouverture correspond à la date prévisionnelle à partir de laquelle la prestation sera de nouveau assurée. Elle s'applique lors d'une période de fermeture temporaire." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "OrganisationInterne.datePrevisionnelleReouverture" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "date" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-organisation-interne.EntiteGeographique" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-organisation-interne.EntiteGeographique" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe EntiteGeographique" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe EntiteGeographique" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "OrganisationInterne.EntiteGeographique" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/EntiteGeographique" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-organisation-interne.OrganisationInterne" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-organisation-interne.OrganisationInterne" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe OrganisationInterne" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe OrganisationInterne" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "OrganisationInterne.OrganisationInterne" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/OrganisationInterne" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-organisation-interne.OffreOperationnelle" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-organisation-interne.OffreOperationnelle" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe OffreOperationnelle" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe OffreOperationnelle" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "OrganisationInterne.OffreOperationnelle" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/OffreOperationnelle" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-organisation-interne.Agenda" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-organisation-interne.Agenda" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe Agenda" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe Agenda" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "OrganisationInterne.Agenda" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Agenda" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-organisation-interne.RendezVous" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-organisation-interne.RendezVous" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe RendezVous" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe RendezVous" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "OrganisationInterne.RendezVous" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/RendezVous" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-organisation-interne.CDSEntiteGeographique" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-organisation-interne.CDSEntiteGeographique" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers le concept Entité Géographique" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers le concept Entité Géographique" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cds-organisation-interne.CDSEntiteGeographique" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-entite-geographique" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-organisation-interne.CDSMembreCercleSoins" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-organisation-interne.CDSMembreCercleSoins" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers le concept Membre Cercle Soins" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers le concept Membre Cercle Soins" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cds-organisation-interne.CDSMembreCercleSoins" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-membre-cercle-soins" ]
+       ]
+     ]
+  ] ;
+  fhir:StructureDefinition.differential [
+     fhir:StructureDefinition.differential.element [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-organisation-interne" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-organisation-interne" ] ;
+       fhir:ElementDefinition.short [ fhir:value "La classe Organisation Interne est une classe abstraite qui contient les attributs inhérents et communs aux classes décrivant l’organisation opérationnelle interne d’une EG permettant de délivrer la prestation.Une organisation interne peut être composée d’autres organisations internes. Par exemple, les unités fonctionnelles peuvent être regroupées au sein de services qui peuvent être regroupés en pôles.La description de cette organisation interne de l’EG n’est pas obligatoire. Lorsqu’elle est décrite cette organisation porte les ressources opérationnelles." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "La classe Organisation Interne est une classe abstraite qui contient les attributs inhérents et communs aux classes décrivant l’organisation opérationnelle interne d’une EG permettant de délivrer la prestation.Une organisation interne peut être composée d’autres organisations internes. Par exemple, les unités fonctionnelles peuvent être regroupées au sein de services qui peuvent être regroupés en pôles.La description de cette organisation interne de l’EG n’est pas obligatoire. Lorsqu’elle est décrite cette organisation porte les ressources opérationnelles." ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-organisation-interne.identifiantOI" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-organisation-interne.identifiantOI" ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-organisation-interne.nomOI" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-organisation-interne.nomOI" ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-organisation-interne.boiteLettresMSS" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-organisation-interne.boiteLettresMSS" ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-organisation-interne.CDSEntiteGeographique" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-organisation-interne.CDSEntiteGeographique" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers le concept Entité Géographique" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers le concept Entité Géographique" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-entite-geographique" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-organisation-interne.CDSMembreCercleSoins" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-organisation-interne.CDSMembreCercleSoins" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers le concept Membre Cercle Soins" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers le concept Membre Cercle Soins" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-membre-cercle-soins" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-organisation-interne.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

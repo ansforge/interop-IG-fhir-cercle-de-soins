@@ -25,9 +25,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.620"],
     "uses" : {
     },
+    "StructureDefinition-cds-bundle-transaction-creation.html" : "CDS Bundle Transaction Creation Profile",
     "StructureDefinition-cds-bundle-response-recherche.html" : "CDS Bundle Response Recherche Profile",
-    "StructureDefinition-cds-bundle-transaction-maj.html" : "CDS Bundle Transaction MAJ Profile",
-    "StructureDefinition-cds-bundle-transaction-creation.html" : "CDS Bundle Transaction Creation Profile"
+    "StructureDefinition-cds-bundle-transaction-maj.html" : "CDS Bundle Transaction MAJ Profile"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/care-team-category",
@@ -141,9 +141,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.624"],
     "uses" : {
     },
+    "StructureDefinition-cds-bundle-transaction-creation.html" : "CDS Bundle Transaction Creation Profile",
     "StructureDefinition-cds-bundle-response-recherche.html" : "CDS Bundle Response Recherche Profile",
-    "StructureDefinition-cds-bundle-transaction-maj.html" : "CDS Bundle Transaction MAJ Profile",
-    "StructureDefinition-cds-bundle-transaction-creation.html" : "CDS Bundle Transaction Creation Profile"
+    "StructureDefinition-cds-bundle-transaction-maj.html" : "CDS Bundle Transaction MAJ Profile"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/identifier-type",
@@ -188,11 +188,11 @@
     "uses" : {
     },
     "StructureDefinition-cds-ihe-careteam.html" : "CDS CareTeam Profile",
-    "StructureDefinition-cds-bundle-response-recherche.html" : "CDS Bundle Response Recherche Profile",
-    "StructureDefinition-cds-fr-related-person.html" : "CDS Fr RelatedPerson Profile",
-    "StructureDefinition-cds-bundle-transaction-maj.html" : "CDS Bundle Transaction MAJ Profile",
     "StructureDefinition-cds-bundle-transaction-creation.html" : "CDS Bundle Transaction Creation Profile",
-    "StructureDefinition-cds-organization.html" : "CDS Organization Profile"
+    "StructureDefinition-cds-fr-related-person.html" : "CDS Fr RelatedPerson Profile",
+    "StructureDefinition-cds-bundle-response-recherche.html" : "CDS Bundle Response Recherche Profile",
+    "StructureDefinition-cds-organization.html" : "CDS Organization Profile",
+    "StructureDefinition-cds-bundle-transaction-maj.html" : "CDS Bundle Transaction MAJ Profile"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/name-use",
@@ -249,9 +249,9 @@
     "sources" : ["2.16.840.1.113883.4.642.3.622"],
     "uses" : {
     },
+    "StructureDefinition-cds-bundle-transaction-creation.html" : "CDS Bundle Transaction Creation Profile",
     "StructureDefinition-cds-bundle-response-recherche.html" : "CDS Bundle Response Recherche Profile",
-    "StructureDefinition-cds-bundle-transaction-maj.html" : "CDS Bundle Transaction MAJ Profile",
-    "StructureDefinition-cds-bundle-transaction-creation.html" : "CDS Bundle Transaction Creation Profile"
+    "StructureDefinition-cds-bundle-transaction-maj.html" : "CDS Bundle Transaction MAJ Profile"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/security-labels",
@@ -347,6 +347,167 @@
     "uses" : {
     },
     "StructureDefinition-cds-ihe-careteam.html" : "CDS CareTeam Profile"
+  },
+  {
+    "url" : "https://interop.esante.gouv.fr/ig/mos/ValueSet/categorieEtablissement-vs",
+    "version" : "0.1.0-ballot",
+    "status" : "draft",
+    "name" : "CategorieetablissementVs",
+    "title" : null,
+    "description" : "",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R316-AutreCategorieEtablissement/FHIR/TRE-R316-AutreCategorieEtablissement",
+    "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement"],
+    "uses" : {
+    },
+    "StructureDefinition-cds-entite-geographique.html" : "CDS Entite Geographique"
+  },
+  {
+    "url" : "https://interop.esante.gouv.fr/ig/mos/ValueSet/lieuNaissance-vs",
+    "version" : "0.1.0-ballot",
+    "status" : "draft",
+    "name" : "LieunaissanceVs",
+    "title" : null,
+    "description" : "",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R20-Pays/FHIR/TRE-R20-Pays",
+    "https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM"],
+    "uses" : {
+    },
+    "StructureDefinition-cds-personne-physique.html" : "CDS Personne Physique"
+  },
+  {
+    "url" : "https://interop.esante.gouv.fr/ig/mos/ValueSet/paysNaissance-vs",
+    "version" : "0.1.0-ballot",
+    "status" : "draft",
+    "name" : "PaysnaissanceVs",
+    "title" : null,
+    "description" : "",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R20-Pays/FHIR/TRE-R20-Pays",
+    "https://mos.esante.gouv.fr/NOS/TRE_R268-PaysProvenanceISO/FHIR/TRE-R268-PaysProvenanceISO"],
+    "uses" : {
+    },
+    "StructureDefinition-cds-personne-physique.html" : "CDS Personne Physique"
+  },
+  {
+    "url" : "https://interop.esante.gouv.fr/ig/mos/ValueSet/paysNationalite-vs",
+    "version" : "0.1.0-ballot",
+    "status" : "draft",
+    "name" : "PaysnationaliteVs",
+    "title" : null,
+    "description" : "",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R20-Pays/FHIR/TRE-R20-Pays",
+    "https://mos.esante.gouv.fr/NOS/TRE_R89-RegroupementPays/FHIR/TRE-R89-RegroupementPays",
+    "https://mos.esante.gouv.fr/NOS/TRE_R268-PaysProvenanceISO/FHIR/TRE-R268-PaysProvenanceISO"],
+    "uses" : {
+    },
+    "StructureDefinition-cds-personne-physique.html" : "CDS Personne Physique"
+  },
+  {
+    "url" : "https://interop.esante.gouv.fr/ig/mos/ValueSet/profession-vs",
+    "version" : "0.1.0-ballot",
+    "status" : "draft",
+    "name" : "ProfessionVs",
+    "title" : null,
+    "description" : "",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R291-AutreProfession/FHIR/TRE-R291-AutreProfession",
+    "https://mos.esante.gouv.fr/NOS/TRE_R95-UsagerTitre/FHIR/TRE-R95-UsagerTitre",
+    "https://mos.esante.gouv.fr/NOS/TRE_G15-ProfessionSante/FHIR/TRE-G15-ProfessionSante",
+    "https://mos.esante.gouv.fr/NOS/TRE_R94-ProfessionSocial/FHIR/TRE-R94-ProfessionSocial"],
+    "uses" : {
+    },
+    "StructureDefinition-cds-exercice-professionnel.html" : "CDS Exercice Professionnel"
+  },
+  {
+    "url" : "https://interop.esante.gouv.fr/ig/mos/ValueSet/professionCategorieSocioProfessionnelle-vs",
+    "version" : "0.1.0-ballot",
+    "status" : "draft",
+    "name" : "ProfessioncategoriesocioprofessionnelleVs",
+    "title" : null,
+    "description" : "",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R292-INSEECategorieSocioProfessionnelleAgrNiv1/FHIR/TRE-R292-INSEECategorieSocioProfessionnelleAgrNiv1",
+    "https://mos.esante.gouv.fr/NOS/TRE_R262-CategorieSocioProfessionnelle/FHIR/TRE-R262-CategorieSocioProfessionnelle"],
+    "uses" : {
+    },
+    "StructureDefinition-cds-personne-physique.html" : "CDS Personne Physique"
+  },
+  {
+    "url" : "https://interop.esante.gouv.fr/ig/mos/ValueSet/relation-vs",
+    "version" : "0.1.0-ballot",
+    "status" : "draft",
+    "name" : "RelationVs",
+    "title" : null,
+    "description" : "",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R216-HL7RoleCode/FHIR/TRE-R216-HL7RoleCode",
+    "https://mos.esante.gouv.fr/NOS/TRE_R217-ProtectionJuridique/FHIR/TRE-R217-ProtectionJuridique"],
+    "uses" : {
+    },
+    "StructureDefinition-cds-contact.html" : "CDS Contact"
+  },
+  {
+    "url" : "https://interop.esante.gouv.fr/ig/mos/ValueSet/role-vs",
+    "version" : "0.1.0-ballot",
+    "status" : "draft",
+    "name" : "RoleVs",
+    "title" : null,
+    "description" : "",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R85-RolePriseCharge/FHIR/TRE-R85-RolePriseCharge",
+    "https://mos.esante.gouv.fr/NOS/TRE_R21-Fonction/FHIR/TRE-R21-Fonction",
+    "https://mos.esante.gouv.fr/NOS/TRE_R96-AutreFonctionSanitaire/FHIR/TRE-R96-AutreFonctionSanitaire"],
+    "uses" : {
+    },
+    "StructureDefinition-cds-situation-exercice.html" : "CDS Situation Exercice"
+  },
+  {
+    "url" : "https://interop.esante.gouv.fr/ig/mos/ValueSet/secteurActivite-vs",
+    "version" : "0.1.0-ballot",
+    "status" : "draft",
+    "name" : "SecteuractiviteVs",
+    "title" : null,
+    "description" : "",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R02-SecteurActivite/FHIR/TRE-R02-SecteurActivite",
+    "https://mos.esante.gouv.fr/NOS/TRE_G19-SecteurActiviteADELI/FHIR/TRE-G19-SecteurActiviteADELI"],
+    "uses" : {
+    },
+    "StructureDefinition-cds-entite-geographique.html" : "CDS Entite Geographique"
+  },
+  {
+    "url" : "https://interop.esante.gouv.fr/ig/mos/ValueSet/sexe-vs",
+    "version" : "0.1.0-ballot",
+    "status" : "draft",
+    "name" : "SexeVs",
+    "title" : null,
+    "description" : "",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R303-HL7v3AdministrativeGender/FHIR/TRE-R303-HL7v3AdministrativeGender",
+    "https://mos.esante.gouv.fr/NOS/TRE_R267-SexeProvenanceISO/FHIR/TRE-R267-SexeProvenanceISO",
+    "https://mos.esante.gouv.fr/NOS/TRE_R249-Sexe/FHIR/TRE-R249-Sexe"],
+    "uses" : {
+    },
+    "StructureDefinition-cds-personne-physique.html" : "CDS Personne Physique"
+  },
+  {
+    "url" : "https://interop.esante.gouv.fr/ig/mos/ValueSet/typeProfession-vs",
+    "version" : "0.1.0-ballot",
+    "status" : "draft",
+    "name" : "TypeprofessionVs",
+    "title" : null,
+    "description" : "",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R37-TypeProfessionFonction/FHIR/TRE-R37-TypeProfessionFonction",
+    "https://mos.esante.gouv.fr/NOS/TRE_R288-TypeProfession/FHIR/TRE-R288-TypeProfession"],
+    "uses" : {
+    },
+    "StructureDefinition-cds-exercice-professionnel.html" : "CDS Exercice Professionnel"
+  },
+  {
+    "url" : "https://interop.esante.gouv.fr/ig/mos/ValueSet/typeRole-vs",
+    "version" : "0.1.0-ballot",
+    "status" : "draft",
+    "name" : "TyperoleVs",
+    "title" : null,
+    "description" : "",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R289-TypeFonction/FHIR/TRE-R289-TypeFonction",
+    "https://mos.esante.gouv.fr/NOS/TRE_R37-TypeProfessionFonction/FHIR/TRE-R37-TypeProfessionFonction"],
+    "uses" : {
+    },
+    "StructureDefinition-cds-situation-exercice.html" : "CDS Situation Exercice"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/JDV_J100-FinessStatutJuridique-RASS/FHIR/JDV-J100-FinessStatutJuridique-RASS",
@@ -445,5 +606,31 @@
     "uses" : {
     },
     "StructureDefinition-cds-organization.html" : "CDS Organization Profile"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R73-ESPIC/FHIR/TRE-R73-ESPIC?vs",
+    "version" : "20260223120000",
+    "status" : "active",
+    "name" : "VsTreR73EspicAll",
+    "title" : "Vs Tre R73 Espic All",
+    "description" : "Jeu de valeurs ALL contenant tous les établissements de santé privés d'intérêt collectif",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R73-ESPIC/FHIR/TRE-R73-ESPIC"],
+    "oids" : ["1.2.250.1.213.1.6.1.280"],
+    "sources" : ["1.2.250.1.213.1.6.1.280"],
+    "uses" : {
+    },
+    "StructureDefinition-cds-entite-geographique.html" : "CDS Entite Geographique"
+  },
+  {
+    "url" : "https://mos.esante.gouv.fr/NOS/TRE_R74-ModeFixationTarifaire/FHIR/TRE-R74-ModeFixationTarifaire?vs",
+    "version" : "20260330120000",
+    "status" : "active",
+    "name" : "VsTreR74ModeFixationTarifaireAll",
+    "title" : "Vs Tre R74 Mode Fixation Tarifaire All",
+    "description" : "Jeu de valeurs ALL contenant les modes de fixation tarifaire",
+    "systems" : ["https://mos.esante.gouv.fr/NOS/TRE_R74-ModeFixationTarifaire/FHIR/TRE-R74-ModeFixationTarifaire"],
+    "uses" : {
+    },
+    "StructureDefinition-cds-entite-geographique.html" : "CDS Entite Geographique"
   }]
 }

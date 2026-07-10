@@ -11,7 +11,7 @@
   <name value="CDS"/>
   <title value="Cercle De Soins"/>
   <status value="active"/>
-  <date value="2026-07-10T12:59:14+00:00"/>
+  <date value="2026-07-10T13:11:38+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -57,6 +57,11 @@
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
     <packageId value="hl7.fhir.uv.extensions.r4"/>
     <version value="5.2.0"/>
+  </dependsOn>
+  <dependsOn id="ans_fr_mos">
+    <uri value="https://interop.esante.gouv.fr/ig/mos/ImplementationGuide/ans.fr.mos"/>
+    <packageId value="ans.fr.mos"/>
+    <version value="0.1.0-ballot"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -609,6 +614,83 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cds-cercle-soins"/>
+      </reference>
+      <name value="CDS Cercle Soins"/>
+      <description value="Le cercle de soins est l'agrégation de membres qui participent à la prise en charge et aux actions de coordination du parcours de santé d’une personne."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActorDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActorDefinition/CDS-Consommateur-Actor"/>
+      </reference>
+      <name value="CDS Consommateur"/>
+      <description value="Le rôle de consommateur incarné par un système, peut consulter un cercle de soins."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cds-contact"/>
+      </reference>
+      <name value="CDS Contact"/>
+      <description value="Un contact peut être un membre de la famille ou un proche de l’Usager. Il peut s’agir par exemple d’un aidant, de la personne de confiance de l’Usager"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActorDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActorDefinition/CDS-Createur-Actor"/>
+      </reference>
+      <name value="CDS Créateur"/>
+      <description value="Le rôle de créateur incarné par un système peut créer ou mettre à jour le cercle de soins d'une personne."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cds-entite-geographique"/>
+      </reference>
+      <name value="CDS Entite Geographique"/>
+      <description value="L’Entité Géographique (EG) correspond à la notion d’établissement : ** Pour les établissements inscrits au FINESS, cette notion d’établissement résulte du croisement de trois critères : - Un critère géographique : Est un établissement tout lieu dont l’implantation d’activité(s) ou d’équipement(s) est géographiquement distincte d’une autre implantation. Ainsi un Centre Hospitalier Régional comprend autant d’établissements que d’implantations géographiques différentes. Un établissement principal et son établissement secondaire situé à 1 km constituent deux établissements distincts dans FINESS. L’implantation géographique peut-être décrite soit avec l’attribut addresseEG soit au travers de la classe Lieu. - Un critère budgétaire : Pour une même implantation géographique, on distingue autant d’établissements du secteur public qu’il y a de budgets distincts (budget général, budget annexe).Ainsi un ESAT et son foyer d’hébergement constituent deux établissements même s’ils sont implantés à la même adresse. - Un critère d’activité : Pour une même implantation géographique et un même budget, on distingue autant d’établissements que de « catégorie d’établissement » décrivant l’activité principale autorisée.Ainsi un centre hospitalier et son EHPAD, financés par le même budget, constituent deux établissements même s’ils sont implantés à la même adresse.** Pour les entreprises inscrites dans le SIRENE, l’EG correspond à un établissement de la personne morale, elle est identifiée par un numéro Siret.Synonymes: Etablissement, structure"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cds-entite-juridique"/>
+      </reference>
+      <name value="CDS Entite Juridique"/>
+      <description value="L’Entité Juridique (EJ) correspond à la notion de personne morale :** Pour les établissements sanitaires, sociaux, médico-sociaux et de formation aux professions de ces secteurs enregistrés dans le FINESS, une EJ détient des droits (autorisations, agréments, conventions, etc.) lui permettant d’exercer ses activités dans des établissements; chaque EJ dispose d’un statut juridique de la personne morale;** Pour les autres types de structures, une EJ est une personne morale inscrite dans le SIRENE, identifiée par son numéro Siren."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cds-exercice-professionnel"/>
+      </reference>
+      <name value="CDS Exercice Professionnel"/>
+      <description value="Informations décrivant notamment la profession exercée, l’identité d’exercice d’un professionnel et le cadre de son exercice (civil, agent public, etc.).Il peut exister plusieurs exercices professionnels pour une personne à un instant donné."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -620,6 +702,39 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActorDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActorDefinition/CDS-Gestionnaire-Actor"/>
+      </reference>
+      <name value="CDS Gestionnaire"/>
+      <description value="Le rôle de gestionnaire incarné par un système, gère et stocke le cercle de soins, donne accès aux informations en cas de consultation."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cds-membre-cercle-soins"/>
+      </reference>
+      <name value="CDS Membre Cercle Soins"/>
+      <description value="Un membre du cercle de soins est une personne (Professionnel ou Personne Tierce) ou une Entité qui fait partie du Cercle de Soins d’un Usager."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cds-organisation-interne"/>
+      </reference>
+      <name value="CDS Organisation Interne"/>
+      <description value="La classe Organisation Interne est une classe abstraite qui contient les attributs inhérents et communs aux classes décrivant l’organisation opérationnelle interne d’une EG permettant de délivrer la prestation.Une organisation interne peut être composée d’autres organisations internes. Par exemple, les unités fonctionnelles peuvent être regroupées au sein de services qui peuvent être regroupés en pôles.La description de cette organisation interne de l’EG n’est pas obligatoire. Lorsqu’elle est décrite cette organisation porte les ressources opérationnelles."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -627,6 +742,50 @@
       </reference>
       <name value="CDS Organization Profile"/>
       <description value="Profil organization adapté au cercle de soins. Ce profil peut modéliser une entité juridique (EJ), une entité géographique (EG) ou une organisation interne (OI)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cds-personne-physique"/>
+      </reference>
+      <name value="CDS Personne Physique"/>
+      <description value="Une personne physique est un individu titulaire de droits et d'obligations caractérisé par une identité civile."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cds-personne-prise-charge"/>
+      </reference>
+      <name value="CDS Personne Prise Charge"/>
+      <description value="Personne physique bénéficiaire de soins, d'examens, d'actes de prévention ou de services. Selon le contexte, la personne prise en charge peut être un patient ou un usager."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cds-professionnel"/>
+      </reference>
+      <name value="CDS Professionnel"/>
+      <description value="Données d’identification pérennes d’une personne physique, qui travaille en tant que professionnel (professionnel enregistré dans RPPS ou ADELI), personnel autorisé ou personnel d’établissement, dans les domaines sanitaire, médico-social et social."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cds-situation-exercice"/>
+      </reference>
+      <name value="CDS Situation Exercice"/>
+      <description value="Caractéristiques de l’exercice d’un professionnel pendant une période déterminée et dans une structure déterminée (à l’exception des remplaçants). Synonymes : Activité (RPPS)."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -764,7 +923,7 @@
         <reference value="CapabilityStatement/CDSCreateurRestful"/>
       </reference>
       <name value="CI-SIS Gestion du Cercle de Soins - CreateurRestful"/>
-      <description value="Le rôle de créateur incarné par un système peut créer ou mettre à jour le cercle de soins d'une personne"/>
+      <description value="Le rôle de créateur incarné par un système peut créer ou mettre à jour le cercle&#xA;de soins d'une personne"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -775,7 +934,7 @@
         <reference value="CapabilityStatement/CDSCreateurTransaction"/>
       </reference>
       <name value="CI-SIS Gestion du Cercle de Soins - CreateurTransaction"/>
-      <description value="Le rôle de créateur incarné par un système peut créer ou mettre à jour le cercle de soins d'une personne"/>
+      <description value="Le rôle de créateur incarné par un système peut créer ou mettre à jour le cercle&#xA;de soins d'une personne"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -786,7 +945,7 @@
         <reference value="CapabilityStatement/CDSGestionnaire"/>
       </reference>
       <name value="CI-SIS Gestion du Cercle de Soins - Gestionnaire"/>
-      <description value="Le rôle de gestionnaire incarné par un système, gère et stocke le cercle de soins,donne accès aux informations en cas de consultation."/>
+      <description value="Le rôle de gestionnaire incarné par un système, gère et stocke le cercle de soins,&#xA;donne accès aux informations en cas de consultation."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -817,58 +976,58 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="specifications_fonctionnelles.html"/>
+          <valueUrl value="specifications.html"/>
         </extension>
-        <nameUrl value="specifications_fonctionnelles.html"/>
-        <title value="Volume 1 - Etude fonctionnelle"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="specifications_techniques.html"/>
-        </extension>
-        <nameUrl value="specifications_techniques.html"/>
-        <title value="Specifications Techniques"/>
+        <nameUrl value="specifications.html"/>
+        <title value="Specifications"/>
         <generation value="markdown"/>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="interaction_restful.html"/>
+            <valueUrl value="spe_synthese.html"/>
           </extension>
-          <nameUrl value="interaction_restful.html"/>
-          <title value="Interactions RESTful"/>
+          <nameUrl value="spe_synthese.html"/>
+          <title value="Synthèse"/>
           <generation value="markdown"/>
         </page>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="interaction_transaction.html"/>
+            <valueUrl value="spe_creation_cercle_soins.html"/>
           </extension>
-          <nameUrl value="interaction_transaction.html"/>
-          <title value="Interactions transaction"/>
+          <nameUrl value="spe_creation_cercle_soins.html"/>
+          <title value="Création du cercle de soins"/>
           <generation value="markdown"/>
         </page>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="recherche_recuperation_cds.html"/>
+            <valueUrl value="spe_consultation_cercle_soins.html"/>
           </extension>
-          <nameUrl value="recherche_recuperation_cds.html"/>
-          <title value="Recherche CDS"/>
+          <nameUrl value="spe_consultation_cercle_soins.html"/>
+          <title value="Consultation du cercle de soins"/>
           <generation value="markdown"/>
         </page>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="correspondances_metier.html"/>
+            <valueUrl value="spe_mise_jour_cercle_soins.html"/>
           </extension>
-          <nameUrl value="correspondances_metier.html"/>
-          <title value="Correspondances métier"/>
+          <nameUrl value="spe_mise_jour_cercle_soins.html"/>
+          <title value="Mise à jour du cercle de soins"/>
           <generation value="markdown"/>
         </page>
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="autres_ressources.html"/>
+          <valueUrl value="tests.html"/>
         </extension>
-        <nameUrl value="autres_ressources.html"/>
-        <title value="Autres Ressources"/>
+        <nameUrl value="tests.html"/>
+        <title value="Tests"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="annexes.html"/>
+        </extension>
+        <nameUrl value="annexes.html"/>
+        <title value="Annexes"/>
         <generation value="markdown"/>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">

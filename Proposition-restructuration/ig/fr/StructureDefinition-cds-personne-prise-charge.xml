@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="cds-personne-prise-charge"/>
+  <language value="fr"/>
+  <text>
+    <status value="extensions"/><div xml:lang="fr" lang="fr"><hr/><p><b>French</b></p><hr/><p class="res-header-id"><b>Narratif généré : DéfinitionStructure cds-personne-prise-charge</b></p><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Le nom logique de l'élément">Nom</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Informations sur l'utilisation de l'élément">Drapeaux</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Nombre minimum et maximum de fois que l'élément peut apparaître dans l'instance">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Référence au type de l'élément">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Informations supplémentaires sur l'élément">Description et contraintes</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-cds-personne-prise-charge-definitions.html#cds-personne-prise-charge">cds-personne-prise-charge</a><a name="cds-personne-prise-charge"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html">PersonnePriseCharge(0.1.0-ballot)</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Personne physique bénéficiaire de soins, d'examens, d'actes de prévention ou de services. Selon le contexte, la personne prise en charge peut être un patient ou un usager.</span><br/><br/>Éléments définis dans les ancêtres :<a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html" title="Identifiant secondaire de la personne prise en charge.">idPersonnePriseCharge</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html" title="Identité civile de la personne prise en charge.">personne</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html" title="Moyen de communication privilégié de la personne prise en charge.">preferenceCommunication</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html" title="Coordonnées des personnes à contacter en cas de besoin.">contact</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html" title="Adresse(s) de correspondance de la personne prise en charge.">adresseCorrespondance</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html" title="Adresse(s) de télécommunication de la personne prise en charge (numéro de téléphone, adresse email, URL, etc.).">telecommunication</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html" title="L'INS a pour signification « Identité Nationale de Santé »Préambule : Les informations constituant l'INS sont délibérément disjointes des informations de la personne physique qui sont utilisées dans des contextes différents de celui de l'INS.Les informations de l'INS permettent de  : ** sécuriser le référencement des données de santé;** favoriser l'échange et le partage;** améliorer la qualité et la sécurité de la prise en charge.Seuls les acteurs de la santé et du médico-social concourant à la prise en charge de l’usager, au suivi médico-social de la personne, ou menant des actions de prévention sont tenus d’utiliser l’INS.  L'INS référence les données de santé et se compose des éléments suivants: ** un matricule INS : le numéro d’inscription au répertoire national d’identification des personnes physiques (NIR) ou le numéro identifiant d’attente (NIA) pour les personnes en instance d’attribution d’un NIR (Art. R. 1111-8-1.-I du CSP); ** des traits d'identité de l'état civil : nom de naissance, prénom (liste des prénoms de naissance), date de naissance, sexe et lieu de naissance; ** des traits complémentaires provenant du Référentiel National d'Identitovigilance (RNIV) : premier prénom de l'acte de naissance, prénom utilisé et nom utilisé. Toute personne née sur le sol français et/ou bénéficiaire de l'assurance maladie dispose de son INS, unique et propre à chaque usage.">INS</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html" title="Lien vers la classe RendezVous">RendezVous</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html" title="Lien vers la classe VieQuotidienne">VieQuotidienne</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html" title="Lien vers la classe VieProfessionnelle">VieProfessionnelle</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html" title="Lien vers la classe VieScolaire">VieScolaire</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html" title="Lien vers la classe NoteLiaison">NoteLiaison</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html" title="Lien vers la classe Observation">Observation</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html" title="Lien vers la classe Professionnel">Professionnel</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html" title="Lien vers la classe DossierPersonnePriseCharge">DossierPersonnePriseCharge</a>, <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html" title="Lien vers la classe Agenda">Agenda</a></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-cds-personne-prise-charge-definitions.html#cds-personne-prise-charge.idPersonnePriseCharge">idPersonnePriseCharge</a><a name="cds-personne-prise-charge.idPersonnePriseCharge"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="Cet élément doit être pris en charge">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Identifiant secondaire de la personne prise en charge.</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-cds-personne-prise-charge-definitions.html#cds-personne-prise-charge.adresseCorrespondance">adresseCorrespondance</a><a name="cds-personne-prise-charge.adresseCorrespondance"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="Cet élément doit être pris en charge">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-Adresse.html">Adresse</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Adresse(s) de correspondance de la personne prise en charge.</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-cds-personne-prise-charge-definitions.html#cds-personne-prise-charge.telecommunication">telecommunication</a><a name="cds-personne-prise-charge.telecommunication"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="Cet élément doit être pris en charge">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-Telecommunication.html">Telecommunication</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Adresse(s) de télécommunication de la personne prise en charge (numéro de téléphone, adresse email, URL, etc.).</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-cds-personne-prise-charge-definitions.html#cds-personne-prise-charge.INS">INS</a><a name="cds-personne-prise-charge.INS"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000" title="Cet élément doit être pris en charge">S</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Base</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">L'INS a pour signification « Identité Nationale de Santé »Préambule : Les informations constituant l'INS sont délibérément disjointes des informations de la personne physique qui sont utilisées dans des contextes différents de celui de l'INS.Les informations de l'INS permettent de  : ** sécuriser le référencement des données de santé;** favoriser l'échange et le partage;** améliorer la qualité et la sécurité de la prise en charge.Seuls les acteurs de la santé et du médico-social concourant à la prise en charge de l’usager, au suivi médico-social de la personne, ou menant des actions de prévention sont tenus d’utiliser l’INS.  L'INS référence les données de santé et se compose des éléments suivants: ** un matricule INS : le numéro d’inscription au répertoire national d’identification des personnes physiques (NIR) ou le numéro identifiant d’attente (NIA) pour les personnes en instance d’attribution d’un NIR (Art. R. 1111-8-1.-I du CSP); ** des traits d'identité de l'état civil : nom de naissance, prénom (liste des prénoms de naissance), date de naissance, sexe et lieu de naissance; ** des traits complémentaires provenant du Référentiel National d'Identitovigilance (RNIV) : premier prénom de l'acte de naissance, prénom utilisé et nom utilisé. Toute personne née sur le sol français et/ou bénéficiaire de l'assurance maladie dispose de son INS, unique et propre à chaque usage.</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Ressource" class="hierarchy"/> <a href="StructureDefinition-cds-personne-prise-charge-definitions.html#cds-personne-prise-charge.CDSCercleSoins" title="Lien vers le concept Cercle Soins">CDSCercleSoins</a><a name="cds-personne-prise-charge.CDSCercleSoins"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-cds-cercle-soins.html">cds-cercle-soins</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Lien vers le concept Cercle Soins</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Ressource" class="hierarchy"/> <a href="StructureDefinition-cds-personne-prise-charge-definitions.html#cds-personne-prise-charge.CDSPersonnePhysique" title="Lien vers le concept Personne Physique">CDSPersonnePhysique</a><a name="cds-personne-prise-charge.CDSPersonnePhysique"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-cds-personne-physique.html">cds-personne-physique</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Lien vers le concept Personne Physique</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Légende pour ce format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation pour ce format</a></td></tr></table></div>
+  </text>
+  <url value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-personne-prise-charge"/>
+  <version value="2.0.1"/>
+  <name value="CDSPersonnePriseCharge"/>
+  <title value="CDS Personne Prise Charge"/>
+  <status value="draft"/>
+  <date value="2026-07-10T13:11:38+00:00"/>
+  <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+  <contact>
+    <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://esante.gouv.fr"/>
+    </telecom>
+  </contact>
+  <description value="Personne physique bénéficiaire de soins, d'examens, d'actes de prévention ou de services. Selon le contexte, la personne prise en charge peut être un patient ou un usager."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="4.0.1"/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-personne-prise-charge"/>
+  <baseDefinition value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/PersonnePriseCharge|0.1.0-ballot"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version">
+      <valueString value="0.1.0-ballot"/>
+    </extension>
+    <element id="cds-personne-prise-charge">
+      <path value="cds-personne-prise-charge"/>
+      <short value="Personne physique bénéficiaire de soins, d'examens, d'actes de prévention ou de services. Selon le contexte, la personne prise en charge peut être un patient ou un usager."/>
+      <definition value="Personne physique bénéficiaire de soins, d'examens, d'actes de prévention ou de services. Selon le contexte, la personne prise en charge peut être un patient ou un usager."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Base"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <isModifier value="false"/>
+    </element>
+    <element id="cds-personne-prise-charge.idPersonnePriseCharge">
+      <path value="cds-personne-prise-charge.idPersonnePriseCharge"/>
+      <short value="Identifiant secondaire de la personne prise en charge."/>
+      <definition value="Identifiant secondaire de la personne prise en charge."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="PersonnePriseCharge.idPersonnePriseCharge"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-personne-prise-charge.personne">
+      <path value="cds-personne-prise-charge.personne"/>
+      <short value="Identité civile de la personne prise en charge."/>
+      <definition value="Identité civile de la personne prise en charge."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="PersonnePriseCharge.personne"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/PersonnePhysique"/>
+      </type>
+    </element>
+    <element id="cds-personne-prise-charge.preferenceCommunication">
+      <path value="cds-personne-prise-charge.preferenceCommunication"/>
+      <short value="Moyen de communication privilégié de la personne prise en charge."/>
+      <definition value="Moyen de communication privilégié de la personne prise en charge."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="PersonnePriseCharge.preferenceCommunication"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+    </element>
+    <element id="cds-personne-prise-charge.contact">
+      <path value="cds-personne-prise-charge.contact"/>
+      <short value="Coordonnées des personnes à contacter en cas de besoin."/>
+      <definition value="Coordonnées des personnes à contacter en cas de besoin."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="PersonnePriseCharge.contact"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Contact"/>
+      </type>
+    </element>
+    <element id="cds-personne-prise-charge.adresseCorrespondance">
+      <path value="cds-personne-prise-charge.adresseCorrespondance"/>
+      <short value="Adresse(s) de correspondance de la personne prise en charge."/>
+      <definition value="Adresse(s) de correspondance de la personne prise en charge."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="PersonnePriseCharge.adresseCorrespondance"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Adresse"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-personne-prise-charge.telecommunication">
+      <path value="cds-personne-prise-charge.telecommunication"/>
+      <short value="Adresse(s) de télécommunication de la personne prise en charge (numéro de téléphone, adresse email, URL, etc.)."/>
+      <definition value="Adresse(s) de télécommunication de la personne prise en charge (numéro de téléphone, adresse email, URL, etc.)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="PersonnePriseCharge.telecommunication"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Telecommunication"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-personne-prise-charge.INS">
+      <path value="cds-personne-prise-charge.INS"/>
+      <short value="L'INS a pour signification « Identité Nationale de Santé »Préambule : Les informations constituant l'INS sont délibérément disjointes des informations de la personne physique qui sont utilisées dans des contextes différents de celui de l'INS.Les informations de l'INS permettent de  : ** sécuriser le référencement des données de santé;** favoriser l'échange et le partage;** améliorer la qualité et la sécurité de la prise en charge.Seuls les acteurs de la santé et du médico-social concourant à la prise en charge de l’usager, au suivi médico-social de la personne, ou menant des actions de prévention sont tenus d’utiliser l’INS.  L'INS référence les données de santé et se compose des éléments suivants: ** un matricule INS : le numéro d’inscription au répertoire national d’identification des personnes physiques (NIR) ou le numéro identifiant d’attente (NIA) pour les personnes en instance d’attribution d’un NIR (Art. R. 1111-8-1.-I du CSP); ** des traits d'identité de l'état civil : nom de naissance, prénom (liste des prénoms de naissance), date de naissance, sexe et lieu de naissance; ** des traits complémentaires provenant du Référentiel National d'Identitovigilance (RNIV) : premier prénom de l'acte de naissance, prénom utilisé et nom utilisé. Toute personne née sur le sol français et/ou bénéficiaire de l'assurance maladie dispose de son INS, unique et propre à chaque usage."/>
+      <definition value="L'INS a pour signification « Identité Nationale de Santé »Préambule : Les informations constituant l'INS sont délibérément disjointes des informations de la personne physique qui sont utilisées dans des contextes différents de celui de l'INS.Les informations de l'INS permettent de  : ** sécuriser le référencement des données de santé;** favoriser l'échange et le partage;** améliorer la qualité et la sécurité de la prise en charge.Seuls les acteurs de la santé et du médico-social concourant à la prise en charge de l’usager, au suivi médico-social de la personne, ou menant des actions de prévention sont tenus d’utiliser l’INS.  L'INS référence les données de santé et se compose des éléments suivants: ** un matricule INS : le numéro d’inscription au répertoire national d’identification des personnes physiques (NIR) ou le numéro identifiant d’attente (NIA) pour les personnes en instance d’attribution d’un NIR (Art. R. 1111-8-1.-I du CSP); ** des traits d'identité de l'état civil : nom de naissance, prénom (liste des prénoms de naissance), date de naissance, sexe et lieu de naissance; ** des traits complémentaires provenant du Référentiel National d'Identitovigilance (RNIV) : premier prénom de l'acte de naissance, prénom utilisé et nom utilisé. Toute personne née sur le sol français et/ou bénéficiaire de l'assurance maladie dispose de son INS, unique et propre à chaque usage."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="PersonnePriseCharge.INS"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Base"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-personne-prise-charge.INS.matricule">
+      <path value="cds-personne-prise-charge.INS.matricule"/>
+      <short value="La loi consacre comme matricule INS, le NIR et à défaut le NIA.Communément appelé numéro de sécurité sociale, le numéro d’inscription au répertoire (NIR) est un identifiant unique attribué à toute personne inscrite au répertoire national d'identification des personnes physiques (RNIPP). La forme du NIR est spécifiée par le décret n° 82-103 du 22 janvier 1982 [D82-103]. Il est formé de 13 caractères (chiffres ou lettres) et de la clé de contrôle.Le numéro identifiant d’attente (NIA) doit être utilisé comme matricule INS pour toute personne qui ne dispose pas encore de NIR et pour laquelle une procédure d’affectation de NIR est en cours.Dans la très grande majorité des cas, le NIA est identique au NIR qui sera affecté à la personne. Dans le cas exceptionnel où la procédure de vérification des pièces justificatives fait apparaître la nécessité de correction de éléments d’identité ayant un impact sur le NIR, le NIR attribué est différent du NIA.Dans tous les cas, le lien entre le NIR et le NIA est conservé dans les bases de référence.(Référentiel Identifiant national de santé)L’OID d’affection de l’identifiant utilisé doit représenter la personne morale responsable de la collecte de l’identité véhiculée : ** 1.2.250.1.213.1.4.8 - autorité d'affectation INS-NIR** 1.2.250.1.213.1.4.9 - autorité d'affectation INS-NIAL'OID est véhiculé dans l'identifiant par l'attribut identifiantSystem."/>
+      <definition value="La loi consacre comme matricule INS, le NIR et à défaut le NIA.Communément appelé numéro de sécurité sociale, le numéro d’inscription au répertoire (NIR) est un identifiant unique attribué à toute personne inscrite au répertoire national d'identification des personnes physiques (RNIPP). La forme du NIR est spécifiée par le décret n° 82-103 du 22 janvier 1982 [D82-103]. Il est formé de 13 caractères (chiffres ou lettres) et de la clé de contrôle.Le numéro identifiant d’attente (NIA) doit être utilisé comme matricule INS pour toute personne qui ne dispose pas encore de NIR et pour laquelle une procédure d’affectation de NIR est en cours.Dans la très grande majorité des cas, le NIA est identique au NIR qui sera affecté à la personne. Dans le cas exceptionnel où la procédure de vérification des pièces justificatives fait apparaître la nécessité de correction de éléments d’identité ayant un impact sur le NIR, le NIR attribué est différent du NIA.Dans tous les cas, le lien entre le NIR et le NIA est conservé dans les bases de référence.(Référentiel Identifiant national de santé)L’OID d’affection de l’identifiant utilisé doit représenter la personne morale responsable de la collecte de l’identité véhiculée : ** 1.2.250.1.213.1.4.8 - autorité d'affectation INS-NIR** 1.2.250.1.213.1.4.9 - autorité d'affectation INS-NIAL'OID est véhiculé dans l'identifiant par l'attribut identifiantSystem."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="PersonnePriseCharge.INS.matricule"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+    </element>
+    <element id="cds-personne-prise-charge.INS.nomNaissance">
+      <path value="cds-personne-prise-charge.INS.nomNaissance"/>
+      <short value="Le nom de  naissance est un élément d’identité mentionné à l’article R. 1111-8-6 du CSP.C'est  un trait &quot;strict&quot; d'identité de la personne dans l'INS ( Référentiel Identité Nationale de Santé)synonyme moins précis : nom de famille"/>
+      <definition value="Le nom de  naissance est un élément d’identité mentionné à l’article R. 1111-8-6 du CSP.C'est  un trait &quot;strict&quot; d'identité de la personne dans l'INS ( Référentiel Identité Nationale de Santé)synonyme moins précis : nom de famille"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="PersonnePriseCharge.INS.nomNaissance"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="cds-personne-prise-charge.INS.listePrenomsNaissance">
+      <path value="cds-personne-prise-charge.INS.listePrenomsNaissance"/>
+      <short value="Liste des prénoms de naissance indiqués sur l'acte de naissance. Ce sont des éléments d’identité mentionnés à l’article R. 1111-8-6 du CSP.La liste des prénoms de naissance est un trait d'identité &quot;strict&quot; de la personne dans l'INS ( Référentiel Identité Nationale de Santé)  Ce champ peut comporter plusieurs prénoms, simples ou composés.(avec ou sans tiret d’union entre les prénoms)."/>
+      <definition value="Liste des prénoms de naissance indiqués sur l'acte de naissance. Ce sont des éléments d’identité mentionnés à l’article R. 1111-8-6 du CSP.La liste des prénoms de naissance est un trait d'identité &quot;strict&quot; de la personne dans l'INS ( Référentiel Identité Nationale de Santé)  Ce champ peut comporter plusieurs prénoms, simples ou composés.(avec ou sans tiret d’union entre les prénoms)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="PersonnePriseCharge.INS.listePrenomsNaissance"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="cds-personne-prise-charge.INS.sexe">
+      <path value="cds-personne-prise-charge.INS.sexe"/>
+      <short value="Le sexe est un élément d’identité mentionné à l’article R. 1111-8-6 du CSP. L’identité INS ne peut comporter que des valeurs F (féminin) ou M (masculin)."/>
+      <definition value="Le sexe est un élément d’identité mentionné à l’article R. 1111-8-6 du CSP. L’identité INS ne peut comporter que des valeurs F (féminin) ou M (masculin)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="PersonnePriseCharge.INS.sexe"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+    </element>
+    <element id="cds-personne-prise-charge.INS.dateNaissance">
+      <path value="cds-personne-prise-charge.INS.dateNaissance"/>
+      <short value="Date de naissance de la personne, modifiée selon les règles du RNIV dans le cas des dates exceptionnelles. C'est un élément d’identité mentionné à l’article R. 1111-8-6 du CSP."/>
+      <definition value="Date de naissance de la personne, modifiée selon les règles du RNIV dans le cas des dates exceptionnelles. C'est un élément d’identité mentionné à l’article R. 1111-8-6 du CSP."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="PersonnePriseCharge.INS.dateNaissance"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+    </element>
+    <element id="cds-personne-prise-charge.INS.lieuNaissance">
+      <path value="cds-personne-prise-charge.INS.lieuNaissance"/>
+      <short value="Code officiel géographique (COG) de la commune (France) ou du pays. C'est un élément d’identité mentionné à l’article R. 1111-8-6 du CSP."/>
+      <definition value="Code officiel géographique (COG) de la commune (France) ou du pays. C'est un élément d’identité mentionné à l’article R. 1111-8-6 du CSP."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="PersonnePriseCharge.INS.lieuNaissance"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+    </element>
+    <element id="cds-personne-prise-charge.INS.premierPrenomNaissance">
+      <path value="cds-personne-prise-charge.INS.premierPrenomNaissance"/>
+      <short value="La distinction du premier prénom dans la liste des prénoms de naissance est nécessaire à la communication entre logiciels n’ayant pas encore été mis en conformité avec les exigences du RNIV. Il peut être composé (avec ou sans tiret d’union entre les prénoms)."/>
+      <definition value="La distinction du premier prénom dans la liste des prénoms de naissance est nécessaire à la communication entre logiciels n’ayant pas encore été mis en conformité avec les exigences du RNIV. Il peut être composé (avec ou sans tiret d’union entre les prénoms)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="PersonnePriseCharge.INS.premierPrenomNaissance"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="cds-personne-prise-charge.INS.nomUtilise">
+      <path value="cds-personne-prise-charge.INS.nomUtilise"/>
+      <short value="Nom réellement porté par la personne physique dans la vie courante.Il peut s'agir du nom de naissance, du surnom, du pseudonyme ou du nom d'usage de la personne physique. C'est un trait complémentaire provenant du Référentiel National d'Identitovigilance (RNIV).Le nom utilisé est obligatoirement renseigné lorsqu’il est différent du nom de naissance."/>
+      <definition value="Nom réellement porté par la personne physique dans la vie courante.Il peut s'agir du nom de naissance, du surnom, du pseudonyme ou du nom d'usage de la personne physique. C'est un trait complémentaire provenant du Référentiel National d'Identitovigilance (RNIV).Le nom utilisé est obligatoirement renseigné lorsqu’il est différent du nom de naissance."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="PersonnePriseCharge.INS.nomUtilise"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="cds-personne-prise-charge.INS.prenomUtilise">
+      <path value="cds-personne-prise-charge.INS.prenomUtilise"/>
+      <short value="Prénom réellement porté par la personne physique dans la vie courante.Il peut s'agir du prénom usuel, du surnom ou du pseudonyme de la personne physique.C'est un trait complémentaire provenant du Référentiel National d'Identitovigilance (RNIV).Le prénom utilisé est obligatoirement renseigné lorsqu’il est différent du premier prénom de naissance."/>
+      <definition value="Prénom réellement porté par la personne physique dans la vie courante.Il peut s'agir du prénom usuel, du surnom ou du pseudonyme de la personne physique.C'est un trait complémentaire provenant du Référentiel National d'Identitovigilance (RNIV).Le prénom utilisé est obligatoirement renseigné lorsqu’il est différent du premier prénom de naissance."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="PersonnePriseCharge.INS.prenomUtilise"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="cds-personne-prise-charge.RendezVous">
+      <path value="cds-personne-prise-charge.RendezVous"/>
+      <short value="Lien vers la classe RendezVous"/>
+      <definition value="Lien vers la classe RendezVous"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="PersonnePriseCharge.RendezVous"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/RendezVous"/>
+      </type>
+    </element>
+    <element id="cds-personne-prise-charge.VieQuotidienne">
+      <path value="cds-personne-prise-charge.VieQuotidienne"/>
+      <short value="Lien vers la classe VieQuotidienne"/>
+      <definition value="Lien vers la classe VieQuotidienne"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="PersonnePriseCharge.VieQuotidienne"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/VieQuotidienne"/>
+      </type>
+    </element>
+    <element id="cds-personne-prise-charge.VieProfessionnelle">
+      <path value="cds-personne-prise-charge.VieProfessionnelle"/>
+      <short value="Lien vers la classe VieProfessionnelle"/>
+      <definition value="Lien vers la classe VieProfessionnelle"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="PersonnePriseCharge.VieProfessionnelle"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/VieProfessionnelle"/>
+      </type>
+    </element>
+    <element id="cds-personne-prise-charge.VieScolaire">
+      <path value="cds-personne-prise-charge.VieScolaire"/>
+      <short value="Lien vers la classe VieScolaire"/>
+      <definition value="Lien vers la classe VieScolaire"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="PersonnePriseCharge.VieScolaire"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/VieScolaire"/>
+      </type>
+    </element>
+    <element id="cds-personne-prise-charge.NoteLiaison">
+      <path value="cds-personne-prise-charge.NoteLiaison"/>
+      <short value="Lien vers la classe NoteLiaison"/>
+      <definition value="Lien vers la classe NoteLiaison"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="PersonnePriseCharge.NoteLiaison"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/NoteLiaison"/>
+      </type>
+    </element>
+    <element id="cds-personne-prise-charge.Observation">
+      <path value="cds-personne-prise-charge.Observation"/>
+      <short value="Lien vers la classe Observation"/>
+      <definition value="Lien vers la classe Observation"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="PersonnePriseCharge.Observation"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Observation"/>
+      </type>
+    </element>
+    <element id="cds-personne-prise-charge.Professionnel">
+      <path value="cds-personne-prise-charge.Professionnel"/>
+      <short value="Lien vers la classe Professionnel"/>
+      <definition value="Lien vers la classe Professionnel"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="PersonnePriseCharge.Professionnel"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Professionnel"/>
+      </type>
+    </element>
+    <element id="cds-personne-prise-charge.DossierPersonnePriseCharge">
+      <path value="cds-personne-prise-charge.DossierPersonnePriseCharge"/>
+      <short value="Lien vers la classe DossierPersonnePriseCharge"/>
+      <definition value="Lien vers la classe DossierPersonnePriseCharge"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="PersonnePriseCharge.DossierPersonnePriseCharge"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/DossierPersonnePriseCharge"/>
+      </type>
+    </element>
+    <element id="cds-personne-prise-charge.Agenda">
+      <path value="cds-personne-prise-charge.Agenda"/>
+      <short value="Lien vers la classe Agenda"/>
+      <definition value="Lien vers la classe Agenda"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="PersonnePriseCharge.Agenda"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Agenda"/>
+      </type>
+    </element>
+    <element id="cds-personne-prise-charge.CDSCercleSoins">
+      <path value="cds-personne-prise-charge.CDSCercleSoins"/>
+      <short value="Lien vers le concept Cercle Soins"/>
+      <definition value="Lien vers le concept Cercle Soins"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cds-personne-prise-charge.CDSCercleSoins"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-cercle-soins"/>
+      </type>
+    </element>
+    <element id="cds-personne-prise-charge.CDSPersonnePhysique">
+      <path value="cds-personne-prise-charge.CDSPersonnePhysique"/>
+      <short value="Lien vers le concept Personne Physique"/>
+      <definition value="Lien vers le concept Personne Physique"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="cds-personne-prise-charge.CDSPersonnePhysique"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-personne-physique"/>
+      </type>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="cds-personne-prise-charge">
+      <path value="cds-personne-prise-charge"/>
+    </element>
+    <element id="cds-personne-prise-charge.idPersonnePriseCharge">
+      <path value="cds-personne-prise-charge.idPersonnePriseCharge"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-personne-prise-charge.adresseCorrespondance">
+      <path value="cds-personne-prise-charge.adresseCorrespondance"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-personne-prise-charge.telecommunication">
+      <path value="cds-personne-prise-charge.telecommunication"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-personne-prise-charge.INS">
+      <path value="cds-personne-prise-charge.INS"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="cds-personne-prise-charge.CDSCercleSoins">
+      <path value="cds-personne-prise-charge.CDSCercleSoins"/>
+      <short value="Lien vers le concept Cercle Soins"/>
+      <definition value="Lien vers le concept Cercle Soins"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-cercle-soins"/>
+      </type>
+    </element>
+    <element id="cds-personne-prise-charge.CDSPersonnePhysique">
+      <path value="cds-personne-prise-charge.CDSPersonnePhysique"/>
+      <short value="Lien vers le concept Personne Physique"/>
+      <definition value="Lien vers le concept Personne Physique"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-personne-physique"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

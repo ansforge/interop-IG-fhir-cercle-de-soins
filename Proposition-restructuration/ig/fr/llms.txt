@@ -3,23 +3,58 @@
 ## Pages
 
 * [Accueil](index.md)
-* [Interactions transaction](interaction_transaction.md)
+* [](ActorDefinition-CDS-Consommateur-Actor.change.history.md)
+* [Mise à jour du cercle de soins](spe_mise_jour_cercle_soins.md)
+* [](ActorDefinition-CDS-Createur-Actor.change.history.md)
+* [CDS Gestionnaire](ActorDefinition-CDS-Gestionnaire-Actor-testing.md)
+* [CDS Consommateur - JSON Representation](ActorDefinition-CDS-Consommateur-Actor.json.md)
 * [Téléchargements et usages](downloads.md)
-* [Interactions RESTful](interaction_restful.md)
-* [Recherche CDS](recherche_recuperation_cds.md)
+* [CDS Créateur](ActorDefinition-CDS-Createur-Actor.md)
+* [CDS Créateur](ActorDefinition-CDS-Createur-Actor.ai.md)
+* [CDS Gestionnaire - TTL Representation](ActorDefinition-CDS-Gestionnaire-Actor.ttl.md)
+* [CDS Gestionnaire - JSON Representation](ActorDefinition-CDS-Gestionnaire-Actor.json.md)
 * [Informations sur la traduction](translationinfo.md)
-* [Autres Ressources](autres_ressources.md)
+* [CDS Créateur - TTL Representation](ActorDefinition-CDS-Createur-Actor.ttl.md)
+* [CDS Consommateur](ActorDefinition-CDS-Consommateur-Actor-testing.md)
 * [Résumé des artefacts](artifacts.md)
-* [Correspondances métier](correspondances_metier.md)
-* [Volume 1 - Etude fonctionnelle](specifications_fonctionnelles.md)
+* [CDS Consommateur - XML Representation](ActorDefinition-CDS-Consommateur-Actor.xml.md)
+* [](ActorDefinition-CDS-Gestionnaire-Actor.change.history.md)
+* [CDS Créateur](ActorDefinition-CDS-Createur-Actor-testing.md)
+* [Tests](tests.md)
+* [Specifications](specifications.md)
+* [Consultation du cercle de soins](spe_consultation_cercle_soins.md)
+* [CDS Créateur - XML Representation](ActorDefinition-CDS-Createur-Actor.xml.md)
+* [Synthèse](spe_synthese.md)
+* [CDS Créateur - JSON Representation](ActorDefinition-CDS-Createur-Actor.json.md)
+* [CDS Consommateur - TTL Representation](ActorDefinition-CDS-Consommateur-Actor.ttl.md)
+* [CDS Gestionnaire](ActorDefinition-CDS-Gestionnaire-Actor.ai.md)
+* [CDS Gestionnaire](ActorDefinition-CDS-Gestionnaire-Actor.md)
 * [Historique](changes.md)
-* [Specifications Techniques](specifications_techniques.md)
+* [CDS Consommateur](ActorDefinition-CDS-Consommateur-Actor.md)
+* [CDS Consommateur](ActorDefinition-CDS-Consommateur-Actor.ai.md)
+* [Annexes](annexes.md)
+* [Création du cercle de soins](spe_creation_cercle_soins.md)
+* [CDS Gestionnaire - XML Representation](ActorDefinition-CDS-Gestionnaire-Actor.xml.md)
 
 ## Resources
 
 ### ValueSets
 
 * [Roles des participants dans un cercle de soins](ValueSet-careteam-roles-vs.md)
+
+### Logicals
+
+* [CDS Cercle Soins](StructureDefinition-cds-cercle-soins.md)
+* [CDS Contact](StructureDefinition-cds-contact.md)
+* [CDS Entite Geographique](StructureDefinition-cds-entite-geographique.md)
+* [CDS Entite Juridique](StructureDefinition-cds-entite-juridique.md)
+* [CDS Exercice Professionnel](StructureDefinition-cds-exercice-professionnel.md)
+* [CDS Membre Cercle Soins](StructureDefinition-cds-membre-cercle-soins.md)
+* [CDS Organisation Interne](StructureDefinition-cds-organisation-interne.md)
+* [CDS Personne Physique](StructureDefinition-cds-personne-physique.md)
+* [CDS Personne Prise Charge](StructureDefinition-cds-personne-prise-charge.md)
+* [CDS Professionnel](StructureDefinition-cds-professionnel.md)
+* [CDS Situation Exercice](StructureDefinition-cds-situation-exercice.md)
 
 ### Resource Profiles
 
@@ -29,6 +64,12 @@
 * [CDS Fr RelatedPerson Profile](StructureDefinition-cds-fr-related-person.md)
 * [CDS CareTeam Profile](StructureDefinition-cds-ihe-careteam.md)
 * [CDS Organization Profile](StructureDefinition-cds-organization.md)
+
+### Basics
+
+* [CDS-Consommateur-Actor](Basic-CDS-Consommateur-Actor.md)
+* [CDS-Createur-Actor](Basic-CDS-Createur-Actor.md)
+* [CDS-Gestionnaire-Actor](Basic-CDS-Gestionnaire-Actor.md)
 
 ### CapabilityStatements
 

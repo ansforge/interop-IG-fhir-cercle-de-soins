@@ -1,0 +1,703 @@
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "cds-exercice-professionnel",
+  "language" : "fr",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : DéfinitionStructure cds-exercice-professionnel</b></p><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Le nom logique de l'élément\">Nom</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Informations sur l'utilisation de l'élément\">Drapeaux</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Nombre minimum et maximum de fois que l'élément peut apparaître dans l'instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Référence au type de l'élément\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Informations supplémentaires sur l'élément\">Description et contraintes</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-exercice-professionnel-definitions.html#cds-exercice-professionnel\" title=\"Informations décrivant notamment la profession exercée, l’identité d’exercice d’un professionnel et le cadre de son exercice (civil, agent public, etc.).Il peut exister plusieurs exercices professionnels pour une personne à un instant donné.\">cds-exercice-professionnel</a><a name=\"cds-exercice-professionnel\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\">ExerciceProfessionnel(0.1.0-ballot)</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Informations décrivant notamment la profession exercée, l’identité d’exercice d’un professionnel et le cadre de son exercice (civil, agent public, etc.).Il peut exister plusieurs exercices professionnels pour une personne à un instant donné.<br/><br/>Éléments définis dans les ancêtres :<a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Civilité d’exercice du professionnel.\">civiliteExercice</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Nom sous lequel exerce le professionnel.\">nomExercice</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Prénom sous lequel exerce le professionnel.\">prenomExercice</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Profession exercée ou future profession de l'étudiant.\">profession</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Indique le type de profession de la personne.Exemples :** Professionnel de santé** Usager de titre** Professionnel secteur social** etc.\">typeProfession</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Indique si le professionnel exerce sa profession en tant que :** M: Agent public** C: Civil** F: Fonctionnaire ** E: EtudiantL'autorité d'enregistrement du professionnel dépend de la catégorie de sa profession.\">categorieProfessionnelle</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Date à partir de laquelle le professionnel exerce cette profession.\">dateEffetExercice</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Date à partir de laquelle le professionnel n’exerce plus cette profession.\">dateFinEffetExercice</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Code du département du premier référencement, pour un référencement de nature « inscription à l’ordre ».\">departementPremierReferencementAE</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'exercice professionnel du professionnel.\">boiteLettresMSS</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Eléments permettant de retrouver les informations d'inscription à un ordre par rapport à la profession de la personne physique sur une période et un département donnéSynonymes RPPS : Inscription à ordre\">InscriptionOrdre</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Activités ponctuelles du professionnel de type expertise.\">AttributionParticuliere</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Le niveau de formation décrit le niveau de formation de l’étudiant, comme demandé par le décret n°2010-701 et complété par le décret n°2011-462.\">NiveauFormation</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Lien vers la classe SituationExercice\">SituationExercice</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Lien vers la classe Certificat\">Certificat</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Lien vers la classe SavoirFaire\">SavoirFaire</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Lien vers la classe CarteProfessionnel\">CarteProfessionnel</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Lien vers la classe Professionnel\">Professionnel</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-ExerciceProfessionnel.html\" title=\"Lien vers la classe SituationOperationnelle\">SituationOperationnelle</a></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-exercice-professionnel-definitions.html#cds-exercice-professionnel.civiliteExercice\">civiliteExercice</a><a name=\"cds-exercice-professionnel.civiliteExercice\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Coding\">Coding</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Civilité d’exercice du professionnel.</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-exercice-professionnel-definitions.html#cds-exercice-professionnel.nomExercice\">nomExercice</a><a name=\"cds-exercice-professionnel.nomExercice\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Nom sous lequel exerce le professionnel.</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-exercice-professionnel-definitions.html#cds-exercice-professionnel.prenomExercice\">prenomExercice</a><a name=\"cds-exercice-professionnel.prenomExercice\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Prénom sous lequel exerce le professionnel.</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-exercice-professionnel-definitions.html#cds-exercice-professionnel.profession\">profession</a><a name=\"cds-exercice-professionnel.profession\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Coding\">Coding</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Profession exercée ou future profession de l'étudiant.</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-exercice-professionnel-definitions.html#cds-exercice-professionnel.CDSSituationExercice\" title=\"Lien vers le concept Situation Exercice\">CDSSituationExercice</a><a name=\"cds-exercice-professionnel.CDSSituationExercice\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-cds-situation-exercice.html\">cds-situation-exercice</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Lien vers le concept Situation Exercice</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-exercice-professionnel-definitions.html#cds-exercice-professionnel.CDSProfessionnel\" title=\"Lien vers le concept Professionnel\">CDSProfessionnel</a><a name=\"cds-exercice-professionnel.CDSProfessionnel\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-cds-professionnel.html\">cds-professionnel</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Lien vers le concept Professionnel</td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Légende pour ce format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation pour ce format</a></td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-exercice-professionnel",
+  "version" : "2.0.1",
+  "name" : "CDSExerciceProfessionnel",
+  "title" : "CDS Exercice Professionnel",
+  "status" : "draft",
+  "date" : "2026-07-10T13:11:38+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Informations décrivant notamment la profession exercée, l’identité d’exercice d’un professionnel et le cadre de son exercice (civil, agent public, etc.).Il peut exister plusieurs exercices professionnels pour une personne à un instant donné.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "fhirVersion" : "4.0.1",
+  "kind" : "logical",
+  "abstract" : false,
+  "type" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-exercice-professionnel",
+  "baseDefinition" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/ExerciceProfessionnel|0.1.0-ballot",
+  "derivation" : "specialization",
+  "snapshot" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version",
+      "valueString" : "0.1.0-ballot"
+    }],
+    "element" : [{
+      "id" : "cds-exercice-professionnel",
+      "path" : "cds-exercice-professionnel",
+      "short" : "Informations décrivant notamment la profession exercée, l’identité d’exercice d’un professionnel et le cadre de son exercice (civil, agent public, etc.).Il peut exister plusieurs exercices professionnels pour une personne à un instant donné.",
+      "definition" : "Informations décrivant notamment la profession exercée, l’identité d’exercice d’un professionnel et le cadre de son exercice (civil, agent public, etc.).Il peut exister plusieurs exercices professionnels pour une personne à un instant donné.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Base",
+        "min" : 0,
+        "max" : "*"
+      },
+      "isModifier" : false
+    },
+    {
+      "id" : "cds-exercice-professionnel.civiliteExercice",
+      "path" : "cds-exercice-professionnel.civiliteExercice",
+      "short" : "Civilité d’exercice du professionnel.",
+      "definition" : "Civilité d’exercice du professionnel.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ExerciceProfessionnel.civiliteExercice",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Coding"
+      }],
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "preferred",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/TRE_R11-CiviliteExercice/FHIR/TRE-R11-CiviliteExercice?vs"
+      }
+    },
+    {
+      "id" : "cds-exercice-professionnel.nomExercice",
+      "path" : "cds-exercice-professionnel.nomExercice",
+      "short" : "Nom sous lequel exerce le professionnel.",
+      "definition" : "Nom sous lequel exerce le professionnel.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ExerciceProfessionnel.nomExercice",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "cds-exercice-professionnel.prenomExercice",
+      "path" : "cds-exercice-professionnel.prenomExercice",
+      "short" : "Prénom sous lequel exerce le professionnel.",
+      "definition" : "Prénom sous lequel exerce le professionnel.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ExerciceProfessionnel.prenomExercice",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "cds-exercice-professionnel.profession",
+      "path" : "cds-exercice-professionnel.profession",
+      "short" : "Profession exercée ou future profession de l'étudiant.",
+      "definition" : "Profession exercée ou future profession de l'étudiant.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ExerciceProfessionnel.profession",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Coding"
+      }],
+      "mustSupport" : true,
+      "binding" : {
+        "strength" : "preferred",
+        "valueSet" : "https://interop.esante.gouv.fr/ig/mos/ValueSet/profession-vs|0.1.0-ballot"
+      }
+    },
+    {
+      "id" : "cds-exercice-professionnel.typeProfession",
+      "path" : "cds-exercice-professionnel.typeProfession",
+      "short" : "Indique le type de profession de la personne.Exemples :** Professionnel de santé** Usager de titre** Professionnel secteur social** etc.",
+      "definition" : "Indique le type de profession de la personne.Exemples :** Professionnel de santé** Usager de titre** Professionnel secteur social** etc.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ExerciceProfessionnel.typeProfession",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Coding"
+      }],
+      "binding" : {
+        "strength" : "preferred",
+        "valueSet" : "https://interop.esante.gouv.fr/ig/mos/ValueSet/typeProfession-vs|0.1.0-ballot"
+      }
+    },
+    {
+      "id" : "cds-exercice-professionnel.categorieProfessionnelle",
+      "path" : "cds-exercice-professionnel.categorieProfessionnelle",
+      "short" : "Indique si le professionnel exerce sa profession en tant que :** M: Agent public** C: Civil** F: Fonctionnaire ** E: EtudiantL'autorité d'enregistrement du professionnel dépend de la catégorie de sa profession.",
+      "definition" : "Indique si le professionnel exerce sa profession en tant que :** M: Agent public** C: Civil** F: Fonctionnaire ** E: EtudiantL'autorité d'enregistrement du professionnel dépend de la catégorie de sa profession.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ExerciceProfessionnel.categorieProfessionnelle",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Coding"
+      }],
+      "binding" : {
+        "strength" : "preferred",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/TRE_R09-CategorieProfessionnelle/FHIR/TRE-R09-CategorieProfessionnelle?vs"
+      }
+    },
+    {
+      "id" : "cds-exercice-professionnel.dateEffetExercice",
+      "path" : "cds-exercice-professionnel.dateEffetExercice",
+      "short" : "Date à partir de laquelle le professionnel exerce cette profession.",
+      "definition" : "Date à partir de laquelle le professionnel exerce cette profession.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ExerciceProfessionnel.dateEffetExercice",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "date"
+      }]
+    },
+    {
+      "id" : "cds-exercice-professionnel.dateFinEffetExercice",
+      "path" : "cds-exercice-professionnel.dateFinEffetExercice",
+      "short" : "Date à partir de laquelle le professionnel n’exerce plus cette profession.",
+      "definition" : "Date à partir de laquelle le professionnel n’exerce plus cette profession.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ExerciceProfessionnel.dateFinEffetExercice",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "date"
+      }]
+    },
+    {
+      "id" : "cds-exercice-professionnel.departementPremierReferencementAE",
+      "path" : "cds-exercice-professionnel.departementPremierReferencementAE",
+      "short" : "Code du département du premier référencement, pour un référencement de nature « inscription à l’ordre ».",
+      "definition" : "Code du département du premier référencement, pour un référencement de nature « inscription à l’ordre ».",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ExerciceProfessionnel.departementPremierReferencementAE",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Coding"
+      }],
+      "binding" : {
+        "strength" : "preferred",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/TRE_G09-DepartementOM/FHIR/TRE-G09-DepartementOM?vs"
+      }
+    },
+    {
+      "id" : "cds-exercice-professionnel.boiteLettresMSS",
+      "path" : "cds-exercice-professionnel.boiteLettresMSS",
+      "short" : "Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'exercice professionnel du professionnel.",
+      "definition" : "Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'exercice professionnel du professionnel.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "ExerciceProfessionnel.boiteLettresMSS",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/BoiteLettreMSS"
+      }]
+    },
+    {
+      "id" : "cds-exercice-professionnel.InscriptionOrdre",
+      "path" : "cds-exercice-professionnel.InscriptionOrdre",
+      "short" : "Eléments permettant de retrouver les informations d'inscription à un ordre par rapport à la profession de la personne physique sur une période et un département donnéSynonymes RPPS : Inscription à ordre",
+      "definition" : "Eléments permettant de retrouver les informations d'inscription à un ordre par rapport à la profession de la personne physique sur une période et un département donnéSynonymes RPPS : Inscription à ordre",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "ExerciceProfessionnel.InscriptionOrdre",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Base"
+      }]
+    },
+    {
+      "id" : "cds-exercice-professionnel.InscriptionOrdre.ordre",
+      "path" : "cds-exercice-professionnel.InscriptionOrdre.ordre",
+      "short" : "Instance de régulation d'une profession de santé réglementée.",
+      "definition" : "Instance de régulation d'une profession de santé réglementée.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ExerciceProfessionnel.InscriptionOrdre.ordre",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Coding"
+      }],
+      "binding" : {
+        "strength" : "preferred",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/TRE_R82-Ordre/FHIR/TRE-R82-Ordre?vs"
+      }
+    },
+    {
+      "id" : "cds-exercice-professionnel.InscriptionOrdre.dateDebutInscription",
+      "path" : "cds-exercice-professionnel.InscriptionOrdre.dateDebutInscription",
+      "short" : "Date d’inscription de la personne au tableau de l’ordre.",
+      "definition" : "Date d’inscription de la personne au tableau de l’ordre.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ExerciceProfessionnel.InscriptionOrdre.dateDebutInscription",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "date"
+      }]
+    },
+    {
+      "id" : "cds-exercice-professionnel.InscriptionOrdre.dateRadiation",
+      "path" : "cds-exercice-professionnel.InscriptionOrdre.dateRadiation",
+      "short" : "Date à partir de laquelle la personne n’est plus autorisée à exercer la profession pour laquelle elle a été inscrite.",
+      "definition" : "Date à partir de laquelle la personne n’est plus autorisée à exercer la profession pour laquelle elle a été inscrite.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ExerciceProfessionnel.InscriptionOrdre.dateRadiation",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "date"
+      }]
+    },
+    {
+      "id" : "cds-exercice-professionnel.InscriptionOrdre.statutInscription",
+      "path" : "cds-exercice-professionnel.InscriptionOrdre.statutInscription",
+      "short" : "Information indiquant l’avancement du traitement du dossier d'inscription de la personne.",
+      "definition" : "Information indiquant l’avancement du traitement du dossier d'inscription de la personne.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ExerciceProfessionnel.InscriptionOrdre.statutInscription",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Coding"
+      }],
+      "binding" : {
+        "strength" : "preferred",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/TRE_R33-StatutInscription/FHIR/TRE-R33-StatutInscription?vs"
+      }
+    },
+    {
+      "id" : "cds-exercice-professionnel.InscriptionOrdre.conseilDepartemental",
+      "path" : "cds-exercice-professionnel.InscriptionOrdre.conseilDepartemental",
+      "short" : "Département du Conseil départemental.",
+      "definition" : "Département du Conseil départemental.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ExerciceProfessionnel.InscriptionOrdre.conseilDepartemental",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Coding"
+      }],
+      "binding" : {
+        "strength" : "preferred",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/TRE_G09-DepartementOM/FHIR/TRE-G09-DepartementOM?vs"
+      }
+    },
+    {
+      "id" : "cds-exercice-professionnel.AttributionParticuliere",
+      "path" : "cds-exercice-professionnel.AttributionParticuliere",
+      "short" : "Activités ponctuelles du professionnel de type expertise.",
+      "definition" : "Activités ponctuelles du professionnel de type expertise.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ExerciceProfessionnel.AttributionParticuliere",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Base"
+      }]
+    },
+    {
+      "id" : "cds-exercice-professionnel.AttributionParticuliere.attributionParticuliere",
+      "path" : "cds-exercice-professionnel.AttributionParticuliere.attributionParticuliere",
+      "short" : "Attribution particulière.Par exemple : **Agrément : Autorisation d’un médecin généraliste ou spécialiste, formalisée par un agrément, à figurer sur une liste départementale établie par le Préfet sur proposition du directeur départemental de l'action sanitaire et sociale et après avis du conseil départemental de l'ordre des médecins et des syndicats départementaux des médecins.",
+      "definition" : "Attribution particulière.Par exemple : **Agrément : Autorisation d’un médecin généraliste ou spécialiste, formalisée par un agrément, à figurer sur une liste départementale établie par le Préfet sur proposition du directeur départemental de l'action sanitaire et sociale et après avis du conseil départemental de l'ordre des médecins et des syndicats départementaux des médecins.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ExerciceProfessionnel.AttributionParticuliere.attributionParticuliere",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Coding"
+      }],
+      "binding" : {
+        "strength" : "preferred",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/TRE_R03-AttributionParticuliere/FHIR/TRE-R03-AttributionParticuliere?vs"
+      }
+    },
+    {
+      "id" : "cds-exercice-professionnel.AttributionParticuliere.dateDebutReconnaissance",
+      "path" : "cds-exercice-professionnel.AttributionParticuliere.dateDebutReconnaissance",
+      "short" : "Date à partir de laquelle l'attribution particulière prend effet.",
+      "definition" : "Date à partir de laquelle l'attribution particulière prend effet.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ExerciceProfessionnel.AttributionParticuliere.dateDebutReconnaissance",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "date"
+      }]
+    },
+    {
+      "id" : "cds-exercice-professionnel.AttributionParticuliere.dateAbandon",
+      "path" : "cds-exercice-professionnel.AttributionParticuliere.dateAbandon",
+      "short" : "Date à laquelle le professionnel ne veut plus faire apparaître cette attribution.",
+      "definition" : "Date à laquelle le professionnel ne veut plus faire apparaître cette attribution.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ExerciceProfessionnel.AttributionParticuliere.dateAbandon",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "date"
+      }]
+    },
+    {
+      "id" : "cds-exercice-professionnel.NiveauFormation",
+      "path" : "cds-exercice-professionnel.NiveauFormation",
+      "short" : "Le niveau de formation décrit le niveau de formation de l’étudiant, comme demandé par le décret n°2010-701 et complété par le décret n°2011-462.",
+      "definition" : "Le niveau de formation décrit le niveau de formation de l’étudiant, comme demandé par le décret n°2010-701 et complété par le décret n°2011-462.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "ExerciceProfessionnel.NiveauFormation",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Base"
+      }]
+    },
+    {
+      "id" : "cds-exercice-professionnel.NiveauFormation.diplome",
+      "path" : "cds-exercice-professionnel.NiveauFormation.diplome",
+      "short" : "Diplôme acquis pour les cycles terminés (cas des diplômes de deuxième cycle pour étudiants qui font un troisième cycle) ou diplôme préparé pour les cycles en cours.",
+      "definition" : "Diplôme acquis pour les cycles terminés (cas des diplômes de deuxième cycle pour étudiants qui font un troisième cycle) ou diplôme préparé pour les cycles en cours.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ExerciceProfessionnel.NiveauFormation.diplome",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Diplome"
+      }]
+    },
+    {
+      "id" : "cds-exercice-professionnel.NiveauFormation.natureCycleFormation",
+      "path" : "cds-exercice-professionnel.NiveauFormation.natureCycleFormation",
+      "short" : "Nature du cycle de formation:- Deuxième cycle,- Troisième cycle court,- Troisième cycle long/Internat.",
+      "definition" : "Nature du cycle de formation:- Deuxième cycle,- Troisième cycle court,- Troisième cycle long/Internat.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ExerciceProfessionnel.NiveauFormation.natureCycleFormation",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Coding"
+      }],
+      "binding" : {
+        "strength" : "preferred",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/TRE_R223-NatCycleForm/FHIR/TRE-R223-NatCycleForm?vs"
+      }
+    },
+    {
+      "id" : "cds-exercice-professionnel.NiveauFormation.niveauFormationAcquis",
+      "path" : "cds-exercice-professionnel.NiveauFormation.niveauFormationAcquis",
+      "short" : "Niveau de validité dans le cycle de formation.",
+      "definition" : "Niveau de validité dans le cycle de formation.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ExerciceProfessionnel.NiveauFormation.niveauFormationAcquis",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Coding"
+      }],
+      "binding" : {
+        "strength" : "preferred",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/TRE_R224-NiveauFormAcquis/FHIR/TRE-R224-NiveauFormAcquis?vs"
+      }
+    },
+    {
+      "id" : "cds-exercice-professionnel.NiveauFormation.anneeUniversitaire",
+      "path" : "cds-exercice-professionnel.NiveauFormation.anneeUniversitaire",
+      "short" : "Année universitaire, exemple : 2015-2016.",
+      "definition" : "Année universitaire, exemple : 2015-2016.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ExerciceProfessionnel.NiveauFormation.anneeUniversitaire",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Coding"
+      }],
+      "binding" : {
+        "strength" : "preferred",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/TRE_R225-AnneeUniversitaire/FHIR/TRE-R225-AnneeUniversitaire?vs"
+      }
+    },
+    {
+      "id" : "cds-exercice-professionnel.NiveauFormation.dateFin",
+      "path" : "cds-exercice-professionnel.NiveauFormation.dateFin",
+      "short" : "Date à laquelle le niveau de formation n’est plus actif (non visible hormis dans les données historisées). Cette date est renseignée par l’ordre à la clôture de l’exercice professionnel.",
+      "definition" : "Date à laquelle le niveau de formation n’est plus actif (non visible hormis dans les données historisées). Cette date est renseignée par l’ordre à la clôture de l’exercice professionnel.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ExerciceProfessionnel.NiveauFormation.dateFin",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "date"
+      }]
+    },
+    {
+      "id" : "cds-exercice-professionnel.SituationExercice",
+      "path" : "cds-exercice-professionnel.SituationExercice",
+      "short" : "Lien vers la classe SituationExercice",
+      "definition" : "Lien vers la classe SituationExercice",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "ExerciceProfessionnel.SituationExercice",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/SituationExercice"
+      }]
+    },
+    {
+      "id" : "cds-exercice-professionnel.Certificat",
+      "path" : "cds-exercice-professionnel.Certificat",
+      "short" : "Lien vers la classe Certificat",
+      "definition" : "Lien vers la classe Certificat",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "ExerciceProfessionnel.Certificat",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Certificat"
+      }]
+    },
+    {
+      "id" : "cds-exercice-professionnel.SavoirFaire",
+      "path" : "cds-exercice-professionnel.SavoirFaire",
+      "short" : "Lien vers la classe SavoirFaire",
+      "definition" : "Lien vers la classe SavoirFaire",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "ExerciceProfessionnel.SavoirFaire",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/SavoirFaire"
+      }]
+    },
+    {
+      "id" : "cds-exercice-professionnel.CarteProfessionnel",
+      "path" : "cds-exercice-professionnel.CarteProfessionnel",
+      "short" : "Lien vers la classe CarteProfessionnel",
+      "definition" : "Lien vers la classe CarteProfessionnel",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "ExerciceProfessionnel.CarteProfessionnel",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/CarteProfessionnel"
+      }]
+    },
+    {
+      "id" : "cds-exercice-professionnel.Professionnel",
+      "path" : "cds-exercice-professionnel.Professionnel",
+      "short" : "Lien vers la classe Professionnel",
+      "definition" : "Lien vers la classe Professionnel",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "ExerciceProfessionnel.Professionnel",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Professionnel"
+      }]
+    },
+    {
+      "id" : "cds-exercice-professionnel.SituationOperationnelle",
+      "path" : "cds-exercice-professionnel.SituationOperationnelle",
+      "short" : "Lien vers la classe SituationOperationnelle",
+      "definition" : "Lien vers la classe SituationOperationnelle",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "ExerciceProfessionnel.SituationOperationnelle",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/SituationOperationnelle"
+      }]
+    },
+    {
+      "id" : "cds-exercice-professionnel.CDSSituationExercice",
+      "path" : "cds-exercice-professionnel.CDSSituationExercice",
+      "short" : "Lien vers le concept Situation Exercice",
+      "definition" : "Lien vers le concept Situation Exercice",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "cds-exercice-professionnel.CDSSituationExercice",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-situation-exercice"
+      }]
+    },
+    {
+      "id" : "cds-exercice-professionnel.CDSProfessionnel",
+      "path" : "cds-exercice-professionnel.CDSProfessionnel",
+      "short" : "Lien vers le concept Professionnel",
+      "definition" : "Lien vers le concept Professionnel",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "cds-exercice-professionnel.CDSProfessionnel",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-professionnel"
+      }]
+    }]
+  },
+  "differential" : {
+    "element" : [{
+      "id" : "cds-exercice-professionnel",
+      "path" : "cds-exercice-professionnel",
+      "short" : "Informations décrivant notamment la profession exercée, l’identité d’exercice d’un professionnel et le cadre de son exercice (civil, agent public, etc.).Il peut exister plusieurs exercices professionnels pour une personne à un instant donné.",
+      "definition" : "Informations décrivant notamment la profession exercée, l’identité d’exercice d’un professionnel et le cadre de son exercice (civil, agent public, etc.).Il peut exister plusieurs exercices professionnels pour une personne à un instant donné."
+    },
+    {
+      "id" : "cds-exercice-professionnel.civiliteExercice",
+      "path" : "cds-exercice-professionnel.civiliteExercice",
+      "mustSupport" : true
+    },
+    {
+      "id" : "cds-exercice-professionnel.nomExercice",
+      "path" : "cds-exercice-professionnel.nomExercice",
+      "mustSupport" : true
+    },
+    {
+      "id" : "cds-exercice-professionnel.prenomExercice",
+      "path" : "cds-exercice-professionnel.prenomExercice",
+      "mustSupport" : true
+    },
+    {
+      "id" : "cds-exercice-professionnel.profession",
+      "path" : "cds-exercice-professionnel.profession",
+      "mustSupport" : true
+    },
+    {
+      "id" : "cds-exercice-professionnel.CDSSituationExercice",
+      "path" : "cds-exercice-professionnel.CDSSituationExercice",
+      "short" : "Lien vers le concept Situation Exercice",
+      "definition" : "Lien vers le concept Situation Exercice",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-situation-exercice"
+      }]
+    },
+    {
+      "id" : "cds-exercice-professionnel.CDSProfessionnel",
+      "path" : "cds-exercice-professionnel.CDSProfessionnel",
+      "short" : "Lien vers le concept Professionnel",
+      "definition" : "Lien vers le concept Professionnel",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-professionnel"
+      }]
+    }]
+  }
+}

@@ -1,0 +1,369 @@
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "cds-organisation-interne",
+  "language" : "fr",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : DéfinitionStructure cds-organisation-interne</b></p><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Le nom logique de l'élément\">Nom</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Informations sur l'utilisation de l'élément\">Drapeaux</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Nombre minimum et maximum de fois que l'élément peut apparaître dans l'instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Référence au type de l'élément\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Informations supplémentaires sur l'élément\">Description et contraintes</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-organisation-interne-definitions.html#cds-organisation-interne\" title=\"La classe Organisation Interne est une classe abstraite qui contient les attributs inhérents et communs aux classes décrivant l’organisation opérationnelle interne d’une EG permettant de délivrer la prestation.Une organisation interne peut être composée d’autres organisations internes. Par exemple, les unités fonctionnelles peuvent être regroupées au sein de services qui peuvent être regroupés en pôles.La description de cette organisation interne de l’EG n’est pas obligatoire. Lorsqu’elle est décrite cette organisation porte les ressources opérationnelles.\">cds-organisation-interne</a><a name=\"cds-organisation-interne\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\">OrganisationInterne(0.1.0-ballot)</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">La classe Organisation Interne est une classe abstraite qui contient les attributs inhérents et communs aux classes décrivant l’organisation opérationnelle interne d’une EG permettant de délivrer la prestation.Une organisation interne peut être composée d’autres organisations internes. Par exemple, les unités fonctionnelles peuvent être regroupées au sein de services qui peuvent être regroupés en pôles.La description de cette organisation interne de l’EG n’est pas obligatoire. Lorsqu’elle est décrite cette organisation porte les ressources opérationnelles.<br/><br/>Éléments définis dans les ancêtres :<a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"Identifiant de l'organisation interne, unique et persistant au niveau national.\">identifiantOI</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"Nom de l'organisation interne.\">nomOI</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"Type d'organisation interne (pôle, structure interne ou service, unité fonctionnelle, unité élémentaire, etc.).\">typeOI</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"Personne ou service qui agit comme point de contact auprès d'une autre personne ou d'un autre service. Les moyens de contact sont précisés (numéro de téléphone, fax, email, site internet).\">contact</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'organisation interne.\">boiteLettresMSS</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"Date d'ouverture administrative de l'organisation interne.\">dateOuverture</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"La date de fermeture d'un niveau organisationnel correspond à la date à partir de laquelle un niveau organisationnel n'assure plus aucune prestation. Cette date de fermeture est caractérisée par un type de fermeture. A partir de cette date, les prestations des niveaux organisationnels inférieurs ne sont plus assurées. Lorsqu'il s'agit d'une fermeture temporaire, la date est remise à nulle lorsque le niveau organisationnel est ouvert de nouveau.\">dateFermeture</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"Le type de fermeture d'un niveau organisationnel indique la temporalité de la fermeture. Le type de fermeture s'applique au niveau organisationnel sur lequel la fermeture est déclarée, ainsi que tous les niveaux inférieurs rattachés à ce niveau organisationnel. Par exemple, si un service est fermé temporairement, toutes les unités fonctionnelles qui lui sont rattachées sont également fermées temporairement.\">typeFermeture</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"La date de réouverture correspond à la date prévisionnelle à partir de laquelle la prestation sera de nouveau assurée. Elle s'applique lors d'une période de fermeture temporaire.\">datePrevisionnelleReouverture</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"Lien vers la classe EntiteGeographique\">EntiteGeographique</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"Lien vers la classe OrganisationInterne\">OrganisationInterne</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"Lien vers la classe OffreOperationnelle\">OffreOperationnelle</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"Lien vers la classe Agenda\">Agenda</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-OrganisationInterne.html\" title=\"Lien vers la classe RendezVous\">RendezVous</a></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-organisation-interne-definitions.html#cds-organisation-interne.identifiantOI\">identifiantOI</a><a name=\"cds-organisation-interne.identifiantOI\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Identifiant de l'organisation interne, unique et persistant au niveau national.</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-organisation-interne-definitions.html#cds-organisation-interne.nomOI\">nomOI</a><a name=\"cds-organisation-interne.nomOI\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Nom de l'organisation interne.</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-organisation-interne-definitions.html#cds-organisation-interne.boiteLettresMSS\">boiteLettresMSS</a><a name=\"cds-organisation-interne.boiteLettresMSS\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-BoiteLettreMSS.html\">BoiteLettreMSS</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'organisation interne.</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-organisation-interne-definitions.html#cds-organisation-interne.CDSEntiteGeographique\" title=\"Lien vers le concept Entité Géographique\">CDSEntiteGeographique</a><a name=\"cds-organisation-interne.CDSEntiteGeographique\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-cds-entite-geographique.html\">cds-entite-geographique</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Lien vers le concept Entité Géographique</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-organisation-interne-definitions.html#cds-organisation-interne.CDSMembreCercleSoins\" title=\"Lien vers le concept Membre Cercle Soins\">CDSMembreCercleSoins</a><a name=\"cds-organisation-interne.CDSMembreCercleSoins\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-cds-membre-cercle-soins.html\">cds-membre-cercle-soins</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Lien vers le concept Membre Cercle Soins</td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Légende pour ce format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation pour ce format</a></td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-organisation-interne",
+  "version" : "2.0.1",
+  "name" : "CDSOrganisationInterne",
+  "title" : "CDS Organisation Interne",
+  "status" : "draft",
+  "date" : "2026-07-10T13:11:38+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "La classe Organisation Interne est une classe abstraite qui contient les attributs inhérents et communs aux classes décrivant l’organisation opérationnelle interne d’une EG permettant de délivrer la prestation.Une organisation interne peut être composée d’autres organisations internes. Par exemple, les unités fonctionnelles peuvent être regroupées au sein de services qui peuvent être regroupés en pôles.La description de cette organisation interne de l’EG n’est pas obligatoire. Lorsqu’elle est décrite cette organisation porte les ressources opérationnelles.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "fhirVersion" : "4.0.1",
+  "kind" : "logical",
+  "abstract" : false,
+  "type" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-organisation-interne",
+  "baseDefinition" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/OrganisationInterne|0.1.0-ballot",
+  "derivation" : "specialization",
+  "snapshot" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version",
+      "valueString" : "0.1.0-ballot"
+    }],
+    "element" : [{
+      "id" : "cds-organisation-interne",
+      "path" : "cds-organisation-interne",
+      "short" : "La classe Organisation Interne est une classe abstraite qui contient les attributs inhérents et communs aux classes décrivant l’organisation opérationnelle interne d’une EG permettant de délivrer la prestation.Une organisation interne peut être composée d’autres organisations internes. Par exemple, les unités fonctionnelles peuvent être regroupées au sein de services qui peuvent être regroupés en pôles.La description de cette organisation interne de l’EG n’est pas obligatoire. Lorsqu’elle est décrite cette organisation porte les ressources opérationnelles.",
+      "definition" : "La classe Organisation Interne est une classe abstraite qui contient les attributs inhérents et communs aux classes décrivant l’organisation opérationnelle interne d’une EG permettant de délivrer la prestation.Une organisation interne peut être composée d’autres organisations internes. Par exemple, les unités fonctionnelles peuvent être regroupées au sein de services qui peuvent être regroupés en pôles.La description de cette organisation interne de l’EG n’est pas obligatoire. Lorsqu’elle est décrite cette organisation porte les ressources opérationnelles.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Base",
+        "min" : 0,
+        "max" : "*"
+      },
+      "isModifier" : false
+    },
+    {
+      "id" : "cds-organisation-interne.identifiantOI",
+      "path" : "cds-organisation-interne.identifiantOI",
+      "short" : "Identifiant de l'organisation interne, unique et persistant au niveau national.",
+      "definition" : "Identifiant de l'organisation interne, unique et persistant au niveau national.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "OrganisationInterne.identifiantOI",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Identifier"
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "cds-organisation-interne.nomOI",
+      "path" : "cds-organisation-interne.nomOI",
+      "short" : "Nom de l'organisation interne.",
+      "definition" : "Nom de l'organisation interne.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "OrganisationInterne.nomOI",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "string"
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "cds-organisation-interne.typeOI",
+      "path" : "cds-organisation-interne.typeOI",
+      "short" : "Type d'organisation interne (pôle, structure interne ou service, unité fonctionnelle, unité élémentaire, etc.).",
+      "definition" : "Type d'organisation interne (pôle, structure interne ou service, unité fonctionnelle, unité élémentaire, etc.).",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "OrganisationInterne.typeOI",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Coding"
+      }],
+      "binding" : {
+        "strength" : "preferred",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/TRE_R207-TypeOrganisationInterne/FHIR/TRE-R207-TypeOrganisationInterne?vs"
+      }
+    },
+    {
+      "id" : "cds-organisation-interne.contact",
+      "path" : "cds-organisation-interne.contact",
+      "short" : "Personne ou service qui agit comme point de contact auprès d'une autre personne ou d'un autre service. Les moyens de contact sont précisés (numéro de téléphone, fax, email, site internet).",
+      "definition" : "Personne ou service qui agit comme point de contact auprès d'une autre personne ou d'un autre service. Les moyens de contact sont précisés (numéro de téléphone, fax, email, site internet).",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "OrganisationInterne.contact",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Contact"
+      }]
+    },
+    {
+      "id" : "cds-organisation-interne.boiteLettresMSS",
+      "path" : "cds-organisation-interne.boiteLettresMSS",
+      "short" : "Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'organisation interne.",
+      "definition" : "Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'organisation interne.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "OrganisationInterne.boiteLettresMSS",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/BoiteLettreMSS"
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "cds-organisation-interne.dateOuverture",
+      "path" : "cds-organisation-interne.dateOuverture",
+      "short" : "Date d'ouverture administrative de l'organisation interne.",
+      "definition" : "Date d'ouverture administrative de l'organisation interne.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "OrganisationInterne.dateOuverture",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "date"
+      }]
+    },
+    {
+      "id" : "cds-organisation-interne.dateFermeture",
+      "path" : "cds-organisation-interne.dateFermeture",
+      "short" : "La date de fermeture d'un niveau organisationnel correspond à la date à partir de laquelle un niveau organisationnel n'assure plus aucune prestation. Cette date de fermeture est caractérisée par un type de fermeture. A partir de cette date, les prestations des niveaux organisationnels inférieurs ne sont plus assurées. Lorsqu'il s'agit d'une fermeture temporaire, la date est remise à nulle lorsque le niveau organisationnel est ouvert de nouveau.",
+      "definition" : "La date de fermeture d'un niveau organisationnel correspond à la date à partir de laquelle un niveau organisationnel n'assure plus aucune prestation. Cette date de fermeture est caractérisée par un type de fermeture. A partir de cette date, les prestations des niveaux organisationnels inférieurs ne sont plus assurées. Lorsqu'il s'agit d'une fermeture temporaire, la date est remise à nulle lorsque le niveau organisationnel est ouvert de nouveau.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "OrganisationInterne.dateFermeture",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "date"
+      }]
+    },
+    {
+      "id" : "cds-organisation-interne.typeFermeture",
+      "path" : "cds-organisation-interne.typeFermeture",
+      "short" : "Le type de fermeture d'un niveau organisationnel indique la temporalité de la fermeture. Le type de fermeture s'applique au niveau organisationnel sur lequel la fermeture est déclarée, ainsi que tous les niveaux inférieurs rattachés à ce niveau organisationnel. Par exemple, si un service est fermé temporairement, toutes les unités fonctionnelles qui lui sont rattachées sont également fermées temporairement.",
+      "definition" : "Le type de fermeture d'un niveau organisationnel indique la temporalité de la fermeture. Le type de fermeture s'applique au niveau organisationnel sur lequel la fermeture est déclarée, ainsi que tous les niveaux inférieurs rattachés à ce niveau organisationnel. Par exemple, si un service est fermé temporairement, toutes les unités fonctionnelles qui lui sont rattachées sont également fermées temporairement.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "OrganisationInterne.typeFermeture",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Coding"
+      }],
+      "binding" : {
+        "strength" : "preferred",
+        "valueSet" : "https://mos.esante.gouv.fr/NOS/TRE_R286-TypeFermeture/FHIR/TRE-R286-TypeFermeture?vs"
+      }
+    },
+    {
+      "id" : "cds-organisation-interne.datePrevisionnelleReouverture",
+      "path" : "cds-organisation-interne.datePrevisionnelleReouverture",
+      "short" : "La date de réouverture correspond à la date prévisionnelle à partir de laquelle la prestation sera de nouveau assurée. Elle s'applique lors d'une période de fermeture temporaire.",
+      "definition" : "La date de réouverture correspond à la date prévisionnelle à partir de laquelle la prestation sera de nouveau assurée. Elle s'applique lors d'une période de fermeture temporaire.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "OrganisationInterne.datePrevisionnelleReouverture",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "date"
+      }]
+    },
+    {
+      "id" : "cds-organisation-interne.EntiteGeographique",
+      "path" : "cds-organisation-interne.EntiteGeographique",
+      "short" : "Lien vers la classe EntiteGeographique",
+      "definition" : "Lien vers la classe EntiteGeographique",
+      "min" : 1,
+      "max" : "*",
+      "base" : {
+        "path" : "OrganisationInterne.EntiteGeographique",
+        "min" : 1,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/EntiteGeographique"
+      }]
+    },
+    {
+      "id" : "cds-organisation-interne.OrganisationInterne",
+      "path" : "cds-organisation-interne.OrganisationInterne",
+      "short" : "Lien vers la classe OrganisationInterne",
+      "definition" : "Lien vers la classe OrganisationInterne",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "OrganisationInterne.OrganisationInterne",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/OrganisationInterne"
+      }]
+    },
+    {
+      "id" : "cds-organisation-interne.OffreOperationnelle",
+      "path" : "cds-organisation-interne.OffreOperationnelle",
+      "short" : "Lien vers la classe OffreOperationnelle",
+      "definition" : "Lien vers la classe OffreOperationnelle",
+      "min" : 1,
+      "max" : "*",
+      "base" : {
+        "path" : "OrganisationInterne.OffreOperationnelle",
+        "min" : 1,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/OffreOperationnelle"
+      }]
+    },
+    {
+      "id" : "cds-organisation-interne.Agenda",
+      "path" : "cds-organisation-interne.Agenda",
+      "short" : "Lien vers la classe Agenda",
+      "definition" : "Lien vers la classe Agenda",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "OrganisationInterne.Agenda",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Agenda"
+      }]
+    },
+    {
+      "id" : "cds-organisation-interne.RendezVous",
+      "path" : "cds-organisation-interne.RendezVous",
+      "short" : "Lien vers la classe RendezVous",
+      "definition" : "Lien vers la classe RendezVous",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "OrganisationInterne.RendezVous",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/RendezVous"
+      }]
+    },
+    {
+      "id" : "cds-organisation-interne.CDSEntiteGeographique",
+      "path" : "cds-organisation-interne.CDSEntiteGeographique",
+      "short" : "Lien vers le concept Entité Géographique",
+      "definition" : "Lien vers le concept Entité Géographique",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "cds-organisation-interne.CDSEntiteGeographique",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-entite-geographique"
+      }]
+    },
+    {
+      "id" : "cds-organisation-interne.CDSMembreCercleSoins",
+      "path" : "cds-organisation-interne.CDSMembreCercleSoins",
+      "short" : "Lien vers le concept Membre Cercle Soins",
+      "definition" : "Lien vers le concept Membre Cercle Soins",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "cds-organisation-interne.CDSMembreCercleSoins",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-membre-cercle-soins"
+      }]
+    }]
+  },
+  "differential" : {
+    "element" : [{
+      "id" : "cds-organisation-interne",
+      "path" : "cds-organisation-interne",
+      "short" : "La classe Organisation Interne est une classe abstraite qui contient les attributs inhérents et communs aux classes décrivant l’organisation opérationnelle interne d’une EG permettant de délivrer la prestation.Une organisation interne peut être composée d’autres organisations internes. Par exemple, les unités fonctionnelles peuvent être regroupées au sein de services qui peuvent être regroupés en pôles.La description de cette organisation interne de l’EG n’est pas obligatoire. Lorsqu’elle est décrite cette organisation porte les ressources opérationnelles.",
+      "definition" : "La classe Organisation Interne est une classe abstraite qui contient les attributs inhérents et communs aux classes décrivant l’organisation opérationnelle interne d’une EG permettant de délivrer la prestation.Une organisation interne peut être composée d’autres organisations internes. Par exemple, les unités fonctionnelles peuvent être regroupées au sein de services qui peuvent être regroupés en pôles.La description de cette organisation interne de l’EG n’est pas obligatoire. Lorsqu’elle est décrite cette organisation porte les ressources opérationnelles."
+    },
+    {
+      "id" : "cds-organisation-interne.identifiantOI",
+      "path" : "cds-organisation-interne.identifiantOI",
+      "mustSupport" : true
+    },
+    {
+      "id" : "cds-organisation-interne.nomOI",
+      "path" : "cds-organisation-interne.nomOI",
+      "mustSupport" : true
+    },
+    {
+      "id" : "cds-organisation-interne.boiteLettresMSS",
+      "path" : "cds-organisation-interne.boiteLettresMSS",
+      "mustSupport" : true
+    },
+    {
+      "id" : "cds-organisation-interne.CDSEntiteGeographique",
+      "path" : "cds-organisation-interne.CDSEntiteGeographique",
+      "short" : "Lien vers le concept Entité Géographique",
+      "definition" : "Lien vers le concept Entité Géographique",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-entite-geographique"
+      }]
+    },
+    {
+      "id" : "cds-organisation-interne.CDSMembreCercleSoins",
+      "path" : "cds-organisation-interne.CDSMembreCercleSoins",
+      "short" : "Lien vers le concept Membre Cercle Soins",
+      "definition" : "Lien vers le concept Membre Cercle Soins",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-membre-cercle-soins"
+      }]
+    }]
+  }
+}

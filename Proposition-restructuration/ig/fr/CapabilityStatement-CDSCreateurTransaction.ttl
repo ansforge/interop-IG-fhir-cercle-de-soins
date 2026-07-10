@@ -30,7 +30,7 @@
        fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
      ]
   ] ;
-  fhir:CapabilityStatement.description [ fhir:value "Le rôle de créateur incarné par un système peut créer ou mettre à jour le cercle de soins d'une personne"] ;
+  fhir:CapabilityStatement.description [ fhir:value "Le rôle de créateur incarné par un système peut créer ou mettre à jour le cercle\nde soins d'une personne"] ;
   fhir:CapabilityStatement.jurisdiction [
      fhir:index -1 ;
      fhir:CodeableConcept.coding [

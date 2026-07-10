@@ -1,0 +1,17 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: Mapping Cercle de Soins vers CareTeam"
+"cds-cercle-soins","cds-cercle-soins","","","",0,*,"","","","null {[]} {[]}
+","Le cercle de soins est l'agrégation de membres qui participent à la prise en charge et aux actions de coordination du parcours de santé d’une personne.","Le cercle de soins est l'agrégation de membres qui participent à la prise en charge et aux actions de coordination du parcours de santé d’une personne.","Flux 1, flux 2, flux 3, flux 4","","","","","","","","",,,,,"",,,,"Base",0,*,"","","IHECareteam"
+"cds-cercle-soins.idCercleSoins","cds-cercle-soins.idCercleSoins","","","",1,1,"Y","","","Identifier {[]} {[]}
+","Identifiant du cercle de soins","Identifiant du cercle de soins","","","","","","","","","",,,,,"",,,,"cds-cercle-soins.idCercleSoins",1,1,"","","IHECareTeam.identifier"
+"cds-cercle-soins.dateCreation","cds-cercle-soins.dateCreation","","","",0,1,"Y","","","date {[]} {[]}
+","Date de création du cercle de soins","Date de création du cercle de soins","","","","","","","","","",,,,,"",,,,"cds-cercle-soins.dateCreation",0,1,"","","IHECareTeam.period.start"
+"cds-cercle-soins.dateMAJ","cds-cercle-soins.dateMAJ","","","",0,1,"Y","","","date {[]} {[]}
+","Date de mise à jour du cercle de soin.","Date de mise à jour du cercle de soin.","","","","","","","","","",,,,,"",,,,"cds-cercle-soins.dateMAJ",0,1,"",""
+"cds-cercle-soins.dateFin","cds-cercle-soins.dateFin","","","",0,1,"Y","","","date {[]} {[]}
+","Date de fin d'existence du cercle de soins.","Date de fin d'existence du cercle de soins.","","","","","","","","","",,,,,"",,,,"cds-cercle-soins.dateFin",0,1,"","","IHECareTeam.period.end"
+"cds-cercle-soins.statut","cds-cercle-soins.statut","","","",0,1,"Y","","","Coding {[]} {[]}
+","Statut du cercle de soin.","Statut du cercle de soin.","","","","","","","","","",,,,,"",,,,"cds-cercle-soins.statut",0,1,"",""
+"cds-cercle-soins.CDSPersonnePriseCharge","cds-cercle-soins.CDSPersonnePriseCharge","","","",1,1,"","","","https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-personne-prise-charge {[]} {[]}
+","Lien vers le concept Personne Prise Charge","Lien vers le concept Personne Prise Charge","","","","","","","","","",,,,,"",,,,"cds-cercle-soins.CDSPersonnePriseCharge",1,1,"","","IHECareTeam.subject"
+"cds-cercle-soins.CDSMembreCercleSoins","cds-cercle-soins.CDSMembreCercleSoins","","","",1,*,"","","","https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-membre-cercle-soins {[]} {[]}
+","Lien vers le concept Membre Cercle Soins","Lien vers le concept Membre Cercle Soins","","","","","","","","","",,,,,"",,,,"cds-cercle-soins.CDSMembreCercleSoins",1,*,"","","IHECareTeam.participant"

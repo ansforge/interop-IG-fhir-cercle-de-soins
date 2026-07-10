@@ -1,0 +1,101 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/cds/Basic/CDS-Createur-Actor> a fhir:Basic ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "CDS-Createur-Actor"] ;
+  fhir:Resource.language [ fhir:value "fr"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : ActorDefinition CDS-Createur-Actor</b></p><a name=\"CDS-Createur-Actor\"> </a><a name=\"hcCDS-Createur-Actor\"> </a><table class=\"grid\"><tr><td><b>Acteur : CDS_Createur </b></td><td>CDS Créateur</td><td>Type : system </td></tr><tr><td colspan=\"3\"><div><p>Un créateur :</p>\n<ul>\n<li><strong>DOIT</strong> être habilité ;</li>\n</ul>\n<p>Pour une création il :</p>\n<ul>\n<li><strong>DOIT</strong> vérifier l’absence du cercle de soins de la personne par le gestionnaire du cercle de soins via une demande de consultation ;</li>\n<li><strong>DOIT</strong> disposer des paramètres de création de cercle de soins (et en particulier de l’identifiant du patient);\n\n</li>\n</ul>\n<p>Pour une mise à jour il :</p>\n<ul>\n<li><strong>DOIT</strong> disposer des paramètres de mise à jour de cercle de soins (et en particulier de l’identifiant du patient);</li>\n<li>Dans le cas où il y a plusieurs contributeurs : <strong>DOIT</strong> avoir consulté préalablement la dernière version du cercle de soins de la personne dans le gestionnaire du cercle de soins afin de garantir l’intégrité des informations contenues dans le cercle de soins</li>\n</ul>\n<p>Consulter <a href=\"CapabilityStatement-CDSCreateurRestful.html\">CapabilityStatement CDSCreateurRestful</a> et <a href=\"CapabilityStatement-CDSCreateurTransaction.html\">CapabilityStatement CDSCreateurTransaction</a> pour les ressources CapabilityStatement associées à l'acteur.</p>\n</div></td></tr></table></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.url" ] ;
+     fhir:Extension.valueUri [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/ActorDefinition/CDS-Createur-Actor" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.version" ] ;
+     fhir:Extension.valueString [ fhir:value "2.0.1" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.name" ] ;
+     fhir:Extension.valueString [ fhir:value "CDS_Createur" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.title" ] ;
+     fhir:Extension.valueString [ fhir:value "CDS Créateur" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.status" ] ;
+     fhir:Extension.valueCode [ fhir:value "active" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.experimental" ] ;
+     fhir:Extension.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.date" ] ;
+     fhir:Extension.valueDateTime [ fhir:value "2026-07-10T13:11:38+00:00"^^xsd:dateTime ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.publisher" ] ;
+     fhir:Extension.valueString [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.contact" ] ;
+     fhir:Extension.valueContactDetail [
+       fhir:ContactDetail.name [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
+       fhir:ContactDetail.telecom [
+         fhir:index -1 ;
+         fhir:ContactPoint.system [ fhir:value "url" ] ;
+         fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.description" ] ;
+     fhir:Extension.valueMarkdown [ fhir:value "Le rôle de créateur incarné par un système peut créer ou mettre à jour le cercle de soins d'une personne." ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.jurisdiction" ] ;
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+         fhir:Coding.code [ fhir:value "FR" ] ;
+         fhir:Coding.display [ fhir:value "France (la)" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.purpose" ] ;
+     fhir:Extension.valueMarkdown [ fhir:value "**Exemples**\n- Service numérique d’appui à la coordination (SI DAC, SI Médecin traitant) \n- Dossier Patient Informatisé" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.type" ] ;
+     fhir:Extension.valueCode [ fhir:value "system" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.documentation" ] ;
+     fhir:Extension.valueMarkdown [ fhir:value "Un créateur :\n- **DOIT** être habilité ;\n\nPour une création il : \n- **DOIT** vérifier l’absence du cercle de soins de la personne par le gestionnaire du cercle de soins via une demande de consultation ;\n- **DOIT** disposer des paramètres de création de cercle de soins (et en particulier de l’identifiant du patient);&#xa;&#xa;\n\nPour une mise à jour il : \n- **DOIT** disposer des paramètres de mise à jour de cercle de soins (et en particulier de l’identifiant du patient);\n- Dans le cas où il y a plusieurs contributeurs : **DOIT** avoir consulté préalablement la dernière version du cercle de soins de la personne dans le gestionnaire du cercle de soins afin de garantir l’intégrité des informations contenues dans le cercle de soins\n\nConsulter [CapabilityStatement CDSCreateurRestful](CapabilityStatement-CDSCreateurRestful.html) et [CapabilityStatement CDSCreateurTransaction](CapabilityStatement-CDSCreateurTransaction.html) pour les ressources CapabilityStatement associées à l'acteur." ]
+  ] ;
+  fhir:Basic.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/fhir-types" ] ;
+       fhir:Coding.code [ fhir:value "ActorDefinition" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/cds/Basic/CDS-Createur-Actor.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

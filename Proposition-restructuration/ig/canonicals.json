@@ -1,4 +1,25 @@
 [{
+  "id" : "CDS-Consommateur-Actor",
+  "type" : "ActorDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/cds/ActorDefinition/CDS-Consommateur-Actor",
+  "version" : "2.0.1",
+  "name" : "CDS_Consommateur"
+},
+{
+  "id" : "CDS-Createur-Actor",
+  "type" : "ActorDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/cds/ActorDefinition/CDS-Createur-Actor",
+  "version" : "2.0.1",
+  "name" : "CDS_Createur"
+},
+{
+  "id" : "CDS-Gestionnaire-Actor",
+  "type" : "ActorDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/cds/ActorDefinition/CDS-Gestionnaire-Actor",
+  "version" : "2.0.1",
+  "name" : "CDS_Gestionnaire"
+},
+{
   "id" : "CDSConsommateur",
   "type" : "CapabilityStatement",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/cds/CapabilityStatement/CDSConsommateur",
@@ -97,6 +118,41 @@
   "name" : "CDSBundleTransactionMAJ"
 },
 {
+  "id" : "cds-cercle-soins",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-cercle-soins",
+  "version" : "2.0.1",
+  "name" : "CDSCercleSoins"
+},
+{
+  "id" : "cds-contact",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-contact",
+  "version" : "2.0.1",
+  "name" : "CDSContact"
+},
+{
+  "id" : "cds-entite-geographique",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-entite-geographique",
+  "version" : "2.0.1",
+  "name" : "CDSEntiteGeographique"
+},
+{
+  "id" : "cds-entite-juridique",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-entite-juridique",
+  "version" : "2.0.1",
+  "name" : "CDSEntiteJuridique"
+},
+{
+  "id" : "cds-exercice-professionnel",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-exercice-professionnel",
+  "version" : "2.0.1",
+  "name" : "CDSExerciceProfessionnel"
+},
+{
   "id" : "cds-fr-related-person",
   "type" : "StructureDefinition",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-fr-related-person",
@@ -111,11 +167,53 @@
   "name" : "CDSCareTeam"
 },
 {
+  "id" : "cds-membre-cercle-soins",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-membre-cercle-soins",
+  "version" : "2.0.1",
+  "name" : "CDSMembreCercleSoins"
+},
+{
+  "id" : "cds-organisation-interne",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-organisation-interne",
+  "version" : "2.0.1",
+  "name" : "CDSOrganisationInterne"
+},
+{
   "id" : "cds-organization",
   "type" : "StructureDefinition",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-organization",
   "version" : "2.0.1",
   "name" : "CDSAsOrganization"
+},
+{
+  "id" : "cds-personne-physique",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-personne-physique",
+  "version" : "2.0.1",
+  "name" : "CDSPersonnePhysique"
+},
+{
+  "id" : "cds-personne-prise-charge",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-personne-prise-charge",
+  "version" : "2.0.1",
+  "name" : "CDSPersonnePriseCharge"
+},
+{
+  "id" : "cds-professionnel",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-professionnel",
+  "version" : "2.0.1",
+  "name" : "CDSProfessionnel"
+},
+{
+  "id" : "cds-situation-exercice",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-situation-exercice",
+  "version" : "2.0.1",
+  "name" : "CDSSituationExercice"
 },
 {
   "id" : "careteam-roles-vs",

@@ -18,7 +18,7 @@
   fhir:ImplementationGuide.name [ fhir:value "CDS"] ;
   fhir:ImplementationGuide.title [ fhir:value "Cercle De Soins"] ;
   fhir:ImplementationGuide.status [ fhir:value "active"] ;
-  fhir:ImplementationGuide.date [ fhir:value "2026-07-10T12:59:14+00:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-07-10T13:11:38+00:00"^^xsd:dateTime] ;
   fhir:ImplementationGuide.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
   fhir:ImplementationGuide.contact [
      fhir:index -1 ;
@@ -94,6 +94,15 @@
      ] ;
      fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.uv.extensions.r4" ] ;
      fhir:ImplementationGuide.dependsOn.version [ fhir:value "5.2.0" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Element.id [ fhir:value "ans_fr_mos" ] ;
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "https://interop.esante.gouv.fr/ig/mos/ImplementationGuide/ans.fr.mos" ;
+       fhir:link <https://interop.esante.gouv.fr/ig/mos/ImplementationGuide/ans.fr.mos>
+     ] ;
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "ans.fr.mos" ] ;
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "0.1.0-ballot" ]
   ] ;
   fhir:ImplementationGuide.definition [
      fhir:Element.extension [
@@ -913,6 +922,104 @@
        fhir:Element.extension [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:logical" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-cercle-soins> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/cds-cercle-soins" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDS Cercle Soins" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Le cercle de soins est l'agrégation de membres qui participent à la prise en charge et aux actions de coordination du parcours de santé d’une personne." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ActorDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/cds/ActorDefinition/CDS-Consommateur-Actor> ;
+         fhir:Reference.reference [ fhir:value "ActorDefinition/CDS-Consommateur-Actor" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDS Consommateur" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Le rôle de consommateur incarné par un système, peut consulter un cercle de soins." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:logical" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-contact> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/cds-contact" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDS Contact" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Un contact peut être un membre de la famille ou un proche de l’Usager. Il peut s’agir par exemple d’un aidant, de la personne de confiance de l’Usager" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ActorDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/cds/ActorDefinition/CDS-Createur-Actor> ;
+         fhir:Reference.reference [ fhir:value "ActorDefinition/CDS-Createur-Actor" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDS Créateur" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Le rôle de créateur incarné par un système peut créer ou mettre à jour le cercle de soins d'une personne." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:logical" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-entite-geographique> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/cds-entite-geographique" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDS Entite Geographique" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "L’Entité Géographique (EG) correspond à la notion d’établissement : ** Pour les établissements inscrits au FINESS, cette notion d’établissement résulte du croisement de trois critères : - Un critère géographique : Est un établissement tout lieu dont l’implantation d’activité(s) ou d’équipement(s) est géographiquement distincte d’une autre implantation. Ainsi un Centre Hospitalier Régional comprend autant d’établissements que d’implantations géographiques différentes. Un établissement principal et son établissement secondaire situé à 1 km constituent deux établissements distincts dans FINESS. L’implantation géographique peut-être décrite soit avec l’attribut addresseEG soit au travers de la classe Lieu. - Un critère budgétaire : Pour une même implantation géographique, on distingue autant d’établissements du secteur public qu’il y a de budgets distincts (budget général, budget annexe).Ainsi un ESAT et son foyer d’hébergement constituent deux établissements même s’ils sont implantés à la même adresse. - Un critère d’activité : Pour une même implantation géographique et un même budget, on distingue autant d’établissements que de « catégorie d’établissement » décrivant l’activité principale autorisée.Ainsi un centre hospitalier et son EHPAD, financés par le même budget, constituent deux établissements même s’ils sont implantés à la même adresse.** Pour les entreprises inscrites dans le SIRENE, l’EG correspond à un établissement de la personne morale, elle est identifiée par un numéro Siret.Synonymes: Etablissement, structure" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:logical" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-entite-juridique> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/cds-entite-juridique" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDS Entite Juridique" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "L’Entité Juridique (EJ) correspond à la notion de personne morale :** Pour les établissements sanitaires, sociaux, médico-sociaux et de formation aux professions de ces secteurs enregistrés dans le FINESS, une EJ détient des droits (autorisations, agréments, conventions, etc.) lui permettant d’exercer ses activités dans des établissements; chaque EJ dispose d’un statut juridique de la personne morale;** Pour les autres types de structures, une EJ est une personne morale inscrite dans le SIRENE, identifiée par son numéro Siren." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:logical" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-exercice-professionnel> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/cds-exercice-professionnel" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDS Exercice Professionnel" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Informations décrivant notamment la profession exercée, l’identité d’exercice d’un professionnel et le cadre de son exercice (civil, agent public, etc.).Il peut exister plusieurs exercices professionnels pour une personne à un instant donné." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.reference [
@@ -927,6 +1034,48 @@
        fhir:Element.extension [
          fhir:index -1 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ActorDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/cds/ActorDefinition/CDS-Gestionnaire-Actor> ;
+         fhir:Reference.reference [ fhir:value "ActorDefinition/CDS-Gestionnaire-Actor" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDS Gestionnaire" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Le rôle de gestionnaire incarné par un système, gère et stocke le cercle de soins, donne accès aux informations en cas de consultation." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:logical" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-membre-cercle-soins> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/cds-membre-cercle-soins" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDS Membre Cercle Soins" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Un membre du cercle de soins est une personne (Professionnel ou Personne Tierce) ou une Entité qui fait partie du Cercle de Soins d’un Usager." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:logical" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-organisation-interne> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/cds-organisation-interne" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDS Organisation Interne" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "La classe Organisation Interne est une classe abstraite qui contient les attributs inhérents et communs aux classes décrivant l’organisation opérationnelle interne d’une EG permettant de délivrer la prestation.Une organisation interne peut être composée d’autres organisations internes. Par exemple, les unités fonctionnelles peuvent être regroupées au sein de services qui peuvent être regroupés en pôles.La description de cette organisation interne de l’EG n’est pas obligatoire. Lorsqu’elle est décrite cette organisation porte les ressources opérationnelles." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.reference [
@@ -935,6 +1084,62 @@
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDS Organization Profile" ] ;
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profil organization adapté au cercle de soins. Ce profil peut modéliser une entité juridique (EJ), une entité géographique (EG) ou une organisation interne (OI)" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:logical" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-personne-physique> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/cds-personne-physique" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDS Personne Physique" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Une personne physique est un individu titulaire de droits et d'obligations caractérisé par une identité civile." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:logical" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-personne-prise-charge> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/cds-personne-prise-charge" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDS Personne Prise Charge" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Personne physique bénéficiaire de soins, d'examens, d'actes de prévention ou de services. Selon le contexte, la personne prise en charge peut être un patient ou un usager." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:logical" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-professionnel> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/cds-professionnel" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDS Professionnel" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Données d’identification pérennes d’une personne physique, qui travaille en tant que professionnel (professionnel enregistré dans RPPS ou ADELI), personnel autorisé ou personnel d’établissement, dans les domaines sanitaire, médico-social et social." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:logical" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-situation-exercice> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/cds-situation-exercice" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDS Situation Exercice" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Caractéristiques de l’exercice d’un professionnel pendant une période déterminée et dans une structure déterminée (à l’exception des remplaçants). Synonymes : Activité (RPPS)." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index -1 ;
@@ -1123,7 +1328,7 @@
          fhir:Reference.reference [ fhir:value "CapabilityStatement/CDSCreateurRestful" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CI-SIS Gestion du Cercle de Soins - CreateurRestful" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Le rôle de créateur incarné par un système peut créer ou mettre à jour le cercle de soins d'une personne" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Le rôle de créateur incarné par un système peut créer ou mettre à jour le cercle\nde soins d'une personne" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index -1 ;
@@ -1137,7 +1342,7 @@
          fhir:Reference.reference [ fhir:value "CapabilityStatement/CDSCreateurTransaction" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CI-SIS Gestion du Cercle de Soins - CreateurTransaction" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Le rôle de créateur incarné par un système peut créer ou mettre à jour le cercle de soins d'une personne" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Le rôle de créateur incarné par un système peut créer ou mettre à jour le cercle\nde soins d'une personne" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index -1 ;
@@ -1151,7 +1356,7 @@
          fhir:Reference.reference [ fhir:value "CapabilityStatement/CDSGestionnaire" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CI-SIS Gestion du Cercle de Soins - Gestionnaire" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Le rôle de gestionnaire incarné par un système, gère et stocke le cercle de soins,donne accès aux informations en cas de consultation." ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Le rôle de gestionnaire incarné par un système, gère et stocke le cercle de soins,\ndonne accès aux informations en cas de consultation." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index -1 ;
@@ -1192,60 +1397,50 @@
          fhir:Element.extension [
            fhir:index -1 ;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
-           fhir:Extension.valueUrl [ fhir:value "specifications_fonctionnelles.html" ]
+           fhir:Extension.valueUrl [ fhir:value "specifications.html" ]
          ] ;
-         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "specifications_fonctionnelles.html" ] ;
-         fhir:ImplementationGuide.definition.page.title [ fhir:value "Volume 1 - Etude fonctionnelle" ] ;
-         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
-       ], [
-         fhir:index -1 ;
-         fhir:Element.extension [
-           fhir:index -1 ;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
-           fhir:Extension.valueUrl [ fhir:value "specifications_techniques.html" ]
-         ] ;
-         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "specifications_techniques.html" ] ;
-         fhir:ImplementationGuide.definition.page.title [ fhir:value "Specifications Techniques" ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "specifications.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Specifications" ] ;
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ] ;
          fhir:ImplementationGuide.definition.page.page [
            fhir:index -1 ;
            fhir:Element.extension [
              fhir:index -1 ;
              fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
-             fhir:Extension.valueUrl [ fhir:value "interaction_restful.html" ]
+             fhir:Extension.valueUrl [ fhir:value "spe_synthese.html" ]
            ] ;
-           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "interaction_restful.html" ] ;
-           fhir:ImplementationGuide.definition.page.title [ fhir:value "Interactions RESTful" ] ;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "spe_synthese.html" ] ;
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Synthèse" ] ;
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
          ], [
            fhir:index -1 ;
            fhir:Element.extension [
              fhir:index -1 ;
              fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
-             fhir:Extension.valueUrl [ fhir:value "interaction_transaction.html" ]
+             fhir:Extension.valueUrl [ fhir:value "spe_creation_cercle_soins.html" ]
            ] ;
-           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "interaction_transaction.html" ] ;
-           fhir:ImplementationGuide.definition.page.title [ fhir:value "Interactions transaction" ] ;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "spe_creation_cercle_soins.html" ] ;
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Création du cercle de soins" ] ;
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
          ], [
            fhir:index -1 ;
            fhir:Element.extension [
              fhir:index -1 ;
              fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
-             fhir:Extension.valueUrl [ fhir:value "recherche_recuperation_cds.html" ]
+             fhir:Extension.valueUrl [ fhir:value "spe_consultation_cercle_soins.html" ]
            ] ;
-           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "recherche_recuperation_cds.html" ] ;
-           fhir:ImplementationGuide.definition.page.title [ fhir:value "Recherche CDS" ] ;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "spe_consultation_cercle_soins.html" ] ;
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Consultation du cercle de soins" ] ;
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
          ], [
            fhir:index -1 ;
            fhir:Element.extension [
              fhir:index -1 ;
              fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
-             fhir:Extension.valueUrl [ fhir:value "correspondances_metier.html" ]
+             fhir:Extension.valueUrl [ fhir:value "spe_mise_jour_cercle_soins.html" ]
            ] ;
-           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "correspondances_metier.html" ] ;
-           fhir:ImplementationGuide.definition.page.title [ fhir:value "Correspondances métier" ] ;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "spe_mise_jour_cercle_soins.html" ] ;
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Mise à jour du cercle de soins" ] ;
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
          ]
        ], [
@@ -1253,10 +1448,20 @@
          fhir:Element.extension [
            fhir:index -1 ;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
-           fhir:Extension.valueUrl [ fhir:value "autres_ressources.html" ]
+           fhir:Extension.valueUrl [ fhir:value "tests.html" ]
          ] ;
-         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "autres_ressources.html" ] ;
-         fhir:ImplementationGuide.definition.page.title [ fhir:value "Autres Ressources" ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "tests.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Tests" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Element.extension [
+           fhir:index -1 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "annexes.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "annexes.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Annexes" ] ;
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ] ;
          fhir:ImplementationGuide.definition.page.page [
            fhir:index -1 ;

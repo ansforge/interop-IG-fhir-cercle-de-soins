@@ -1,0 +1,594 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-personne-prise-charge> a fhir:StructureDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "cds-personne-prise-charge"] ;
+  fhir:Resource.language [ fhir:value "fr"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : DéfinitionStructure cds-personne-prise-charge</b></p><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Le nom logique de l'élément\">Nom</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Informations sur l'utilisation de l'élément\">Drapeaux</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Nombre minimum et maximum de fois que l'élément peut apparaître dans l'instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Référence au type de l'élément\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Informations supplémentaires sur l'élément\">Description et contraintes</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-personne-prise-charge-definitions.html#cds-personne-prise-charge\">cds-personne-prise-charge</a><a name=\"cds-personne-prise-charge\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html\">PersonnePriseCharge(0.1.0-ballot)</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Personne physique bénéficiaire de soins, d'examens, d'actes de prévention ou de services. Selon le contexte, la personne prise en charge peut être un patient ou un usager.</span><br/><br/>Éléments définis dans les ancêtres :<a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html\" title=\"Identifiant secondaire de la personne prise en charge.\">idPersonnePriseCharge</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html\" title=\"Identité civile de la personne prise en charge.\">personne</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html\" title=\"Moyen de communication privilégié de la personne prise en charge.\">preferenceCommunication</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html\" title=\"Coordonnées des personnes à contacter en cas de besoin.\">contact</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html\" title=\"Adresse(s) de correspondance de la personne prise en charge.\">adresseCorrespondance</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html\" title=\"Adresse(s) de télécommunication de la personne prise en charge (numéro de téléphone, adresse email, URL, etc.).\">telecommunication</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html\" title=\"L'INS a pour signification « Identité Nationale de Santé »Préambule : Les informations constituant l'INS sont délibérément disjointes des informations de la personne physique qui sont utilisées dans des contextes différents de celui de l'INS.Les informations de l'INS permettent de  : ** sécuriser le référencement des données de santé;** favoriser l'échange et le partage;** améliorer la qualité et la sécurité de la prise en charge.Seuls les acteurs de la santé et du médico-social concourant à la prise en charge de l’usager, au suivi médico-social de la personne, ou menant des actions de prévention sont tenus d’utiliser l’INS.  L'INS référence les données de santé et se compose des éléments suivants: ** un matricule INS : le numéro d’inscription au répertoire national d’identification des personnes physiques (NIR) ou le numéro identifiant d’attente (NIA) pour les personnes en instance d’attribution d’un NIR (Art. R. 1111-8-1.-I du CSP); ** des traits d'identité de l'état civil : nom de naissance, prénom (liste des prénoms de naissance), date de naissance, sexe et lieu de naissance; ** des traits complémentaires provenant du Référentiel National d'Identitovigilance (RNIV) : premier prénom de l'acte de naissance, prénom utilisé et nom utilisé. Toute personne née sur le sol français et/ou bénéficiaire de l'assurance maladie dispose de son INS, unique et propre à chaque usage.\">INS</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html\" title=\"Lien vers la classe RendezVous\">RendezVous</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html\" title=\"Lien vers la classe VieQuotidienne\">VieQuotidienne</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html\" title=\"Lien vers la classe VieProfessionnelle\">VieProfessionnelle</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html\" title=\"Lien vers la classe VieScolaire\">VieScolaire</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html\" title=\"Lien vers la classe NoteLiaison\">NoteLiaison</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html\" title=\"Lien vers la classe Observation\">Observation</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html\" title=\"Lien vers la classe Professionnel\">Professionnel</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html\" title=\"Lien vers la classe DossierPersonnePriseCharge\">DossierPersonnePriseCharge</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-PersonnePriseCharge.html\" title=\"Lien vers la classe Agenda\">Agenda</a></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-personne-prise-charge-definitions.html#cds-personne-prise-charge.idPersonnePriseCharge\">idPersonnePriseCharge</a><a name=\"cds-personne-prise-charge.idPersonnePriseCharge\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Identifiant secondaire de la personne prise en charge.</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-personne-prise-charge-definitions.html#cds-personne-prise-charge.adresseCorrespondance\">adresseCorrespondance</a><a name=\"cds-personne-prise-charge.adresseCorrespondance\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-Adresse.html\">Adresse</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Adresse(s) de correspondance de la personne prise en charge.</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-personne-prise-charge-definitions.html#cds-personne-prise-charge.telecommunication\">telecommunication</a><a name=\"cds-personne-prise-charge.telecommunication\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-Telecommunication.html\">Telecommunication</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Adresse(s) de télécommunication de la personne prise en charge (numéro de téléphone, adresse email, URL, etc.).</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-personne-prise-charge-definitions.html#cds-personne-prise-charge.INS\">INS</a><a name=\"cds-personne-prise-charge.INS\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Base</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">L'INS a pour signification « Identité Nationale de Santé »Préambule : Les informations constituant l'INS sont délibérément disjointes des informations de la personne physique qui sont utilisées dans des contextes différents de celui de l'INS.Les informations de l'INS permettent de  : ** sécuriser le référencement des données de santé;** favoriser l'échange et le partage;** améliorer la qualité et la sécurité de la prise en charge.Seuls les acteurs de la santé et du médico-social concourant à la prise en charge de l’usager, au suivi médico-social de la personne, ou menant des actions de prévention sont tenus d’utiliser l’INS.  L'INS référence les données de santé et se compose des éléments suivants: ** un matricule INS : le numéro d’inscription au répertoire national d’identification des personnes physiques (NIR) ou le numéro identifiant d’attente (NIA) pour les personnes en instance d’attribution d’un NIR (Art. R. 1111-8-1.-I du CSP); ** des traits d'identité de l'état civil : nom de naissance, prénom (liste des prénoms de naissance), date de naissance, sexe et lieu de naissance; ** des traits complémentaires provenant du Référentiel National d'Identitovigilance (RNIV) : premier prénom de l'acte de naissance, prénom utilisé et nom utilisé. Toute personne née sur le sol français et/ou bénéficiaire de l'assurance maladie dispose de son INS, unique et propre à chaque usage.</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-personne-prise-charge-definitions.html#cds-personne-prise-charge.CDSCercleSoins\" title=\"Lien vers le concept Cercle Soins\">CDSCercleSoins</a><a name=\"cds-personne-prise-charge.CDSCercleSoins\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-cds-cercle-soins.html\">cds-cercle-soins</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Lien vers le concept Cercle Soins</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-personne-prise-charge-definitions.html#cds-personne-prise-charge.CDSPersonnePhysique\" title=\"Lien vers le concept Personne Physique\">CDSPersonnePhysique</a><a name=\"cds-personne-prise-charge.CDSPersonnePhysique\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-cds-personne-physique.html\">cds-personne-physique</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Lien vers le concept Personne Physique</td></tr>#xD;\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Légende pour ce format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation pour ce format</a></td></tr></table></div>"
+  ] ;
+  fhir:StructureDefinition.url [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-personne-prise-charge"] ;
+  fhir:StructureDefinition.version [ fhir:value "2.0.1"] ;
+  fhir:StructureDefinition.name [ fhir:value "CDSPersonnePriseCharge"] ;
+  fhir:StructureDefinition.title [ fhir:value "CDS Personne Prise Charge"] ;
+  fhir:StructureDefinition.status [ fhir:value "draft"] ;
+  fhir:StructureDefinition.date [ fhir:value "2026-07-10T13:11:38+00:00"^^xsd:dateTime] ;
+  fhir:StructureDefinition.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
+  fhir:StructureDefinition.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
+     ]
+  ] ;
+  fhir:StructureDefinition.description [ fhir:value "Personne physique bénéficiaire de soins, d'examens, d'actes de prévention ou de services. Selon le contexte, la personne prise en charge peut être un patient ou un usager."] ;
+  fhir:StructureDefinition.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "France (la)" ]
+     ]
+  ] ;
+  fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"] ;
+  fhir:StructureDefinition.kind [ fhir:value "logical"] ;
+  fhir:StructureDefinition.abstract [ fhir:value "false"^^xsd:boolean] ;
+  fhir:StructureDefinition.type [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-personne-prise-charge"] ;
+  fhir:StructureDefinition.baseDefinition [
+     fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/PersonnePriseCharge|0.1.0-ballot" ;
+     fhir:link <https://interop.esante.gouv.fr/ig/mos/StructureDefinition/PersonnePriseCharge|0.1.0-ballot>
+  ] ;
+  fhir:StructureDefinition.derivation [ fhir:value "specialization"] ;
+  fhir:StructureDefinition.snapshot [
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version" ] ;
+       fhir:Extension.valueString [ fhir:value "0.1.0-ballot" ]
+     ] ;
+     fhir:StructureDefinition.snapshot.element [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Personne physique bénéficiaire de soins, d'examens, d'actes de prévention ou de services. Selon le contexte, la personne prise en charge peut être un patient ou un usager." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Personne physique bénéficiaire de soins, d'examens, d'actes de prévention ou de services. Selon le contexte, la personne prise en charge peut être un patient ou un usager." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Base" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.idPersonnePriseCharge" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.idPersonnePriseCharge" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Identifiant secondaire de la personne prise en charge." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identifiant secondaire de la personne prise en charge." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.idPersonnePriseCharge" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.personne" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.personne" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Identité civile de la personne prise en charge." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identité civile de la personne prise en charge." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.personne" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/PersonnePhysique" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.preferenceCommunication" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.preferenceCommunication" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Moyen de communication privilégié de la personne prise en charge." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Moyen de communication privilégié de la personne prise en charge." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.preferenceCommunication" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.contact" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.contact" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Coordonnées des personnes à contacter en cas de besoin." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Coordonnées des personnes à contacter en cas de besoin." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.contact" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Contact" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.adresseCorrespondance" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.adresseCorrespondance" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Adresse(s) de correspondance de la personne prise en charge." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Adresse(s) de correspondance de la personne prise en charge." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.adresseCorrespondance" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Adresse" ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.telecommunication" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.telecommunication" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Adresse(s) de télécommunication de la personne prise en charge (numéro de téléphone, adresse email, URL, etc.)." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Adresse(s) de télécommunication de la personne prise en charge (numéro de téléphone, adresse email, URL, etc.)." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.telecommunication" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Telecommunication" ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.INS" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.INS" ] ;
+       fhir:ElementDefinition.short [ fhir:value "L'INS a pour signification « Identité Nationale de Santé »Préambule : Les informations constituant l'INS sont délibérément disjointes des informations de la personne physique qui sont utilisées dans des contextes différents de celui de l'INS.Les informations de l'INS permettent de  : ** sécuriser le référencement des données de santé;** favoriser l'échange et le partage;** améliorer la qualité et la sécurité de la prise en charge.Seuls les acteurs de la santé et du médico-social concourant à la prise en charge de l’usager, au suivi médico-social de la personne, ou menant des actions de prévention sont tenus d’utiliser l’INS.  L'INS référence les données de santé et se compose des éléments suivants: ** un matricule INS : le numéro d’inscription au répertoire national d’identification des personnes physiques (NIR) ou le numéro identifiant d’attente (NIA) pour les personnes en instance d’attribution d’un NIR (Art. R. 1111-8-1.-I du CSP); ** des traits d'identité de l'état civil : nom de naissance, prénom (liste des prénoms de naissance), date de naissance, sexe et lieu de naissance; ** des traits complémentaires provenant du Référentiel National d'Identitovigilance (RNIV) : premier prénom de l'acte de naissance, prénom utilisé et nom utilisé. Toute personne née sur le sol français et/ou bénéficiaire de l'assurance maladie dispose de son INS, unique et propre à chaque usage." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "L'INS a pour signification « Identité Nationale de Santé »Préambule : Les informations constituant l'INS sont délibérément disjointes des informations de la personne physique qui sont utilisées dans des contextes différents de celui de l'INS.Les informations de l'INS permettent de  : ** sécuriser le référencement des données de santé;** favoriser l'échange et le partage;** améliorer la qualité et la sécurité de la prise en charge.Seuls les acteurs de la santé et du médico-social concourant à la prise en charge de l’usager, au suivi médico-social de la personne, ou menant des actions de prévention sont tenus d’utiliser l’INS.  L'INS référence les données de santé et se compose des éléments suivants: ** un matricule INS : le numéro d’inscription au répertoire national d’identification des personnes physiques (NIR) ou le numéro identifiant d’attente (NIA) pour les personnes en instance d’attribution d’un NIR (Art. R. 1111-8-1.-I du CSP); ** des traits d'identité de l'état civil : nom de naissance, prénom (liste des prénoms de naissance), date de naissance, sexe et lieu de naissance; ** des traits complémentaires provenant du Référentiel National d'Identitovigilance (RNIV) : premier prénom de l'acte de naissance, prénom utilisé et nom utilisé. Toute personne née sur le sol français et/ou bénéficiaire de l'assurance maladie dispose de son INS, unique et propre à chaque usage." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.INS" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Base" ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.INS.matricule" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.INS.matricule" ] ;
+       fhir:ElementDefinition.short [ fhir:value "La loi consacre comme matricule INS, le NIR et à défaut le NIA.Communément appelé numéro de sécurité sociale, le numéro d’inscription au répertoire (NIR) est un identifiant unique attribué à toute personne inscrite au répertoire national d'identification des personnes physiques (RNIPP). La forme du NIR est spécifiée par le décret n° 82-103 du 22 janvier 1982 [D82-103]. Il est formé de 13 caractères (chiffres ou lettres) et de la clé de contrôle.Le numéro identifiant d’attente (NIA) doit être utilisé comme matricule INS pour toute personne qui ne dispose pas encore de NIR et pour laquelle une procédure d’affectation de NIR est en cours.Dans la très grande majorité des cas, le NIA est identique au NIR qui sera affecté à la personne. Dans le cas exceptionnel où la procédure de vérification des pièces justificatives fait apparaître la nécessité de correction de éléments d’identité ayant un impact sur le NIR, le NIR attribué est différent du NIA.Dans tous les cas, le lien entre le NIR et le NIA est conservé dans les bases de référence.(Référentiel Identifiant national de santé)L’OID d’affection de l’identifiant utilisé doit représenter la personne morale responsable de la collecte de l’identité véhiculée : ** 1.2.250.1.213.1.4.8 - autorité d'affectation INS-NIR** 1.2.250.1.213.1.4.9 - autorité d'affectation INS-NIAL'OID est véhiculé dans l'identifiant par l'attribut identifiantSystem." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "La loi consacre comme matricule INS, le NIR et à défaut le NIA.Communément appelé numéro de sécurité sociale, le numéro d’inscription au répertoire (NIR) est un identifiant unique attribué à toute personne inscrite au répertoire national d'identification des personnes physiques (RNIPP). La forme du NIR est spécifiée par le décret n° 82-103 du 22 janvier 1982 [D82-103]. Il est formé de 13 caractères (chiffres ou lettres) et de la clé de contrôle.Le numéro identifiant d’attente (NIA) doit être utilisé comme matricule INS pour toute personne qui ne dispose pas encore de NIR et pour laquelle une procédure d’affectation de NIR est en cours.Dans la très grande majorité des cas, le NIA est identique au NIR qui sera affecté à la personne. Dans le cas exceptionnel où la procédure de vérification des pièces justificatives fait apparaître la nécessité de correction de éléments d’identité ayant un impact sur le NIR, le NIR attribué est différent du NIA.Dans tous les cas, le lien entre le NIR et le NIA est conservé dans les bases de référence.(Référentiel Identifiant national de santé)L’OID d’affection de l’identifiant utilisé doit représenter la personne morale responsable de la collecte de l’identité véhiculée : ** 1.2.250.1.213.1.4.8 - autorité d'affectation INS-NIR** 1.2.250.1.213.1.4.9 - autorité d'affectation INS-NIAL'OID est véhiculé dans l'identifiant par l'attribut identifiantSystem." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.INS.matricule" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.INS.nomNaissance" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.INS.nomNaissance" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Le nom de  naissance est un élément d’identité mentionné à l’article R. 1111-8-6 du CSP.C'est  un trait \"strict\" d'identité de la personne dans l'INS ( Référentiel Identité Nationale de Santé)synonyme moins précis : nom de famille" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Le nom de  naissance est un élément d’identité mentionné à l’article R. 1111-8-6 du CSP.C'est  un trait \"strict\" d'identité de la personne dans l'INS ( Référentiel Identité Nationale de Santé)synonyme moins précis : nom de famille" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.INS.nomNaissance" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.INS.listePrenomsNaissance" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.INS.listePrenomsNaissance" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Liste des prénoms de naissance indiqués sur l'acte de naissance. Ce sont des éléments d’identité mentionnés à l’article R. 1111-8-6 du CSP.La liste des prénoms de naissance est un trait d'identité \"strict\" de la personne dans l'INS ( Référentiel Identité Nationale de Santé)  Ce champ peut comporter plusieurs prénoms, simples ou composés.(avec ou sans tiret d’union entre les prénoms)." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Liste des prénoms de naissance indiqués sur l'acte de naissance. Ce sont des éléments d’identité mentionnés à l’article R. 1111-8-6 du CSP.La liste des prénoms de naissance est un trait d'identité \"strict\" de la personne dans l'INS ( Référentiel Identité Nationale de Santé)  Ce champ peut comporter plusieurs prénoms, simples ou composés.(avec ou sans tiret d’union entre les prénoms)." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.INS.listePrenomsNaissance" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.INS.sexe" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.INS.sexe" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Le sexe est un élément d’identité mentionné à l’article R. 1111-8-6 du CSP. L’identité INS ne peut comporter que des valeurs F (féminin) ou M (masculin)." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Le sexe est un élément d’identité mentionné à l’article R. 1111-8-6 du CSP. L’identité INS ne peut comporter que des valeurs F (féminin) ou M (masculin)." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.INS.sexe" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.INS.dateNaissance" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.INS.dateNaissance" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Date de naissance de la personne, modifiée selon les règles du RNIV dans le cas des dates exceptionnelles. C'est un élément d’identité mentionné à l’article R. 1111-8-6 du CSP." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Date de naissance de la personne, modifiée selon les règles du RNIV dans le cas des dates exceptionnelles. C'est un élément d’identité mentionné à l’article R. 1111-8-6 du CSP." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.INS.dateNaissance" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.INS.lieuNaissance" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.INS.lieuNaissance" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Code officiel géographique (COG) de la commune (France) ou du pays. C'est un élément d’identité mentionné à l’article R. 1111-8-6 du CSP." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Code officiel géographique (COG) de la commune (France) ou du pays. C'est un élément d’identité mentionné à l’article R. 1111-8-6 du CSP." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.INS.lieuNaissance" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.INS.premierPrenomNaissance" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.INS.premierPrenomNaissance" ] ;
+       fhir:ElementDefinition.short [ fhir:value "La distinction du premier prénom dans la liste des prénoms de naissance est nécessaire à la communication entre logiciels n’ayant pas encore été mis en conformité avec les exigences du RNIV. Il peut être composé (avec ou sans tiret d’union entre les prénoms)." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "La distinction du premier prénom dans la liste des prénoms de naissance est nécessaire à la communication entre logiciels n’ayant pas encore été mis en conformité avec les exigences du RNIV. Il peut être composé (avec ou sans tiret d’union entre les prénoms)." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.INS.premierPrenomNaissance" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.INS.nomUtilise" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.INS.nomUtilise" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Nom réellement porté par la personne physique dans la vie courante.Il peut s'agir du nom de naissance, du surnom, du pseudonyme ou du nom d'usage de la personne physique. C'est un trait complémentaire provenant du Référentiel National d'Identitovigilance (RNIV).Le nom utilisé est obligatoirement renseigné lorsqu’il est différent du nom de naissance." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Nom réellement porté par la personne physique dans la vie courante.Il peut s'agir du nom de naissance, du surnom, du pseudonyme ou du nom d'usage de la personne physique. C'est un trait complémentaire provenant du Référentiel National d'Identitovigilance (RNIV).Le nom utilisé est obligatoirement renseigné lorsqu’il est différent du nom de naissance." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.INS.nomUtilise" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.INS.prenomUtilise" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.INS.prenomUtilise" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Prénom réellement porté par la personne physique dans la vie courante.Il peut s'agir du prénom usuel, du surnom ou du pseudonyme de la personne physique.C'est un trait complémentaire provenant du Référentiel National d'Identitovigilance (RNIV).Le prénom utilisé est obligatoirement renseigné lorsqu’il est différent du premier prénom de naissance." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Prénom réellement porté par la personne physique dans la vie courante.Il peut s'agir du prénom usuel, du surnom ou du pseudonyme de la personne physique.C'est un trait complémentaire provenant du Référentiel National d'Identitovigilance (RNIV).Le prénom utilisé est obligatoirement renseigné lorsqu’il est différent du premier prénom de naissance." ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.INS.prenomUtilise" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.RendezVous" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.RendezVous" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe RendezVous" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe RendezVous" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.RendezVous" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/RendezVous" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.VieQuotidienne" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.VieQuotidienne" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe VieQuotidienne" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe VieQuotidienne" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.VieQuotidienne" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/VieQuotidienne" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.VieProfessionnelle" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.VieProfessionnelle" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe VieProfessionnelle" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe VieProfessionnelle" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.VieProfessionnelle" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/VieProfessionnelle" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.VieScolaire" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.VieScolaire" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe VieScolaire" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe VieScolaire" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.VieScolaire" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/VieScolaire" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.NoteLiaison" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.NoteLiaison" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe NoteLiaison" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe NoteLiaison" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.NoteLiaison" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/NoteLiaison" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.Observation" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.Observation" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe Observation" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe Observation" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.Observation" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Observation" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.Professionnel" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.Professionnel" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe Professionnel" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe Professionnel" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.Professionnel" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Professionnel" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.DossierPersonnePriseCharge" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.DossierPersonnePriseCharge" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe DossierPersonnePriseCharge" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe DossierPersonnePriseCharge" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.DossierPersonnePriseCharge" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/DossierPersonnePriseCharge" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.Agenda" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.Agenda" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe Agenda" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe Agenda" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "PersonnePriseCharge.Agenda" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Agenda" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.CDSCercleSoins" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.CDSCercleSoins" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers le concept Cercle Soins" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers le concept Cercle Soins" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cds-personne-prise-charge.CDSCercleSoins" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-cercle-soins" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.CDSPersonnePhysique" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.CDSPersonnePhysique" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers le concept Personne Physique" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers le concept Personne Physique" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cds-personne-prise-charge.CDSPersonnePhysique" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-personne-physique" ]
+       ]
+     ]
+  ] ;
+  fhir:StructureDefinition.differential [
+     fhir:StructureDefinition.differential.element [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge" ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.idPersonnePriseCharge" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.idPersonnePriseCharge" ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.adresseCorrespondance" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.adresseCorrespondance" ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.telecommunication" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.telecommunication" ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.INS" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.INS" ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.CDSCercleSoins" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.CDSCercleSoins" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers le concept Cercle Soins" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers le concept Cercle Soins" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-cercle-soins" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-personne-prise-charge.CDSPersonnePhysique" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-personne-prise-charge.CDSPersonnePhysique" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers le concept Personne Physique" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers le concept Personne Physique" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-personne-physique" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-personne-prise-charge.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

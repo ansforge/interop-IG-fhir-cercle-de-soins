@@ -30,7 +30,7 @@
        fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
      ]
   ] ;
-  fhir:CapabilityStatement.description [ fhir:value "Le rôle de gestionnaire incarné par un système, gère et stocke le cercle de soins,donne accès aux informations en cas de consultation."] ;
+  fhir:CapabilityStatement.description [ fhir:value "Le rôle de gestionnaire incarné par un système, gère et stocke le cercle de soins,\ndonne accès aux informations en cas de consultation."] ;
   fhir:CapabilityStatement.jurisdiction [
      fhir:index -1 ;
      fhir:CodeableConcept.coding [

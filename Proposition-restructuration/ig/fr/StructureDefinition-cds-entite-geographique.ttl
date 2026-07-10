@@ -1,0 +1,1563 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-entite-geographique> a fhir:StructureDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "cds-entite-geographique"] ;
+  fhir:Resource.language [ fhir:value "fr"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : DéfinitionStructure cds-entite-geographique</b></p><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Le nom logique de l'élément\">Nom</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Informations sur l'utilisation de l'élément\">Drapeaux</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Nombre minimum et maximum de fois que l'élément peut apparaître dans l'instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Référence au type de l'élément\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Informations supplémentaires sur l'élément\">Description et contraintes</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-entite-geographique-definitions.html#cds-entite-geographique\" title=\"L’Entité Géographique (EG) correspond à la notion d’établissement : ** Pour les établissements inscrits au FINESS, cette notion d’établissement résulte du croisement de trois critères : - Un critère géographique : Est un établissement tout lieu dont l’implantation d’activité(s) ou d’équipement(s) est géographiquement distincte d’une autre implantation. Ainsi un Centre Hospitalier Régional comprend autant d’établissements que d’implantations géographiques différentes. Un établissement principal et son établissement secondaire situé à 1 km constituent deux établissements distincts dans FINESS. L’implantation géographique peut-être décrite soit avec l’attribut addresseEG soit au travers de la classe Lieu. - Un critère budgétaire : Pour une même implantation géographique, on distingue autant d’établissements du secteur public qu’il y a de budgets distincts (budget général, budget annexe).Ainsi un ESAT et son foyer d’hébergement constituent deux établissements même s’ils sont implantés à la même adresse. - Un critère d’activité : Pour une même implantation géographique et un même budget, on distingue autant d’établissements que de « catégorie d’établissement » décrivant l’activité principale autorisée.Ainsi un centre hospitalier et son EHPAD, financés par le même budget, constituent deux établissements même s’ils sont implantés à la même adresse.** Pour les entreprises inscrites dans le SIRENE, l’EG correspond à un établissement de la personne morale, elle est identifiée par un numéro Siret.Synonymes: Etablissement, structure\">cds-entite-geographique</a><a name=\"cds-entite-geographique\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\">EntiteGeographique(0.1.0-ballot)</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">L’Entité Géographique (EG) correspond à la notion d’établissement : ** Pour les établissements inscrits au FINESS, cette notion d’établissement résulte du croisement de trois critères : - Un critère géographique : Est un établissement tout lieu dont l’implantation d’activité(s) ou d’équipement(s) est géographiquement distincte d’une autre implantation. Ainsi un Centre Hospitalier Régional comprend autant d’établissements que d’implantations géographiques différentes. Un établissement principal et son établissement secondaire situé à 1 km constituent deux établissements distincts dans FINESS. L’implantation géographique peut-être décrite soit avec l’attribut addresseEG soit au travers de la classe Lieu. - Un critère budgétaire : Pour une même implantation géographique, on distingue autant d’établissements du secteur public qu’il y a de budgets distincts (budget général, budget annexe).Ainsi un ESAT et son foyer d’hébergement constituent deux établissements même s’ils sont implantés à la même adresse. - Un critère d’activité : Pour une même implantation géographique et un même budget, on distingue autant d’établissements que de « catégorie d’établissement » décrivant l’activité principale autorisée.Ainsi un centre hospitalier et son EHPAD, financés par le même budget, constituent deux établissements même s’ils sont implantés à la même adresse.** Pour les entreprises inscrites dans le SIRENE, l’EG correspond à un établissement de la personne morale, elle est identifiée par un numéro Siret.Synonymes: Etablissement, structure<br/><br/>Éléments définis dans les ancêtres :<a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Numéro FINESS de l'entité géographique.Le numéro FINESS étant porteur intrinsèquement de liens avec le domaine sanitaire ou le domaine médico-social, il est, s'il existe, à privilégier pour l’identification des entités géographiques en tant qu’acteurs sanitaires et médico-sociaux par rapport au numéro SIRET (Référentiel d’identification des acteurs sanitaires et médico-sociaux - Politique Générale de Sécurité des Systèmes d’Information de Santé (PGSSI-S)).A chaque EG (établissement) est attribué un numéro FINESS qui est composé de 9 caractères numériques, tels que :** Position 1-2 : numéro du département d'implantation (&quot;2A&quot;, &quot;2B&quot; pour la Corse; &quot;97&quot; pour les départements d’Outre-mer; &quot;98&quot; pour Mayotte);** Position 3 : &quot;0&quot;;** Position 4-8: &quot;1&quot; pour Guadeloupe, &quot;2&quot; pour Martinique, &quot;3&quot; pour Guyane, &quot;4&quot; pour Réunion, &quot;5&quot; pour Saint-Pierre-et-Miquelon + numéro d'ordre de 4 chiffres;** Position 4-8 : numéro d’ordre de 5 chiffres pour tous les autres départements;** Position 9 : clé de Luhn calculée automatiquement.\">numFINESS</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Le numéro Siret est le numéro unique d'identification, attribué par l'INSEE, à chaque entité géographique.Ce numéro est un simple numéro d'ordre, composé de 14 chiffres non significatifs:   ** les 9 chiffres du numéro Siren de l'entreprise dont l'établissement dépend, suivis des 5 chiffres du numéro interne de classement (NIC), lui-même constitué de 4 chiffres complétés d'une clé de Luhn.Le numéro Siret n'a aucun lien avec les caractéristiques de l'établissement. Il est fermé quand l'activité cesse dans l'établissement concerné ou lorsque l'établissement change d'adresse.\">numSiret</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Identifiant spécifique généré par le RPPS ou ADELI lors de la création d'une structure d'exercice pour un cabinet individuel et un cabinet de groupe. Il est communément connu sous le nom de RPPS-rang ou ADELI-rang :- le RPPS-rang, de 14 caractères, est formé des 11 caractères de l’identifiant RPPS du titulaire du cabinet, suivi d’un numéro d’ordre sur 2 caractères et d’une clé de Luhn (1 caractère) ;- l’ADELI-rang, de 11 caractères, est formé des 9 caractères du numéro ADELI du titulaire du cabinet suivi d’un numéro d’ordre sur 2 caractères.Cet identifiant est utilisé dans les échanges techniques entre le RPPS ou ADELI avec le FNPS de la CNAM, se substituant ainsi au numéro de SIRET dans le cas où ce dernier n'est pas encore connu du RPPS ou d’ADELI.Synonyme : numEG_RPPS_ADELI\">identifiantEG</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Identification nationale de l'Entité géographique initiée pour les besoins du SI-CPS.Cette identification est obtenue par la concaténation du type d'identifiant national de structure (provenant de la nomenclature CodeSystem-TRE-G07-TypeIdentifiantStructure) et de l'identifiant de la structure:** 0 + Identifiant cabinet ADELI (identifiantEG);** 1 + N° FINESS (entité juridique et entité géographique indéterminées);** 3 + N° SIRET;** 4 + Identifiant cabinet RPPS (identifiantEG).Synonyme : Struct_IdNat (CI-SIS)\">idNatStruct</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Type d’identifiant national de la structure.\">typeIdNatStruct</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Le &quot;numéro éducation nationale de l'établissement&quot; est un numéro associé délivré par l’Éducation nationale, pour tous les établissements et services pour enfants et adolescents handicapés qui emploient du personnel de l’Education nationale.\">numeroEducationNationale</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Le nom opérationnel est l’appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique, indépendamment des référentiels nationaux.\">nomOperationnel</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Nom sous lequel l'entité géographique exerce son activité. Il s’agit, par exemple, de l’enseigne commerciale pour les pharmacies. Dans le cas d'un établissement enregistré dans le FINESS, cet attribut correspond à la notion de &quot;raison sociale d'un établissement&quot; renseignée dans le FINESS.\">denominationEG</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Nom, sous sa forme la plus longue et complète, sous lequel l'entité géographique exerce son activité (acronymes, sigles ou abréviations développés).\">denominationEGLongue</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Suite de la dénomination de l'entité géographique, si elle existe. Ce complément peut contenir notamment des informations facilitant l'adressage d'un courrier aux structures.\">complementDenominationEG</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Champ(s) de l’activité des établissements de santé publics et privés français, notamment : - médecine, chirurgie, obstétrique (MCO),- soins de suite et de réadaptation (SSR), - psychiatrie (PSY).Ces champs d'activité seront enrichis avec l'intégration des établissements du secteur médico-social.\">champActivite</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Le type d’établissement détermine si c'est un établissement principal ou secondaire.\">typeEtablissement</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Dans le cas d’un établissement secondaire : Numéro FINESS de l’établissement principal dont dépend l’établissement.\">etablissementPrincipal</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Un secteur d'activité regroupe les établissements partageant la même activité de santé. Exemples (établissement public de santé, maison de santé, etc.)\">secteurActivite</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"La catégorie d'établissement est le cadre réglementaire dans lequel s'exerce l'activité de l'entité géographique. Les catégories d'établissement sont elles-mêmes classifiées en grands agrégats qui sont :** Etablissements relevant de la loi hospitalière,** Autres établissements de soins et de prévention,** Autres établissements à caractère sanitaire,** Etablissements et services sociaux d'accueil, hébergement, assistance, réadaptation,** Etablissements et services sociaux d'aide à la famille,** Etablissements de formation des personnels sanitaires et sociauxCette catégorie recouvre également des établissements qui ne sont pas encore enregistrés dans FINESS, tels que les dispositifs d’appui à la coordination.\">categorieEtablissement</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Agrégat de catégories d'établissements de niveau 1. L'agrégat de niveau 1 représente des regroupements d'agrégat de niveau 2. Par exemple, le code 1000 &quot;Etablissement relevant de la loi hospitalière&quot; regroupe les codes d'agrégat de niveau 2 1100 et 1200.\">agregatCategorieEtablissementNiv1</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Agrégat de catégories d'établissements de niveau 2. L'agrégat de niveau 2 représente des regroupements d'agrégats de niveau 3. Par exemple, le code 1100 &quot;Etablissement hospitaliers&quot; regroupe les codes d'agrégat de niveau 3 1101, 1102, etc.\">agregatCategorieEtablissementNiv2</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Agrégat de catégories d'établissements de niveau 3. L'agrégat de niveau 3 représente des regroupements de catégories d'établissement. Par exemple, le code 1101 &quot;Centres hospitaliers régionaux&quot; regroupe les catégories d'établissement 101, 106 etc.\">agregatCategorieEtablissementNiv3</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Toute entité juridique et chacun de ses établissements (EG) se voit attribuer par l'Insee, lors de son inscription au répertoire SIRENE, un code caractérisant son activité principale par référence à la nomenclature d'activités française (NAF rév. 2).Plus précisément, on distingue le code APET pour les EG.\">codeAPET</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Le mode de tarification détermine l'autorité responsable de la fixation du tarif principal de l'établissement et la procédure utilisée. Il est unique pour un établissement FINESS donné.\">modeFixationTarif</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Modalités de participation au service public hospitalier.\">modaliteParticipationSPH</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Nature du budget alloué à l'établissement dont les valeurs sont &quot;G&quot; pour général et &quot;A&quot; pour annexe.\">natureEtablissement</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Habilitation ou conventionnement de l'entité géographique permettant aux personnes accueillies de bénéficier des aides financières, si elles remplissent les conditions.\">aideFinanciere</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"L'habilitation aux soins sans consentement traduit que l'établissement est autorisé à prendre en charge des patients sans leur consentement. Cette autorisation est donnée par le directeur général de l’ARS après avis du préfet.Valeurs possibles : 0 = L'établissement ne possède pas d'autorisation aux soins sans consentement 1 = L'établissement possède une autorisation aux soins sans consentement\">habilitationSoinSansConsentement</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"L’indicateur hébergement des familles précise si l'établissement peut héberger les familles des personnes prises en charge. Valeurs possibles :0 = L'établissement ne peut pas héberger les familles des personnes prises en charge1 = L'établissement peut héberger les familles des personnes prises en charge\">hebergementFamille</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Date de modification du numéro SIRET.\">dateModificationSIRET</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Origine/nature de modification du SIRET (motif de modification de l’identifiant).\">origineModificationSIRET</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Indicateur de l’activité de l'entité géographique, si celle-ci est active (ou ouverte) ou inactive (ou fermée).\">actif</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Date d’ouverture réelle de fonctionnement de l’établissement.Pour les établissements soumis à autorisation, elle est constatée par la première visite de conformité du premier équipement autorisé. La date d’ouverture doit être supérieure ou égale à la date d’autorisation.\">dateOuverture</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"La date de caducité indique la limite autorisant la réalisation de l’opération pour laquelle il y a autorisation. Elle est calculée automatiquement lorsque la date d’autorisation est renseignée. Elle disparait lorsque la date d’ouverture est renseignée.Par défaut, la date de caducité calculée automatiquement dans FINESS est de trois ans. En cas de début de travaux, une quatrième année est autorisée par les textes.\">dateCaducite</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Indicateur de caducité de l'établissement:- « N » par défaut, lorsque l’établissement est autorisé non ouvert (la date d’ouverture n’est pas renseignée);- « O » à indiquer lorsqu’un constat de caducité a été relevé sur l'établissement.\">constatCaducite</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Date de fermeture de l'entité géographique. La date doit être supérieure à la date d’ouverture.\">dateFermeture</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Type de fermeture de l'entité géographique, au sens des règles de gestion du SI FINESS (par exemple: fermeture définitive, fermeture provisoire), obligatoire lors de la fermeture de l'entité.\">typeFermeture</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Date d’autorisation qui correspond à la date de l’arrêté autorisant la création d’un établissement ou de la première autorisation délivrée pour des équipements.\">dateAutorisation</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Information précisant dans quelle mesure le lieu est conforme aux dispositions règlementaires relatives à l’accessibilité des établissements recevant du public (ex : accessible, non accessible, sur demande, non communiqué, etc.).Rappel sur l'obligation d'accessibilité des établissements recevant du public (ERP) aux personnes handicapées (service-public.fr):Les établissements ouverts au public (magasin, bureau, hôtel, etc.) doivent être accessibles aux personnes handicapées. Les établissements recevant du public (ERP) non conformes aux règles d'accessibilité sont tenus de s'inscrire à un Agenda d'Accessibilité Programmée (Ad'AP) qui permet d'engager les travaux nécessaires dans un délai limité.Règles d'accessibilité:Les normes d'accessibilité doivent permettre aux personnes handicapées de circuler avec la plus grande autonomie possible, d'accéder aux locaux et équipements, d'utiliser les équipements et les prestations, de se repérer et de communiquer.L'accès concerne tout type de handicap (moteur, visuel, auditif, mental...).Les conditions d'accès doivent être les mêmes que pour les personnes valides ou, à défaut, présenter une qualité d'usage équivalente.L'accessibilité de ces établissements et de leurs abords concerne :** les cheminements extérieurs,** le stationnement des véhicules,** les conditions d'accès et d'accueil dans les bâtiments,** les circulations horizontales et verticales à l'intérieur des bâtiments,** les locaux intérieurs et les sanitaires ouverts au public,** les portes, les sas intérieurs et les sorties,** les revêtements des sols et des parois,** les équipements et mobiliers intérieurs et extérieurs susceptibles d'y être installés (dispositifs d'éclairage et d'information des usagers, par exemple).\">accessibiliteLieu</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Indicateur portant sur l'existence d'une zone de poser pour hélicoptère sur le site même.Valeurs possibles: 0 = Pas de zone de poser 1 = Existence d'une zone de poser\">zonePoser</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Le niveau de recours ORSAN correspond à une hiérarchisation fonctionnelle de la mobilisation des établissements pour accueillir les patients après régulation par le SAMU.\">niveauRecoursORSAN</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"URL du site de vente en ligne\">venteLigneURL</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Il s'agit du nombre de places temporaires dédiées à l'aide sociale dans l'établissement.\">nbPlaceAideSocialeTemporaire</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Il s'agit du nombre de places permanentes dédiées à l'aide sociale dans l'établissement.\">nbPlaceAideSocialePermanent</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Adresse(s) géopostale(s) de l'entité géographique en fonction de l'usage (adresse administrative, adresse entrée des véhicules, adresse entrée piétonne, etc.).L'implantation géographique peut également être décrite au travers de la classe Lieu.\">adresseEG</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Implantation géographique de l’EG sur un lieu connu.\">implantationGeographique</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lieu à l'intérieur d'une EG tels que l'entrée A, pavillon des violettes, etcUn lieu peut notamment être décrit par une adresse et des coordonnées géographiques.\">lieuEG</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Division(s) territoriale(s) (commune, département, etc.) où est située l'entité géographique.\">divisionTerritoriale</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Point(s) de contact de l'entité géographique.Par exemple, ce sont les informations permettant de contacter l'accueil ou le secrétariat de l'entité géographique.Les contacts du directeur et de la cellule d'alerte peuvent être inclus dans cette liste de contacts.\">contact</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Adresse(s) de télécommunication de l'entité géographique (numéro de téléphone, adresse email, URL, etc.).\">telecommunication</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'entité géographique.\">boiteLettresMSS</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Commentaire qui permet à la structure de donner des informations complémentaires.\">commentaire</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lien vers la classe SituationExercice\">SituationExercice</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lien vers la classe Certificat\">Certificat</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lien vers la classe EntiteJuridique\">EntiteJuridique</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lien vers la classe Lieu\">Lieu</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lien vers la classe Convention\">Convention</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lien vers la classe EquipementMaterielLourd\">EquipementMaterielLourd</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lien vers la classe LicenceExploitation\">LicenceExploitation</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lien vers la classe ActiviteEnseignement\">ActiviteEnseignement</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lien vers la classe TarifPrestation\">TarifPrestation</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lien vers la classe ActiviteSoinAutorisee\">ActiviteSoinAutorisee</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lien vers la classe AutreActiviteSoumiseAutorisation\">AutreActiviteSoumiseAutorisation</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lien vers la classe ActiviteSoumiseReconnaissance\">ActiviteSoumiseReconnaissance</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lien vers la classe ActiviteSociale\">ActiviteSociale</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lien vers la classe CapaciteActiviteExercee\">CapaciteActiviteExercee</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lien vers la classe OffreOperationnelle\">OffreOperationnelle</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lien vers la classe OrganisationInterne\">OrganisationInterne</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lien vers la classe Emploi\">Emploi</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lien vers la classe AidantDemarche\">AidantDemarche</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lien vers la classe MesureProtection\">MesureProtection</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lien vers la classe NoteLiaison\">NoteLiaison</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lien vers la classe Agenda\">Agenda</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lien vers la classe RendezVous\">RendezVous</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lien vers la classe CapaciteAccueil\">CapaciteAccueil</a>, <a href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-EntiteGeographique.html\" title=\"Lien vers la classe CapaciteHabitation\">CapaciteHabitation</a></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-entite-geographique-definitions.html#cds-entite-geographique.numFINESS\">numFINESS</a><a name=\"cds-entite-geographique.numFINESS\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Numéro FINESS de l'entité géographique.Le numéro FINESS étant porteur intrinsèquement de liens avec le domaine sanitaire ou le domaine médico-social, il est, s'il existe, à privilégier pour l’identification des entités géographiques en tant qu’acteurs sanitaires et médico-sociaux par rapport au numéro SIRET (Référentiel d’identification des acteurs sanitaires et médico-sociaux - Politique Générale de Sécurité des Systèmes d’Information de Santé (PGSSI-S)).A chaque EG (établissement) est attribué un numéro FINESS qui est composé de 9 caractères numériques, tels que :** Position 1-2 : numéro du département d'implantation (\"2A\", \"2B\" pour la Corse; \"97\" pour les départements d’Outre-mer; \"98\" pour Mayotte);** Position 3 : \"0\";** Position 4-8: \"1\" pour Guadeloupe, \"2\" pour Martinique, \"3\" pour Guyane, \"4\" pour Réunion, \"5\" pour Saint-Pierre-et-Miquelon + numéro d'ordre de 4 chiffres;** Position 4-8 : numéro d’ordre de 5 chiffres pour tous les autres départements;** Position 9 : clé de Luhn calculée automatiquement.</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-entite-geographique-definitions.html#cds-entite-geographique.numSiret\">numSiret</a><a name=\"cds-entite-geographique.numSiret\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Le numéro Siret est le numéro unique d'identification, attribué par l'INSEE, à chaque entité géographique.Ce numéro est un simple numéro d'ordre, composé de 14 chiffres non significatifs:   ** les 9 chiffres du numéro Siren de l'entreprise dont l'établissement dépend, suivis des 5 chiffres du numéro interne de classement (NIC), lui-même constitué de 4 chiffres complétés d'une clé de Luhn.Le numéro Siret n'a aucun lien avec les caractéristiques de l'établissement. Il est fermé quand l'activité cesse dans l'établissement concerné ou lorsque l'établissement change d'adresse.</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-entite-geographique-definitions.html#cds-entite-geographique.identifiantEG\">identifiantEG</a><a name=\"cds-entite-geographique.identifiantEG\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Identifiant spécifique généré par le RPPS ou ADELI lors de la création d'une structure d'exercice pour un cabinet individuel et un cabinet de groupe. Il est communément connu sous le nom de RPPS-rang ou ADELI-rang :- le RPPS-rang, de 14 caractères, est formé des 11 caractères de l’identifiant RPPS du titulaire du cabinet, suivi d’un numéro d’ordre sur 2 caractères et d’une clé de Luhn (1 caractère) ;- l’ADELI-rang, de 11 caractères, est formé des 9 caractères du numéro ADELI du titulaire du cabinet suivi d’un numéro d’ordre sur 2 caractères.Cet identifiant est utilisé dans les échanges techniques entre le RPPS ou ADELI avec le FNPS de la CNAM, se substituant ainsi au numéro de SIRET dans le cas où ce dernier n'est pas encore connu du RPPS ou d’ADELI.Synonyme : numEG_RPPS_ADELI</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-entite-geographique-definitions.html#cds-entite-geographique.idNatStruct\">idNatStruct</a><a name=\"cds-entite-geographique.idNatStruct\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Identification nationale de l'Entité géographique initiée pour les besoins du SI-CPS.Cette identification est obtenue par la concaténation du type d'identifiant national de structure (provenant de la nomenclature CodeSystem-TRE-G07-TypeIdentifiantStructure) et de l'identifiant de la structure:** 0 + Identifiant cabinet ADELI (identifiantEG);** 1 + N° FINESS (entité juridique et entité géographique indéterminées);** 3 + N° SIRET;** 4 + Identifiant cabinet RPPS (identifiantEG).Synonyme : Struct_IdNat (CI-SIS)</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-entite-geographique-definitions.html#cds-entite-geographique.denominationEG\">denominationEG</a><a name=\"cds-entite-geographique.denominationEG\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Nom sous lequel l'entité géographique exerce son activité. Il s’agit, par exemple, de l’enseigne commerciale pour les pharmacies. Dans le cas d'un établissement enregistré dans le FINESS, cet attribut correspond à la notion de \"raison sociale d'un établissement\" renseignée dans le FINESS.</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-entite-geographique-definitions.html#cds-entite-geographique.boiteLettresMSS\">boiteLettresMSS</a><a name=\"cds-entite-geographique.boiteLettresMSS\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"padding-left: 3px; padding-right: 3px; color: white; background-color: #D50000\" title=\"Cet élément doit être pris en charge\">S</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5; opacity: 0.5\" href=\"https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/StructureDefinition-BoiteLettreMSS.html\">BoiteLettreMSS</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'entité géographique.</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-entite-geographique-definitions.html#cds-entite-geographique.CDSMembreCercleSoins\" title=\"Lien vers le concept Membre Cercle Soins\">CDSMembreCercleSoins</a><a name=\"cds-entite-geographique.CDSMembreCercleSoins\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-cds-membre-cercle-soins.html\">cds-membre-cercle-soins</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Lien vers le concept Membre Cercle Soins</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-entite-geographique-definitions.html#cds-entite-geographique.CDSOrganisationInterne\" title=\"Lien vers le concept Organisation Interne\">CDSOrganisationInterne</a><a name=\"cds-entite-geographique.CDSOrganisationInterne\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-cds-organisation-interne.html\">cds-organisation-interne</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Lien vers le concept Organisation Interne<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-entite-geographique-definitions.html#cds-entite-geographique.CDSSituationExercice\" title=\"Lien vers le concept Situation exercice\">CDSSituationExercice</a><a name=\"cds-entite-geographique.CDSSituationExercice\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-cds-situation-exercice.html\">cds-situation-exercice</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Lien vers le concept Situation exercice<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-cds-entite-geographique-definitions.html#cds-entite-geographique.CDSEntiteJuridique\" title=\"Lien vers le concept Entité Juridique\">CDSEntiteJuridique</a><a name=\"cds-entite-geographique.CDSEntiteJuridique\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-cds-entite-juridique.html\">cds-entite-juridique</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Lien vers le concept Entité Juridique</td></tr>#xD;\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Légende pour ce format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation pour ce format</a></td></tr></table></div>"
+  ] ;
+  fhir:StructureDefinition.url [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-entite-geographique"] ;
+  fhir:StructureDefinition.version [ fhir:value "2.0.1"] ;
+  fhir:StructureDefinition.name [ fhir:value "CDSEntiteGeographique"] ;
+  fhir:StructureDefinition.title [ fhir:value "CDS Entite Geographique"] ;
+  fhir:StructureDefinition.status [ fhir:value "draft"] ;
+  fhir:StructureDefinition.date [ fhir:value "2026-07-10T13:11:38+00:00"^^xsd:dateTime] ;
+  fhir:StructureDefinition.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
+  fhir:StructureDefinition.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
+     ]
+  ] ;
+  fhir:StructureDefinition.description [ fhir:value "L’Entité Géographique (EG) correspond à la notion d’établissement : ** Pour les établissements inscrits au FINESS, cette notion d’établissement résulte du croisement de trois critères : - Un critère géographique : Est un établissement tout lieu dont l’implantation d’activité(s) ou d’équipement(s) est géographiquement distincte d’une autre implantation. Ainsi un Centre Hospitalier Régional comprend autant d’établissements que d’implantations géographiques différentes. Un établissement principal et son établissement secondaire situé à 1 km constituent deux établissements distincts dans FINESS. L’implantation géographique peut-être décrite soit avec l’attribut addresseEG soit au travers de la classe Lieu. - Un critère budgétaire : Pour une même implantation géographique, on distingue autant d’établissements du secteur public qu’il y a de budgets distincts (budget général, budget annexe).Ainsi un ESAT et son foyer d’hébergement constituent deux établissements même s’ils sont implantés à la même adresse. - Un critère d’activité : Pour une même implantation géographique et un même budget, on distingue autant d’établissements que de « catégorie d’établissement » décrivant l’activité principale autorisée.Ainsi un centre hospitalier et son EHPAD, financés par le même budget, constituent deux établissements même s’ils sont implantés à la même adresse.** Pour les entreprises inscrites dans le SIRENE, l’EG correspond à un établissement de la personne morale, elle est identifiée par un numéro Siret.Synonymes: Etablissement, structure"] ;
+  fhir:StructureDefinition.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "France (la)" ]
+     ]
+  ] ;
+  fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"] ;
+  fhir:StructureDefinition.kind [ fhir:value "logical"] ;
+  fhir:StructureDefinition.abstract [ fhir:value "false"^^xsd:boolean] ;
+  fhir:StructureDefinition.type [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-entite-geographique"] ;
+  fhir:StructureDefinition.baseDefinition [
+     fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/EntiteGeographique|0.1.0-ballot" ;
+     fhir:link <https://interop.esante.gouv.fr/ig/mos/StructureDefinition/EntiteGeographique|0.1.0-ballot>
+  ] ;
+  fhir:StructureDefinition.derivation [ fhir:value "specialization"] ;
+  fhir:StructureDefinition.snapshot [
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version" ] ;
+       fhir:Extension.valueString [ fhir:value "0.1.0-ballot" ]
+     ] ;
+     fhir:StructureDefinition.snapshot.element [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique" ] ;
+       fhir:ElementDefinition.short [ fhir:value "L’Entité Géographique (EG) correspond à la notion d’établissement : ** Pour les établissements inscrits au FINESS, cette notion d’établissement résulte du croisement de trois critères : - Un critère géographique : Est un établissement tout lieu dont l’implantation d’activité(s) ou d’équipement(s) est géographiquement distincte d’une autre implantation. Ainsi un Centre Hospitalier Régional comprend autant d’établissements que d’implantations géographiques différentes. Un établissement principal et son établissement secondaire situé à 1 km constituent deux établissements distincts dans FINESS. L’implantation géographique peut-être décrite soit avec l’attribut addresseEG soit au travers de la classe Lieu. - Un critère budgétaire : Pour une même implantation géographique, on distingue autant d’établissements du secteur public qu’il y a de budgets distincts (budget général, budget annexe).Ainsi un ESAT et son foyer d’hébergement constituent deux établissements même s’ils sont implantés à la même adresse. - Un critère d’activité : Pour une même implantation géographique et un même budget, on distingue autant d’établissements que de « catégorie d’établissement » décrivant l’activité principale autorisée.Ainsi un centre hospitalier et son EHPAD, financés par le même budget, constituent deux établissements même s’ils sont implantés à la même adresse.** Pour les entreprises inscrites dans le SIRENE, l’EG correspond à un établissement de la personne morale, elle est identifiée par un numéro Siret.Synonymes: Etablissement, structure" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "L’Entité Géographique (EG) correspond à la notion d’établissement : ** Pour les établissements inscrits au FINESS, cette notion d’établissement résulte du croisement de trois critères : - Un critère géographique : Est un établissement tout lieu dont l’implantation d’activité(s) ou d’équipement(s) est géographiquement distincte d’une autre implantation. Ainsi un Centre Hospitalier Régional comprend autant d’établissements que d’implantations géographiques différentes. Un établissement principal et son établissement secondaire situé à 1 km constituent deux établissements distincts dans FINESS. L’implantation géographique peut-être décrite soit avec l’attribut addresseEG soit au travers de la classe Lieu. - Un critère budgétaire : Pour une même implantation géographique, on distingue autant d’établissements du secteur public qu’il y a de budgets distincts (budget général, budget annexe).Ainsi un ESAT et son foyer d’hébergement constituent deux établissements même s’ils sont implantés à la même adresse. - Un critère d’activité : Pour une même implantation géographique et un même budget, on distingue autant d’établissements que de « catégorie d’établissement » décrivant l’activité principale autorisée.Ainsi un centre hospitalier et son EHPAD, financés par le même budget, constituent deux établissements même s’ils sont implantés à la même adresse.** Pour les entreprises inscrites dans le SIRENE, l’EG correspond à un établissement de la personne morale, elle est identifiée par un numéro Siret.Synonymes: Etablissement, structure" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Base" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.numFINESS" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.numFINESS" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Numéro FINESS de l'entité géographique.Le numéro FINESS étant porteur intrinsèquement de liens avec le domaine sanitaire ou le domaine médico-social, il est, s'il existe, à privilégier pour l’identification des entités géographiques en tant qu’acteurs sanitaires et médico-sociaux par rapport au numéro SIRET (Référentiel d’identification des acteurs sanitaires et médico-sociaux - Politique Générale de Sécurité des Systèmes d’Information de Santé (PGSSI-S)).A chaque EG (établissement) est attribué un numéro FINESS qui est composé de 9 caractères numériques, tels que :** Position 1-2 : numéro du département d'implantation (\"2A\", \"2B\" pour la Corse; \"97\" pour les départements d’Outre-mer; \"98\" pour Mayotte);** Position 3 : \"0\";** Position 4-8: \"1\" pour Guadeloupe, \"2\" pour Martinique, \"3\" pour Guyane, \"4\" pour Réunion, \"5\" pour Saint-Pierre-et-Miquelon + numéro d'ordre de 4 chiffres;** Position 4-8 : numéro d’ordre de 5 chiffres pour tous les autres départements;** Position 9 : clé de Luhn calculée automatiquement." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Numéro FINESS de l'entité géographique.Le numéro FINESS étant porteur intrinsèquement de liens avec le domaine sanitaire ou le domaine médico-social, il est, s'il existe, à privilégier pour l’identification des entités géographiques en tant qu’acteurs sanitaires et médico-sociaux par rapport au numéro SIRET (Référentiel d’identification des acteurs sanitaires et médico-sociaux - Politique Générale de Sécurité des Systèmes d’Information de Santé (PGSSI-S)).A chaque EG (établissement) est attribué un numéro FINESS qui est composé de 9 caractères numériques, tels que :** Position 1-2 : numéro du département d'implantation (\"2A\", \"2B\" pour la Corse; \"97\" pour les départements d’Outre-mer; \"98\" pour Mayotte);** Position 3 : \"0\";** Position 4-8: \"1\" pour Guadeloupe, \"2\" pour Martinique, \"3\" pour Guyane, \"4\" pour Réunion, \"5\" pour Saint-Pierre-et-Miquelon + numéro d'ordre de 4 chiffres;** Position 4-8 : numéro d’ordre de 5 chiffres pour tous les autres départements;** Position 9 : clé de Luhn calculée automatiquement." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.numFINESS" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.numSiret" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.numSiret" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Le numéro Siret est le numéro unique d'identification, attribué par l'INSEE, à chaque entité géographique.Ce numéro est un simple numéro d'ordre, composé de 14 chiffres non significatifs:   ** les 9 chiffres du numéro Siren de l'entreprise dont l'établissement dépend, suivis des 5 chiffres du numéro interne de classement (NIC), lui-même constitué de 4 chiffres complétés d'une clé de Luhn.Le numéro Siret n'a aucun lien avec les caractéristiques de l'établissement. Il est fermé quand l'activité cesse dans l'établissement concerné ou lorsque l'établissement change d'adresse." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Le numéro Siret est le numéro unique d'identification, attribué par l'INSEE, à chaque entité géographique.Ce numéro est un simple numéro d'ordre, composé de 14 chiffres non significatifs:   ** les 9 chiffres du numéro Siren de l'entreprise dont l'établissement dépend, suivis des 5 chiffres du numéro interne de classement (NIC), lui-même constitué de 4 chiffres complétés d'une clé de Luhn.Le numéro Siret n'a aucun lien avec les caractéristiques de l'établissement. Il est fermé quand l'activité cesse dans l'établissement concerné ou lorsque l'établissement change d'adresse." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.numSiret" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.identifiantEG" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.identifiantEG" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Identifiant spécifique généré par le RPPS ou ADELI lors de la création d'une structure d'exercice pour un cabinet individuel et un cabinet de groupe. Il est communément connu sous le nom de RPPS-rang ou ADELI-rang :- le RPPS-rang, de 14 caractères, est formé des 11 caractères de l’identifiant RPPS du titulaire du cabinet, suivi d’un numéro d’ordre sur 2 caractères et d’une clé de Luhn (1 caractère) ;- l’ADELI-rang, de 11 caractères, est formé des 9 caractères du numéro ADELI du titulaire du cabinet suivi d’un numéro d’ordre sur 2 caractères.Cet identifiant est utilisé dans les échanges techniques entre le RPPS ou ADELI avec le FNPS de la CNAM, se substituant ainsi au numéro de SIRET dans le cas où ce dernier n'est pas encore connu du RPPS ou d’ADELI.Synonyme : numEG_RPPS_ADELI" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identifiant spécifique généré par le RPPS ou ADELI lors de la création d'une structure d'exercice pour un cabinet individuel et un cabinet de groupe. Il est communément connu sous le nom de RPPS-rang ou ADELI-rang :- le RPPS-rang, de 14 caractères, est formé des 11 caractères de l’identifiant RPPS du titulaire du cabinet, suivi d’un numéro d’ordre sur 2 caractères et d’une clé de Luhn (1 caractère) ;- l’ADELI-rang, de 11 caractères, est formé des 9 caractères du numéro ADELI du titulaire du cabinet suivi d’un numéro d’ordre sur 2 caractères.Cet identifiant est utilisé dans les échanges techniques entre le RPPS ou ADELI avec le FNPS de la CNAM, se substituant ainsi au numéro de SIRET dans le cas où ce dernier n'est pas encore connu du RPPS ou d’ADELI.Synonyme : numEG_RPPS_ADELI" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.identifiantEG" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.idNatStruct" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.idNatStruct" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Identification nationale de l'Entité géographique initiée pour les besoins du SI-CPS.Cette identification est obtenue par la concaténation du type d'identifiant national de structure (provenant de la nomenclature CodeSystem-TRE-G07-TypeIdentifiantStructure) et de l'identifiant de la structure:** 0 + Identifiant cabinet ADELI (identifiantEG);** 1 + N° FINESS (entité juridique et entité géographique indéterminées);** 3 + N° SIRET;** 4 + Identifiant cabinet RPPS (identifiantEG).Synonyme : Struct_IdNat (CI-SIS)" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Identification nationale de l'Entité géographique initiée pour les besoins du SI-CPS.Cette identification est obtenue par la concaténation du type d'identifiant national de structure (provenant de la nomenclature CodeSystem-TRE-G07-TypeIdentifiantStructure) et de l'identifiant de la structure:** 0 + Identifiant cabinet ADELI (identifiantEG);** 1 + N° FINESS (entité juridique et entité géographique indéterminées);** 3 + N° SIRET;** 4 + Identifiant cabinet RPPS (identifiantEG).Synonyme : Struct_IdNat (CI-SIS)" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.idNatStruct" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.typeIdNatStruct" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.typeIdNatStruct" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Type d’identifiant national de la structure." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Type d’identifiant national de la structure." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.typeIdNatStruct" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure?vs" ;
+           fhir:link <https://mos.esante.gouv.fr/NOS/TRE_G07-TypeIdentifiantStructure/FHIR/TRE-G07-TypeIdentifiantStructure?vs>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.numeroEducationNationale" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.numeroEducationNationale" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Le \"numéro éducation nationale de l'établissement\" est un numéro associé délivré par l’Éducation nationale, pour tous les établissements et services pour enfants et adolescents handicapés qui emploient du personnel de l’Education nationale." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Le \"numéro éducation nationale de l'établissement\" est un numéro associé délivré par l’Éducation nationale, pour tous les établissements et services pour enfants et adolescents handicapés qui emploient du personnel de l’Education nationale." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.numeroEducationNationale" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.nomOperationnel" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.nomOperationnel" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Le nom opérationnel est l’appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique, indépendamment des référentiels nationaux." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Le nom opérationnel est l’appellation communément utilisée par les acteurs de santé pour désigner l'entité géographique, indépendamment des référentiels nationaux." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.nomOperationnel" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.denominationEG" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.denominationEG" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Nom sous lequel l'entité géographique exerce son activité. Il s’agit, par exemple, de l’enseigne commerciale pour les pharmacies. Dans le cas d'un établissement enregistré dans le FINESS, cet attribut correspond à la notion de \"raison sociale d'un établissement\" renseignée dans le FINESS." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Nom sous lequel l'entité géographique exerce son activité. Il s’agit, par exemple, de l’enseigne commerciale pour les pharmacies. Dans le cas d'un établissement enregistré dans le FINESS, cet attribut correspond à la notion de \"raison sociale d'un établissement\" renseignée dans le FINESS." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.denominationEG" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.denominationEGLongue" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.denominationEGLongue" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Nom, sous sa forme la plus longue et complète, sous lequel l'entité géographique exerce son activité (acronymes, sigles ou abréviations développés)." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Nom, sous sa forme la plus longue et complète, sous lequel l'entité géographique exerce son activité (acronymes, sigles ou abréviations développés)." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.denominationEGLongue" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.complementDenominationEG" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.complementDenominationEG" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Suite de la dénomination de l'entité géographique, si elle existe. Ce complément peut contenir notamment des informations facilitant l'adressage d'un courrier aux structures." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Suite de la dénomination de l'entité géographique, si elle existe. Ce complément peut contenir notamment des informations facilitant l'adressage d'un courrier aux structures." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.complementDenominationEG" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.champActivite" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.champActivite" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Champ(s) de l’activité des établissements de santé publics et privés français, notamment : - médecine, chirurgie, obstétrique (MCO),- soins de suite et de réadaptation (SSR), - psychiatrie (PSY).Ces champs d'activité seront enrichis avec l'intégration des établissements du secteur médico-social." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Champ(s) de l’activité des établissements de santé publics et privés français, notamment : - médecine, chirurgie, obstétrique (MCO),- soins de suite et de réadaptation (SSR), - psychiatrie (PSY).Ces champs d'activité seront enrichis avec l'intégration des établissements du secteur médico-social." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.champActivite" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite?vs" ;
+           fhir:link <https://mos.esante.gouv.fr/NOS/TRE_R227-ChampActivite/FHIR/TRE-R227-ChampActivite?vs>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.typeEtablissement" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.typeEtablissement" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Le type d’établissement détermine si c'est un établissement principal ou secondaire." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Le type d’établissement détermine si c'est un établissement principal ou secondaire." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.typeEtablissement" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.etablissementPrincipal" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.etablissementPrincipal" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Dans le cas d’un établissement secondaire : Numéro FINESS de l’établissement principal dont dépend l’établissement." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Dans le cas d’un établissement secondaire : Numéro FINESS de l’établissement principal dont dépend l’établissement." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.etablissementPrincipal" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Identifier" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.secteurActivite" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.secteurActivite" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Un secteur d'activité regroupe les établissements partageant la même activité de santé. Exemples (établissement public de santé, maison de santé, etc.)" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Un secteur d'activité regroupe les établissements partageant la même activité de santé. Exemples (établissement public de santé, maison de santé, etc.)" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.secteurActivite" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://interop.esante.gouv.fr/ig/mos/ValueSet/secteurActivite-vs|0.1.0-ballot" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/mos/ValueSet/secteurActivite-vs|0.1.0-ballot>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.categorieEtablissement" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.categorieEtablissement" ] ;
+       fhir:ElementDefinition.short [ fhir:value "La catégorie d'établissement est le cadre réglementaire dans lequel s'exerce l'activité de l'entité géographique. Les catégories d'établissement sont elles-mêmes classifiées en grands agrégats qui sont :** Etablissements relevant de la loi hospitalière,** Autres établissements de soins et de prévention,** Autres établissements à caractère sanitaire,** Etablissements et services sociaux d'accueil, hébergement, assistance, réadaptation,** Etablissements et services sociaux d'aide à la famille,** Etablissements de formation des personnels sanitaires et sociauxCette catégorie recouvre également des établissements qui ne sont pas encore enregistrés dans FINESS, tels que les dispositifs d’appui à la coordination." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "La catégorie d'établissement est le cadre réglementaire dans lequel s'exerce l'activité de l'entité géographique. Les catégories d'établissement sont elles-mêmes classifiées en grands agrégats qui sont :** Etablissements relevant de la loi hospitalière,** Autres établissements de soins et de prévention,** Autres établissements à caractère sanitaire,** Etablissements et services sociaux d'accueil, hébergement, assistance, réadaptation,** Etablissements et services sociaux d'aide à la famille,** Etablissements de formation des personnels sanitaires et sociauxCette catégorie recouvre également des établissements qui ne sont pas encore enregistrés dans FINESS, tels que les dispositifs d’appui à la coordination." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.categorieEtablissement" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://interop.esante.gouv.fr/ig/mos/ValueSet/categorieEtablissement-vs|0.1.0-ballot" ;
+           fhir:link <https://interop.esante.gouv.fr/ig/mos/ValueSet/categorieEtablissement-vs|0.1.0-ballot>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.agregatCategorieEtablissementNiv1" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.agregatCategorieEtablissementNiv1" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Agrégat de catégories d'établissements de niveau 1. L'agrégat de niveau 1 représente des regroupements d'agrégat de niveau 2. Par exemple, le code 1000 \"Etablissement relevant de la loi hospitalière\" regroupe les codes d'agrégat de niveau 2 1100 et 1200." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Agrégat de catégories d'établissements de niveau 1. L'agrégat de niveau 1 représente des regroupements d'agrégat de niveau 2. Par exemple, le code 1000 \"Etablissement relevant de la loi hospitalière\" regroupe les codes d'agrégat de niveau 2 1100 et 1200." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.agregatCategorieEtablissementNiv1" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R63-AgregatCategorieEtablissementNiv1/FHIR/TRE-R63-AgregatCategorieEtablissementNiv1?vs" ;
+           fhir:link <https://mos.esante.gouv.fr/NOS/TRE_R63-AgregatCategorieEtablissementNiv1/FHIR/TRE-R63-AgregatCategorieEtablissementNiv1?vs>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.agregatCategorieEtablissementNiv2" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.agregatCategorieEtablissementNiv2" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Agrégat de catégories d'établissements de niveau 2. L'agrégat de niveau 2 représente des regroupements d'agrégats de niveau 3. Par exemple, le code 1100 \"Etablissement hospitaliers\" regroupe les codes d'agrégat de niveau 3 1101, 1102, etc." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Agrégat de catégories d'établissements de niveau 2. L'agrégat de niveau 2 représente des regroupements d'agrégats de niveau 3. Par exemple, le code 1100 \"Etablissement hospitaliers\" regroupe les codes d'agrégat de niveau 3 1101, 1102, etc." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.agregatCategorieEtablissementNiv2" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R64-AgregatCategorieEtablissementNiv2/FHIR/TRE-R64-AgregatCategorieEtablissementNiv2?vs" ;
+           fhir:link <https://mos.esante.gouv.fr/NOS/TRE_R64-AgregatCategorieEtablissementNiv2/FHIR/TRE-R64-AgregatCategorieEtablissementNiv2?vs>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.agregatCategorieEtablissementNiv3" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.agregatCategorieEtablissementNiv3" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Agrégat de catégories d'établissements de niveau 3. L'agrégat de niveau 3 représente des regroupements de catégories d'établissement. Par exemple, le code 1101 \"Centres hospitaliers régionaux\" regroupe les catégories d'établissement 101, 106 etc." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Agrégat de catégories d'établissements de niveau 3. L'agrégat de niveau 3 représente des regroupements de catégories d'établissement. Par exemple, le code 1101 \"Centres hospitaliers régionaux\" regroupe les catégories d'établissement 101, 106 etc." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.agregatCategorieEtablissementNiv3" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R65-AgregatCategorieEtablissement/FHIR/TRE-R65-AgregatCategorieEtablissement?vs" ;
+           fhir:link <https://mos.esante.gouv.fr/NOS/TRE_R65-AgregatCategorieEtablissement/FHIR/TRE-R65-AgregatCategorieEtablissement?vs>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.codeAPET" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.codeAPET" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Toute entité juridique et chacun de ses établissements (EG) se voit attribuer par l'Insee, lors de son inscription au répertoire SIRENE, un code caractérisant son activité principale par référence à la nomenclature d'activités française (NAF rév. 2).Plus précisément, on distingue le code APET pour les EG." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Toute entité juridique et chacun de ses établissements (EG) se voit attribuer par l'Insee, lors de son inscription au répertoire SIRENE, un code caractérisant son activité principale par référence à la nomenclature d'activités française (NAF rév. 2).Plus précisément, on distingue le code APET pour les EG." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.codeAPET" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R75-InseeNAFrev2Niveau5/FHIR/TRE-R75-InseeNAFrev2Niveau5?vs" ;
+           fhir:link <https://mos.esante.gouv.fr/NOS/TRE_R75-InseeNAFrev2Niveau5/FHIR/TRE-R75-InseeNAFrev2Niveau5?vs>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.modeFixationTarif" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.modeFixationTarif" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Le mode de tarification détermine l'autorité responsable de la fixation du tarif principal de l'établissement et la procédure utilisée. Il est unique pour un établissement FINESS donné." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Le mode de tarification détermine l'autorité responsable de la fixation du tarif principal de l'établissement et la procédure utilisée. Il est unique pour un établissement FINESS donné." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.modeFixationTarif" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R74-ModeFixationTarifaire/FHIR/TRE-R74-ModeFixationTarifaire?vs|20260330120000" ;
+           fhir:link <https://mos.esante.gouv.fr/NOS/TRE_R74-ModeFixationTarifaire/FHIR/TRE-R74-ModeFixationTarifaire?vs|20260330120000>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.modaliteParticipationSPH" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.modaliteParticipationSPH" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Modalités de participation au service public hospitalier." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Modalités de participation au service public hospitalier." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.modaliteParticipationSPH" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R73-ESPIC/FHIR/TRE-R73-ESPIC?vs|20260223120000" ;
+           fhir:link <https://mos.esante.gouv.fr/NOS/TRE_R73-ESPIC/FHIR/TRE-R73-ESPIC?vs|20260223120000>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.natureEtablissement" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.natureEtablissement" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Nature du budget alloué à l'établissement dont les valeurs sont \"G\" pour général et \"A\" pour annexe." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Nature du budget alloué à l'établissement dont les valeurs sont \"G\" pour général et \"A\" pour annexe." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.natureEtablissement" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.aideFinanciere" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.aideFinanciere" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Habilitation ou conventionnement de l'entité géographique permettant aux personnes accueillies de bénéficier des aides financières, si elles remplissent les conditions." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Habilitation ou conventionnement de l'entité géographique permettant aux personnes accueillies de bénéficier des aides financières, si elles remplissent les conditions." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.aideFinanciere" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R241-AideFinanciere/FHIR/TRE-R241-AideFinanciere?vs" ;
+           fhir:link <https://mos.esante.gouv.fr/NOS/TRE_R241-AideFinanciere/FHIR/TRE-R241-AideFinanciere?vs>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.habilitationSoinSansConsentement" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.habilitationSoinSansConsentement" ] ;
+       fhir:ElementDefinition.short [ fhir:value "L'habilitation aux soins sans consentement traduit que l'établissement est autorisé à prendre en charge des patients sans leur consentement. Cette autorisation est donnée par le directeur général de l’ARS après avis du préfet.Valeurs possibles : 0 = L'établissement ne possède pas d'autorisation aux soins sans consentement 1 = L'établissement possède une autorisation aux soins sans consentement" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "L'habilitation aux soins sans consentement traduit que l'établissement est autorisé à prendre en charge des patients sans leur consentement. Cette autorisation est donnée par le directeur général de l’ARS après avis du préfet.Valeurs possibles : 0 = L'établissement ne possède pas d'autorisation aux soins sans consentement 1 = L'établissement possède une autorisation aux soins sans consentement" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.habilitationSoinSansConsentement" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "boolean" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.hebergementFamille" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.hebergementFamille" ] ;
+       fhir:ElementDefinition.short [ fhir:value "L’indicateur hébergement des familles précise si l'établissement peut héberger les familles des personnes prises en charge. Valeurs possibles :0 = L'établissement ne peut pas héberger les familles des personnes prises en charge1 = L'établissement peut héberger les familles des personnes prises en charge" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "L’indicateur hébergement des familles précise si l'établissement peut héberger les familles des personnes prises en charge. Valeurs possibles :0 = L'établissement ne peut pas héberger les familles des personnes prises en charge1 = L'établissement peut héberger les familles des personnes prises en charge" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.hebergementFamille" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "boolean" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.dateModificationSIRET" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.dateModificationSIRET" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Date de modification du numéro SIRET." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Date de modification du numéro SIRET." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.dateModificationSIRET" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "date" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.origineModificationSIRET" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.origineModificationSIRET" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Origine/nature de modification du SIRET (motif de modification de l’identifiant)." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Origine/nature de modification du SIRET (motif de modification de l’identifiant)." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.origineModificationSIRET" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.actif" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.actif" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Indicateur de l’activité de l'entité géographique, si celle-ci est active (ou ouverte) ou inactive (ou fermée)." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Indicateur de l’activité de l'entité géographique, si celle-ci est active (ou ouverte) ou inactive (ou fermée)." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.actif" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "boolean" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.dateOuverture" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.dateOuverture" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Date d’ouverture réelle de fonctionnement de l’établissement.Pour les établissements soumis à autorisation, elle est constatée par la première visite de conformité du premier équipement autorisé. La date d’ouverture doit être supérieure ou égale à la date d’autorisation." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Date d’ouverture réelle de fonctionnement de l’établissement.Pour les établissements soumis à autorisation, elle est constatée par la première visite de conformité du premier équipement autorisé. La date d’ouverture doit être supérieure ou égale à la date d’autorisation." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.dateOuverture" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "date" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.dateCaducite" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.dateCaducite" ] ;
+       fhir:ElementDefinition.short [ fhir:value "La date de caducité indique la limite autorisant la réalisation de l’opération pour laquelle il y a autorisation. Elle est calculée automatiquement lorsque la date d’autorisation est renseignée. Elle disparait lorsque la date d’ouverture est renseignée.Par défaut, la date de caducité calculée automatiquement dans FINESS est de trois ans. En cas de début de travaux, une quatrième année est autorisée par les textes." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "La date de caducité indique la limite autorisant la réalisation de l’opération pour laquelle il y a autorisation. Elle est calculée automatiquement lorsque la date d’autorisation est renseignée. Elle disparait lorsque la date d’ouverture est renseignée.Par défaut, la date de caducité calculée automatiquement dans FINESS est de trois ans. En cas de début de travaux, une quatrième année est autorisée par les textes." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.dateCaducite" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "date" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.constatCaducite" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.constatCaducite" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Indicateur de caducité de l'établissement:- « N » par défaut, lorsque l’établissement est autorisé non ouvert (la date d’ouverture n’est pas renseignée);- « O » à indiquer lorsqu’un constat de caducité a été relevé sur l'établissement." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Indicateur de caducité de l'établissement:- « N » par défaut, lorsque l’établissement est autorisé non ouvert (la date d’ouverture n’est pas renseignée);- « O » à indiquer lorsqu’un constat de caducité a été relevé sur l'établissement." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.constatCaducite" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "boolean" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.dateFermeture" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.dateFermeture" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Date de fermeture de l'entité géographique. La date doit être supérieure à la date d’ouverture." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Date de fermeture de l'entité géographique. La date doit être supérieure à la date d’ouverture." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.dateFermeture" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "date" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.typeFermeture" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.typeFermeture" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Type de fermeture de l'entité géographique, au sens des règles de gestion du SI FINESS (par exemple: fermeture définitive, fermeture provisoire), obligatoire lors de la fermeture de l'entité." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Type de fermeture de l'entité géographique, au sens des règles de gestion du SI FINESS (par exemple: fermeture définitive, fermeture provisoire), obligatoire lors de la fermeture de l'entité." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.typeFermeture" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R286-TypeFermeture/FHIR/TRE-R286-TypeFermeture?vs" ;
+           fhir:link <https://mos.esante.gouv.fr/NOS/TRE_R286-TypeFermeture/FHIR/TRE-R286-TypeFermeture?vs>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.dateAutorisation" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.dateAutorisation" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Date d’autorisation qui correspond à la date de l’arrêté autorisant la création d’un établissement ou de la première autorisation délivrée pour des équipements." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Date d’autorisation qui correspond à la date de l’arrêté autorisant la création d’un établissement ou de la première autorisation délivrée pour des équipements." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.dateAutorisation" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "date" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.accessibiliteLieu" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.accessibiliteLieu" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Information précisant dans quelle mesure le lieu est conforme aux dispositions règlementaires relatives à l’accessibilité des établissements recevant du public (ex : accessible, non accessible, sur demande, non communiqué, etc.).Rappel sur l'obligation d'accessibilité des établissements recevant du public (ERP) aux personnes handicapées (service-public.fr):Les établissements ouverts au public (magasin, bureau, hôtel, etc.) doivent être accessibles aux personnes handicapées. Les établissements recevant du public (ERP) non conformes aux règles d'accessibilité sont tenus de s'inscrire à un Agenda d'Accessibilité Programmée (Ad'AP) qui permet d'engager les travaux nécessaires dans un délai limité.Règles d'accessibilité:Les normes d'accessibilité doivent permettre aux personnes handicapées de circuler avec la plus grande autonomie possible, d'accéder aux locaux et équipements, d'utiliser les équipements et les prestations, de se repérer et de communiquer.L'accès concerne tout type de handicap (moteur, visuel, auditif, mental...).Les conditions d'accès doivent être les mêmes que pour les personnes valides ou, à défaut, présenter une qualité d'usage équivalente.L'accessibilité de ces établissements et de leurs abords concerne :** les cheminements extérieurs,** le stationnement des véhicules,** les conditions d'accès et d'accueil dans les bâtiments,** les circulations horizontales et verticales à l'intérieur des bâtiments,** les locaux intérieurs et les sanitaires ouverts au public,** les portes, les sas intérieurs et les sorties,** les revêtements des sols et des parois,** les équipements et mobiliers intérieurs et extérieurs susceptibles d'y être installés (dispositifs d'éclairage et d'information des usagers, par exemple)." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Information précisant dans quelle mesure le lieu est conforme aux dispositions règlementaires relatives à l’accessibilité des établissements recevant du public (ex : accessible, non accessible, sur demande, non communiqué, etc.).Rappel sur l'obligation d'accessibilité des établissements recevant du public (ERP) aux personnes handicapées (service-public.fr):Les établissements ouverts au public (magasin, bureau, hôtel, etc.) doivent être accessibles aux personnes handicapées. Les établissements recevant du public (ERP) non conformes aux règles d'accessibilité sont tenus de s'inscrire à un Agenda d'Accessibilité Programmée (Ad'AP) qui permet d'engager les travaux nécessaires dans un délai limité.Règles d'accessibilité:Les normes d'accessibilité doivent permettre aux personnes handicapées de circuler avec la plus grande autonomie possible, d'accéder aux locaux et équipements, d'utiliser les équipements et les prestations, de se repérer et de communiquer.L'accès concerne tout type de handicap (moteur, visuel, auditif, mental...).Les conditions d'accès doivent être les mêmes que pour les personnes valides ou, à défaut, présenter une qualité d'usage équivalente.L'accessibilité de ces établissements et de leurs abords concerne :** les cheminements extérieurs,** le stationnement des véhicules,** les conditions d'accès et d'accueil dans les bâtiments,** les circulations horizontales et verticales à l'intérieur des bâtiments,** les locaux intérieurs et les sanitaires ouverts au public,** les portes, les sas intérieurs et les sorties,** les revêtements des sols et des parois,** les équipements et mobiliers intérieurs et extérieurs susceptibles d'y être installés (dispositifs d'éclairage et d'information des usagers, par exemple)." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.accessibiliteLieu" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R202-AccessibiliteLieu/FHIR/TRE-R202-AccessibiliteLieu?vs" ;
+           fhir:link <https://mos.esante.gouv.fr/NOS/TRE_R202-AccessibiliteLieu/FHIR/TRE-R202-AccessibiliteLieu?vs>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.zonePoser" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.zonePoser" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Indicateur portant sur l'existence d'une zone de poser pour hélicoptère sur le site même.Valeurs possibles: 0 = Pas de zone de poser 1 = Existence d'une zone de poser" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Indicateur portant sur l'existence d'une zone de poser pour hélicoptère sur le site même.Valeurs possibles: 0 = Pas de zone de poser 1 = Existence d'une zone de poser" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.zonePoser" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "boolean" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.niveauRecoursORSAN" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.niveauRecoursORSAN" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Le niveau de recours ORSAN correspond à une hiérarchisation fonctionnelle de la mobilisation des établissements pour accueillir les patients après régulation par le SAMU." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Le niveau de recours ORSAN correspond à une hiérarchisation fonctionnelle de la mobilisation des établissements pour accueillir les patients après régulation par le SAMU." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.niveauRecoursORSAN" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "Coding" ]
+       ] ;
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ] ;
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R284-NiveauRecoursORSAN/FHIR/TRE-R284-NiveauRecoursORSAN?vs" ;
+           fhir:link <https://mos.esante.gouv.fr/NOS/TRE_R284-NiveauRecoursORSAN/FHIR/TRE-R284-NiveauRecoursORSAN?vs>
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.venteLigneURL" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.venteLigneURL" ] ;
+       fhir:ElementDefinition.short [ fhir:value "URL du site de vente en ligne" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "URL du site de vente en ligne" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.venteLigneURL" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.nbPlaceAideSocialeTemporaire" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.nbPlaceAideSocialeTemporaire" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Il s'agit du nombre de places temporaires dédiées à l'aide sociale dans l'établissement." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Il s'agit du nombre de places temporaires dédiées à l'aide sociale dans l'établissement." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.nbPlaceAideSocialeTemporaire" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "integer" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.nbPlaceAideSocialePermanent" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.nbPlaceAideSocialePermanent" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Il s'agit du nombre de places permanentes dédiées à l'aide sociale dans l'établissement." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Il s'agit du nombre de places permanentes dédiées à l'aide sociale dans l'établissement." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.nbPlaceAideSocialePermanent" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "integer" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.adresseEG" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.adresseEG" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Adresse(s) géopostale(s) de l'entité géographique en fonction de l'usage (adresse administrative, adresse entrée des véhicules, adresse entrée piétonne, etc.).L'implantation géographique peut également être décrite au travers de la classe Lieu." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Adresse(s) géopostale(s) de l'entité géographique en fonction de l'usage (adresse administrative, adresse entrée des véhicules, adresse entrée piétonne, etc.).L'implantation géographique peut également être décrite au travers de la classe Lieu." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.adresseEG" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Adresse" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.implantationGeographique" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.implantationGeographique" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Implantation géographique de l’EG sur un lieu connu." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Implantation géographique de l’EG sur un lieu connu." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.implantationGeographique" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Lieu" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.lieuEG" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.lieuEG" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lieu à l'intérieur d'une EG tels que l'entrée A, pavillon des violettes, etcUn lieu peut notamment être décrit par une adresse et des coordonnées géographiques." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lieu à l'intérieur d'une EG tels que l'entrée A, pavillon des violettes, etcUn lieu peut notamment être décrit par une adresse et des coordonnées géographiques." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.lieuEG" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Lieu" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.divisionTerritoriale" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.divisionTerritoriale" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Division(s) territoriale(s) (commune, département, etc.) où est située l'entité géographique." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Division(s) territoriale(s) (commune, département, etc.) où est située l'entité géographique." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.divisionTerritoriale" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/DivisionTerritoriale" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.contact" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.contact" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Point(s) de contact de l'entité géographique.Par exemple, ce sont les informations permettant de contacter l'accueil ou le secrétariat de l'entité géographique.Les contacts du directeur et de la cellule d'alerte peuvent être inclus dans cette liste de contacts." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Point(s) de contact de l'entité géographique.Par exemple, ce sont les informations permettant de contacter l'accueil ou le secrétariat de l'entité géographique.Les contacts du directeur et de la cellule d'alerte peuvent être inclus dans cette liste de contacts." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.contact" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Contact" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.telecommunication" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.telecommunication" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Adresse(s) de télécommunication de l'entité géographique (numéro de téléphone, adresse email, URL, etc.)." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Adresse(s) de télécommunication de l'entité géographique (numéro de téléphone, adresse email, URL, etc.)." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.telecommunication" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Telecommunication" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.boiteLettresMSS" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.boiteLettresMSS" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'entité géographique." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Boîte(s) aux lettres du service de messagerie sécurisée de santé (MSS) rattachée(s) à l'entité géographique." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.boiteLettresMSS" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/BoiteLettreMSS" ]
+       ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.commentaire" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.commentaire" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Commentaire qui permet à la structure de donner des informations complémentaires." ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Commentaire qui permet à la structure de donner des informations complémentaires." ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.commentaire" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "string" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.SituationExercice" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.SituationExercice" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe SituationExercice" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe SituationExercice" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.SituationExercice" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/SituationExercice" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.Certificat" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.Certificat" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe Certificat" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe Certificat" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.Certificat" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Certificat" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.EntiteJuridique" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.EntiteJuridique" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe EntiteJuridique" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe EntiteJuridique" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.EntiteJuridique" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/EntiteJuridique" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.Lieu" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.Lieu" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe Lieu" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe Lieu" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.Lieu" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Lieu" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.Convention" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.Convention" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe Convention" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe Convention" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.Convention" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Convention" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.EquipementMaterielLourd" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.EquipementMaterielLourd" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe EquipementMaterielLourd" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe EquipementMaterielLourd" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.EquipementMaterielLourd" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/EquipementMaterielLourd" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.LicenceExploitation" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.LicenceExploitation" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe LicenceExploitation" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe LicenceExploitation" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.LicenceExploitation" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/LicenceExploitation" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.ActiviteEnseignement" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.ActiviteEnseignement" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe ActiviteEnseignement" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe ActiviteEnseignement" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.ActiviteEnseignement" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/ActiviteEnseignement" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.TarifPrestation" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.TarifPrestation" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe TarifPrestation" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe TarifPrestation" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.TarifPrestation" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/TarifPrestation" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.ActiviteSoinAutorisee" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.ActiviteSoinAutorisee" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe ActiviteSoinAutorisee" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe ActiviteSoinAutorisee" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.ActiviteSoinAutorisee" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/ActiviteSoinAutorisee" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.AutreActiviteSoumiseAutorisation" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.AutreActiviteSoumiseAutorisation" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe AutreActiviteSoumiseAutorisation" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe AutreActiviteSoumiseAutorisation" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.AutreActiviteSoumiseAutorisation" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/AutreActiviteSoumiseAutorisation" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.ActiviteSoumiseReconnaissance" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.ActiviteSoumiseReconnaissance" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe ActiviteSoumiseReconnaissance" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe ActiviteSoumiseReconnaissance" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.ActiviteSoumiseReconnaissance" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/ActiviteSoumiseReconnaissance" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.ActiviteSociale" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.ActiviteSociale" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe ActiviteSociale" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe ActiviteSociale" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.ActiviteSociale" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/ActiviteSociale" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.CapaciteActiviteExercee" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.CapaciteActiviteExercee" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe CapaciteActiviteExercee" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe CapaciteActiviteExercee" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.CapaciteActiviteExercee" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/CapaciteActiviteExercee" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.OffreOperationnelle" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.OffreOperationnelle" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe OffreOperationnelle" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe OffreOperationnelle" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.OffreOperationnelle" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/OffreOperationnelle" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.OrganisationInterne" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.OrganisationInterne" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe OrganisationInterne" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe OrganisationInterne" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.OrganisationInterne" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/OrganisationInterne" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.Emploi" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.Emploi" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe Emploi" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe Emploi" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.Emploi" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Emploi" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.AidantDemarche" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.AidantDemarche" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe AidantDemarche" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe AidantDemarche" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.AidantDemarche" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/AidantDemarche" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.MesureProtection" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.MesureProtection" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe MesureProtection" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe MesureProtection" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.MesureProtection" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/MesureProtection" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.NoteLiaison" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.NoteLiaison" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe NoteLiaison" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe NoteLiaison" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.NoteLiaison" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/NoteLiaison" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.Agenda" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.Agenda" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe Agenda" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe Agenda" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.Agenda" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/Agenda" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.RendezVous" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.RendezVous" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe RendezVous" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe RendezVous" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.RendezVous" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/RendezVous" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.CapaciteAccueil" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.CapaciteAccueil" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe CapaciteAccueil" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe CapaciteAccueil" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.CapaciteAccueil" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/CapaciteAccueil" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.CapaciteHabitation" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.CapaciteHabitation" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers la classe CapaciteHabitation" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers la classe CapaciteHabitation" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "EntiteGeographique.CapaciteHabitation" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/mos/StructureDefinition/CapaciteHabitation" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.CDSMembreCercleSoins" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.CDSMembreCercleSoins" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers le concept Membre Cercle Soins" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers le concept Membre Cercle Soins" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cds-entite-geographique.CDSMembreCercleSoins" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-membre-cercle-soins" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.CDSOrganisationInterne" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.CDSOrganisationInterne" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers le concept Organisation Interne" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers le concept Organisation Interne" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cds-entite-geographique.CDSOrganisationInterne" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-organisation-interne" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.CDSSituationExercice" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.CDSSituationExercice" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers le concept Situation exercice" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers le concept Situation exercice" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cds-entite-geographique.CDSSituationExercice" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-situation-exercice" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.CDSEntiteJuridique" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.CDSEntiteJuridique" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers le concept Entité Juridique" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers le concept Entité Juridique" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "cds-entite-geographique.CDSEntiteJuridique" ] ;
+         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+         fhir:ElementDefinition.base.max [ fhir:value "1" ]
+       ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-entite-juridique" ]
+       ]
+     ]
+  ] ;
+  fhir:StructureDefinition.differential [
+     fhir:StructureDefinition.differential.element [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique" ] ;
+       fhir:ElementDefinition.short [ fhir:value "L’Entité Géographique (EG) correspond à la notion d’établissement : ** Pour les établissements inscrits au FINESS, cette notion d’établissement résulte du croisement de trois critères : - Un critère géographique : Est un établissement tout lieu dont l’implantation d’activité(s) ou d’équipement(s) est géographiquement distincte d’une autre implantation. Ainsi un Centre Hospitalier Régional comprend autant d’établissements que d’implantations géographiques différentes. Un établissement principal et son établissement secondaire situé à 1 km constituent deux établissements distincts dans FINESS. L’implantation géographique peut-être décrite soit avec l’attribut addresseEG soit au travers de la classe Lieu. - Un critère budgétaire : Pour une même implantation géographique, on distingue autant d’établissements du secteur public qu’il y a de budgets distincts (budget général, budget annexe).Ainsi un ESAT et son foyer d’hébergement constituent deux établissements même s’ils sont implantés à la même adresse. - Un critère d’activité : Pour une même implantation géographique et un même budget, on distingue autant d’établissements que de « catégorie d’établissement » décrivant l’activité principale autorisée.Ainsi un centre hospitalier et son EHPAD, financés par le même budget, constituent deux établissements même s’ils sont implantés à la même adresse.** Pour les entreprises inscrites dans le SIRENE, l’EG correspond à un établissement de la personne morale, elle est identifiée par un numéro Siret.Synonymes: Etablissement, structure" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "L’Entité Géographique (EG) correspond à la notion d’établissement : ** Pour les établissements inscrits au FINESS, cette notion d’établissement résulte du croisement de trois critères : - Un critère géographique : Est un établissement tout lieu dont l’implantation d’activité(s) ou d’équipement(s) est géographiquement distincte d’une autre implantation. Ainsi un Centre Hospitalier Régional comprend autant d’établissements que d’implantations géographiques différentes. Un établissement principal et son établissement secondaire situé à 1 km constituent deux établissements distincts dans FINESS. L’implantation géographique peut-être décrite soit avec l’attribut addresseEG soit au travers de la classe Lieu. - Un critère budgétaire : Pour une même implantation géographique, on distingue autant d’établissements du secteur public qu’il y a de budgets distincts (budget général, budget annexe).Ainsi un ESAT et son foyer d’hébergement constituent deux établissements même s’ils sont implantés à la même adresse. - Un critère d’activité : Pour une même implantation géographique et un même budget, on distingue autant d’établissements que de « catégorie d’établissement » décrivant l’activité principale autorisée.Ainsi un centre hospitalier et son EHPAD, financés par le même budget, constituent deux établissements même s’ils sont implantés à la même adresse.** Pour les entreprises inscrites dans le SIRENE, l’EG correspond à un établissement de la personne morale, elle est identifiée par un numéro Siret.Synonymes: Etablissement, structure" ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.numFINESS" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.numFINESS" ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.numSiret" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.numSiret" ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.identifiantEG" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.identifiantEG" ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.idNatStruct" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.idNatStruct" ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.denominationEG" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.denominationEG" ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.boiteLettresMSS" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.boiteLettresMSS" ] ;
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.CDSMembreCercleSoins" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.CDSMembreCercleSoins" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers le concept Membre Cercle Soins" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers le concept Membre Cercle Soins" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-membre-cercle-soins" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.CDSOrganisationInterne" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.CDSOrganisationInterne" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers le concept Organisation Interne" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers le concept Organisation Interne" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-organisation-interne" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.CDSSituationExercice" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.CDSSituationExercice" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers le concept Situation exercice" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers le concept Situation exercice" ] ;
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "*" ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-situation-exercice" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.id [ fhir:value "cds-entite-geographique.CDSEntiteJuridique" ] ;
+       fhir:ElementDefinition.path [ fhir:value "cds-entite-geographique.CDSEntiteJuridique" ] ;
+       fhir:ElementDefinition.short [ fhir:value "Lien vers le concept Entité Juridique" ] ;
+       fhir:ElementDefinition.definition [ fhir:value "Lien vers le concept Entité Juridique" ] ;
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ] ;
+       fhir:ElementDefinition.max [ fhir:value "1" ] ;
+       fhir:ElementDefinition.type [
+         fhir:index -1 ;
+         fhir:ElementDefinition.type.code [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-entite-juridique" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/cds/StructureDefinition/cds-entite-geographique.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

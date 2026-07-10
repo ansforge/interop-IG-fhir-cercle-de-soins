@@ -106,36 +106,39 @@
   <li>
     <a href="index.html">Accueil</a>
   </li>
-  <li>
-    <a href="specifications_fonctionnelles.html">Vol 1 - Etude fonctionnelle</a>
-  </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Vol 2 - Détail des transactions
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Spécifications
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="interaction_restful.html">Interactions RESTful</a>
+        <a href="spe_synthese.html">Synthèse</a>
       </li>
       <li>
-        <a href="interaction_transaction.html">Interactions transaction</a>
+        <a href="spe_creation_cercle_soins.html">Création du cercle de soins</a>
       </li>
       <li>
-        <a href="recherche_recuperation_cds.html">Recherche CDS</a>
+        <a href="spe_consultation_cercle_soins.html">Consultation du cercle de soins</a>
       </li>
       <li>
-        <a href="correspondances_metier.html">Correspondances métier</a>
+        <a href="spe_mise_jour_cercle_soins.html">Mise à jour du cercle de soins</a>
       </li>
     </ul>
   </li>
   <li>
     <a href="artifacts.html">Ressources de conformité</a>
   </li>
+  <li>
+    <a href="tests.html">Tests</a>
+  </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Annexes
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
+      <li>
+        <a href="translationinfo.html">Informations sur la traduction</a>
+      </li>
       <li>
         <a href="downloads.html">Téléchargements et usage</a>
       </li>
@@ -191,7 +194,7 @@
 
             <a href="#bottom">bas de page</a>
 
-          | <a href="specifications_fonctionnelles.html">suivant &gt;</a>
+          | <a href="specifications.html">suivant &gt;</a>
 
           </span>
 
@@ -281,9 +284,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#ressources-profilées" id="markdown-toc-ressources-profilées">Ressources profilées</a></li>
-  <li><a href="#synthèse-des-flux" id="markdown-toc-synthèse-des-flux">Synthèse des flux</a></li>
-  <li><a href="#utilisation-de-lig" id="markdown-toc-utilisation-de-lig">Utilisation de l'IG</a></li>
+  <li><a href="#cas-dusages" id="markdown-toc-cas-dusages">Cas d'usages</a></li>
+  <li><a href="#définitions-et-cadre-juridique" id="markdown-toc-définitions-et-cadre-juridique">Définitions et cadre juridique</a></li>
+  <li><a href="#organisation-du-contexte-métier" id="markdown-toc-organisation-du-contexte-métier">Organisation du contexte métier</a></li>
+  <li><a href="#acteurs-pour-lensemble-des-processus" id="markdown-toc-acteurs-pour-lensemble-des-processus">Acteurs pour l'ensemble des processus</a></li>
   <li><a href="#scénarios-dimplémentation" id="markdown-toc-scénarios-dimplémentation">Scénarios d'implémentation</a></li>
   <li><a href="#dépendances" id="markdown-toc-dépendances">Dépendances</a></li>
   <li><a href="#propriété-intellectuelle" id="markdown-toc-propriété-intellectuelle">Propriété intellectuelle</a></li>
@@ -291,6 +295,157 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
+<style>
+body {
+  counter-reset: figures;
+}
+
+/* On incrémente seulement les figures qui ont une légende */
+figure:has(figcaption) {
+  counter-increment: figures;
+  margin: 1.5em 0;
+}
+
+/* Légende */
+
+figure figcaption {
+  text-align: center;
+  margin-top: 0.6em;
+  font-style: italic;
+  color: #555;
+  font-size: 0.95em;
+}
+
+figure figcaption:before {
+  content: 'Figure ' counter(figures) ' : ';
+  font-weight: bold;
+  font-style: normal;
+  color: #222;
+}
+</style>
+
+<!-- CSS pour les contrôles SVG interactifs -->
+<style>
+/* ===========================
+   CONTENEUR SVG - MODE NORMAL
+   =========================== */
+.svg-wrap {
+  position: relative;
+  cursor: default;
+  overflow: visible !important;
+  text-align: center;
+}
+
+.svg-wrap > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.svg-wrap svg {
+  transition: transform 0.1s ease-out;
+  display: block;
+  margin: 0 auto;
+  max-width: 100% !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+/* ===========================
+   CONTENEUR SVG - FULLSCREEN
+   =========================== */
+.svg-wrap:is(:fullscreen, :-webkit-full-screen, :-moz-full-screen) {
+  background: white;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.svg-wrap:is(:fullscreen, :-webkit-full-screen, :-moz-full-screen) > p {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg-wrap:is(:fullscreen, :-webkit-full-screen, :-moz-full-screen) svg {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain;
+}
+
+/* Curseur grabbing pendant le drag */
+.svg-wrap:is(:fullscreen, :-webkit-full-screen, :-moz-full-screen).grabbing {
+  cursor: grabbing;
+}
+
+.svg-wrap:is(:fullscreen, :-webkit-full-screen, :-moz-full-screen).grabbing * {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+/* ===========================
+   BOUTONS DE CONTRÔLE
+   =========================== */
+.svg-controls {
+  z-index: 99999 !important;
+  position: absolute !important;
+  top: 8px !important;
+  right: 8px !important;
+}
+
+.svg-controls .btn {
+  opacity: 0.9;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+  transition: none !important;
+  z-index: 99999 !important;
+  border-radius: 0.25rem !important;
+  position: relative;
+  background: white;
+  color: var(--body-color);
+}
+
+/* Surcharge Bootstrap btn-group-vertical */
+.svg-controls.btn-group-vertical .btn {
+  border-radius: 0.25rem !important;
+  margin-top: 2px;
+}
+
+/* Boutons zoom cachés en mode normal */
+.svg-controls .svg-zoom-in,
+.svg-controls .svg-zoom-out,
+.svg-controls .svg-zoom-reset {
+  display: none;
+}
+
+/* Boutons zoom visibles en fullscreen */
+.svg-wrap:is(:fullscreen, :-webkit-full-screen, :-moz-full-screen) .svg-controls .svg-zoom-in,
+.svg-wrap:is(:fullscreen, :-webkit-full-screen, :-moz-full-screen) .svg-controls .svg-zoom-out,
+.svg-wrap:is(:fullscreen, :-webkit-full-screen, :-moz-full-screen) .svg-controls .svg-zoom-reset {
+  display: block;
+}
+
+/* Z-index élevé pour les contrôles en fullscreen */
+.svg-wrap:is(:fullscreen, :-webkit-full-screen, :-moz-full-screen) .svg-controls {
+  z-index: 99999 !important;
+}
+
+.svg-wrap:is(:fullscreen, :-webkit-full-screen, :-moz-full-screen) .svg-controls .btn {
+  z-index: 99999 !important;
+}
+
+.svg-wrap:is(:fullscreen, :-webkit-full-screen, :-moz-full-screen) .svg-controls .btn:is(:hover, :focus, :active) {
+  z-index: 99999 !important;
+}
+</style>
+
 <p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; width: 65%">
 <b>CDS Implementation Guide</b><br />
 This implementation guide contains the profiles to share about a patient CareTeam.
@@ -311,111 +466,188 @@ This implementation guide contains the profiles to share about a patient CareTea
 <p>Le cercle de soins permet d’identifier l’ensemble des intervenants (personnes, professionnels et structures) participant à la prise en charge et aux actions de coordination du parcours de santé de la personne.
 Le cercle de soins d'une personne peut être échangé pour répondre aux besoins des domaines sanitaire, médico-administratif, médico-social et social.</p>
 
-<h3 id="ressources-profilées">Ressources profilées</h3>
+<p>Le guide d'implementation suit cette structure :</p>
 
-<p>La liste ci-dessous expose la liste des profils.</p>
-
-<table class="grid"><tr><td style="background-color: #eeeeee">Titre du profil</td><td style="background-color: #eeeeee">Description</td></tr><tr><td><div><p><a href="StructureDefinition-cds-bundle-response-recherche.html">CDS Bundle Response Recherche Profile</a></p>
-</div></td><td>Profil « Bundle » de type « searchset » encapsulant une collection de 0, une ou plusieurs ressources « CareTeam » répondant aux critères de recherche. Les ressources référencées par les ressources CareTeam retournées sont aussi dans le Bundle s’il a été demandé de les inclure dans la requête GET.</td></tr><tr><td><div><p><a href="StructureDefinition-cds-bundle-transaction-creation.html">CDS Bundle Transaction Creation Profile</a></p>
-</div></td><td><div><p>Profil défini dans le volet de Gestion du Cercle de Soins (flux 1c) pour créer un cercle de soins selon l’option Transaction.
-Il s'agit d'un bundle de type <code>transaction</code> permettant d'organiser le contenu du flux de création d'un cercle de soins.</p>
-</div></td></tr><tr><td><div><p><a href="StructureDefinition-cds-bundle-transaction-maj.html">CDS Bundle Transaction MAJ Profile</a></p>
-</div></td><td><div><p>Profil défini dans le volet de Gestion du Cercle de Soins (flux 1c) pour mettre à jour un cercle de soins selon l’option Transaction.
-Il s'agit d'un bundle de type &quot;transaction&quot; permettant d'organiser le contenu du flux de création d'un cercle de soins.</p>
-</div></td></tr><tr><td><div><p><a href="StructureDefinition-cds-fr-related-person.html">CDS Fr RelatedPerson Profile</a></p>
-</div></td><td>Profil créé pour le volet Gestion du Cercle de Soins afin de décrire les contacts du sujet du cercle de soins (aidant, personne de confiance…).</td></tr><tr><td><div><p><a href="StructureDefinition-cds-ihe-careteam.html">CDS CareTeam Profile</a></p>
-</div></td><td>Profil héritant du profil défini dans DCTM et défini pour le volet Gestion du Cercle de Soins. Le concept métier « cercle de soins » correspond à la ressource FHIR « CareTeam ».</td></tr><tr><td><div><p><a href="StructureDefinition-cds-organization.html">CDS Organization Profile</a></p>
-</div></td><td>Profil organization adapté au cercle de soins. Ce profil peut modéliser une entité juridique (EJ), une entité géographique (EG) ou une organisation interne (OI)</td></tr></table>
-
-<div class="figure" style="width:100%;">
-    <p><?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="400px" preserveAspectRatio="none" style="width:645px;height:400px;background:#FFFFFF;" version="1.1" viewBox="0 0 645 400" width="645px" zoomAndPan="magnify"><defs /><g><!--entity patient--><g id="elem_patient"><a href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient.html" target="_top" title="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient.html" xlink:actuate="onRequest" xlink:href="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient.html" xlink:show="new" xlink:title="https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient.html" xlink:type="simple"><rect fill="#F1F1F1" height="39.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="137" x="230" y="7" /><polygon fill="#F1F1F1" points="350,12,350,26,362,26,362,18,356,12,350,12" style="stroke:#181818;stroke-width:0.5;" /><line style="stroke:#181818;stroke-width:0.5;" x1="356" x2="356" y1="12" y2="18" /><line style="stroke:#181818;stroke-width:0.5;" x1="362" x2="356" y1="18" y2="18" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107" x="240" y="32.9951">FR Core Patient</text></a></g><!--entity careteam--><g id="elem_careteam"><a href="StructureDefinition-cds-ihe-careteam.html" target="_top" title="StructureDefinition-cds-ihe-careteam.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-cds-ihe-careteam.html" xlink:show="new" xlink:title="StructureDefinition-cds-ihe-careteam.html" xlink:type="simple"><rect fill="#99FF99" height="39.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="161" x="218" y="123" /><polygon fill="#99FF99" points="362,128,362,142,374,142,374,134,368,128,362,128" style="stroke:#181818;stroke-width:0.5;" /><line style="stroke:#181818;stroke-width:0.5;" x1="368" x2="368" y1="128" y2="134" /><line style="stroke:#181818;stroke-width:0.5;" x1="374" x2="368" y1="134" y2="134" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131" x="228" y="148.9951">CDS IHE CareTeam</text></a></g><!--entity cdsfrrelatedperson--><g id="elem_cdsfrrelatedperson"><a href="StructureDefinition-cds-fr-related-person.html" target="_top" title="StructureDefinition-cds-fr-related-person.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-cds-fr-related-person.html" xlink:show="new" xlink:title="StructureDefinition-cds-fr-related-person.html" xlink:type="simple"><rect fill="#F1F1F1" height="39.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="179" x="7" y="239" /><polygon fill="#F1F1F1" points="169,244,169,258,181,258,181,250,175,244,169,244" style="stroke:#181818;stroke-width:0.5;" /><line style="stroke:#181818;stroke-width:0.5;" x1="175" x2="175" y1="244" y2="250" /><line style="stroke:#181818;stroke-width:0.5;" x1="181" x2="175" y1="250" y2="250" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="149" x="17" y="264.9951">CDS FrRelatedPerson</text></a></g><!--entity cdsorganization--><g id="elem_cdsorganization"><a href="StructureDefinition-cds-organization.html" target="_top" title="StructureDefinition-cds-organization.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-cds-organization.html" xlink:show="new" xlink:title="StructureDefinition-cds-organization.html" xlink:type="simple"><rect fill="#F1F1F1" height="39.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="151" x="223" y="239" /><polygon fill="#F1F1F1" points="357,244,357,258,369,258,369,250,363,244,357,244" style="stroke:#181818;stroke-width:0.5;" /><line style="stroke:#181818;stroke-width:0.5;" x1="363" x2="363" y1="244" y2="250" /><line style="stroke:#181818;stroke-width:0.5;" x1="369" x2="363" y1="250" y2="250" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="121" x="233" y="264.9951">CDS Organization</text></a></g><!--entity aspractitioner--><g id="elem_aspractitioner"><a href="https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-practitioner.html" target="_top" title="https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-practitioner.html" xlink:actuate="onRequest" xlink:href="https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-practitioner.html" xlink:show="new" xlink:title="https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-practitioner.html" xlink:type="simple"><rect fill="#F1F1F1" height="39.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="130" x="435.5" y="355" /><polygon fill="#F1F1F1" points="548.5,360,548.5,374,560.5,374,560.5,366,554.5,360,548.5,360" style="stroke:#181818;stroke-width:0.5;" /><line style="stroke:#181818;stroke-width:0.5;" x1="554.5" x2="554.5" y1="360" y2="366" /><line style="stroke:#181818;stroke-width:0.5;" x1="560.5" x2="554.5" y1="366" y2="366" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="445.5" y="380.9951">AS Practitioner</text></a></g><!--entity aspractitionerrole--><g id="elem_aspractitionerrole"><a href="https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-practitionerrole.html" target="_top" title="https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-practitionerrole.html" xlink:actuate="onRequest" xlink:href="https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-practitionerrole.html" xlink:show="new" xlink:title="https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-practitionerrole.html" xlink:type="simple"><rect fill="#F1F1F1" height="39.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="161" x="420" y="239" /><polygon fill="#F1F1F1" points="564,244,564,258,576,258,576,250,570,244,564,244" style="stroke:#181818;stroke-width:0.5;" /><line style="stroke:#181818;stroke-width:0.5;" x1="570" x2="570" y1="244" y2="250" /><line style="stroke:#181818;stroke-width:0.5;" x1="576" x2="570" y1="250" y2="250" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131" x="430" y="264.9951">AS PractitionerRole</text></a></g><!--reverse link patient to careteam--><g id="link_patient_careteam"><path d="M298.5,51.27 C298.5,72.57 298.5,103.4 298.5,122.94 " fill="none" id="patient-backto-careteam" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="298.5,46.07,294.5,55.07,298.5,51.07,302.5,55.07,298.5,46.07" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="74" x="299.5" y="89.0669">subject 0..1</text></g><!--link careteam to cdsfrrelatedperson--><g id="link_careteam_cdsfrrelatedperson"><path d="M217.71,150.83 C185.57,157.34 150.21,169.48 124.5,192 C112.24,202.74 105.18,219.79 101.22,233.8 " fill="none" id="careteam-to-cdsfrrelatedperson" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="99.89,238.8,106.0711,231.1323,101.1765,233.9684,98.3404,229.0738,99.89,238.8" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="160" x="125.5" y="205.0669">participant[0..*].member</text></g><!--link careteam to cdsorganization--><g id="link_careteam_cdsorganization"><path d="M297.06,162.37 C296.45,171.34 295.8,182.22 295.5,192 C295.07,205.84 295.73,221.31 296.53,233.74 " fill="none" id="careteam-to-cdsorganization" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="296.89,238.87,300.2631,229.6168,296.547,233.8818,292.282,230.1656,296.89,238.87" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="160" x="296.5" y="205.0669">participant[0..*].member</text></g><!--link careteam to aspractitionerrole--><g id="link_careteam_aspractitionerrole"><path d="M379.11,155.06 C407.33,162.16 437.85,173.59 461.5,192 C475.39,202.81 485.37,220.06 491.76,234.15 " fill="none" id="careteam-to-aspractitionerrole" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="493.79,238.79,493.8585,228.9414,491.7912,234.2069,486.5256,232.1395,493.79,238.79" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="160" x="477.5" y="205.0669">participant[0..*].member</text></g><!--link aspractitionerrole to aspractitioner--><g id="link_aspractitionerrole_aspractitioner"><path d="M500.5,278.07 C500.5,297.61 500.5,328.44 500.5,349.74 " fill="none" id="aspractitionerrole-to-aspractitioner" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="500.5,354.94,504.5,345.94,500.5,349.94,496.5,345.94,500.5,354.94" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="101" x="501.5" y="321.0669">practitioner 0..1</text></g></g></svg></p>
+<div style="background-color: #e8f4f8; border-left: 4px solid #0077be; padding: 15px; margin: 20px 0;color: #333333; font-size: 14px;">
+<strong>Contexte métier</strong>
+<ul style="margin: 10px 0 0 0;">
+Le contexte métier de la gestion du cercle de soins, défini sur cette page, présente les <a href="#cas-dusages">cas d'usages</a> les <a href="#définitions-et-cadre-juridique"> définitions et le cadre juridique</a>, l'<a href="#organisation-du-contexte-métier">organisation des processus collaboratifs</a>, les <a href="#acteurs-pour-lensemble-des-processus">acteurs impliqués</a> ainsi que les <a href="#scénarios-dimplémentation">scénarios d'implémentation</a>.
+</ul>
 </div>
 
-<h3 id="synthèse-des-flux">Synthèse des flux</h3>
+<div style="background-color: #e9edfa; border-left: 4px solid #94aef7; padding: 15px; margin: 20px 0;color: #333333; font-size: 14px;">
+<strong>Spécifications</strong>
+<ul style="margin: 10px 0 0 0;">
 
-<table>
-  <thead>
-    <tr>
-      <th>Flux</th>
-      <th> Processus</th>
-      <th> Emetteur</th>
-      <th> Récepteur</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Flux 1 - CreationCercleSoins</td>
-      <td>Création CDS</td>
-      <td>Créateur</td>
-      <td>Gestionnaire</td>
-    </tr>
-    <tr>
-      <td>Flux 2 - RechercheCercleSoins</td>
-      <td>Consultation CDS</td>
-      <td>Consommateur</td>
-      <td>Gestionnaire</td>
-    </tr>
-    <tr>
-      <td>Flux 3 - ResultatRechercheCercleSoins</td>
-      <td>Consultation CDS</td>
-      <td>Gestionnaire</td>
-      <td>Consommateur</td>
-    </tr>
-    <tr>
-      <td>Flux 4 - MiseJourCercleSoins</td>
-      <td>Mise à jour CDS</td>
-      <td>Créateur</td>
-      <td>Gestionnaire</td>
-    </tr>
-  </tbody>
-</table>
+<p>La section <a href="specifications.html">spécifications</a> présente l'étude fonctionnelle et les spécifications techniques associées à chaque processus collaboratif.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Flux</th>
-      <th>Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Flux 1a - CreationActeurRestful, Flux 1b - CreationCercleSoinsRestful</td>
-      <td>Ces deux flux ont été dissociés pour séparer la création des acteurs de la création des cercles de soins dans l’option de construction Restful.</td>
-    </tr>
-    <tr>
-      <td>Flux 1c – CreationCercleSoinsTransaction</td>
-      <td>Ce flux a été dissocié des flux 1a et 1b car il correspond à la création d’un cercle de soins dans l’option de construction Transaction</td>
-    </tr>
-    <tr>
-      <td>Flux 2a - RechercheCercleSoins, Flux 2b - RecuperationCercleSoins</td>
-      <td>Ces flux ont été dissociés de manière à distinguer la recherche de cercles de soins répondant à des critères définis de la demande de la récupération d’un cercle de soins particulier</td>
-    </tr>
-    <tr>
-      <td>Flux 3a - ResultatRechercheCercleSoins</td>
-      <td>Réponse au flux 2a</td>
-    </tr>
-    <tr>
-      <td>Flux 3b - ResultatRecuperationCercleSoins</td>
-      <td>Réponse au flux 2b</td>
-    </tr>
-    <tr>
-      <td>Flux 4a - MiseJourActeurRestful, Flux 4b - MiseJourCercleSoinsRestful</td>
-      <td>Ces deux flux ont été dissociés pour séparer la mise à jour des acteurs de la mise à jour des cercles de soins dans l’option de construction Restful.</td>
-    </tr>
-    <tr>
-      <td>Flux 4c – MAJCercleSoinsTransaction</td>
-      <td>Ce flux a été dissocié pour séparer les mises à jour dans l’option de construction Transaction</td>
-    </tr>
-  </tbody>
-</table>
+<p>L'<strong>étude fonctionnelle</strong> contient notamment la description des activités liées au flux ainsi que les concepts métiers véhiculés.</p>
 
-<h3 id="utilisation-de-lig">Utilisation de l'IG</h3>
+<p>Les <strong>spécifications techniques</strong> décrivent l'implémentation des flux nécessaires à la gestion du cercle de soins.
+Elles s’appuient sur le standard HL7 FHIR et définissent notamment les modèles de données, profils, extensions et interfaces nécessaires aux échanges entre systèmes d'information. Pour les opérations sur les ressources, l’API HTTP REST définie par le standard HL7 FHIR est mise en œuvre. </p>
+<p></p>
+<p>Une <a href="spe_synthese.html">synthèse des flux et des ressources profilées</a> dans ce volet est également disponible.</p>
+</ul>
+</div>
 
-<p>Ce guide d'implémentation s’adresse aux développeurs des interfaces interopérables des systèmes implémentant la gestion du cercle de soins ou à toute autre personne intervenant dans le processus de mise en place de ces interfaces.</p>
+<div style="background-color: #f7f2ff; border-left: 4px solid #bd90f8; padding: 15px; margin: 20px 0;color: #333333; font-size: 14px;">
+<strong>Ressources de conformité, Tests et Annexes</strong>
+<ul style="margin: 10px 0 0 0;">
+<p>La section <a href="artifacts.html">Ressources de conformité</a> liste les différents artéfacts supportant les spécifications fonctionnelles et techniques.</p>
+<p>La section <a href="tests.html">Tests</a> permet d'accéder aux solutions de tests disponibles pour ce volet.</p>
+<p>La section <a href="annexes.html">Annexes</a> permet d'accéder à des ressources complémentaires relatives à la sécurité, aux téléchargements, à la traduction ou à tout autre documentation utile à ce volet.</p>
+</ul>
+</div>
 
 <p>Les spécifications d'interopérabilité présentées dans ce volet ne présagent pas des conditions de leur mise en œuvre dans le cadre d'un système d'information partagé. Il appartient à tout responsable de traitement de s'assurer que les services utilisant ces spécifications respectent les cadres et bonnes pratiques applicables à ce genre de service (ex : cadre juridique, bonnes pratiques de sécurité, ergonomie, accessibilité…).</p>
 
 <p>Il est à noter que les contraintes de sécurité concernant les flux échangés ne sont pas traitées dans ce document. Celles-ci sont du ressort de chaque responsable de l’implémentation du mécanisme qui est dans l’obligation de se conformer au cadre juridique en la matière. L’ANS propose des référentiels dédiés à la politique de sécurité (la <a href="https://esante.gouv.fr/produits-services/pgssi-s">PGSSI-S</a>) et des mécanismes de sécurisation sont définis dans les volets de la <a href="https://esante.gouv.fr/services/referentiels/ci-sis/espace-publication/couche-transport">couche Transport</a> du Cadre d’Interopérabilité des systèmes d’information de santé (CI- SIS).</p>
+
+<h3 id="cas-dusages">Cas d'usages</h3>
+
+<p>Cette section présente deux exemples, non exclusifs, de l’utilisation d’un cercle de soins. Ces spécifications ne s’appliquent pas uniquement à ces cas d’usages et peuvent faire intervenir des acteurs différents.</p>
+
+<p><strong><u>Contexte 1</u> :</strong> <em>Une personne, âgée de 75 ans et vivant seule à son domicile, est atteinte de troubles cognitifs et souffre d’une maladie chronique inflammatoire des bronches (BPCO). Elle est suivie tous les mois par son médecin traitant qui dispose d’un appui d'un Dispositif d'Appui à la Coordination (DAC) de son territoire pour la coordination et la prise en charge de son patient. Parmi les actions de coordination mises en place par le médecin traitant et le médecin coordinateur du DAC, une infirmière se rend quotidiennement au domicile de la personne pour l’administration des traitements. De même, une kinésithérapeute passe quotidiennement à son domicile pour maintenir son activité physique et renforcer sa capacité respiratoire.</em></p>
+
+<p><u>Cas d'usage 1</u> : La personne est prise en charge pour la première fois par le DAC, qui crée son cercle de soins dans son outil numérique d'appui à la coordination. Tous les professionnels intervenants auprès de la personne prise en charge sont répertoriés dans le cercle de soins avec leurs coordonnées.</p>
+
+<p><u>Cas d’usage 2</u> : La personne chute à son domicile et contacte les secours. Elle est prise en charge par une ambulance qui la transporte dans l’unité de soins des urgences d’une structure de santé de son territoire. Le médecin des urgences prend connaissance du cercle de soins de la personne dans le Dossier Patient Informatisé de la structure, ce qui permet à la structure de santé de se mettre en contact avec le médecin traitant de la personne et le DAC pour organiser sa sortie.</p>
+
+<p><u>Cas d’usage 3</u> : L'infirmière libérale déménage, la personne choisit un nouvel infirmier. Le DAC met à jour le cercle de soins de la personne dans son outil numérique d'appui à la coordination en fonction des nouveaux professionnels intervenants auprès de la personne prise en charge.</p>
+
+<p>Illustration avec un diagramme de séquence interaction :</p>
+
+<figure style="text-align:center">
+<?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="387px" preserveAspectRatio="none" style="width:725px;height:387px;background:#FFFFFF;" version="1.1" viewBox="0 0 725 387" width="725px" zoomAndPan="magnify"><defs /><g><rect fill="#FFFFFF" height="29.1328" style="stroke:#000000;stroke-width:1.0;" width="10" x="288" y="83.7266" /><rect fill="#FFFFFF" height="30" style="stroke:#000000;stroke-width:1.0;" width="10" x="288" y="141.9922" /><rect fill="#FFFFFF" height="29.1328" style="stroke:#000000;stroke-width:1.0;" width="10" x="288" y="201.125" /><rect fill="#FFFFFF" height="30" style="stroke:#000000;stroke-width:1.0;" width="10" x="288" y="274.5234" /><rect fill="#FFFFFF" height="29.1328" style="stroke:#000000;stroke-width:1.0;" width="10" x="288" y="333.6563" /><line style="stroke:#000000;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="38" x2="38" y1="52.5938" y2="380.7891" /><line style="stroke:#000000;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="293" x2="293" y1="52.5938" y2="380.7891" /><line style="stroke:#000000;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="481" x2="481" y1="52.5938" y2="380.7891" /><line style="stroke:#000000;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="638" x2="638" y1="52.5938" y2="380.7891" /><rect fill="#87CEEB" height="30.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="66" x="5" y="21.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="52" x="12" y="41.292">SI DAC</text><rect fill="#87CEEB" height="46.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="174" x="206" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="149" x="218.5" y="24.9951">Service num&#233;rique</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="160" x="213" y="41.292">partage de donn&#233;es</text><rect fill="#87CEEB" height="46.5938" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="134" x="414" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="120" x="421" y="24.9951">Dossier Patient</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="89" x="436.5" y="41.292">Informatis&#233;</text><rect fill="#87CEEB" height="30.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="161" x="558" y="21.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="147" x="565" y="41.292">SI M&#233;decin traitant</text><rect fill="#FFFFFF" height="29.1328" style="stroke:#000000;stroke-width:1.0;" width="10" x="288" y="83.7266" /><rect fill="#FFFFFF" height="30" style="stroke:#000000;stroke-width:1.0;" width="10" x="288" y="141.9922" /><rect fill="#FFFFFF" height="29.1328" style="stroke:#000000;stroke-width:1.0;" width="10" x="288" y="201.125" /><rect fill="#FFFFFF" height="30" style="stroke:#000000;stroke-width:1.0;" width="10" x="288" y="274.5234" /><rect fill="#FFFFFF" height="29.1328" style="stroke:#000000;stroke-width:1.0;" width="10" x="288" y="333.6563" /><polygon fill="#181818" points="276,79.7266,286,83.7266,276,87.7266,280,83.7266" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="38" x2="282" y1="83.7266" y2="83.7266" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="231" x="45" y="78.6606">Recherche existence cercle de soins</text><polygon fill="#181818" points="49,108.8594,39,112.8594,49,116.8594,45,112.8594" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="43" x2="292" y1="112.8594" y2="112.8594" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="168" x="55" y="107.7935">R&#233;sultat : cercle inexistant</text><polygon fill="#181818" points="276,137.9922,286,141.9922,276,145.9922,280,141.9922" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="38" x2="282" y1="141.9922" y2="141.9922" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="149" x="45" y="136.9263">Cr&#233;er le cercle de soins</text><polygon fill="#181818" points="309,197.125,299,201.125,309,205.125,305,201.125" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="303" x2="480" y1="201.125" y2="201.125" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="160" x="315" y="196.0591">Consulter cercle de soins</text><polygon fill="#181818" points="469,226.2578,479,230.2578,469,234.2578,473,230.2578" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="293" x2="475" y1="230.2578" y2="230.2578" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="159" x="300" y="225.1919">R&#233;sultat : cercle de soins</text><polygon fill="#181818" points="276,270.5234,286,274.5234,276,278.5234,280,274.5234" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="38" x2="282" y1="274.5234" y2="274.5234" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="128" x="45" y="254.3247">Mise &#224; jour membre</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="120" x="45" y="269.4575">(infirmi&#232;re lib&#233;rale)</text><polygon fill="#181818" points="309,329.6563,299,333.6563,309,337.6563,305,333.6563" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="303" x2="637.5" y1="333.6563" y2="333.6563" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="160" x="315" y="328.5903">Consulter cercle de soins</text><polygon fill="#181818" points="626.5,358.7891,636.5,362.7891,626.5,366.7891,630.5,362.7891" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="293" x2="632.5" y1="362.7891" y2="362.7891" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="159" x="300" y="357.7231">R&#233;sultat : cercle de soins</text></g></svg>
+<figcaption>diagramme de séquence illustrant le contexte 1</figcaption>
+</figure>
+
+<p><br /></p>
+
+<p>Autre illustration du cas d’usage :</p>
+
+<figure style="text-align:center">
+<?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="313px" preserveAspectRatio="none" style="width:733px;height:313px;background:#FFFFFF;" version="1.1" viewBox="0 0 733 313" width="733px" zoomAndPan="magnify"><defs /><g><rect fill="#EFEFEF" height="29.1328" style="stroke:#333333;stroke-width:1.0;" width="10" x="298" y="83.7266" /><rect fill="#EFEFEF" height="30" style="stroke:#333333;stroke-width:1.0;" width="10" x="298" y="141.9922" /><rect fill="#EFEFEF" height="14" style="stroke:#333333;stroke-width:1.0;" width="10" x="298" y="216.2578" /><rect fill="#EFEFEF" height="29.1328" style="stroke:#333333;stroke-width:1.0;" width="10" x="298" y="259.3906" /><line style="stroke:#333333;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="38" x2="38" y1="52.5938" y2="306.5234" /><line style="stroke:#333333;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="303" x2="303" y1="52.5938" y2="306.5234" /><line style="stroke:#333333;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="489" x2="489" y1="52.5938" y2="306.5234" /><line style="stroke:#333333;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="646" x2="646" y1="52.5938" y2="306.5234" /><rect fill="#87CEEB" height="30.2969" rx="2.5" ry="2.5" style="stroke:#333333;stroke-width:0.5;" width="66" x="5" y="21.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="52" x="12" y="41.292">SI DAC</text><rect fill="#87CEEB" height="30.2969" rx="2.5" ry="2.5" style="stroke:#333333;stroke-width:0.5;" width="66" x="270" y="21.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="52" x="277" y="41.292">SI DAC</text><rect fill="#87CEEB" height="46.5938" rx="2.5" ry="2.5" style="stroke:#333333;stroke-width:0.5;" width="134" x="422" y="5" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="120" x="429" y="24.9951">Dossier Patient</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="89" x="444.5" y="41.292">Informatis&#233;</text><rect fill="#87CEEB" height="30.2969" rx="2.5" ry="2.5" style="stroke:#333333;stroke-width:0.5;" width="161" x="566" y="21.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="147" x="573" y="41.292">SI M&#233;decin traitant</text><rect fill="#EFEFEF" height="29.1328" style="stroke:#333333;stroke-width:1.0;" width="10" x="298" y="83.7266" /><rect fill="#EFEFEF" height="30" style="stroke:#333333;stroke-width:1.0;" width="10" x="298" y="141.9922" /><rect fill="#EFEFEF" height="14" style="stroke:#333333;stroke-width:1.0;" width="10" x="298" y="216.2578" /><rect fill="#EFEFEF" height="29.1328" style="stroke:#333333;stroke-width:1.0;" width="10" x="298" y="259.3906" /><polygon fill="#181818" points="286,79.7266,296,83.7266,286,87.7266,290,83.7266" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="38" x2="292" y1="83.7266" y2="83.7266" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="231" x="45" y="78.6606">Recherche existance cercle de soins</text><polygon fill="#181818" points="49,108.8594,39,112.8594,49,116.8594,45,112.8594" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="43" x2="302" y1="112.8594" y2="112.8594" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="236" x="55" y="107.7935">Resultat recherche : cercle inexistant</text><polygon fill="#181818" points="286,137.9922,296,141.9922,286,145.9922,290,141.9922" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="38" x2="292" y1="141.9922" y2="141.9922" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="149" x="45" y="136.9263">Cr&#233;er le cercle de soins</text><polygon fill="#181818" points="319,212.2578,309,216.2578,319,220.2578,315,216.2578" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="313" x2="645.5" y1="216.2578" y2="216.2578" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="128" x="325" y="196.0591">Mise &#224; jour membre</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="124" x="325" y="211.1919">( infirmi&#232;re lib&#233;rale)</text><polygon fill="#181818" points="634.5,226.2578,644.5,230.2578,634.5,234.2578,638.5,230.2578" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="303" x2="640.5" y1="230.2578" y2="230.2578" /><polygon fill="#181818" points="319,255.3906,309,259.3906,319,263.3906,315,259.3906" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="313" x2="488" y1="259.3906" y2="259.3906" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="160" x="325" y="254.3247">Consulter cercle de soins</text><polygon fill="#181818" points="477,284.5234,487,288.5234,477,292.5234,481,288.5234" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="303" x2="483" y1="288.5234" y2="288.5234" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="157" x="310" y="283.4575">R&#233;sultat : cercle existant</text></g></svg>
+<figcaption>diagramme de séquence du cas d'usage</figcaption>
+</figure>
+
+<p><br /></p>
+
+<p><strong><u>Contexte 2</u> :</strong> <em>Une personne, âgée de 62 ans, souffre de diabète et est suivie régulièrement par son diabétologue exerçant au sein d’un cabinet libéral. Un suivi avec un diététicien est également mis en place.</em></p>
+
+<p><u>Cas d'usage 1</u> : La personne est prise en charge pour la première fois par le diabétologue qui crée le cercle de soins dans son outil de gestion de cabinet. Tous les professionnels intervenants auprès de la personne prise en charge sont répertoriés dans le cercle de soins avec leurs coordonnées.</p>
+
+<h3 id="définitions-et-cadre-juridique">Définitions et cadre juridique</h3>
+
+<h4 id="cercle-de-soins">Cercle de soins</h4>
+
+<p>Il n’existe pas de définition juridique du cercle de soins en tant que telle. Le « cercle de soins » d’une personne peut être défini comme le regroupement de personnes, professionnels et structures intervenant dans la prise en charge de la personne dans le domaine sanitaire, médico-administratif, médico-social et social. Le « cercle de soins » d'une personne peut donc être constitué des membres de son équipe de soins, d'autres professionnels, de structures, de ses aidants, de sa personne de confiance ou encore de ses représentants légaux.</p>
+
+<div class="figure" style="margin:auto; width:65%;">
+    <img src="acc_image1.png" alt="Flux1" title="Flux1" />
+</div>
+
+<h4 id="equipe-de-soins">Equipe de soins</h4>
+
+<p>La notion d’« équipe de soins » a été définie dans la loi n°2016-41 du 26 Janvier 2016, et dans les textes qui en découlent :</p>
+
+<ul>
+  <li>Décret n°2016-994 du 20 juillet 2016 relatif aux conditions d'échange et de partage d'informations entre professionnels de santé et autres professionnels des champs social et médico-social et à l'accès aux informations de santé à caractère personnel ;</li>
+  <li>Décret n°2016-996 du 20 juillet 2016 relatif à la liste des structures de coopération, d'exercice partagé ou de coordination sanitaire ou médico-sociale dans lesquelles peuvent exercer les membres d'une équipe de soins ;</li>
+  <li>Décret n°2016-1349 du 10 octobre 2016 relatif au consentement préalable au partage d’informations entre des professionnels ne faisant pas partie de la même équipe de soins ;</li>
+  <li>Arrêté du 25 novembre 2016 fixant le cahier des charges de définition de l’équipe de soins visée au 3 de l’article L. 1110-12 du code de la santé publique.</li>
+</ul>
+
+<p>Selon l’article L. 1110-12 du Code de la Santé Publique, l'équipe de soins est un ensemble de professionnels qui participent directement au profit d'un même patient à la réalisation d'un acte diagnostique, thérapeutique, de compensation du handicap, de soulagement de la douleur ou de prévention de perte d'autonomie, ou aux actions nécessaires à la coordination de plusieurs de ces actes, et qui :</p>
+
+<p>1° Soit exercent dans le même établissement de santé, au sein du service de santé des armées, dans le même établissement ou service social ou médico-social mentionné au I de l'article L. 312-1 du code de l'action sociale et des familles ou dans le cadre d'une structure de coopération, d'exercice partagé ou de coordination sanitaire ou médico-sociale figurant sur une liste fixée par décret ;</p>
+
+<p>2° Soit se sont vu reconnaître la qualité de membre de l'équipe de soins par le patient qui s'adresse à eux pour la réalisation des consultations et des actes prescrits par un médecin auquel il a confié sa prise en charge ;</p>
+
+<p>3° Soit exercent dans un ensemble, comprenant au moins un professionnel de santé, présentant une organisation formalisée et des pratiques conformes à un cahier des charges fixé par un arrêté du ministre chargé de la santé.</p>
+
+<h4 id="aidant">Aidant</h4>
+
+<p>On retrouve plusieurs définitions juridiques de l' « aidant » proche des personnes prises en charge dans les différents codes juridiques français (Code de l’action sociale et des familles, Code de la sécurité sociale, Code du Travail…).</p>
+
+<p>Si l'on se réfère à sa définition dans le Code de la santé publique, l’article L1111-6-1 précise le statut de l’aidant naturel comme une personne choisie par la personne aidée pour l’accompagner dans les gestes liés à des soins prescrits par un médecin pour favoriser son autonomie.</p>
+
+<h4 id="personne-de-confiance">Personne de confiance</h4>
+
+<p>La loi du 4 mars 2002 relative aux droits des malades a introduit la notion de « personne de confiance » de la personne prise en charge dans le droit français.</p>
+
+<p>La loi du 2 février 2016 créant de nouveaux droits en faveur des malades et des personnes en fin de vie est venue en préciser les contours codifiés dans l'article L1111-6 du Code de la santé publique.</p>
+
+<p>L'article L1111-6 du Code de la santé publique précise ainsi que toute personne majeure peut désigner une personne de confiance qui peut être un parent, un proche ou le médecin traitant et qui sera consultée au cas où elle-même serait hors d'état d'exprimer sa volonté et de recevoir l'information nécessaire à cette fin. La personne de confiance rend compte de la volonté de la personne. Son témoignage prévaut sur tout autre témoignage. Cette désignation est faite par écrit et cosignée par la personne désignée. Elle est révisable et révocable à tout moment.</p>
+
+<p>Si le patient le souhaite, la personne de confiance l'accompagne dans ses démarches et assiste aux entretiens médicaux afin de l'aider dans ses décisions.</p>
+
+<p>La désignation de la personne de confiance n’est pas obligatoire. Mais dans le cadre du suivi de son patient, le médecin traitant s’assure que son patient est informé de la possibilité de désigner une personne de confiance. Par ailleurs, lors de toute hospitalisation, il est proposé au malade de désigner une personne de confiance. Cette désignation est valable pour la durée de l’hospitalisation, sauf mention contraire du patient.</p>
+
+<p>La désignation de la personne de confiance s’effectue par écrit, sur papier libre ou dans le cadre de la rédaction de directives anticipées.</p>
+
+<h4 id="responsable-légal">Responsable légal</h4>
+
+<p>Un représentant légal est une personne légalement désignée en vue de représenter et de défendre les intérêts d'une autre. Le représentant légal agit au nom et pour le compte de la personne qu'il représente.</p>
+
+<p>Pour l'enfant mineur, sa représentation légale incombe dans l’immense majorité des cas aux personnes qui exercent l'autorité parentale sur l'enfant (Art. 382 du Code Civil).</p>
+
+<p>Lorsque les titulaires de l'autorité parentale ne peuvent plus l'exercer, la loi a envisagé la situation dans laquelle l'enfant mineur est représenté par un tiers (le tuteur), chargé de représenter et de défendre ses intérêts (Art. 390 à 413 du Code Civil).</p>
+
+<p>Lorsqu'une personne majeure connaît une altération de ses facultés mentales mais aussi corporelles (à la condition qu'elle soit de nature à empêcher l'expression de sa volonté) qui la place dans l'impossibilité de pourvoir seule à ses intérêts, la loi envisage sa protection dans le respect des libertés individuelles selon quatre modes de protection : la sauvegarde de justice, la curatelle, la tutelle et l'habilitation familiale. Dans le cas de la tutelle, la personne majeure est représentée par un tiers (le tuteur), chargé de représenter et de défendre ses intérêts (Art. 440 et suivants du Code Civil).</p>
+
+<h4 id="si-dac-et-si-médecin">SI DAC et SI Médecin</h4>
+
+<p>SI DAC : toute application ou service numérique utilisé par un DAC à des fins de coordination (service numérique de coordination…)</p>
+
+<p>SI Médecin traitant : toute application ou service numérique utilisé par un Médecin (Logiciel de gestion de cabinet, service numérique de coordination…)</p>
+
+<h4 id="echange-et-partage-de-données-relatives-à-un-cercle-de-soins">Echange et partage de données relatives à un cercle de soins</h4>
+
+<p>L’échange et le partage de données relatives à un cercle de soins constituent un traitement de données à caractère personnel, qui entre dans le champ d’application du Règlement Général européen de Protection des Données (RGPD).</p>
+
+<h3 id="organisation-du-contexte-métier">Organisation du contexte métier</h3>
+
+<p>Le domaine « Cercle de soins » est relatif à la gestion du cercle de soins d’une personne.</p>
+
+<figure class="figure svg-wrap" style="width:100%;">
+ <div class="btn-group-vertical position-absolute top-0 end-0 p-2 svg-controls">
+ <button class="btn btn-light btn-sm svg-zoom-in">🔍+</button>
+ <button class="btn btn-light btn-sm svg-zoom-out">🔍−</button>
+ <button class="btn btn-light btn-sm svg-zoom-reset">↻</button>
+ <button class="btn btn-light btn-sm svg-fullscreen">⛶</button>
+ </div>
+ <p style="margin: 0; padding: 0;">
+    <?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="283px" preserveAspectRatio="none" style="width:676px;height:283px;background:#FFFFFF;" version="1.1" viewBox="0 0 676 283" width="676px" zoomAndPan="magnify"><defs /><g><!--cluster Cercle de soins--><g id="cluster_Cercle de soins"><path d="M8.5,6 L132.5,6 A3.75,3.75 0 0 1 135,8.5 L142,28.2969 L666.5,28.2969 A2.5,2.5 0 0 1 669,30.7969 L669,273.5 A2.5,2.5 0 0 1 666.5,276 L8.5,276 A2.5,2.5 0 0 1 6,273.5 L6,8.5 A2.5,2.5 0 0 1 8.5,6 " fill="#FFF5EE" style="stroke:#000000;stroke-width:1.5;" /><line style="stroke:#000000;stroke-width:1.5;" x1="6" x2="142" y1="28.2969" y2="28.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="123" x="10" y="20.9951">Cercle de soins</text></g><!--cluster Gestion du cercle de soins--><g id="cluster_Gestion du cercle de soins"><path d="M32.5,49 L245.5,49 A3.75,3.75 0 0 1 248,51.5 L255,71.2969 L642.5,71.2969 A2.5,2.5 0 0 1 645,73.7969 L645,249.5 A2.5,2.5 0 0 1 642.5,252 L32.5,252 A2.5,2.5 0 0 1 30,249.5 L30,51.5 A2.5,2.5 0 0 1 32.5,49 " fill="#F0FFFF" style="stroke:#000000;stroke-width:1.5;" /><line style="stroke:#000000;stroke-width:1.5;" x1="30" x2="255" y1="71.2969" y2="71.2969" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="212" x="34" y="63.9951">Gestion du cercle de soins</text></g><!--entity Cr?ation du cercle de soins--><g id="elem_Cr&#233;ation du cercle de soins"><a href="spe_creation_cercle_soins.html" target="_top" title="spe_creation_cercle_soins.html" xlink:actuate="onRequest" xlink:href="spe_creation_cercle_soins.html" xlink:show="new" xlink:title="spe_creation_cercle_soins.html" xlink:type="simple"><rect fill="#87CEEB" height="46.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="258" x="46" y="84" /><rect fill="#87CEEB" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="284" y="89" /><rect fill="#87CEEB" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="282" y="91" /><rect fill="#87CEEB" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="282" y="95" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="218" x="61" y="116.9951">Cr&#233;ation du cercle de soins</text></a></g><!--entity Consultation du cercle de soins--><g id="elem_Consultation du cercle de soins"><a href="spe_consultation_cercle_soins.html" target="_top" title="spe_consultation_cercle_soins.html" xlink:actuate="onRequest" xlink:href="spe_consultation_cercle_soins.html" xlink:show="new" xlink:title="spe_consultation_cercle_soins.html" xlink:type="simple"><rect fill="#87CEEB" height="46.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="290" x="339" y="84" /><rect fill="#87CEEB" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="609" y="89" /><rect fill="#87CEEB" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="607" y="91" /><rect fill="#87CEEB" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="607" y="95" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="250" x="354" y="116.9951">Consultation du cercle de soins</text></a></g><!--entity Mise ? jour du cercle de soins--><g id="elem_Mise &#224; jour du cercle de soins"><a href="spe_mise_jour_cercle_soins.html" target="_top" title="spe_mise_jour_cercle_soins.html" xlink:actuate="onRequest" xlink:href="spe_mise_jour_cercle_soins.html" xlink:show="new" xlink:title="spe_mise_jour_cercle_soins.html" xlink:type="simple"><rect fill="#87CEEB" height="46.2969" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="277" x="46.5" y="190" /><rect fill="#87CEEB" height="10" style="stroke:#000000;stroke-width:0.5;" width="15" x="303.5" y="195" /><rect fill="#87CEEB" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="301.5" y="197" /><rect fill="#87CEEB" height="2" style="stroke:#000000;stroke-width:0.5;" width="4" x="301.5" y="201" /><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="237" x="61.5" y="222.9951">Mise &#224; jour du cercle de soins</text></a></g></g></svg>
+ </p>
+<figcaption>Organisation du contexte métier de l'étude "Cercle de soins"</figcaption>
+</figure>
+
+<p>Le périmètre de l'étude englobe les processus en bleu sur le diagramme de paquetage.</p>
+
+<h3 id="acteurs-pour-lensemble-des-processus">Acteurs pour l'ensemble des processus</h3>
+
+<p>Les acteurs génériques pour cet IG sont :</p>
+
+<table class="lines"><tr><td style="background-color: #eeeeee">Acteur</td><td style="background-color: #eeeeee">Description</td><td style="background-color: #eeeeee">Exemples</td></tr><tr><td><a href="ActorDefinition-CDS-Consommateur-Actor.html">CDS Consommateur</a></td><td><div><p>Le rôle de consommateur incarné par un système, peut consulter un cercle de soins.</p>
+</div></td><td><div><ul>
+<li>Dossier patient informatisé</li>
+<li>Système de gestion de laboratoire</li>
+<li>Système d’information radiologique</li>
+<li>Logiciel de gestion de cabinet</li>
+<li>Service numérique d’appui à la coordination</li>
+</ul>
+</div></td></tr><tr><td><a href="ActorDefinition-CDS-Createur-Actor.html">CDS Créateur</a></td><td><div><p>Le rôle de créateur incarné par un système peut créer ou mettre à jour le cercle de soins d'une personne.</p>
+</div></td><td><div><ul>
+<li>Service numérique d’appui à la coordination (SI DAC, SI Médecin traitant)</li>
+<li>Dossier Patient Informatisé</li>
+</ul>
+</div></td></tr><tr><td><a href="ActorDefinition-CDS-Gestionnaire-Actor.html">CDS Gestionnaire</a></td><td><div><p>Le rôle de gestionnaire incarné par un système, gère et stocke le cercle de soins, donne accès aux informations en cas de consultation.</p>
+</div></td><td><div><ul>
+<li>Dossier patient informatisé</li>
+<li>Service numérique de partage de données</li>
+</ul>
+</div></td></tr></table>
 
 <h3 id="scénarios-dimplémentation">Scénarios d'implémentation</h3>
 
@@ -427,6 +659,8 @@ Il s'agit d'un bundle de type &quot;transaction&quot; permettant d'organiser le 
 </ul>
 
 <p>Ces spécifications d’interopérabilité s’appliquent quel que soit le schéma d’urbanisation adopté.</p>
+
+<p><br /></p>
 
 <h3 id="dépendances">Dépendances</h3>
 
@@ -445,7 +679,11 @@ Il s'agit d'un bundle de type &quot;transaction&quot; permettant d'organiser le 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aca" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/__w/IG-fhir-cercle-de-soins/IG-fhir-cercle-de-soins/igSource/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img onclick="tableRowAction(this)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAACfSURBVDhP7ZJBD4IwDIVbrvqft/1kEw8egNKHrRKyjiXG4MEvWVtYebwuYxGhCGZsC9tjlaZAD4PlKnBgZcgPOSildFtJKb0PFgJYOWdNz3rDxfKLbR9Wc4RE9LAypCmguAO3fEXws0GOBNAghehm9YyXyh1Bra+CyJEAGlhHwB/X2mfeczTCiFD70GkK6AiTlSEf34PvXuUe/gLnCxAtVClV++yUSjoAAAAASUVORK5CYII=" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy" /> <a href="http://hl7.org/fhir/uv/ips/STU1.1" title="Canonical: http://hl7.org/fhir/uv/ips">International Patient Summary Implementation Guide</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.uv.ips/1.1.0">hl7.fhir.uv.ips#1.1.0</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="acaa" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/__w/IG-fhir-cercle-de-soins/IG-fhir-cercle-de-soins/igSource/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAMUlEQVR4Xu3NoQ0AIBRDwb9r958B0KAgAcw1OfNMK0ntGGtze+n3PwAAcG4JAAAAt3RWK0BWYk6o4QAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIZgEiYEgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAIElEQVQ4y2P8//8/AyWAiYFCMGrAqAGjBowaMGoAAgAALL0DKYQ0DPIAAAAASUVORK5CYII=" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy" /> <a href="http://terminology.hl7.org/5.0.0" title="Canonical: http://terminology.hl7.org">HL7 Terminology (THO)</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.terminology.r4/5.0.0">hl7.terminology.r4#5.0.0</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="acab" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/__w/IG-fhir-cercle-de-soins/IG-fhir-cercle-de-soins/igSource/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIZgEiYEgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAIElEQVQ4y2P8//8/AyWAiYFCMGrAqAGjBowaMGoAAgAALL0DKYQ0DPIAAAAASUVORK5CYII=" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy" /> <a href="http://fhir.org/packages/fhir.dicom" title="Canonical: http://fhir.org/packages/fhir.dicom">fhir.dicom</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/fhir.dicom/2022.4.20221006">fhir.dicom#2022.4.20221006</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
-<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #fcf7c0" id="ad" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/__w/IG-fhir-cercle-de-soins/IG-fhir-cercle-de-soins/igSource/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAJUlEQVR4Xu3IIQEAAAgDsHd9/w4EQIOamFnaBgAA4MMKAACAKwNp30CqZFfFmwAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,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ZGY6YWJvdXQ9IiIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgIHhtbG5zOkdJTVA9Imh0dHA6Ly93d3cuZ2ltcC5vcmcveG1wLyIKICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXBNTTpEb2N1bWVudElEPSJnaW1wOmRvY2lkOmdpbXA6ZjNlMmQ5MzgtMDE4Yi00YmEyLThiMzQtNDBiM2Q4MmJjZDMzIgogICB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ0ZTMwYzM5LTllYWItNGJjZS1hMjU0LTUxOGY3ODRjODg0NiIKICAgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmUxNzgzM2U1LWQ1ZWMtNDM3NC1hYzJlLTk0YzVlN2I5OGUzNyIKICAgZGM6Rm9ybWF0PSJpbWFnZS9wbmciCiAgIEdJTVA6QVBJPSIyLjAiCiAgIEdJTVA6UGxhdGZvcm09Ik1hYyBPUyIKICAgR0lNUDpUaW1lU3RhbXA9IjE3MjYxMzMyOTE1MjEwMDciCiAgIEdJTVA6VmVyc2lvbj0iMi4xMC4zMCIKICAgdGlmZjpPcmllbnRhdGlvbj0iMSIKICAgeG1wOkNyZWF0b3JUb29sPSJHSU1QIDIuMTAiPgogICA8eG1wTU06SGlzdG9yeT4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJzYXZlZCIKICAgICAgc3RFdnQ6Y2hhbmdlZD0iLyIKICAgICAgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpmN2Q4YzdkZC1mMGNlLTQxNWYtOWQ1ZS04NGE2YThmNGZkMDUiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkdpbXAgMi4xMCAoTWFjIE9TKSIKICAgICAgc3RFdnQ6d2hlbj0iMjAyNC0wOS0xMlQxNzoyODoxMSswODowMCIvPgogICAgPC9yZGY6U2VxPgogICA8L3htcE1NOkhpc3Rvcnk+CiAgPC9yZGY6RGVzY3JpcHRpb24+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgCjw/eHBhY2tldCBlbmQ9InciPz7Mhr9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH6AkMCRwLD3FR3AAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAC8SURBVBjTY/gPAf9e/YUwmBig4Nh7CA0T+H/7JqrAhzf3UQR+TeB4DGEx/mdgYPhy/vg32W/iIUxQFW+Xvf7h9tb03AOolv8rHU84/Wf69fsRVOAt80F1+Tcal/k/QAVuqfx0e/tRmVmBBSrAyyPG8zTglpmEEFRAgUfkj8Z9BUVO2ddQFeIC/wQYFBj4PnMwMDCwMDAwCDB95RJj+8DDygsVYBFiY2Bj4f4nCncpA8OfH/9/8zMzMDAwAAB49kdRfpOTuAAAAABJRU5ErkJggg==" alt="." style="background-color: #fcf7c0; background-color: inherit" title="NPM Package IG Dependency" class="hierarchy" /> <a href="http://hl7.org/fhir/tools/1.1.2" title="Canonical: http://hl7.org/fhir/tools">FHIR Tooling Extensions IG</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.uv.tools.r4/1.1.2">hl7.fhir.uv.tools.r4#1.1.2</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">for example references</td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ad" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/__w/IG-fhir-cercle-de-soins/IG-fhir-cercle-de-soins/igSource/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img onclick="tableRowAction(this)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAACwSURBVDhP7ZLBDsIwCIaLZz34xG3f2cQYo5UfYalJoY07ePFL4GcbpZSVWmvJgwifG+njkLDACgfVIehAQ5ffdMDvxSS2Dmqty62UUmS1rIWD8UuWd9xxVt1AnoaSGx6Buap+0G80K3BTtbtwhLPZQL0CSIA9OwUXON7dZkBeASTAThb3bffMjnCHGy00ZgUeqi5f3YOcsw01vsqYMrMljwgLrBDOwP53xL+D3R2k9ALHsmr3Yu73+gAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy" /> <a href="https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot" title="Canonical: https://interop.esante.gouv.fr/ig/mos">Modèle des Objets de Santé (MOS)</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/ans.fr.mos/0.1.0-ballot">ans.fr.mos#0.1.0-ballot</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ada" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/__w/IG-fhir-cercle-de-soins/IG-fhir-cercle-de-soins/igSource/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAMUlEQVR4Xu3LMQoAIBADwftr/v8GtdbqEAthAtMspJJUx9rYW8ftHwAA+NcRAAAAXplLq0BWj/rZigAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy" /> <a href="http://terminology.hl7.org/7.1.0" title="Canonical: http://terminology.hl7.org">HL7 Terminology (THO)</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.terminology.r4/7.1.0">hl7.terminology.r4#7.1.0</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="adb" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/__w/IG-fhir-cercle-de-soins/IG-fhir-cercle-de-soins/igSource/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img onclick="tableRowAction(this)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAACfSURBVDhP7ZJBD4IwDIVbrvqft/1kEw8egNKHrRKyjiXG4MEvWVtYebwuYxGhCGZsC9tjlaZAD4PlKnBgZcgPOSildFtJKb0PFgJYOWdNz3rDxfKLbR9Wc4RE9LAypCmguAO3fEXws0GOBNAghehm9YyXyh1Bra+CyJEAGlhHwB/X2mfeczTCiFD70GkK6AiTlSEf34PvXuUe/gLnCxAtVClV++yUSjoAAAAASUVORK5CYII=" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy" /> <a href="https://interop.esante.gouv.fr/terminologies/1.1.0" title="Canonical: https://interop.esante.gouv.fr/terminologies">Terminologies  de Santé</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/ans.fr.terminologies/1.1.0">ans.fr.terminologies#1.1.0</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="adba" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/__w/IG-fhir-cercle-de-soins/IG-fhir-cercle-de-soins/igSource/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIZgEiYEgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAIElEQVQ4y2P8//8/AyWAiYFCMGrAqAGjBowaMGoAAgAALL0DKYQ0DPIAAAAASUVORK5CYII=" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy" /> <a href="http://terminology.hl7.org/6.4.0" title="Canonical: http://terminology.hl7.org">HL7 Terminology (THO)</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.terminology.r4/6.4.0">hl7.terminology.r4#6.4.0</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #fcf7c0" id="ae" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/__w/IG-fhir-cercle-de-soins/IG-fhir-cercle-de-soins/igSource/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAJUlEQVR4Xu3IIQEAAAgDsHd9/w4EQIOamFnaBgAA4MMKAACAKwNp30CqZFfFmwAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,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ZGY6YWJvdXQ9IiIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgIHhtbG5zOkdJTVA9Imh0dHA6Ly93d3cuZ2ltcC5vcmcveG1wLyIKICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXBNTTpEb2N1bWVudElEPSJnaW1wOmRvY2lkOmdpbXA6ZjNlMmQ5MzgtMDE4Yi00YmEyLThiMzQtNDBiM2Q4MmJjZDMzIgogICB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ0ZTMwYzM5LTllYWItNGJjZS1hMjU0LTUxOGY3ODRjODg0NiIKICAgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmUxNzgzM2U1LWQ1ZWMtNDM3NC1hYzJlLTk0YzVlN2I5OGUzNyIKICAgZGM6Rm9ybWF0PSJpbWFnZS9wbmciCiAgIEdJTVA6QVBJPSIyLjAiCiAgIEdJTVA6UGxhdGZvcm09Ik1hYyBPUyIKICAgR0lNUDpUaW1lU3RhbXA9IjE3MjYxMzMyOTE1MjEwMDciCiAgIEdJTVA6VmVyc2lvbj0iMi4xMC4zMCIKICAgdGlmZjpPcmllbnRhdGlvbj0iMSIKICAgeG1wOkNyZWF0b3JUb29sPSJHSU1QIDIuMTAiPgogICA8eG1wTU06SGlzdG9yeT4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJzYXZlZCIKICAgICAgc3RFdnQ6Y2hhbmdlZD0iLyIKICAgICAgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpmN2Q4YzdkZC1mMGNlLTQxNWYtOWQ1ZS04NGE2YThmNGZkMDUiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkdpbXAgMi4xMCAoTWFjIE9TKSIKICAgICAgc3RFdnQ6d2hlbj0iMjAyNC0wOS0xMlQxNzoyODoxMSswODowMCIvPgogICAgPC9yZGY6U2VxPgogICA8L3htcE1NOkhpc3Rvcnk+CiAgPC9yZGY6RGVzY3JpcHRpb24+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgCjw/eHBhY2tldCBlbmQ9InciPz7Mhr9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH6AkMCRwLD3FR3AAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAC8SURBVBjTY/gPAf9e/YUwmBig4Nh7CA0T+H/7JqrAhzf3UQR+TeB4DGEx/mdgYPhy/vg32W/iIUxQFW+Xvf7h9tb03AOolv8rHU84/Wf69fsRVOAt80F1+Tcal/k/QAVuqfx0e/tRmVmBBSrAyyPG8zTglpmEEFRAgUfkj8Z9BUVO2ddQFeIC/wQYFBj4PnMwMDCwMDAwCDB95RJj+8DDygsVYBFiY2Bj4f4nCncpA8OfH/9/8zMzMDAwAAB49kdRfpOTuAAAAABJRU5ErkJggg==" alt="." style="background-color: #fcf7c0; background-color: inherit" title="NPM Package IG Dependency" class="hierarchy" /> <a href="http://hl7.org/fhir/tools/1.1.2" title="Canonical: http://hl7.org/fhir/tools">FHIR Tooling Extensions IG</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.uv.tools.r4/1.1.2">hl7.fhir.uv.tools.r4#1.1.2</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">for example references</td></tr>
 </table></div>
 <table class="grid"><tr><td><p><b>Package hl7.fhir.uv.extensions.r4#5.2.0</b></p>
 <p>This IG defines the global extensions - the ones defined for everyone. These extensions are always in scope wherever FHIR is being used (built Mon, Feb 10, 2025 21:45+1100+11:00)</p>
@@ -468,6 +706,9 @@ Il s'agit d'un bundle de type &quot;transaction&quot; permettant d'organiser le 
 <table class="grid"><tr><td><p><b>Package ans.fr.terminologies#1.11.1</b></p>
 <p>Les nomenclatures des objets de Santé sont mises à disposition du secteur santé-social par l’agence du numérique en santé (built Tue, Jul 7, 2026 20:48+0000+00:00)</p>
 </td></tr></table>
+<table class="grid"><tr><td><p><b>Package ans.fr.terminologies#1.1.0</b></p>
+<p>Les nomenclatures des objets de Santé sont mises à disposition du secteur santé-social par l’agence du numérique en santé (built Wed, Jul 2, 2025 12:12+0000+00:00)</p>
+</td></tr></table>
 <table class="grid"><tr><td><p><b>Package hl7.fhir.uv.tools.r4#1.1.2</b></p>
 <p>This IG defines the extensions that the tools use internally. Some of these extensions are content that are being evaluated for elevation into the main spec, and others are tooling concerns (built Tue, Mar 24, 2026 11:13+1100+11:00)</p>
 </td></tr></table>
@@ -479,7 +720,7 @@ Il s'agit d'un bundle de type &quot;transaction&quot; permettant d'organiser le 
 <ul>
 <li>ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: <a href="https://www.iso.org/iso-3166-country-codes.html">https://www.iso.org/iso-3166-country-codes.html</a><div data-fhir="generated" id="ipp_1" onclick="if (document.getElementById('ipp2_1').innerHTML != '') {document.getElementById('ipp_1').innerHTML = document.getElementById('ipp2_1').innerHTML; document.getElementById('ipp2_1').innerHTML = ''}"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div id="ipp2_1" style="display: none">
 <ul>
-<li><a href="http://terminology.hl7.org/6.2.0/CodeSystem-ISO3166Part1.html">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>: <a href="index.html">CDS</a>, <a href="StructureDefinition-cds-organization.html">CDSAsOrganization</a><span id="ips_1" onclick="document.getElementById('ips_1').innerHTML = document.getElementById('ips2_1').innerHTML">... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 16 more</span></span><span id="ips2_1" style="display: none">, <a href="StructureDefinition-cds-bundle-response-recherche.html">CDSBundleResponseRecherche</a>, <a href="StructureDefinition-cds-bundle-transaction-creation.html">CDSBundleTransactionCreation</a>, <a href="StructureDefinition-cds-bundle-transaction-maj.html">CDSBundleTransactionMAJ</a>, <a href="StructureDefinition-cds-ihe-careteam.html">CDSCareTeam</a>, <a href="SearchParameter-cds-careteam-end.html">CDSCareTeamEnd</a>, <a href="SearchParameter-cds-careteam-managing-organization.html">CDSCareTeamManagingOrganization</a>, <a href="SearchParameter-cds-careteam-participant-end.html">CDSCareTeamParticipantEnd</a>, <a href="SearchParameter-cds-careteam-participant-start.html">CDSCareTeamParticipantStart</a>, <a href="SearchParameter-cds-careteam-start.html">CDSCareTeamStart</a>, <a href="StructureDefinition-cds-fr-related-person.html">CDSFrRelatedPerson</a>, <a href="SearchParameter-cds-patient-birthplace.html">CDSPatientBirthplace</a>, <a href="ValueSet-careteam-roles-vs.html">CareTeamRolesValueSet</a>, <a href="CapabilityStatement-CDSCreateurTransaction.html">CreateurTransaction-cds</a>, <a href="CapabilityStatement-CDSConsommateur.html">consommateur-cds</a>, <a href="CapabilityStatement-CDSCreateurRestful.html">createur-restful-cds</a> and <a href="CapabilityStatement-CDSGestionnaire.html">gestionnaire-cds</a></span></li>
+<li><a href="http://terminology.hl7.org/6.4.0/CodeSystem-ISO3166Part1.html">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>: <a href="index.html">CDS</a>, <a href="StructureDefinition-cds-organization.html">CDSAsOrganization</a><span id="ips_1" onclick="document.getElementById('ips_1').innerHTML = document.getElementById('ips2_1').innerHTML">... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 30 more</span></span><span id="ips2_1" style="display: none">, <a href="StructureDefinition-cds-bundle-response-recherche.html">CDSBundleResponseRecherche</a>, <a href="StructureDefinition-cds-bundle-transaction-creation.html">CDSBundleTransactionCreation</a>, <a href="StructureDefinition-cds-bundle-transaction-maj.html">CDSBundleTransactionMAJ</a>, <a href="StructureDefinition-cds-ihe-careteam.html">CDSCareTeam</a>, <a href="SearchParameter-cds-careteam-end.html">CDSCareTeamEnd</a>, <a href="SearchParameter-cds-careteam-managing-organization.html">CDSCareTeamManagingOrganization</a>, <a href="SearchParameter-cds-careteam-participant-end.html">CDSCareTeamParticipantEnd</a>, <a href="SearchParameter-cds-careteam-participant-start.html">CDSCareTeamParticipantStart</a>, <a href="SearchParameter-cds-careteam-start.html">CDSCareTeamStart</a>, <a href="StructureDefinition-cds-cercle-soins.html">CDSCercleSoins</a>, <a href="StructureDefinition-cds-contact.html">CDSContact</a>, <a href="StructureDefinition-cds-entite-geographique.html">CDSEntiteGeographique</a>, <a href="StructureDefinition-cds-entite-juridique.html">CDSEntiteJuridique</a>, <a href="StructureDefinition-cds-exercice-professionnel.html">CDSExerciceProfessionnel</a>, <a href="StructureDefinition-cds-fr-related-person.html">CDSFrRelatedPerson</a>, <a href="StructureDefinition-cds-membre-cercle-soins.html">CDSMembreCercleSoins</a>, <a href="StructureDefinition-cds-organisation-interne.html">CDSOrganisationInterne</a>, <a href="SearchParameter-cds-patient-birthplace.html">CDSPatientBirthplace</a>, <a href="StructureDefinition-cds-personne-physique.html">CDSPersonnePhysique</a>, <a href="StructureDefinition-cds-personne-prise-charge.html">CDSPersonnePriseCharge</a>, <a href="StructureDefinition-cds-professionnel.html">CDSProfessionnel</a>, <a href="StructureDefinition-cds-situation-exercice.html">CDSSituationExercice</a>, <a href="ActorDefinition-CDS-Consommateur-Actor.html">CDS_Consommateur</a>, <a href="ActorDefinition-CDS-Createur-Actor.html">CDS_Createur</a>, <a href="ActorDefinition-CDS-Gestionnaire-Actor.html">CDS_Gestionnaire</a>, <a href="ValueSet-careteam-roles-vs.html">CareTeamRolesValueSet</a>, <a href="CapabilityStatement-CDSCreateurTransaction.html">CreateurTransaction-cds</a>, <a href="CapabilityStatement-CDSConsommateur.html">consommateur-cds</a>, <a href="CapabilityStatement-CDSCreateurRestful.html">createur-restful-cds</a> and <a href="CapabilityStatement-CDSGestionnaire.html">gestionnaire-cds</a></span></li>
 </ul>
 </div></li>
 </ul>
@@ -508,6 +749,244 @@ Il s'agit d'un bundle de type &quot;transaction&quot; permettant d'organiser le 
     </tr>
   </tbody>
 </table>
+
+<!-- Script pour les contrôles SVG interactifs -->
+<script>
+(function() {
+  // Attendre que le DOM soit complètement chargé
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAllSvgWrappers);
+  } else {
+    initAllSvgWrappers();
+  }
+
+  function initAllSvgWrappers() {
+    // Initialiser tous les wrappers SVG sur la page
+    const wrappers = document.querySelectorAll('.svg-wrap');
+    wrappers.forEach(wrap => initSvgWrapper(wrap));
+  }
+
+  function initSvgWrapper(wrap) {
+    if (!wrap) return;
+
+    // Trouver le SVG inclus
+    const svg = wrap.querySelector('svg');
+    if (!svg) {
+      console.warn('SVG non trouvé dans', wrap);
+      return;
+    }
+
+    let scale = 1;
+    let translateX = 0;
+    let translateY = 0;
+    const zoomStep = 0.15;
+    const minScale = 0.3;
+    const maxScale = 5;
+    const panSpeed = 1;
+
+    let isPanning = false;
+    let startX = 0;
+    let startY = 0;
+
+    // Fonction pour vérifier si on est en fullscreen
+    function isFullscreen() {
+      return document.fullscreenElement === wrap;
+    }
+
+    function applyTransform() {
+      if (isFullscreen()) {
+        svg.style.transformOrigin = "center center";
+        svg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+      } else {
+        // En mode normal, pas de transformation
+        svg.style.transform = '';
+      }
+    }
+
+    // Récupérer les boutons de contrôle pour ce wrapper spécifique
+    const zoomInBtn = wrap.querySelector('.svg-zoom-in');
+    const zoomOutBtn = wrap.querySelector('.svg-zoom-out');
+    const zoomResetBtn = wrap.querySelector('.svg-zoom-reset');
+    const fsBtn = wrap.querySelector('.svg-fullscreen');
+
+    /* ZOOM PAR BOUTONS */
+    if (zoomInBtn) {
+      zoomInBtn.addEventListener('click', (e) => {
+        if (!isFullscreen()) return; // Actif uniquement en fullscreen
+        e.preventDefault();
+        e.stopPropagation();
+        scale = Math.min(maxScale, scale + zoomStep);
+        applyTransform();
+      });
+    }
+
+    if (zoomOutBtn) {
+      zoomOutBtn.addEventListener('click', (e) => {
+        if (!isFullscreen()) return; // Actif uniquement en fullscreen
+        e.preventDefault();
+        e.stopPropagation();
+        scale = Math.max(minScale, scale - zoomStep);
+        applyTransform();
+      });
+    }
+
+    if (zoomResetBtn) {
+      zoomResetBtn.addEventListener('click', (e) => {
+        if (!isFullscreen()) return; // Actif uniquement en fullscreen
+        e.preventDefault();
+        e.stopPropagation();
+        scale = 1;
+        translateX = 0;
+        translateY = 0;
+        applyTransform();
+      });
+    }
+
+    /* ZOOM À LA MOLETTE */
+    wrap.addEventListener('wheel', (e) => {
+      if (!isFullscreen()) return; // Actif uniquement en fullscreen
+      e.preventDefault();
+      const delta = e.deltaY < 0 ? zoomStep : -zoomStep;
+      scale = Math.min(maxScale, Math.max(minScale, scale + delta));
+      applyTransform();
+    }, { passive: false });
+
+    /* PAN (déplacement à la souris) */
+    wrap.addEventListener('mousedown', (e) => {
+      if (!isFullscreen()) return; // Actif uniquement en fullscreen
+
+      // Ignorer si clic sur les boutons de contrôle
+      if (e.target.closest('.svg-controls')) return;
+
+      // Ignorer si clic sur un lien ou élément cliquable dans le SVG
+      if (e.target.tagName === 'A' || e.target.closest('a')) return;
+      if (e.target.hasAttribute('href') || e.target.getAttribute('xlink:href')) return;
+
+      // Ignorer si ce n'est pas le bouton gauche
+      if (e.button !== 0) return;
+
+      e.preventDefault();
+      isPanning = true;
+      startX = e.clientX - (translateX / panSpeed);
+      startY = e.clientY - (translateY / panSpeed);
+      wrap.classList.add('grabbing');
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (!isPanning) return;
+      e.preventDefault();
+      const deltaX = (e.clientX - startX) * panSpeed;
+      const deltaY = (e.clientY - startY) * panSpeed;
+      translateX = deltaX;
+      translateY = deltaY;
+      applyTransform();
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      if (isPanning) {
+        isPanning = false;
+        wrap.classList.remove('grabbing');
+      }
+    });
+
+    document.addEventListener('mouseleave', () => {
+      if (isPanning) {
+        isPanning = false;
+        wrap.classList.remove('grabbing');
+      }
+    });
+
+    /* PINCH ZOOM (mobile) */
+    let touchDistance = null;
+    let lastTouchX = 0;
+    let lastTouchY = 0;
+
+    wrap.addEventListener('touchstart', (e) => {
+      if (!isFullscreen()) return; // Actif uniquement en fullscreen
+      if (e.touches.length === 2) {
+        const dx = e.touches[0].clientX - e.touches[1].clientX;
+        const dy = e.touches[0].clientY - e.touches[1].clientY;
+        touchDistance = Math.sqrt(dx*dx + dy*dy);
+
+        lastTouchX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
+        lastTouchY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
+      } else if (e.touches.length === 1) {
+        lastTouchX = e.touches[0].clientX;
+        lastTouchY = e.touches[0].clientY;
+      }
+    });
+
+    wrap.addEventListener('touchmove', (e) => {
+      if (!isFullscreen()) return; // Actif uniquement en fullscreen
+      if (e.touches.length === 2) {
+        e.preventDefault();
+
+        const dx = e.touches[0].clientX - e.touches[1].clientX;
+        const dy = e.touches[0].clientY - e.touches[1].clientY;
+        const newDist = Math.sqrt(dx*dx + dy*dy);
+
+        if (touchDistance) {
+          const diff = newDist - touchDistance;
+          scale += diff * 0.005;
+          scale = Math.min(maxScale, Math.max(minScale, scale));
+          applyTransform();
+        }
+
+        touchDistance = newDist;
+      } else if (e.touches.length === 1 && scale > 1) {
+        e.preventDefault();
+        const touchX = e.touches[0].clientX;
+        const touchY = e.touches[0].clientY;
+
+        translateX += touchX - lastTouchX;
+        translateY += touchY - lastTouchY;
+        applyTransform();
+
+        lastTouchX = touchX;
+        lastTouchY = touchY;
+      }
+    }, { passive: false });
+
+    wrap.addEventListener('touchend', () => {
+      touchDistance = null;
+    });
+
+    /* FULLSCREEN */
+    if (fsBtn) {
+      fsBtn.addEventListener('click', async (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        try {
+          if (!document.fullscreenElement) {
+            // Réinitialiser zoom/pan avant fullscreen
+            scale = 1;
+            translateX = 0;
+            translateY = 0;
+            applyTransform();
+            await wrap.requestFullscreen();
+          } else {
+            await document.exitFullscreen();
+          }
+        } catch (err) {
+          console.error('Erreur fullscreen:', err);
+        }
+      });
+    }
+
+    // Gérer fullscreenchange pour réinitialiser quand on sort du fullscreen
+    document.addEventListener('fullscreenchange', () => {
+      if (!isFullscreen()) {
+        // Sortie du fullscreen : réinitialiser le zoom/pan
+        scale = 1;
+        translateX = 0;
+        translateY = 0;
+        applyTransform();
+      }
+    });
+  }
+})();
+</script>
 
 
 
@@ -542,7 +1021,7 @@ Il s'agit d'un bundle de type &quot;transaction&quot; permettant d'organiser le 
               </td>
               <td style="text-align:var(--ig-right);">&#xA0;
 
-                <a href="specifications_fonctionnelles.html">suivant ></a>
+                <a href="specifications.html">suivant ></a>
 
               </td>
             </tr>
@@ -558,7 +1037,7 @@ Il s'agit d'un bundle de type &quot;transaction&quot; permettant d'organiser le 
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  
           Le package ans.fhir.fr.cds#2.0.1 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-07-10 12:59:00 +0000">
+  <span title="2026-07-10 13:11:00 +0000">
     2026-07-10
   </span>
 
