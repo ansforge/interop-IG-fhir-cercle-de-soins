@@ -1,0 +1,18 @@
+@startuml
+
+skinparam backgroundColor #fcf6eb
+skinparam activityBackgroundColor #efd9fc
+skinparam activityBorderColor #000000
+skinparam shadowing false
+skinparam defaultFontSize 12
+
+
+|Créateur|
+start
+:Saisir la mise à jour;
+:Envoyer la demande de mise à jour;
+-[dashed]-> flux 4 - **MiseJourCercleSoins**;
+|Gestionnaire|
+:Mettre à jour le cercle de soins;
+stop 
+@enduml

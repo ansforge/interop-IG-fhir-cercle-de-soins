@@ -1,0 +1,16 @@
+@startuml
+!theme carbon-gray
+object "[[StructureDefinition-cds-personne-prise-charge.html CDSPersonnePriseCharge]]" as CDSPersonnePriseCharge {
+  idPersonnePriseCharge : Identifier [0..*]
+  INS : Base [0..*]
+}
+
+object "[[https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-PersonnePriseCharge.html PersonnePriseCharge]]" as PersonnePriseCharge #LightGreen
+PersonnePriseCharge <|-- CDSPersonnePriseCharge
+
+object "[[StructureDefinition-cds-cercle-soins.html CDSCercleSoins]]" as CDSCercleSoins
+CDSPersonnePriseCharge "1" -- "1" CDSCercleSoins
+object "[[StructureDefinition-cds-personne-physique.html CDSPersonnePhysique]]" as CDSPersonnePhysique
+CDSPersonnePriseCharge "1" -- "1" CDSPersonnePhysique
+
+@enduml

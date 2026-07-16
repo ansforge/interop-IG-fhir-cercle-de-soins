@@ -1,0 +1,16 @@
+@startuml
+!theme carbon-gray
+object "[[StructureDefinition-cds-cercle-soins.html CDSCercleSoins]]" as CDSCercleSoins {
+  idCercleSoins : Identifier [1]
+  dateCreation : date [0..1]
+  dateMAJ : date [0..1]
+  dateFin : date [0..1]
+  statut : Coding [0..1]
+}
+
+object "[[StructureDefinition-cds-personne-prise-charge.html CDSPersonnePriseCharge]]" as CDSPersonnePriseCharge
+CDSCercleSoins "1" -- "1" CDSPersonnePriseCharge
+object "[[StructureDefinition-cds-membre-cercle-soins.html CDSMembreCercleSoins]]" as CDSMembreCercleSoins
+CDSCercleSoins "1" -- "1..*" CDSMembreCercleSoins
+
+@enduml

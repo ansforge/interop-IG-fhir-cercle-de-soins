@@ -1,0 +1,42 @@
+@startuml
+
+hide footbox
+
+skinparam backgroundColor #FFFFFF
+skinparam sequence {
+    ArrowThickness 1
+    LifeLineBorderColor #Black
+    LifeLineBackgroundColor #White
+    ParticipantBorderColor #Black
+    ParticipantFontStyle bold
+}
+
+participant "SI DAC" as DAC #SkyBlue
+participant "Service numérique\npartage de données" as SNP #SkyBlue
+participant "Dossier Patient\nInformatisé" as DPI #SkyBlue
+participant "SI Médecin traitant" as MT #SkyBlue
+
+DAC -> SNP : Recherche existence cercle de soins
+activate SNP
+SNP --> DAC : Résultat : cercle inexistant
+deactivate SNP 
+
+DAC -> SNP : Créer le cercle de soins
+activate SNP
+deactivate SNP
+
+DPI -> SNP : Consulter cercle de soins
+activate SNP
+SNP --> DPI : Résultat : cercle de soins
+deactivate SNP
+
+DAC -> SNP : Mise à jour membre\n(infirmière libérale)
+activate SNP
+deactivate SNP
+
+MT -> SNP : Consulter cercle de soins
+activate SNP
+SNP --> MT : Résultat : cercle de soins
+deactivate SNP
+
+@enduml

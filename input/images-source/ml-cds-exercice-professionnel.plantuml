@@ -1,0 +1,18 @@
+@startuml
+!theme carbon-gray
+object "[[StructureDefinition-cds-exercice-professionnel.html CDSExerciceProfessionnel]]" as CDSExerciceProfessionnel {
+  civiliteExercice : Coding [0..1]
+  nomExercice : string [0..1]
+  prenomExercice : string [0..1]
+  profession : Coding [0..1]
+}
+
+object "[[https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-ExerciceProfessionnel.html ExerciceProfessionnel]]" as ExerciceProfessionnel #LightGreen
+ExerciceProfessionnel <|-- CDSExerciceProfessionnel
+
+object "[[StructureDefinition-cds-situation-exercice.html CDSSituationExercice]]" as CDSSituationExercice
+CDSExerciceProfessionnel "1" -- "1" CDSSituationExercice
+object "[[StructureDefinition-cds-professionnel.html CDSProfessionnel]]" as CDSProfessionnel
+CDSExerciceProfessionnel "1" -- "1" CDSProfessionnel
+
+@enduml

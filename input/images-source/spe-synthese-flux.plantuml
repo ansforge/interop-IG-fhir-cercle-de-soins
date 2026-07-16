@@ -1,0 +1,39 @@
+@startuml
+hide footbox
+
+participant "Créateur / Consommateur" as C
+participant "Gestionnaire" as G
+
+C -> G : **[[spe_consultation_cercle_soins.html#recherche-et-récupération-du-cercle-de-soins Flux 2a - RechercheCercleSoins]]**\nGET [lien vers le serveur]/[CareTeam]{?[parametres]}{&_format=[mime-type]}
+G --> C : **[[spe_consultation_cercle_soins.html#recherche-et-récupération-du-cercle-de-soins Flux 3a - ResultatRechercheCercleSoins ]]**\nHTTP 200 OK + {Bundle:CareTeam}
+
+alt CercleSoins existant
+
+    C -> G : **[[spe_consultation_cercle_soins.html#recherche-et-récupération-du-cercle-de-soins Flux 2b - RecuperationCercleSoins]]**\nGET [lien vers le serveur]/[CareTeam]/[id]
+    note right of G
+    Parmi les cercles de soins retournés,
+    le créateur a identifié le cercle de soins recherché
+    et demande au gestionnaire de le renvoyer spécifiquement.
+    Il peut alors le mettre à jour.
+    end note
+
+    G --> C : **[[spe_consultation_cercle_soins.html#recherche-et-récupération-du-cercle-de-soins Flux 3b - ResultatRecuperationCercleSoins]]**\nHTTP 200 OK + {CareTeam}
+
+    C -> G : **[[spe_mise_jour_cercle_soins.html#gestion-du-cercle-de-soins Flux 4b - MAJCercleSoinsRESTful]]**\nPUT [lien vers le serveur]/[CareTeam]/[id]
+    G --> C : HTTP 200 OK
+
+else CercleSoins non existant
+
+    C -> G : **[[spe_creation_cercle_soins.html#gestion-du-cercle-de-soins Flux 1b - CreationCercleSoinsRESTful]]**\nPOST [lien vers le serveur]/[CareTeam]
+
+    note right of G
+    Parmi les cercles de soins retournés,
+    le créateur n'a pas identifié le cercle de soins recherché.
+    Le créateur crée un nouveau cercle de soins.
+    end note
+
+    G --> C : HTTP 201 Created
+
+end
+
+@enduml

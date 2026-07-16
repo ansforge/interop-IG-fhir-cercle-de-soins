@@ -1,0 +1,7 @@
+@startuml
+
+hide footbox 
+
+Consommateur -> Gestionnaire : [[spe_consultation_cercle_soins.html#recherche-et-récupération-du-cercle-de-soins Flux 2a - RechercheCercleSoins]] \n GET [Lien vers le serveur] / [CareTeam] {?[parameters]{&_format=[mime-type]}}
+Gestionnaire --> Consommateur : [[spe_consultation_cercle_soins.html#recherche-et-récupération-du-cercle-de-soins Flux 3a - ResultatRechercheCercleSoins ]] \n  HTTP 200 OK + {Bundle:CareTeam}
+@enduml

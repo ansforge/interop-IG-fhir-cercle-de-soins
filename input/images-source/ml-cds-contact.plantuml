@@ -1,0 +1,17 @@
+@startuml
+!theme carbon-gray
+object "[[StructureDefinition-cds-contact.html CDSContact]]" as CDSContact {
+  description : string [0..1]
+  role : Coding [1]
+  relation : Coding [0..1]
+}
+
+object "[[https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-Contact.html Contact]]" as Contact #LightGreen
+Contact <|-- CDSContact
+
+object "[[StructureDefinition-cds-personne-physique.html CDSPersonnePhysique]]" as CDSPersonnePhysique
+CDSContact "1" -- "1..*" CDSPersonnePhysique
+object "[[StructureDefinition-cds-membre-cercle-soins.html CDSMembreCercleSoins]]" as CDSMembreCercleSoins
+CDSContact "1" -- "1" CDSMembreCercleSoins
+
+@enduml

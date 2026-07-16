@@ -1,0 +1,23 @@
+@startuml
+!theme carbon-gray
+object "[[StructureDefinition-cds-entite-geographique.html CDSEntiteGeographique]]" as CDSEntiteGeographique {
+  numFINESS : Identifier [0..1]
+  numSiret : Identifier [0..1]
+  identifiantEG : Identifier [0..1]
+  idNatStruct : Identifier [0..1]
+  denominationEG : string [0..1]
+}
+
+object "[[https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-EntiteGeographique.html EntiteGeographique]]" as EntiteGeographique #LightGreen
+EntiteGeographique <|-- CDSEntiteGeographique
+
+object "[[StructureDefinition-cds-membre-cercle-soins.html CDSMembreCercleSoins]]" as CDSMembreCercleSoins
+CDSEntiteGeographique "1" -- "1" CDSMembreCercleSoins
+object "[[StructureDefinition-cds-organisation-interne.html CDSOrganisationInterne]]" as CDSOrganisationInterne
+CDSEntiteGeographique "1" -- "0..*" CDSOrganisationInterne
+object "[[StructureDefinition-cds-situation-exercice.html CDSSituationExercice]]" as CDSSituationExercice
+CDSEntiteGeographique "1" -- "0..*" CDSSituationExercice
+object "[[StructureDefinition-cds-entite-juridique.html CDSEntiteJuridique]]" as CDSEntiteJuridique
+CDSEntiteGeographique "1" -- "1" CDSEntiteJuridique
+
+@enduml

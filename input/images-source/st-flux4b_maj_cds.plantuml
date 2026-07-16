@@ -1,0 +1,8 @@
+@startuml
+
+hide footbox
+
+Créateur -> Gestionnaire : [[spe_mise_jour_cercle_soins.html#gestion-du-cercle-de-soins Flux 4b - MAJCercleSoinsRESTful]] \n PUT [Lien vers le serveur] / [CareTeam] / [id]
+Gestionnaire --> Créateur : HTTP 200 OK
+
+@enduml

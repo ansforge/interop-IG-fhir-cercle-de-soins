@@ -1,0 +1,17 @@
+@startuml
+!theme carbon-gray
+object "[[StructureDefinition-cds-entite-juridique.html CDSEntiteJuridique]]" as CDSEntiteJuridique {
+  numFINESS : Identifier [0..1]
+  numSiren : Identifier [0..1]
+  idNatStruct : Identifier [0..1]
+  identifiantEJ : Identifier [0..1]
+  raisonSociale : string [0..1]
+}
+
+object "[[https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-EntiteJuridique.html EntiteJuridique]]" as EntiteJuridique #LightGreen
+EntiteJuridique <|-- CDSEntiteJuridique
+
+object "[[StructureDefinition-cds-entite-geographique.html CDSEntiteGeographique]]" as CDSEntiteGeographique
+CDSEntiteJuridique "1" -- "0..*" CDSEntiteGeographique
+
+@enduml

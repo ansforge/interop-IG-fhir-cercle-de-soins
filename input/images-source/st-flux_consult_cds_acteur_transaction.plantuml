@@ -1,0 +1,7 @@
+@startuml
+
+hide footbox 
+
+Consommateur -> Gestionnaire: flux 2 : RechercheCercleSoins
+Gestionnaire -> Consommateur : flux 3 : ResultatRechercheCercleSoins
+@enduml

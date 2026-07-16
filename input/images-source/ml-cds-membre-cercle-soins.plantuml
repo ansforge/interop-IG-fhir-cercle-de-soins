@@ -1,0 +1,20 @@
+@startuml
+!theme carbon-gray
+object "[[StructureDefinition-cds-membre-cercle-soins.html CDSMembreCercleSoins]]" as CDSMembreCercleSoins {
+  idMembreCercleSoin : Identifier [1]
+  dateEntreeCercleSoin : date [1..*]
+  dateSortieCercleSoin : date [0..*]
+}
+
+object "[[https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-Adresse.html Adresse]]" as Adresse 
+CDSMembreCercleSoins "1" -- "0..1" Adresse
+object "[[StructureDefinition-cds-cercle-soins.html CDSCercleSoins]]" as CDSCercleSoins
+CDSMembreCercleSoins "1" -- "1" CDSCercleSoins
+object "[[StructureDefinition-cds-contact.html CDSContact]]" as CDSContact
+CDSMembreCercleSoins "1" -- "0..1" CDSContact
+object "[[StructureDefinition-cds-situation-exercice.html CDSSituationExercice]]" as CDSSituationExercice
+CDSMembreCercleSoins "1" -- "0..1" CDSSituationExercice
+object "[[StructureDefinition-cds-organisation-interne.html CDSOrganisationInterne]]" as CDSOrganisationInterne
+CDSMembreCercleSoins "1" -- "0..1" CDSOrganisationInterne
+
+@enduml

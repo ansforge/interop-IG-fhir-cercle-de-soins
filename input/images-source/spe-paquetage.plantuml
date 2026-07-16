@@ -1,0 +1,19 @@
+@startuml
+
+hide stereotype
+
+skinparam component {
+  BorderColor black
+  BackgroundColor #SkyBlue
+  FontStyle bold
+}
+
+package "Cercle de soins" #Seashell   {
+    package "Gestion du cercle de soins" #Azure {
+        [Création du cercle de soins] [[spe_creation_cercle_soins.html]]
+        [Consultation du cercle de soins] [[spe_consultation_cercle_soins.html]]
+        [Mise à jour du cercle de soins] [[spe_mise_jour_cercle_soins.html]] 
+        }
+}
+
+@enduml 
