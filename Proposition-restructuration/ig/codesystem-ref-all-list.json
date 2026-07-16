@@ -177,8 +177,8 @@
     "oids" : ["2.16.840.1.113883.18.58"],
     "uses" : {
     },
-    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-patient-contact-role.html" : "FR Core ValueSet Patient contact role",
-    "http://hl7.org/fhir/R4/valueset-relatedperson-relationshiptype.html" : "Patient relationship type"
+    "http://hl7.org/fhir/R4/valueset-relatedperson-relationshiptype.html" : "Patient relationship type",
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-patient-contact-role.html" : "FR Core ValueSet Patient contact role"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v2-0203",
@@ -308,9 +308,9 @@
     "oids" : ["1.2.250.1.213.2.24"],
     "uses" : {
     },
-    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-paysNaissance-vs.html" : "PaysnaissanceVs",
     "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-paysNationalite-vs.html" : "PaysnationaliteVs",
-    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-lieuNaissance-vs.html" : "LieunaissanceVs"
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-lieuNaissance-vs.html" : "LieunaissanceVs",
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-paysNaissance-vs.html" : "PaysnaissanceVs"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/TRE_R21-Fonction/FHIR/TRE-R21-Fonction",
@@ -334,8 +334,8 @@
     "oids" : ["2.16.840.1.113883.5.111"],
     "uses" : {
     },
-    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-relation-vs.html" : "RelationVs",
-    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-relation-type.html" : "FR Core ValueSet relation type"
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-relation-type.html" : "FR Core ValueSet relation type",
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-relation-vs.html" : "RelationVs"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/TRE_R217-ProtectionJuridique/FHIR/TRE-R217-ProtectionJuridique",
@@ -347,8 +347,8 @@
     "oids" : ["1.2.250.1.213.1.1.4.327"],
     "uses" : {
     },
-    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-relation-vs.html" : "RelationVs",
-    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-patient-contact-role.html" : "FR Core ValueSet Patient contact role"
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-patient-contact-role.html" : "FR Core ValueSet Patient contact role",
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-relation-vs.html" : "RelationVs"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/TRE_R249-Sexe/FHIR/TRE-R249-Sexe",
@@ -384,8 +384,8 @@
     "oids" : ["2.16.840.1.113883.5.110"],
     "uses" : {
     },
-    "ValueSet-careteam-roles-vs.html" : "Roles des participants dans un cercle de soins",
-    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-patient-contact-role.html" : "FR Core ValueSet Patient contact role"
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-patient-contact-role.html" : "FR Core ValueSet Patient contact role",
+    "ValueSet-careteam-roles-vs.html" : "Roles des participants dans un cercle de soins"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/TRE_R262-CategorieSocioProfessionnelle/FHIR/TRE-R262-CategorieSocioProfessionnelle",
@@ -421,8 +421,8 @@
     "oids" : ["1.2.250.1.213.2.57"],
     "uses" : {
     },
-    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-paysNaissance-vs.html" : "PaysnaissanceVs",
-    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-paysNationalite-vs.html" : "PaysnationaliteVs"
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-paysNationalite-vs.html" : "PaysnationaliteVs",
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-paysNaissance-vs.html" : "PaysnaissanceVs"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/TRE_R288-TypeProfession/FHIR/TRE-R288-TypeProfession",
@@ -519,8 +519,8 @@
     "oids" : ["1.2.250.1.213.1.6.1.8"],
     "uses" : {
     },
-    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-categorieEtablissement-vs.html" : "CategorieetablissementVs",
-    "https://interop.esante.gouv.fr/terminologies/1.11.1/ValueSet-JDV-J129-CategorieEtablissement-RASS.html" : "JDV_J129_CategorieEtablissement_RASS"
+    "https://interop.esante.gouv.fr/terminologies/1.11.1/ValueSet-JDV-J129-CategorieEtablissement-RASS.html" : "JDV_J129_CategorieEtablissement_RASS",
+    "https://interop.esante.gouv.fr/ig/mos/0.1.0-ballot/ValueSet-categorieEtablissement-vs.html" : "CategorieetablissementVs"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/TRE_R72-FinessStatutJuridique/FHIR/TRE-R72-FinessStatutJuridique",

@@ -2,8 +2,8 @@ CDS : Validation Results
 =========================================
 
 err = 220, warn = 482, info = 1659
-IG Publisher Version: 2.2.10
-Generated Fri Jul 10 13:14:55 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.cds#2.0.1 (canonical = https://interop.esante.gouv.fr/ig/fhir/cds)
+IG Publisher Version: 2.2.10 Out of date - current version is 2.2.11
+Generated Thu Jul 16 08:42:28 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.cds#2.0.1 (canonical = https://interop.esante.gouv.fr/ig/fhir/cds)
  Build Errors : 0 / 9 / 0
  /__w/IG-fhir-cercle-de-soins/IG-fhir-cercle-de-soins/igSource/fsh-generated/resources/ActorDefinition-CDS-Consommateur-Actor : 0 / 0 / 4
  /__w/IG-fhir-cercle-de-soins/IG-fhir-cercle-de-soins/igSource/fsh-generated/resources/ActorDefinition-CDS-Createur-Actor : 0 / 0 / 3
