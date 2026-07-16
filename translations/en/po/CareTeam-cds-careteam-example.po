@@ -1,6 +1,0 @@
-
-# CareTeam.name
-#: CareTeam.name
-msgid "Cercle de soins de Mr Jacques Thobois"
-msgstr ""
-
