@@ -29,7 +29,7 @@ Organisation responsable du Cercle De Soins
     }]
   },
   "status" : "active",
-  "date" : "2026-08-25T08:05:50+00:00",
+  "date" : "2026-08-25T08:34:58+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

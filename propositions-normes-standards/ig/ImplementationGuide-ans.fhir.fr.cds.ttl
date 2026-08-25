@@ -18,7 +18,7 @@
   fhir:ImplementationGuide.name [ fhir:value "CDS"] ;
   fhir:ImplementationGuide.title [ fhir:value "Cercle De Soins"] ;
   fhir:ImplementationGuide.status [ fhir:value "active"] ;
-  fhir:ImplementationGuide.date [ fhir:value "2026-08-25T08:05:50+00:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-08-25T08:34:58+00:00"^^xsd:dateTime] ;
   fhir:ImplementationGuide.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
   fhir:ImplementationGuide.contact [
      fhir:index 0 ;
@@ -1253,13 +1253,33 @@
          fhir:Element.extension [
            fhir:index 0 ;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
-           fhir:Extension.valueUrl [ fhir:value "autres_ressources.html" ]
+           fhir:Extension.valueUrl [ fhir:value "annexes.html" ]
          ] ;
-         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "autres_ressources.html" ] ;
-         fhir:ImplementationGuide.definition.page.title [ fhir:value "Autres Ressources" ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "annexes.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Annexes" ] ;
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ] ;
          fhir:ImplementationGuide.definition.page.page [
            fhir:index 0 ;
+           fhir:Element.extension [
+             fhir:index 0 ;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+             fhir:Extension.valueUrl [ fhir:value "normes_standards.html" ]
+           ] ;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "normes_standards.html" ] ;
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Normes et standards" ] ;
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+         ], [
+           fhir:index 1 ;
+           fhir:Element.extension [
+             fhir:index 0 ;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+             fhir:Extension.valueUrl [ fhir:value "normes_standards_ig_annexe.html" ]
+           ] ;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "normes_standards_ig_annexe.html" ] ;
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "IG N&S" ] ;
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+         ], [
+           fhir:index 2 ;
            fhir:Element.extension [
              fhir:index 0 ;
              fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
@@ -1267,16 +1287,6 @@
            ] ;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "downloads.html" ] ;
            fhir:ImplementationGuide.definition.page.title [ fhir:value "Téléchargements et usages" ] ;
-           fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
-         ], [
-           fhir:index 1 ;
-           fhir:Element.extension [
-             fhir:index 0 ;
-             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
-             fhir:Extension.valueUrl [ fhir:value "translationinfo.html" ]
-           ] ;
-           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "translationinfo.html" ] ;
-           fhir:ImplementationGuide.definition.page.title [ fhir:value "Informations sur la traduction" ] ;
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
          ]
        ], [

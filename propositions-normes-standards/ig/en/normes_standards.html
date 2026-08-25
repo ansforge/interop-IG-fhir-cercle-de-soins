@@ -1,0 +1,1309 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Normes et standards - Cercle De Soins v2.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+    <link rel="stylesheet" href="assets/css/project.css"/>
+  	<link rel="stylesheet" href="assets/css/cqf.css"/>
+        <link rel="stylesheet" href="assets/css/style-ans.css"/>
+    <link rel="stylesheet" href="assets/css/style-add-ans.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+    <script src="assets/js/direction-management.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js" type="text/javascript"></script>
+	  <script src="assets/js/prism-fhirpath.js" type="text/javascript"></script>
+	  <script src="assets/js/prism-cql.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
+    <style type="text/css">h2{--heading-prefix:"4.1"}
+    h3,h4,h5,h6{--heading-prefix:"4.1"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+
+          <!-- Placeholder for child template header declarations -->
+<div id="family-nav">
+    <a id="hl7-search-lnk" href="http://hl7.org/fhir" data-no-external="true"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
+  </div>
+  <div style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; " id="ans-nav">
+    <a id="hl7-logo" href="https://esante.gouv.fr/" data-no-external="true"><img src="assets/images/logo-ANS.svg" alt="ANS Logo" height="50"/></a>
+    <a id="hl7-search-lnk" href="searchform.html" data-no-external="true"><img src="assets/images/search.png" alt="Search FHIR"/></a>
+  </div>
+
+  <div id="ig-search">
+ </div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Cercle De Soins</span>
+            <br/>
+            <span style="display:inline-block;">2.0.1 - final-text
+
+
+
+
+
+  <img src="../assets/images/fra.svg" alt="France (la) flag" title="France (la)" height="16"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="index.html">Accueil</a>
+  </li>
+  <li>
+    <a href="specifications_fonctionnelles.html">Volume 1 - Etude fonctionnelle</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2 - Détail des transactions
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="interaction_restful.html">Interactions RESTful</a>
+      </li>
+      <li>
+        <a href="interaction_transaction.html">Interactions transaction</a>
+      </li>
+      <li>
+        <a href="recherche_recuperation_cds.html">Recherche CDS</a>
+      </li>
+      <li>
+        <a href="correspondances_metier.html">Correspondances métier</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Annexes
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="normes_standards.html">Normes et standards</a>
+      </li>
+      <li>
+        <a href="normes_standards_ig_annexe.html">IG N&amp;S</a>
+      </li>
+      <li>
+        <a href="downloads.html">Téléchargements et usage</a>
+      </li>
+      <li>
+        <a href="http://hl7.org/fhir/R4/index.html" target="_blank">Spécifications FHIR </a>
+      </li>
+      <li>
+        <a href="https://esante.gouv.fr/" target="_blank">Site de l'ANS </a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="https://interop.esante.gouv.fr/ig/documentation/" target="_blank">Documentation</a>
+  </li>
+  <li>
+    <a href="changes.html">Historique</a>
+  </li>
+</ul>
+            </div>    <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;" id="select_flg" class="flaglist">
+    <div><img src="assets/images/lang-en.png" alt="flag en" class="flag"/>English</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;" id="flaglist" class="flaglist">
+    <div><img src="assets/images/lang-en.png" alt="flag en" class="flag"/>English</div>
+
+    <div><a href="../fr/normes_standards.html"><img src="assets/images/lang-fr.png" alt="flag fr" class="flag"/>Français</a></div>
+
+  </div>
+</div>
+
+
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="annexes.html"><b>Annexes</b></a></li><li><b>Normes et standards</b></li>
+
+          <span style="float: var(--ig-right);">
+
+            <a href="annexes.html">&lt; prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="normes_standards_ig_annexe.html">next &gt;</a>
+
+          </span>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">Cercle De Soins - Local Development build (v2.0.1) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/cds/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Normes et standards</h2>
+  
+
+
+
+
+<p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;">
+
+<p>There is no translation page available for the current page, so it has been rendered in the default language</p>
+
+
+</p>
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#les-standards" id="markdown-toc-les-standards">Les standards</a></li>
+  <li><a href="#synthèse-comparative-des-standards-présentés" id="markdown-toc-synthèse-comparative-des-standards-présentés">Synthèse comparative des standards présentés</a></li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
+</ul>
+
+</div>
+<div style="width: 65%" class="warning">
+Étude du 10/2020, avec dernière mise à jour en 03/2021; les conclusions de cette étude reflètent l’état de l’art disponible à cette date.
+</div>
+
+<p><br/></p>
+
+<p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; width: 65%">
+<b>Résumé de l'étude</b><br/>
+Cette étude compare les principaux standards d’interopérabilité susceptibles de répondre aux besoins d’échange du volet Cercle de soins, au regard de critères fonctionnels, techniques et réglementaires. Le profil IHE DCTM a été adopté dans le cadre de ce volet bien que récent et non implémenté.
+</p>
+
+<div style="background-color:#f0f4f8; border-left:4px solid #2c5f8a; padding:15px 20px; margin-bottom:25px; border-radius:4px;">
+  <p style="margin-top:0; font-weight:bold; color:#2c5f8a;">Aide à la lecture</p>
+  <p style="margin-bottom:10px;">Cette section suppose que le lecteur est familier avec les standards et profils étudiés. Pour toute information, se référer à l'IG des Normes et Standards :</p>
+  <ul style="margin-bottom:0;">
+    <li><a href="normes_standards_ig_annexe.html#pam">Profil IHE PAM</a></li>
+    <li><a href="normes_standards_ig_annexe.html#dctm">Profil IHE DCTM</a></li>
+    <li><a href="normes_standards_ig_annexe.html#standard-hl7-fhir">HL7 FHIR R4</a></li>
+    <li><a href="normes_standards_ig_annexe.html#openehr">openEHR</a></li>
+  </ul>
+</div>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>Ce document présente l'ensemble des normes et standards identifiés comme potentiellement adaptés pour la mise en œuvre, en mobilité, des flux structurés présentés dans l'onglet spécifications.
+L’objectif de cette étude est d’identifier, qualifier et comparer les standards pertinents pour supporter les échanges nécessaires à la gestion du cercle de soins.
+Cette étude va se concentrer sur la justification de la pertinence d'un standard pour notre cas d'usage, elle ne détaillera pas les aspects génériques de chaque standard, ceux-ci sont à retrouver dans l'<a href="normes_standards_ig_annexe.html">IG des N&amp;S</a></p>
+
+<p>Les versions des normes et standards étudiés dans le présent document sont celles disponibles à la date de réalisation de l’étude (mars 2021).</p>
+
+<p>Chaque standard est étudié afin d'analyser leur pertinence au regard des cas d’usage identifiés.</p>
+
+<ul>
+  <li>L'étude comprend notamment une analyse SWOT avec une grille construite conformément à la méthodologie décrite dans la <a href="https://interop.esante.gouv.fr/ig/doctrine/choix-standard#analyse-swot.html">Doctrine CI-SIS : Choix des normes et standard</a>.</li>
+  <li>Une synthèse comparative est ensuite proposée afin de faciliter la lecture et la mise en perspective des normes et standards évalués.</li>
+</ul>
+
+<p>Le choix final s'appuie sur des critères de décision explicites, hiérarchisés par la doctrine CI-SIS.</p>
+
+<p>Les critères à prendre en compte dans le choix de la solution sont les suivants :</p>
+
+<table>
+<tr>
+<td style="background-color:#e6eef8; color:#16324f; padding:14px;">
+<b>Critères de décision</b>
+<ul style="margin-bottom:0;">
+<li>Couverture maximale des informations identifiées dans l'étude métier</li>
+<li>Effort de développement raisonnable pour les développeurs</li>
+<li>Adaptation aux environnements mobiles</li>
+<li>Minimum de standards différents mobilisés</li>
+</ul>
+</td>
+</tr>
+</table>
+
+<p>La doctrine CI-SIS fixe un ordre de préférence entre types de standards :</p>
+
+<figure style="margin:0 auto;">
+  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 1089 81" zoomAndPan="magnify" preserveAspectRatio="none" width="1089px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:1089px;height:81px;background:#FFFFFF;" version="1.1" height="81px"><defs></defs><g>  <!-- entity R1 --><g id="elem_R1"><rect rx="2.5" ry="2.5" width="303" x="7" y="15" style="stroke:#185FA5;stroke-width:0.5;" fill="#F7FAFD" height="52.5938"></rect><text lengthAdjust="spacing" x="17" font-size="14" textLength="283" y="37.9951" font-family="DejaVu Sans" fill="#085877">1. Privilégier un profil IHE adapté et stable</text><text lengthAdjust="spacing" x="17" font-size="14" textLength="4" y="54.292" font-family="DejaVu Sans" fill="#085877">&nbsp;</text></g>  <!-- entity R2 --><g id="elem_R2"><rect rx="2.5" ry="2.5" width="287" x="428" y="7" style="stroke:#185FA5;stroke-width:0.5;" fill="#F7FAFD" height="68.8906"></rect><text lengthAdjust="spacing" x="438" font-size="14" textLength="168" y="29.9951" font-family="DejaVu Sans" fill="#085877">2. Réutiliser des normes</text><text lengthAdjust="spacing" x="442" font-size="14" textLength="226" y="46.292" font-family="DejaVu Sans" fill="#085877">et standards déjà utilisés dans le</text><text lengthAdjust="spacing" x="442" font-size="14" textLength="263" y="62.5889" font-family="DejaVu Sans" fill="#085877">CI-SISpour des cas d'usages similaires</text></g>  <!-- entity R3 --><g id="elem_R3"><rect rx="2.5" ry="2.5" width="250" x="833" y="7" style="stroke:#185FA5;stroke-width:0.5;" fill="#F7FAFD" height="68.8906"></rect><text lengthAdjust="spacing" x="843" font-size="14" textLength="206" y="29.9951" font-family="DejaVu Sans" fill="#085877">3. Consulter des acteurs pour</text><text lengthAdjust="spacing" x="847" font-size="14" textLength="226" y="46.292" font-family="DejaVu Sans" fill="#085877">identifier la norme ou le standard</text><text lengthAdjust="spacing" x="847" font-size="14" textLength="57" y="62.5889" font-family="DejaVu Sans" fill="#085877">à utiliser</text></g>  <!-- link R1 to R2 --><g id="link_R1_R2"><path d="M310.21,41.5 C346.78,41.5 385.86,41.5 422.31,41.5 " style="stroke:#181818;stroke-width:1.0;" id="R1-to-R2" fill="none"></path><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="427.67,41.5,418.67,37.5,422.67,41.5,418.67,45.5,427.67,41.5"></polygon><text lengthAdjust="spacing" x="341" font-size="14" textLength="56" y="37.4951" font-family="DejaVu Sans" fill="#1A1A1A">à défaut</text></g>  <!-- link R2 to R3 --><g id="link_R2_R3"><path d="M715.13,41.5 C752,41.5 791.48,41.5 827.63,41.5 " style="stroke:#181818;stroke-width:1.0;" id="R2-to-R3" fill="none"></path><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="832.94,41.5,823.94,37.5,827.94,41.5,823.94,45.5,832.94,41.5"></polygon><text lengthAdjust="spacing" x="746" font-size="14" textLength="56" y="37.4951" font-family="DejaVu Sans" fill="#1A1A1A">à défaut</text></g></g></svg>
+</figure>
+
+<p><br/></p>
+
+<h3 id="les-standards">Les standards</h3>
+
+<h4 id="profils-ihe--pam">Profils IHE : PAM</h4>
+
+<p><a href="normes_standards_ig_annexe.html#pam">Présentation générale du profil</a></p>
+
+<p>L’extension française du profil PAM a été étudiée dans le cadre de la présente étude. Le périmètre de ce profil couvre les échanges intra-hospitaliers des identités, venues et mouvements de patients, les échanges inter-établissements des identités et venues et la diffusion d’identités vers une communauté d’établissements et de professionnels de santé. Les objectifs sont donc d’une part de notifier les identités des patients et d’autre part, de notifier les venues et mouvements.</p>
+
+<h5 id="mapping-données-métiers---éléments-techniques">Mapping données métiers - éléments techniques</h5>
+
+<p>Ce mapping n'est pas exhaustif et peut ne pas refléter une correspondance exacte</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Concept Métier</th>
+      <th>Segment HL7v2</th>
+      <th>Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a name="l613">​</a><a href="StructureDefinition-cds-personne-prise-charge.html">PersonnePriseCharge</a></td>
+      <td>PID</td>
+      <td>Segment d'identification patient</td>
+    </tr>
+    <tr>
+      <td><a name="l626">​</a><a href="StructureDefinition-cds-professionnel.html">Professionnel</a></td>
+      <td>ROL</td>
+      <td>Précise la fonction (rôle) d'un intervenant médical en relation avec le patient</td>
+    </tr>
+    <tr>
+      <td><a name="l639">​</a><a href="StructureDefinition-cds-contact.html">Contact</a></td>
+      <td>NK1</td>
+      <td>Décrit les personnes à prévenir ou les personnes de confiance, mais ne permet pas de décrire les notions d'aidant et de responsable légal</td>
+    </tr>
+    <tr>
+      <td><a name="l652">​</a><a href="StructureDefinition-cds-entite-geographique.html">EntiteGeographique</a></td>
+      <td>Non couvert</td>
+      <td>Les structures de santé ne sont identifiés dans aucun segment</td>
+    </tr>
+    <tr>
+      <td><a name="l665">​</a><a href="StructureDefinition-cds-entite-juridique.html">EntiteJuridique</a></td>
+      <td>Non couvert</td>
+      <td>Les structures de santé ne sont identifiés dans aucun segment</td>
+    </tr>
+    <tr>
+      <td><a name="l678">​</a><a href="StructureDefinition-cds-organisation-interne.html">OrganisationInterne</a></td>
+      <td>Non couvert</td>
+      <td>Les unités de soins ne sont identifiées dans aucun segment</td>
+    </tr>
+    <tr>
+      <td><a name="l691">​</a><a href="StructureDefinition-cds-membre-cercle-soins.html">MembreCercleSoins</a></td>
+      <td>ROL / NK1</td>
+      <td>Pas de segment dédié ; répartition entre ROL (professionnels) et NK1 (entourage)</td>
+    </tr>
+    <tr>
+      <td><a name="l704">​</a><a href="StructureDefinition-cds-cercle-soins.html">CercleSoins</a></td>
+      <td>Non couvert</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><a name="l717">​</a><a href="StructureDefinition-cds-situation-exercice.html">SituationExercice</a></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><a name="l730">​</a><a href="StructureDefinition-cds-exercice-professionnel.html">ExerciceProfessionnel</a></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>texte d'origine:</p>
+
+<p>Dans ce profil, les segments ROL et NK1 pourraient être intéressants pour le cas d’usage de la gestion du cercle de soins. En effet, le segment ROL représente un médecin en relation avec le patient et est destiné à préciser la fonction (rôle) d’un intervenant médical en relation avec le patient ; le segment NK1 décrit les personnes à prévenir ou les personnes de confiance.<br/>
+Toutefois, les structures de santé et unités de soins, ainsi que les notions de représentant légal et d’aidant décrites dans l’étude métier ne sont identifiées dans aucun segment. PAM est donc adapté aux problématiques de l’identité du patient et de ses déplacements mais pas au cas d’usage de la  gestion du cercle de soins.</p>
+
+<h5 id="analyse-swot-du-standard">Analyse SWOT du standard</h5>
+
+<table>
+<tr>
+<td style="background-color:#e6eef8; color:#245a8c;"><b>Forces</b></td>
+<td style="background-color:#fbe9e8; color:#a13c37;"><b>Faiblesses</b></td>
+</tr>
+<tr>
+<td style="background-color:#e6eef8;">
+- Profil IHE mature et stable, largement implanté dans les établissements de santé (gestion des identités, venues, mouvements)<br/>
+- Extension française existante, déjà documentée<br/>
+- Segments ROL (rôle d'un intervenant médical) et NK1 (personnes à prévenir/de confiance) potentiellement réutilisables pour le cercle de soins<br/>
+- Outillage et adoption marché solides sur son périmètre historique
+</td>
+<td style="background-color:#fbe9e8;">
+- Ne couvre pas les structures de santé, unités de soins, ni les notions de représentant légal / aidant identifiées dans l'étude métier<br/>
+- Couverture métier du cas d'usage cercle de soins jugée <b>partielle</b><br/>
+- Nécessiterait des <b>développements supplémentaires importants</b> pour combler les manques
+</td>
+</tr>
+<tr>
+<td style="background-color:#e5f3ea; color:#1f6b40;"><b>Opportunités</b></td>
+<td style="background-color:#fdf0dd; color:#a3660f;"><b>Menaces</b></td>
+</tr>
+<tr>
+<td style="background-color:#e5f3ea;">
+- Réutiliser un standard déjà déployé dans l'écosystème réduit l'effort d'intégration côté éditeurs<br/>
+- Cohérent avec le principe doctrinal de préférence pour un profil IHE stable
+</td>
+<td style="background-color:#fdf0dd;">
+- Risque de construire une solution avec des extensions non standard faute de couverture native<br/>
+- Écart croissant avec la dynamique FHIR/DCTM sur ce cas d'usage spécifique
+</td>
+</tr>
+
+<tr>
+<td colspan="2" style="background-color:#ffffff; padding:12px;">
+<b>Synthèse</b><br/>
+Profil adapté à l'identité et aux déplacements du patient, mais pas au cas d'usage de gestion du cercle de soins.
+</td>
+</tr>
+
+</table>
+
+<h4 id="profils-ihe--dctm">Profils IHE : DCTM</h4>
+
+<p><a href="normes_standards_ig_annexe.html#dctm">Présentation générale du profil</a></p>
+
+<p>Le profil DCTM décrit les scénarios de création et de mise à jour d’équipes de soins, les scénarios de consultation d’équipes de soins, ainsi que les scénarios d’abonnement aux mises à jour d’une équipe de soins.<br/>
+Les ressources FHIR utilisées pour mettre en œuvre ce profil sont CareTeam et Subscription.</p>
+
+<p>La ressource CareTeam est contrainte dans le profil DCTM, les contraintes appliquées étant compatibles avec l’étude métier du présent volet. Les flux d’abonnement aux mises à jour de la ressource CareTeam sont optionnels dans le profil DCTM et ne seront pas repris dans cette étude. La ressource Subscription ne sera donc pas exploitée.</p>
+
+<p>Pour obtenir les informations relatives à la maturité et à l'adoption du profil,  <a href="normes_standards_ig_annexe.html#maturité-et-adoption">consulter l'IG annexe des Normes et Standards</a></p>
+
+<h5 id="mapping-données-métiers---éléments-techniques-1">Mapping données métiers - éléments techniques</h5>
+
+<p>Le profil DCTM décrit la StructureDefinition de la ressource FHIR CareTeam mais ne décrit pas précisément la manière dont les ressources Patient, Practitioner, PractitionerRole, RelatedPerson ou Organization sont référencées.</p>
+
+<p>Ce mapping n'est pas exhaustif et peut ne pas refléter une correspondance exacte</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Concept Métier</th>
+      <th>Ressource FHIR</th>
+      <th>Élément CareTeam (DCTM)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a name="l876">​</a><a href="StructureDefinition-cds-cercle-soins.html">CercleSoins</a></td>
+      <td>CareTeam</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><a name="l889">​</a><a href="StructureDefinition-cds-membre-cercle-soins.html">MembreCercleSoins</a></td>
+      <td>CareTeam</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.participant</code></td>
+    </tr>
+    <tr>
+      <td><a name="l903">​</a><a href="StructureDefinition-cds-personne-prise-charge.html">PersonnePriseCharge</a></td>
+      <td>Patient</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.subject</code></td>
+    </tr>
+    <tr>
+      <td><a name="l917">​</a><a href="StructureDefinition-cds-professionnel.html">Professionnel</a></td>
+      <td>Practitioner</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.participant.member</code></td>
+    </tr>
+    <tr>
+      <td><a name="l931">​</a><a href="StructureDefinition-cds-contact.html">Contact</a></td>
+      <td>RelatedPerson</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.participant.member</code></td>
+    </tr>
+    <tr>
+      <td><a name="l945">​</a><a href="StructureDefinition-cds-entite-geographique.html">EntiteGeographique</a></td>
+      <td>Organization</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.participant.member</code> / <code class="language-plaintext highlighter-rouge">CareTeam.managingOrganization</code></td>
+    </tr>
+    <tr>
+      <td><a name="l962">​</a><a href="StructureDefinition-cds-entite-juridique.html">EntiteJuridique</a></td>
+      <td>Organization</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.participant.member</code> / <code class="language-plaintext highlighter-rouge">CareTeam.managingOrganization</code></td>
+    </tr>
+    <tr>
+      <td><a name="l979">​</a><a href="StructureDefinition-cds-organisation-interne.html">OrganisationInterne</a></td>
+      <td>Organization</td>
+      <td><code class="language-plaintext highlighter-rouge">CareTeam.participant.member</code> / <code class="language-plaintext highlighter-rouge">CareTeam.managingOrganization</code></td>
+    </tr>
+    <tr>
+      <td><a name="l996">​</a><a href="StructureDefinition-cds-situation-exercice.html">SituationExercice</a></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><a name="l1009">​</a><a href="StructureDefinition-cds-exercice-professionnel.html">ExerciceProfessionnel</a></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="mise-en-oeuvre">Mise en oeuvre</h5>
+
+<p>Pour la mise en œuvre du profil IHE DCTM pour le besoin d’interopérabilité « Cercle de soins » :</p>
+
+<ul>
+  <li>L’acteur « Créateur » doit supporter le profil IHE DCTM en tant que Care Team Contributor.</li>
+  <li>L’acteur « Consommateur » doit supporter le profil IHE DCTM en tant que Care Team Contributor.
+L’acteur mettant à jour une ressource CareTeam doit respecter les règles d’intégrité de FHIR.</li>
+  <li>L’acteur « Gestionnaire » doit supporter le profil IHE DCTM en tant que Care Team Service.
+Le gestionnaire doit supporter la gestion des versions de la ressource CareTeam.</li>
+</ul>
+
+<p>Les cas d’utilisation sont réalisés à l’aide des transactions décrites dans le profil DCTM comme suit :</p>
+
+<ul>
+  <li>La transaction Update Care Team [PCC-45] pour les cas d’utilisation : « Création du cercle de soins » et « Mise à jour du cercle de soins ».
+La mise à jour de la ressource CareTeam nécessite de préciser l’identifiant logique de la ressource à mettre à jour. En réponse à la mise à jour, le gestionnaire doit indiquer l’élément meta.versionId de la ressource mise à jour.</li>
+  <li>Les transactions Search for Care Team [PCC-46] et Retrieve Care Team [PCC-47] pour le cas d’utilisation « Consultation du cercle de soins ».
+La récupération d’une ressource CareTeam correspondant à un identifiant logique peut être réalisée en tenant compte de la version de la ressource et en demandant ainsi la récupération
+d’une version précise de cette ressource.</li>
+</ul>
+
+<p>La figure ci-après illustre l’utilisation du profil DCTM pour la gestion du cercle de soins :</p>
+
+<figure style="width:65%; margin:0 auto;">
+  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 712 296" zoomAndPan="magnify" preserveAspectRatio="none" width="712px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:712px;height:296px;background:#FFFFFF;" version="1.1" height="296px"><defs></defs><g><line y1="36.2969" x1="42" y2="289.3594" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="42"></line><line y1="36.2969" x1="655" y2="289.3594" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="655"></line><rect rx="2.5" ry="2.5" width="74" x="5" y="5" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0" height="30.2969"></rect><text lengthAdjust="spacing" x="12" font-size="14" textLength="60" y="24.9951" font-family="sans-serif" fill="#000000">Créateur</text><rect rx="2.5" ry="2.5" width="102" x="604" y="5" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0" height="30.2969"></rect><text lengthAdjust="spacing" x="611" font-size="14" textLength="88" y="24.9951" font-family="sans-serif" fill="#000000">Gestionnaire</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="643,63.4297,653,67.4297,643,71.4297,647,67.4297"></polygon><line y1="67.4297" x1="42" y2="67.4297" style="stroke:#181818;stroke-width:1.0;" x2="649"></line><text lengthAdjust="spacing" x="49" font-size="13" textLength="101" y="62.3638" font-family="sans-serif" fill="#000000">PCC-45  Flux 1 -</text><text font-weight="bold" lengthAdjust="spacing" x="154" font-size="13" textLength="147" y="62.3638" font-family="sans-serif" fill="#000000">CreationCercleSoins</text><text lengthAdjust="spacing" x="305" font-size="13" textLength="5" y="62.3638" font-family="sans-serif" fill="#000000">-</text><text lengthAdjust="spacing" x="318" font-size="13" textLength="250" y="62.3638" font-family="sans-serif" fill="#FF0000">POST [Lien vers le serveur] / CareTeam</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="53,92.5625,43,96.5625,53,100.5625,49,96.5625"></polygon><line y1="96.5625" x1="47" y2="96.5625" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="654"></line><text lengthAdjust="spacing" x="63" font-size="13" textLength="113" y="91.4966" font-family="sans-serif" fill="#FF0000">HTTP 201 created</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="643,121.6953,653,125.6953,643,129.6953,647,125.6953"></polygon><line y1="125.6953" x1="42" y2="125.6953" style="stroke:#181818;stroke-width:1.0;" x2="649"></line><text lengthAdjust="spacing" x="49" font-size="13" textLength="97" y="120.6294" font-family="sans-serif" fill="#000000">PCC-46 Flux 2 -</text><text font-weight="bold" lengthAdjust="spacing" x="150" font-size="13" textLength="172" y="120.6294" font-family="sans-serif" fill="#000000">RechercheCercleSoins -</text><text lengthAdjust="spacing" x="326" font-size="13" textLength="305" y="120.6294" font-family="sans-serif" fill="#FF0000">GET [Lien vers le serveur] / [CareTeam]/_search</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="53,150.8281,43,154.8281,53,158.8281,49,154.8281"></polygon><line y1="154.8281" x1="47" y2="154.8281" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="654"></line><text lengthAdjust="spacing" x="59" font-size="13" textLength="50" y="149.7622" font-family="sans-serif" fill="#000000">Flux 3  -</text><text font-weight="bold" lengthAdjust="spacing" x="113" font-size="13" textLength="233" y="149.7622" font-family="sans-serif" fill="#000000">ResultatRechercheCercleSoins -</text><text lengthAdjust="spacing" x="346" font-size="13" textLength="4" y="149.7622" font-family="sans-serif" fill="#000000">&nbsp;</text><text lengthAdjust="spacing" x="354" font-size="13" textLength="235" y="149.7622" font-family="sans-serif" fill="#FF0000">HTTP 200 OK + {Bundle: CareTeam}</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="643,179.9609,653,183.9609,643,187.9609,647,183.9609"></polygon><line y1="183.9609" x1="42" y2="183.9609" style="stroke:#181818;stroke-width:1.0;" x2="649"></line><text lengthAdjust="spacing" x="49" font-size="13" textLength="119" y="178.895" font-family="sans-serif" fill="#000000">PCC-47  Flux 2bis -</text><text font-weight="bold" lengthAdjust="spacing" x="172" font-size="13" textLength="183" y="178.895" font-family="sans-serif" fill="#000000">RecuperationCercleSoins</text><text lengthAdjust="spacing" x="359" font-size="13" textLength="5" y="178.895" font-family="sans-serif" fill="#000000">-</text><text lengthAdjust="spacing" x="372" font-size="13" textLength="266" y="178.895" font-family="sans-serif" fill="#FF0000">GET [Lien vers le serveur] / CareTeam/[id]</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="53,209.0938,43,213.0938,53,217.0938,49,213.0938"></polygon><line y1="213.0938" x1="47" y2="213.0938" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="654"></line><text lengthAdjust="spacing" x="59" font-size="13" textLength="68" y="208.0278" font-family="sans-serif" fill="#000000">Flux 3bis  -</text><text font-weight="bold" lengthAdjust="spacing" x="131" font-size="13" textLength="254" y="208.0278" font-family="sans-serif" fill="#000000">ResultatRecuperationCercleSoins -</text><text lengthAdjust="spacing" x="385" font-size="13" textLength="8" y="208.0278" font-family="sans-serif" fill="#000000">&nbsp;&nbsp;</text><text lengthAdjust="spacing" x="397" font-size="13" textLength="183" y="208.0278" font-family="sans-serif" fill="#FF0000">HTTP 200 OK + {CareTeam}</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="643,238.2266,653,242.2266,643,246.2266,647,242.2266"></polygon><line y1="242.2266" x1="42" y2="242.2266" style="stroke:#181818;stroke-width:1.0;" x2="649"></line><text lengthAdjust="spacing" x="49" font-size="13" textLength="97" y="237.1606" font-family="sans-serif" fill="#000000">PCC-45 Flux 4 -</text><text font-weight="bold" lengthAdjust="spacing" x="150" font-size="13" textLength="147" y="237.1606" font-family="sans-serif" fill="#000000">MiseJourCercleSoins</text><text lengthAdjust="spacing" x="301" font-size="13" textLength="5" y="237.1606" font-family="sans-serif" fill="#000000">-</text><text lengthAdjust="spacing" x="314" font-size="13" textLength="270" y="237.1606" font-family="sans-serif" fill="#FF0000">PUT  [Lien vers le serveur] /CareTeam/ [id]</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="53,267.3594,43,271.3594,53,275.3594,49,271.3594"></polygon><line y1="271.3594" x1="47" y2="271.3594" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="654"></line><text lengthAdjust="spacing" x="63" font-size="13" textLength="82" y="266.2935" font-family="sans-serif" fill="#FF0000">HTTP 200 OK</text></g></svg>
+</figure>
+
+<h5 id="analyse-swot-du-standard-1">Analyse SWOT du standard</h5>
+
+<table>
+<tr>
+<td style="background-color:#e6eef8; color:#245a8c;"><b>Forces</b></td>
+<td style="background-color:#fbe9e8; color:#a13c37;"><b>Faiblesses</b></td>
+</tr>
+<tr>
+<td style="background-color:#e6eef8;">
+- Répond au besoin métier de gestion du cercle de soins<br/>
+- S'appuie sur la ressource FHIR CareTeam, avec des transactions dédiées (Update/Search/Retrieve Care Team)<br/>
+- StructureDefinition disponible → outil de validation possible<br/>
+- Cohérent avec la doctrine CI-SIS (préférence pour un profil IHE)
+</td>
+<td style="background-color:#fbe9e8;">
+- Profil récent, encore en phase de test / <i>trial implementation</i><br/>
+- Aucun éditeur ne déclare l'avoir intégré à ce jour ; aucune société ne l'a testé en connectathon<br/>
+- Pas d'outil de validation disponible pour les transactions<br/>
+- Documentation non encore stabilisée
+</td>
+</tr>
+<tr>
+<td style="background-color:#e5f3ea; color:#1f6b40;"><b>Opportunités</b></td>
+<td style="background-color:#fdf0dd; color:#a3660f;"><b>Menaces</b></td>
+</tr>
+<tr>
+<td style="background-color:#e5f3ea;">
+- HL7 organise des sessions de test régulières qui devraient faire évoluer rapidement la ressource CareTeam<br/>
+- Une mise en œuvre française pourrait nourrir le retour d'expérience de la communauté IHE internationale<br/>
+- Dynamique existante autour du Care Planning/Management (tracks connectathon FHIR 2019 et 2020)
+</td>
+<td style="background-color:#fdf0dd;">
+- Forte dépendance à la maturité encore faible de CareTeam (NM2)<br/>
+- Risque de modifications majeures non rétrocompatibles<br/>
+- Adoption marché quasi nulle à ce stade → risque d'isolement si l'écosystème international ne suit pas
+</td>
+</tr>
+
+<tr>
+<td colspan="2" style="background-color:#ffffff; padding:12px;">
+<b>Synthèse</b><br/>
+<p> Profil qui n'est pas encore stable du fait de la maturité du standard FHIR, mais couvrant entièrement le besoin. </p> 
+<p> Profil nécessitant des contraintes supplémentaires (cardinalité, optionalité, nomenclature).</p> 
+</td>
+</tr>
+
+</table>
+
+<h4 id="fhir-r4">FHIR R4</h4>
+
+<p><a href="normes_standards_ig_annexe.html#présentation">Présentation générale du standard</a>.</p>
+
+<p>L'outillage associé à ce standard est également disponible dans la <a href="normes_standards_ig_annexe.html#outillage">partie dédié de l'IG annexe</a>.</p>
+
+<p>Il convient de souligner que, bien que le standard HL7 FHIR dispose à ce jour d’une version R5, les ressources présentées dans la suite du document s’appuient sur la version R4, conformément à la stratégie nationale en vigueur. Cette stratégie relative au choix des versions FHIR a été définie dans le cadre de travaux conduits conjointement par Interop’Santé et l’Agence du Numérique en Santé en 2023-2024, puis validée à l’issue d’une <a href="https://participez.esante.gouv.fr/project/fhir-r5-ou-r4/presentation/presentation">concertation</a> portée par l’ANS.</p>
+
+<p><a name="l1241">​</a>Pour plus d'info sur la maturité et l'adoption du standard dans l'écosystème, consulter la <a href="blabla">partie maturité et adoption de l'IG N&amp;S</a></p>
+
+<p><strong>Ressources FHIR concernées</strong></p>
+
+<p>L’analyse des ressources FHIR « métier » pouvant être appliquées au contexte de la gestion du cercle de soins montre que ce standard couvre la grande majorité des informations identifiées dans l’étude métier. Les informations non couvertes font l’objet d’extensions des ressources FHIR dans le cas où celles-ci sont adaptées pour mettre en œuvre les spécifications d’interopérabilité pour ce besoin.</p>
+
+<h5 id="mapping-données-métiers---éléments-techniques-2">Mapping données métiers - éléments techniques</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Concept Métier</th>
+      <th>Ressource FHIR</th>
+      <th>Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a name="l1277">​</a><a href="StructureDefinition-cds-personne-prise-charge.html">PersonnePriseCharge</a></td>
+      <td><a href="https://hl7.org/fhir/patient.html">Patient</a><br/><strong>(NM N)</strong></td>
+      <td>Décrit les données démographiques d’un patient. Cette ressource est mise en correspondance avec la classe <a href="https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-PersonnePriseCharge.html">PersonnePriseCharge</a> dans le Modèle des Objets de Santé</td>
+    </tr>
+    <tr>
+      <td><a name="l1297">​</a><a href="StructureDefinition-cds-professionnel.html">Professionnel</a></td>
+      <td><a href="https://hl7.org/fhir/practitioner.html">Practitioner</a><br/><strong>(NM 3)</strong></td>
+      <td>Décrit l’identité d’un professionnel de santé. Cette ressource est mise en correspondance avec la classe <a href="https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-Professionnel.html">Professionnel</a> du MOS.<br/><br/>La ressource Practitioner permet de véhiculer les informations définies dans l’étude métier comme nécessaires pour décrire les professionnels de santé membres du cercle de soins.</td>
+    </tr>
+    <tr>
+      <td><a name="l1320">​</a><a href="StructureDefinition-cds-contact.html">Contact</a></td>
+      <td><a href="https://hl7.org/fhir/relatedperson.html">RelatedPerson</a><br/><strong>(NM 2)</strong></td>
+      <td>Contient les informations sur une personne impliquée dans les soins d'un patient. Cette personne n’est pas la personne recevant les soins de santé et n’a pas de responsabilité formelle dans le processus de soins. La ressource RelatedPerson répond aux besoins définis dans l’étude métier pour décrire les membres du cercle de soins qui ne sont pas des professionnels de santé, c’est-à-dire les aidants, la personne de confiance ou les représentants légaux.</td>
+    </tr>
+    <tr>
+      <td><a name="l1337">​</a><a href="StructureDefinition-cds-entite-geographique.html">EntiteGeographique</a></td>
+      <td><a href="https://hl7.org/fhir/organization.html">Organization</a><br/><strong>(NM 3)</strong></td>
+      <td>Décrit un groupement de personnes ou d'organisations, officiel ou non, formé dans le but de réaliser une certaine forme d'action collective. La ressource Organization comprend par exemple les entreprises, les institutions,les sociétés, les départements, les groupes communautaires, les groupes de pratique de soins de santé, etc. Cette ressource couvre donc la notion d’entité juridique et d'entité géographique (établissement ou de structure sanitaire, médico-sociale et sociale) telle qu’elle est définie dans l’étude métier. Cette ressource couvre également la notion d’unité de soins comme définie dans l’étude métier (unité organisationnelle regroupant des activités de soins de santé au sein d’une entité).<br/><br/>Par exemple, les unités de soins de néphrologie et d’hématologie peuvent être définies comme des membres du cercle dans la mesure où les patients sont suivis de manière très régulière par les différents professionnels de ces unités pour des gestes techniques récurrents (dialyse, chimiothérapie…), et donc l’ensemble de l’unité de soins peut être considéré comme un membre du cercle.</td>
+    </tr>
+    <tr>
+      <td><a name="l1357">​</a><a href="StructureDefinition-cds-entite-juridique.html">EntiteJuridique</a></td>
+      <td><a href="https://hl7.org/fhir/organization.html">Organization</a><br/><strong>(NM 3)</strong></td>
+      <td>Décrit un groupement de personnes ou d'organisations, officiel ou non, formé dans le but de réaliser une certaine forme d'action collective. La ressource Organization comprend par exemple les entreprises, les institutions,les sociétés, les départements, les groupes communautaires, les groupes de pratique de soins de santé, etc. Cette ressource couvre donc la notion d’entité juridique et d'entité géographique (établissement ou de structure sanitaire, médico-sociale et sociale) telle qu’elle est définie dans l’étude métier. Cette ressource couvre également la notion d’unité de soins comme définie dans l’étude métier (unité organisationnelle regroupant des activités de soins de santé au sein d’une entité).<br/><br/>Par exemple, les unités de soins de néphrologie et d’hématologie peuvent être définies comme des membres du cercle dans la mesure où les patients sont suivis de manière très régulière par les différents professionnels de ces unités pour des gestes techniques récurrents (dialyse, chimiothérapie…), et donc l’ensemble de l’unité de soins peut être considéré comme un membre du cercle.</td>
+    </tr>
+    <tr>
+      <td><a name="l1377">​</a><a href="StructureDefinition-cds-organisation-interne.html">OrganisationInterne</a></td>
+      <td><a href="https://hl7.org/fhir/organization.html">Organization</a><br/><strong>(NM 3)</strong></td>
+      <td>Décrit un groupement de personnes ou d'organisations, officiel ou non, formé dans le but de réaliser une certaine forme d'action collective. La ressource Organization comprend par exemple les entreprises, les institutions,les sociétés, les départements, les groupes communautaires, les groupes de pratique de soins de santé, etc. Cette ressource couvre donc la notion d’entité juridique et d'entité géographique (établissement ou de structure sanitaire, médico-sociale et sociale) telle qu’elle est définie dans l’étude métier. Cette ressource couvre également la notion d’unité de soins comme définie dans l’étude métier (unité organisationnelle regroupant des activités de soins de santé au sein d’une entité).<br/><br/>Par exemple, les unités de soins de néphrologie et d’hématologie peuvent être définies comme des membres du cercle dans la mesure où les patients sont suivis de manière très régulière par les différents professionnels de ces unités pour des gestes techniques récurrents (dialyse, chimiothérapie…), et donc l’ensemble de l’unité de soins peut être considéré comme un membre du cercle.</td>
+    </tr>
+    <tr>
+      <td><a name="l1397">​</a><a href="StructureDefinition-cds-membre-cercle-soins.html">MembreCercleSoins</a></td>
+      <td>CareTeam.participant</td>
+      <td>Élément de la ressource CareTeam.</td>
+    </tr>
+    <tr>
+      <td><a name="l1410">​</a><a href="StructureDefinition-cds-cercle-soins.html">CercleSoins</a></td>
+      <td><a href="https://hl7.org/fhir/careteam.html">CareTeam</a><br/><strong>(NM 2)</strong></td>
+      <td>Inclut l’ensemble des personnes et organisations qui participent ou prévoient de participer à la coordination des soins autour d’un patient et aux prestations de soins pour ce patient.<br/><br/>Les éléments suivants sont particulièrement intéressants et adaptés aux besoins décrits dans l’étude métier :<br/><br/>- <strong>Status</strong> : état courant de la ressource.<br/>- <strong>Subject</strong> : référence à l’objet de l’équipe de soins (patient).<br/>- <strong>Period</strong> : définit la période pendant laquelle l’équipe de soins intervient.<br/>- <strong>Participant</strong> : définit les membres de l’équipe, notamment :<br/>&nbsp;&nbsp;- <strong>Member</strong> : référence aux membres de l’équipe de soins (Patient, Practitioner, PractitionerRole, RelatedPerson, Organization).<br/>&nbsp;&nbsp;- <strong>Period</strong> : période pendant laquelle le membre intervient dans le Cercle de Soins.</td>
+    </tr>
+    <tr>
+      <td><a name="l1461">​</a><a href="StructureDefinition-cds-situation-exercice.html">SituationExercice</a></td>
+      <td><a href="https://hl7.org/fhir/practitionerrole.html">PractitionerRole</a><br/><strong>(NM 2)</strong></td>
+      <td>Détaille les rôles et spécialités qu'un praticien peut exercer dans différents services d’une organisation pendant une durée déterminée. Cette ressource est mise en correspondance avec les classes <a href="https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-ExerciceProfessionnel.html">ExerciceProfessionnel</a> et <a href="https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-SituationExercice.html">SituationExercice</a> du MOS.<br/><br/>La ressources PractitionerRole permet de véhiculer les informations définies dans l’étude métier comme nécessaires pour décrire les professionnels de santé membres du cercle de soins</td>
+    </tr>
+    <tr>
+      <td><a name="l1487">​</a><a href="StructureDefinition-cds-exercice-professionnel.html">ExerciceProfessionnel</a></td>
+      <td><a href="https://hl7.org/fhir/practitionerrole.html">PractitionerRole</a><br/><strong>(NM 2)</strong></td>
+      <td>Détaille les rôles et spécialités qu'un praticien peut exercer dans différents services d’une organisation pendant une durée déterminée. Cette ressource est mise en correspondance avec les classes <a href="https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-ExerciceProfessionnel.html">ExerciceProfessionnel</a> et <a href="https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-SituationExercice.html">SituationExercice</a> du MOS.<br/><br/>La ressources PractitionerRole permet de véhiculer les informations définies dans l’étude métier comme nécessaires pour décrire les professionnels de santé membres du cercle de soins</td>
+    </tr>
+    <tr>
+      <td>*</td>
+      <td><a href="https://www.hl7.org/fhir/bundle.html">Bundle</a><br/><strong>(NM N)</strong></td>
+      <td>Un document FHIR est généré à partir de plusieurs ressources, contenues dans une ressource appelée Bundle (bouquet de ressources). Ce bouquet rassemble de manière indépendante ces ressources, c’est-à-dire qu’elles peuvent être consultées directement en utilisant l’API Restful de FHIR.<br/><br/>L’utilisation de la ressource Bundle est particulièrement pertinente lorsque le système cible retourne un ensemble d’instances de ressources ou lorsque plusieurs ressources doivent être soumises en même temps pour permettre l’établissement de liens (référence) entre elles</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="description-du-workflow">Description du workflow</h5>
+
+<p>Les informations concernant le transport et les interactions FHIR sont disponibles dans <a href="normes_standards_ig_annexe.html#transport-et-interactions-fhir">l'IG annexe</a>.</p>
+
+<h6 id="création-dun-cercle-de-soins">Création d’un cercle de soins</h6>
+
+<figure style="width:65%; margin:0 auto;">
+  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 677 121" zoomAndPan="magnify" preserveAspectRatio="none" width="677px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:677px;height:121px;background:#FFFFFF;" version="1.1" height="121px"><defs></defs><g><line y1="36.2969" x1="42" y2="114.5625" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="42"></line><line y1="36.2969" x1="620" y2="114.5625" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="620"></line><rect rx="2.5" ry="2.5" width="74" x="5" y="5" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0" height="30.2969"></rect><text lengthAdjust="spacing" x="12" font-size="14" textLength="60" y="24.9951" font-family="sans-serif" fill="#000000">Créateur</text><rect rx="2.5" ry="2.5" width="102" x="569" y="5" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0" height="30.2969"></rect><text lengthAdjust="spacing" x="576" font-size="14" textLength="88" y="24.9951" font-family="sans-serif" fill="#000000">Gestionnaire</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="608,63.4297,618,67.4297,608,71.4297,612,67.4297"></polygon><line y1="67.4297" x1="42" y2="67.4297" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="614"></line><text lengthAdjust="spacing" x="49" font-size="13" textLength="46" y="62.3638" font-family="sans-serif" fill="#000000">Flux 1 -</text><text font-weight="bold" lengthAdjust="spacing" x="99" font-size="13" textLength="147" y="62.3638" font-family="sans-serif" fill="#000000">CreationCercleSoins</text><text lengthAdjust="spacing" x="250" font-size="13" textLength="5" y="62.3638" font-family="sans-serif" fill="#000000">-</text><text lengthAdjust="spacing" x="263" font-size="13" textLength="340" y="62.3638" font-family="sans-serif" fill="#FF0000">POST [Lien vers le serveur]+{ressourceType: Bundle/</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="53,92.5625,43,96.5625,53,100.5625,49,96.5625"></polygon><line y1="96.5625" x1="47" y2="96.5625" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="619"></line><text lengthAdjust="spacing" x="63" font-size="13" textLength="113" y="91.4966" font-family="sans-serif" fill="#FF0000">HTTP 201 created</text></g></svg>
+</figure>
+
+<p>Le créateur envoie par POST la demande de création de cercle de soins constituée d’une ressource « Bundle » de type « transaction » contenant la ressource « CareTeam » et les ressources
+correspondant aux membres du cercle de soins (« Patient », « Practitioner », « PractitionerRole », « RelatedPerson », « Organization »).</p>
+
+<p>Afin d’éviter que deux clients ne puissent créer un cercle de soins pour le même patient, FHIR propose l’interaction « Conditional create » (création conditionnelle) qui permet au client de créer une ressource à condition qu’aucun équivalent de cette ressource n’existe encore sur le serveur. Il faut donc supporter la création conditionnelle ; ceci est à préciser dans l’élément « request » de l’entrée « Patient » du « Bundle ». De la même manière, l’interaction « Conditional Create » est utilisée pour les entrées « RelatedPerson », « Practitioner » et « Organization » de manière à ne pas créer plusieurs fois les mêmes ressources. Les paramètres de recherche utilisés seront précisés ultérieurement.</p>
+
+<p>Si la création du cercle de soins est correctement effectuée, un code HTTP 201 created est retourné. Il est recommandé qu’un Bundle, ayant le même format que celui de la requête de création de cercle de soins, soit renvoyé dans le corps de la réponse. Ce dernier doit contenir les ressources telles qu’elles ont été créées par le gestionnaire ou, a minima, les identifiants logiques des ressources ayant été attribués par le gestionnaire (dans Bundle.entry.fullUrl et/ou Bundle.entry.resource.id).</p>
+
+<h6 id="consultation-dun-cercle-de-soins">Consultation d’un cercle de soins</h6>
+
+<figure style="width:65%; margin:0 auto;">
+  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 888 121" zoomAndPan="magnify" preserveAspectRatio="none" width="888px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:888px;height:121px;background:#FFFFFF;" version="1.1" height="121px"><defs></defs><g><line y1="36.2969" x1="42" y2="114.5625" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="42"></line><line y1="36.2969" x1="831" y2="114.5625" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="831"></line><rect rx="2.5" ry="2.5" width="74" x="5" y="5" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0" height="30.2969"></rect><text lengthAdjust="spacing" x="12" font-size="14" textLength="60" y="24.9951" font-family="sans-serif" fill="#000000">Créateur</text><rect rx="2.5" ry="2.5" width="102" x="780" y="5" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0" height="30.2969"></rect><text lengthAdjust="spacing" x="787" font-size="14" textLength="88" y="24.9951" font-family="sans-serif" fill="#000000">Gestionnaire</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="819,63.4297,829,67.4297,819,71.4297,823,67.4297"></polygon><line y1="67.4297" x1="42" y2="67.4297" style="stroke:#181818;stroke-width:1.0;" x2="825"></line><text lengthAdjust="spacing" x="49" font-size="13" textLength="46" y="62.3638" font-family="sans-serif" fill="#000000">Flux 2 -</text><text font-weight="bold" lengthAdjust="spacing" x="99" font-size="13" textLength="172" y="62.3638" font-family="sans-serif" fill="#000000">RechercheCercleSoins -</text><text lengthAdjust="spacing" x="275" font-size="13" textLength="539" y="62.3638" font-family="sans-serif" fill="#FF0000">GET [Lien vers le serveur] / [CareTeam] { ?[parameters]{&amp;_format=[mime-type]} }</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="53,92.5625,43,96.5625,53,100.5625,49,96.5625"></polygon><line y1="96.5625" x1="47" y2="96.5625" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="830"></line><text lengthAdjust="spacing" x="59" font-size="13" textLength="50" y="91.4966" font-family="sans-serif" fill="#000000">Flux 3  -</text><text font-weight="bold" lengthAdjust="spacing" x="113" font-size="13" textLength="233" y="91.4966" font-family="sans-serif" fill="#000000">ResultatRechercheCercleSoins -</text><text lengthAdjust="spacing" x="346" font-size="13" textLength="4" y="91.4966" font-family="sans-serif" fill="#000000">&nbsp;</text><text lengthAdjust="spacing" x="354" font-size="13" textLength="231" y="91.4966" font-family="sans-serif" fill="#FF0000">HTTP 200 OK + {Bundle:CareTeam}</text></g></svg>
+</figure>
+
+<p>Le flux 2 de recherche de cercles de soins est une requête HTTP GET accompagnée des paramètres définis dans l’étude métier de ce volet. Des paramètres de recherche chaînés doivent être définis afin de répondre à ces attentes.</p>
+
+<p>Le paramètre « _include » pourra être utilisé pour demander le renvoi des ressources référencées par les éléments de la ressource « CareTeam », particulièrement par les éléments « subject » et
+« participant.member ». Le flux 3 constitue la réponse à la requête GET du flux 2. Lorsque la recherche s’est bien exécutée, le système gestionnaire retourne un code HTTP 200 OK. Le corps de la réponse à la requête est une ressource « Bundle » de type « searchset » encapsulant 0, 1 à plusieurs ressources « CareTeam » répondant aux critères de recherche. Les ressources référencées par les ressources CareTeam retournées sont aussi dans le Bundle s’il a été demandé de les inclure dans la requête GET.</p>
+
+<h6 id="mise-à-jour-dun-cercle-de-soins">Mise à jour d’un cercle de soins</h6>
+
+<figure style="width:65%; margin:0 auto;">
+  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 625 121" zoomAndPan="magnify" preserveAspectRatio="none" width="625px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:625px;height:121px;background:#FFFFFF;" version="1.1" height="121px"><defs></defs><g><line y1="36.2969" x1="42" y2="114.5625" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="42"></line><line y1="36.2969" x1="568" y2="114.5625" style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x2="568"></line><rect rx="2.5" ry="2.5" width="74" x="5" y="5" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0" height="30.2969"></rect><text lengthAdjust="spacing" x="12" font-size="14" textLength="60" y="24.9951" font-family="sans-serif" fill="#000000">Créateur</text><rect rx="2.5" ry="2.5" width="102" x="517" y="5" style="stroke:#181818;stroke-width:0.5;" fill="#E2E2F0" height="30.2969"></rect><text lengthAdjust="spacing" x="524" font-size="14" textLength="88" y="24.9951" font-family="sans-serif" fill="#000000">Gestionnaire</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="556,63.4297,566,67.4297,556,71.4297,560,67.4297"></polygon><line y1="67.4297" x1="42" y2="67.4297" style="stroke:#181818;stroke-width:1.0;" x2="562"></line><text lengthAdjust="spacing" x="49" font-size="13" textLength="46" y="62.3638" font-family="sans-serif" fill="#000000">Flux 4 -</text><text font-weight="bold" lengthAdjust="spacing" x="99" font-size="13" textLength="147" y="62.3638" font-family="sans-serif" fill="#000000">MiseJourCercleSoins</text><text lengthAdjust="spacing" x="250" font-size="13" textLength="5" y="62.3638" font-family="sans-serif" fill="#000000">-</text><text lengthAdjust="spacing" x="263" font-size="13" textLength="288" y="62.3638" font-family="sans-serif" fill="#FF0000">PUT  [Lien vers le serveur] / [CareTeam] / [id]</text><polygon style="stroke:#181818;stroke-width:1.0;" fill="#181818" points="53,92.5625,43,96.5625,53,100.5625,49,96.5625"></polygon><line y1="96.5625" x1="47" y2="96.5625" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x2="567"></line><text lengthAdjust="spacing" x="63" font-size="13" textLength="82" y="91.4966" font-family="sans-serif" fill="#FF0000">HTTP 200 OK</text></g></svg>
+</figure>
+
+<p>Le flux se compose d’une requête PUT basée sur l’identifiant de la ressource et qui contient la nouvelle version de la ressource. La méthode choisie est l’interaction Update, qui consiste à envoyer une nouvelle version de la ressource en demandant au serveur de remplacer la ressource existante par cette nouvelle version.</p>
+
+<p>Si la mise à jour du cercle de soins est correctement effectuée, le système gestionnaire retourne un code HTTP 200 OK.</p>
+
+<h5 id="analyse-swot-du-standard-2">Analyse SWOT du standard</h5>
+
+<table>
+<tr>
+<td style="background-color:#e6eef8; color:#245a8c;"><b>Forces</b></td>
+<td style="background-color:#fbe9e8; color:#a13c37;"><b>Faiblesses</b></td>
+</tr>
+<tr>
+<td style="background-color:#e6eef8;">
+- Couvre nativement la majorité des besoins métier via ses ressources (Patient, Practitioner, PractitionerRole, RelatedPerson, Organization, CareTeam, Bundle)<br/>
+- API REST complète (Read/Update/Create/Search) permettant tous les scénarios (création, consultation, mise à jour)<br/>
+- JSON adapté à la mobilité<br/>
+- Adoption marché forte, spécifications accessibles gratuitement
+</td>
+<td style="background-color:#fbe9e8;">
+- La ressource centrale CareTeam reste à un <b>niveau de maturité faible (NM2)</b><br/>
+- Documentation de CareTeam non stabilisée, contrairement aux autres ressources mobilisées
+</td>
+</tr>
+<tr>
+<td style="background-color:#e5f3ea; color:#1f6b40;"><b>Opportunités</b></td>
+<td style="background-color:#fdf0dd; color:#a3660f;"><b>Menaces</b></td>
+</tr>
+<tr>
+<td style="background-color:#e5f3ea;">
+- Montée en puissance générale de FHIR à l'international<br/>
+- Sessions de tests HL7 continues qui font progresser les spécifications<br/>
+- Écosystème d'éditeurs déjà large sur les autres ressources FHIR
+</td>
+<td style="background-color:#fdf0dd;">
+- Instabilité persistante de CareTeam → risque de refontes majeures des spécifications d'interopérabilité si adopté seul<br/>
+- Utiliser FHIR sans profil IHE va à l'encontre du principe doctrinal de minimiser le nombre de standards différents mobilisés
+</td>
+</tr>
+
+<tr>
+<td colspan="2" style="background-color:#ffffff; padding:12px;">
+<b>Synthèse</b><br/>
+Les ressources FHIR identifiées répondent aux besoins identifiés dans l’étude métier. La ressource CareTeam utilisée pour décrire le cercle de soins apparaît comme la ressource centrale adaptée au cas d’usage de la gestion du cercle de soins. 
+<p> FHIR décrit également une API REST réutilisant les méthodes HTTP, celle-ci est utilisée dans les scénarios ci-après pour permettre l’interaction entre les différents acteurs impliqués dans le cas d’usage de la gestion du cercle de soins.</p> 
+<br/>
+Ainsi, malgré une bonne couvrance de l'ensemble des flux, l'instabilité de CareTeam introduit un risque d'évolution majeure des spécifications si retenu sans profilage IHE.
+</td>
+</tr>
+
+</table>
+
+<h4 id="openehr">openEHR</h4>
+
+<p><a href="normes_standards_ig_annexe.html#description">Présentation générale du standard</a>.</p>
+
+<h5 id="le-modèle-openehr">Le modèle openEHR</h5>
+
+<p>Cette section présente les éléments du <a href="https://specifications.openehr.org/releases/RM/latest/ehr.html">modèle d’information openEHR</a> pertinents pour le besoin d’interopérabilité de gestion du « cercle de soins »</p>
+
+<p><strong><a href="https://specifications.openehr.org/releases/RM/latest/ehr.html#_demographic_data_in_the_ehr">openEHR Demographic</a> Information Model</strong></p>
+
+<p>Ce modèle est basé sur les standards ISO 13606-5 (Informatique de santé – Communication du dossier de santé informatisé – Partie 5: Spécification d'interfaces) et HL7v3 RIM pour décrire les informations démographiques d’une personne physique. Ce modèle décrit les informations liées à l’identité de la personne, son adresse, ses informations de contact ainsi que ses relations avec d’autres personnes.</p>
+
+<p>Le package Demographic d’OpenEHR contient différentes classes qui permettent de décrire le cas d’usage de la gestion du cercle de soins :</p>
+
+<p>Le package Demographic d’OpenEHR contient différentes classes qui permettent de décrire le cas
+d’usage de la gestion du cercle de soins :</p>
+
+<ul>
+  <li>la classe PARTY pour représenter l’usager pour lequel le cercle de soins est défini, ainsi que l’ensemble des membres du cercle, personnes et organisations,</li>
+  <li>la classe ROLE pour définir le rôle de chaque acteur,</li>
+  <li>la classe ACTOR héritée de la classe PARTY, pour décrire toute entité capable de tenir un rôle ; un acteur peut être une personne, une organisation ou un groupe,</li>
+  <li>la classe RELATIONSHIP pour décrire les relations entre les différentes parties,</li>
+  <li>la classe GROUP qui est un ensemble de PARTIES réunies pour un objectif commun, par exemple une équipe de soins. 
+Cette classe est particulièrement intéressante pour le cas d’usage de la gestion du cercle de soins, en représentant le groupe « cercle de soins » d’une personne prise en charge. Ce groupe serait constitué d’acteurs (personnes ou organisations) définis par leur rôle et leur lien avec la personne prise en charge.</li>
+</ul>
+
+<h5 id="mapping-données-métiers---éléments-techniques-3">Mapping données métiers - éléments techniques</h5>
+
+<p>Ce mapping n'est pas exhaustif et peut ne pas refléter une correspondance exacte</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Concept Métier</th>
+      <th>Classe openEHR</th>
+      <th>Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a name="l1819">​</a><a href="StructureDefinition-cds-cercle-soins.html">CercleSoins</a></td>
+      <td>GROUP</td>
+      <td>Représente le regroupement de PARTIES formé pour un objectif commun (équipe de soins)</td>
+    </tr>
+    <tr>
+      <td><a name="l1832">​</a><a href="StructureDefinition-cds-membre-cercle-soins.html">MembreCercleSoins</a></td>
+      <td>PARTY</td>
+      <td>Membre du groupe, personne ou organisation</td>
+    </tr>
+    <tr>
+      <td><a name="l1845">​</a><a href="StructureDefinition-cds-personne-prise-charge.html">PersonnePriseCharge</a></td>
+      <td>PARTY</td>
+      <td>Usager pour lequel le cercle de soins est défini</td>
+    </tr>
+    <tr>
+      <td><a name="l1858">​</a><a href="StructureDefinition-cds-professionnel.html">Professionnel</a></td>
+      <td>ACTOR + ROLE + RELATIONSHIP</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><a name="l1871">​</a><a href="StructureDefinition-cds-contact.html">Contact</a></td>
+      <td>ACTOR + ROLE + RELATIONSHIP</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><a name="l1884">​</a><a href="StructureDefinition-cds-entite-geographique.html">EntiteGeographique</a></td>
+      <td>ACTOR + ROLE + RELATIONSHIP</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><a name="l1897">​</a><a href="StructureDefinition-cds-entite-juridique.html">EntiteJuridique</a></td>
+      <td>ACTOR + ROLE + RELATIONSHIP</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><a name="l1910">​</a><a href="StructureDefinition-cds-organisation-interne.html">OrganisationInterne</a></td>
+      <td>ACTOR + ROLE + RELATIONSHIP</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><a name="l1923">​</a><a href="StructureDefinition-cds-situation-exercice.html">SituationExercice</a></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><a name="l1936">​</a><a href="StructureDefinition-cds-exercice-professionnel.html">ExerciceProfessionnel</a></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="lapi-rest-dopenehr">L’API REST d’openEHR</h5>
+
+<p>Cette <a href="https://specifications.openehr.org/releases/ITS-REST/Release-1.0.1/">API</a> s’appuie sur les méthodes et codes HTTP tels que définis dans la recommandation RFC 7231.</p>
+
+<p>Les méthodes suivantes sont pertinentes pour notre cas d’usage :</p>
+
+<ul>
+  <li>La méthode POST est utilisée pour la création de nouveaux objets ;</li>
+  <li>La méthode GET est utilisée pour récupérer des objets par leur ID ou bien pour former une recherche sur un type d’objet particulier ;</li>
+  <li>La méthode PUT est utilisée pour mettre à jour un objet existant connaissant son identifiant.</li>
+</ul>
+
+<p>Pour le corps des requêtes, les formats XML et JSON sont supportés.<br/>
+Les en-têtes HTTP utilisés sont pour la plupart ceux décrits par HTTP mais des en-têtes spécifiques à openEHR ont également été spécifiés pour permettre d’échanger des informations liées au contrôle de version.</p>
+
+<p>Des mécanismes d’authentification et d’autorisation sont également décrits et s’appuient notamment sur la recommandation RFC 7235.</p>
+
+<h5 id="analyse-swot-du-standard-3">Analyse SWOT du standard</h5>
+
+<table>
+<tr>
+<td style="background-color:#e6eef8; color:#245a8c;"><b>Forces</b></td>
+<td style="background-color:#fbe9e8; color:#a13c37;"><b>Faiblesses</b></td>
+</tr>
+<tr>
+<td style="background-color:#e6eef8;">
+- Standard considéré comme <b>stable</b> (ISO 13606-2, révisé en 2019)<br/>
+- Modèle Demographic riche : classes PARTY, ROLE, ACTOR, RELATIONSHIP, et surtout <b>GROUP</b> (directement pertinente pour représenter un « cercle de soins »)<br/>
+- API REST avec gestion de version des objets<br/>
+- Déjà utilisé par plusieurs programmes nationaux de santé numérique à l'étranger
+</td>
+<td style="background-color:#fbe9e8;">
+- L'alignement du modèle avec la ressource FHIR CareTeam est <b>en cours d'étude</b>, non finalisé<br/>
+- Maturité insuffisante pour ce cas d'usage précis en l'état actuel<br/>
+- Pas d'outillage de test formalisé pour ce standard<br/>
+- Aucune mise en œuvre du cas d'usage identifiée
+</td>
+</tr>
+<tr>
+<td style="background-color:#e5f3ea; color:#1f6b40;"><b>Opportunités</b></td>
+<td style="background-color:#fdf0dd; color:#a3660f;"><b>Menaces</b></td>
+</tr>
+<tr>
+<td style="background-color:#e5f3ea;">
+- Les travaux de révision en cours (alignement sur CareTeam) pourraient combler l'écart à moyen terme<br/>
+- Crédibilité internationale croissante du standard dans les systèmes nationaux de santé
+</td>
+<td style="background-color:#fdf0dd;">
+- Écosystème CI-SIS déjà structuré autour de FHIR/IHE → introduire openEHR ajouterait un standard supplémentaire, contraire au principe doctrinal de sobriété technologique<br/>
+- Dépendance à l'issue de travaux de révision non pilotés par la France
+</td>
+</tr>
+
+<tr>
+<td colspan="2" style="background-color:#ffffff; padding:12px;"><a name="l2053">​</a>
+<b>Synthèse</b><br/>
+Le package Demographic d’OpenEHR contient l’ensemble des notions décrites dans l’étude métier de la gestion du cercle de soins. Aujourd’hui, une révision de ce package est envisagée, en particulier pour prendre en compte la problématique de l’équipe de soins en s’alignant à la ressource FHIR CareTeam ; <br/>
+Ce travail <a href="[spe_synthese.html](https://discourse.openehr.org/t/revision-of-the-clinical-demographic-archetypes/367)">est en cours</a>. La possibilité d’adaptation d’OpenEHR au cas d’usage de la gestion du cercle de soins n’a donc pas encore atteint le niveau de maturité nécessaire.
+<br/>
+Ainsi c'est un modèle pertinent sur le fond, mais dont la mise en œuvre est <b>prématurée</b> pour ce cas d'usage.
+</td>
+</tr>
+
+</table>
+
+<p><br/></p>
+
+<h3 id="synthèse-comparative-des-standards-présentés">Synthèse comparative des standards présentés</h3>
+
+<p>Cette section présente la comparaison des standards et profils analysés dans les sections précédentes selon des critères d’évaluation provenant des documents suivants :</p>
+
+<ul>
+  <li>La <a href="https://interop.esante.gouv.fr/ig/doctrine/choix-standard.html">doctrine du CI-SIS</a></li>
+  <li>Le document « Organismes et Standards » qui décrit les organismes producteurs de standards ainsi que la manière dont ces standards sont gérés.</li>
+  <li>« <a href="null">Evaluating HIT Standards</a> » document sur la comparaison des standards publiés par l’organisation <a href="https://www.himss.org/">HIMSS</a></li>
+</ul>
+
+<p><br/></p>
+
+<h4 id="maturité-technique">Maturité technique</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="background-color:#2c5f8a; color:#ffffff;">Critère d'évaluation</th>
+      <th style="background-color:#2c5f8a; color:#ffffff;">IHE PAM</th>
+      <th style="background-color:#2c5f8a; color:#ffffff;">IHE DCTM</th>
+      <th style="background-color:#2c5f8a; color:#ffffff;">HL7 FHIR R4</th>
+      <th style="background-color:#2c5f8a; color:#ffffff;">openEHR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="background-color:#eaf2fa;"><strong>Outillage</strong><br/><em>(outils de test pour valider l'adhérence au standard)</em></td>
+      <td>✅ Outillage mature, hérité de l'écosystème PAM largement déployé</td>
+      <td>⚠️ La StructureDefinition de la ressource CareTeam contrainte est disponible → un outil de validation <em>structurelle</em> est possible, mais aucun outillage dédié au profil DCTM lui-même n'existe</td>
+      <td>✅ Outillage disponible sur les 6 ressources mobilisées (Patient, Practitioner, PractitionerRole, RelatedPerson, Organization, CareTeam)</td>
+      <td>❌ Le développement d'outils de test est identifié comme une <strong>activité future potentielle</strong> seulement : rien de disponible aujourd'hui</td>
+    </tr>
+    <tr>
+      <td style="background-color:#eaf2fa;"><strong>Tests</strong><br/><em>(tests sur versions STU et/ou guides normatifs)</em></td>
+      <td>✅</td>
+      <td>❌ Aucun outil disponible pour valider les <em>transactions</em> du profil ; le profil n'a été testé lors d'<strong>aucun connectathon IHE</strong> à ce jour</td>
+      <td>✅ Sessions de test HL7 continues tout au long de l'année sur les ressources concernées</td>
+      <td>❌ Pas de démarche de test formalisée</td>
+    </tr>
+    <tr>
+      <td style="background-color:#eaf2fa;"><strong>Stabilité de la documentation</strong></td>
+      <td>✅ Profil ancien, stable</td>
+      <td>✅ Stable</td>
+      <td>⚠️ <strong>Hétérogène selon la ressource</strong> : Patient est normatif (stable) ; Practitioner (NM3), PractitionerRole (NM2), RelatedPerson (NM2) et surtout <strong>CareTeam (NM2, ressource centrale du cas d'usage)</strong> sont à un niveau de maturité qualifié de <strong>faible</strong></td>
+      <td>✅ Standard ISO 13606-2 révisé en 2019, considéré globalement comme stable</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="gouvernance">Gouvernance</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="background-color:#2c5f8a; color:#ffffff;">Critère d'évaluation</th>
+      <th style="background-color:#2c5f8a; color:#ffffff;">IHE PAM</th>
+      <th style="background-color:#2c5f8a; color:#ffffff;">IHE DCTM</th>
+      <th style="background-color:#2c5f8a; color:#ffffff;">HL7 FHIR R4</th>
+      <th style="background-color:#2c5f8a; color:#ffffff;">openEHR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="background-color:#eaf2fa;"><strong>Processus de prise en compte des améliorations</strong></td>
+      <td>✅</td>
+      <td>✅ Porté par le cycle IHE + les tracks connectathon FHIR (Care Planning 2019, Care Management 2020)</td>
+      <td>✅</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td style="background-color:#eaf2fa;"><strong>Existence de guides d'implémentation</strong><br/><em>Les guides référencent les standards de base avec au moins un cas d'usage et une optionalité sur les paramètres pour permettre les extensions.</em></td>
+      <td>✅</td>
+      <td>✅ Le profil DCTM constitue lui-même un guide d'implémentation combinant FHIR CareTeam avec cas d'usage et contraintes</td>
+      <td>✅</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td style="background-color:#eaf2fa;"><strong>Neutralité concurrentielle</strong><br/><em>les spécifications ne limitent pas la concurrence et l'innovation</em><br/><em>les spécifications sont basées sur des développements scientifiques et technologiques de pointe.</em></td>
+      <td>✅</td>
+      <td>✅</td>
+      <td>❌</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td style="background-color:#eaf2fa;"><strong>Qualité</strong><br/><em>la qualité est suffisante pour permettre le développement de produits et de services interopérables concurrents</em></td>
+      <td>✅</td>
+      <td>❌ Non stabilisée (dépendance directe à CareTeam)</td>
+      <td>⚠️ <strong>Mixte</strong> : Patient et Organization ✅ stabilisées ; CareTeam, Practitioner, PractitionerRole, RelatedPerson non stabilisées</td>
+      <td>❌ Non stabilisée pour ce cas d'usage précis</td>
+    </tr>
+    <tr>
+      <td style="background-color:#eaf2fa;"><strong>Accessibilité des spécifications</strong><br/><em>Les spécifications sont disponibles au public à des conditions raisonnables (y compris pour un prix raisonnable ou gratuitement)</em></td>
+      <td>✅</td>
+      <td>✅</td>
+      <td>✅</td>
+      <td>✅</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="adoption-et-usage">Adoption et usage</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="background-color:#2c5f8a; color:#ffffff;">Critère d'évaluation</th>
+      <th style="background-color:#2c5f8a; color:#ffffff;">IHE PAM</th>
+      <th style="background-color:#2c5f8a; color:#ffffff;">IHE DCTM</th>
+      <th style="background-color:#2c5f8a; color:#ffffff;">HL7 FHIR R4</th>
+      <th style="background-color:#2c5f8a; color:#ffffff;">openEHR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="background-color:#eaf2fa;"><strong>Adoption par le marché et utilisation</strong></td>
+      <td>✅ Large adoption hospitalière</td>
+      <td>❌ <strong>Aucun éditeur ne déclare avoir intégré ce profil</strong> dans un produit à ce jour</td>
+      <td>✅ Adoption confirmée sur les 6 ressources mobilisées</td>
+      <td>✅ Plusieurs programmes nationaux de santé numérique s'appuient sur openEHR</td>
+    </tr>
+    <tr>
+      <td style="background-color:#eaf2fa;"><strong>Adapté aux dispositifs mobiles</strong></td>
+      <td>✅</td>
+      <td>✅ S'appuie sur JSON/XML/HTTP (via FHIR)</td>
+      <td>✅ JSON particulièrement adapté à la mobilité</td>
+      <td>✅ XML et JSON supportés</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="adéquation-au-cas-dusage">Adéquation au cas d'usage</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="background-color:#2c5f8a; color:#ffffff;">Critère d'évaluation</th>
+      <th style="background-color:#2c5f8a; color:#ffffff;">IHE PAM</th>
+      <th style="background-color:#2c5f8a; color:#ffffff;">IHE DCTM</th>
+      <th style="background-color:#2c5f8a; color:#ffffff;">HL7 FHIR R4</th>
+      <th style="background-color:#2c5f8a; color:#ffffff;">openEHR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="background-color:#eaf2fa;"><strong>Couverture métier (cercle de soins)</strong></td>
+      <td>⚠️ <strong>Partielle</strong> : segments ROL (rôle d'un intervenant médical) et NK1 (personne de confiance) exploitables, mais <strong>aucun segment</strong> ne couvre les structures de santé, unités de soins, représentant légal ou aidant identifiés dans l'étude métier</td>
+      <td>✅ <strong>Complète</strong> : répond pleinement au besoin ; nécessite seulement des contraintes complémentaires (cardinalité, optionalité, nomenclature)</td>
+      <td>✅ <strong>Complète</strong> : les 6 ressources couvrent la majorité des informations métier ; le résiduel est traitable par extensions</td>
+      <td>⚠️ <strong>Partielle</strong> : la classe GROUP du package Demographic est pertinente pour modéliser le « cercle de soins », mais l'alignement du modèle avec CareTeam est <strong>en cours d'étude</strong>, non finalisé</td>
+    </tr>
+    <tr>
+      <td style="background-color:#eaf2fa;"><strong>Mises en œuvre existantes du cas d'usage (cercle de soins)</strong></td>
+      <td>❌</td>
+      <td>❌</td>
+      <td>❌</td>
+      <td>❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br/></p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>Le tableau ci-dessous présente la synthèse métier et technique de la présente étude des standards HL7 FHIR R4, openEHR et les profils IHE PAM et DCTM candidats à l’élaboration des spécifications techniques du volet « Cercle de Soins ».</p>
+
+<table>
+<tr>
+<td style="background-color:#2c5f8a; color:#ffffff;"><b>Standard</b></td>
+<td style="background-color:#2c5f8a; color:#ffffff;"><b>Synthèse</b></td>
+</tr>
+<tr>
+<td style="background-color:#e6eef8; color:#245a8c;"><b>IHE PAM</b></td>
+<td style="background-color:#e6eef8;">Les segments ROL et NK1 apportent des éléments utiles (rôle d'un intervenant, personne de confiance), mais leur mise en œuvre pour le cercle de soins demanderait des <b>développements complémentaires importants</b>. Les structures de santé et les unités de soins ne sont couvertes par aucun segment.</td>
+</tr>
+<tr>
+<td style="background-color:#e6eef8; color:#245a8c;"><b>IHE DCTM</b></td>
+<td style="background-color:#e6eef8;">Le profil <b>répond pleinement</b> au besoin métier et permet la mise en œuvre de l'ensemble des flux identifiés dans l'étude métier. Il est actuellement au stade <i>trial implementation</i> et nécessite des contraintes complémentaires (cardinalité, optionalité, nomenclature) pour finaliser sa mise en œuvre.</td>
+</tr>
+<tr>
+<td style="background-color:#e6eef8; color:#245a8c;"><b>HL7 FHIR</b></td>
+<td style="background-color:#e6eef8;">Les ressources identifiées couvrent nativement la majorité des besoins et l'ensemble des flux métier, avec un format JSON bien adapté à la mobilité.Cependant la ressource centrale <b>CareTeam (NM2)</b> reste instable et pourrait évoluer sans garantie de rétrocompatibilité.</td>
+</tr>
+<tr>
+<td style="background-color:#e6eef8; color:#245a8c;"><b>openEHR</b></td>
+<td style="background-color:#e6eef8;">Le modèle Demographic répond en partie aux notions identifiées dans l'étude métier, mais l'alignement du modèle avec la ressource CareTeam est <b>encore en cours d'étude</b>. Sa mise en œuvre pour ce cas d'usage est jugée prématurée et nécessiterait des développements supplémentaires.</td>
+</tr>
+</table>
+
+<p><br/></p>
+
+<h4 id="standard-retenu">Standard retenu</h4>
+
+<div style="border: 2px solid #2e7d4f; border-radius: 8px; background-color: #eef7f1; margin: 24px 0">
+  <div style="background-color: #2e7d4f; color: #ffffff; padding: 10px 20px; font-weight: bold; font-size: 1.1em;">
+    IHE DCTM
+  </div>
+  <div style="padding: 16px 20px;">
+    <p>Le profil <b>IHE DCTM</b>, bien que récent et non encore implémenté, est le seul à couvrir pleinement le besoin d'interopérabilité de la gestion du cercle de soins tout en respectant le premier niveau de la hiérarchie doctrinale (profil IHE stable).</p>
+    <p>La ressource FHIR <b>CareTeam</b> dont il dépend n'a pas encore atteint une maturité satisfaisante, mais les sessions de test organisées par HL7 tout au long de l'année laissent présager une évolution rapide de cette ressource.</p>
+    <p style="margin-bottom:0;">La mise en œuvre de ce volet pourra elle-même nourrir le retour d'expérience de la communauté internationale autour du profil DCTM.</p>
+  </div>
+</div>
+
+
+
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+  <script src="assets/js/flags.js" type="text/javascript"> </script>
+
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container" data-fhir="generated">    <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:var(--ig-left);">&nbsp;
+
+                <a href="annexes.html">&lt; prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:var(--ig-right);">&nbsp;
+
+                <a href="normes_standards_ig_annexe.html">next &gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  
+          Package ans.fhir.fr.cds#2.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-08-25 08:34:00 +0000">
+    2026-08-25
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="https://interop.esante.gouv.fr/ig/fhir/cds/history.html" target="_blank">Historique des versions</a>
+<a style="color: var(--footer-hyperlink-text-color)" href="https://interop.esante.gouv.fr/ig/documentation" target="_blank">Documentation</a>
+ | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/ansforge/IG-fhir-cercle-de-soins/issues/new" target="_blank">New issue</a>
+
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+
+    <!-- Ajout ANS -->
+  <script src="assets/js/app.js" type="text/javascript"> </script>
+  <script src="assets/js/vendor.js" type="text/javascript"> </script>
+    <!-- Fin ajout ANS -->
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
+  ================================================== -->
+    <!-- AJOUT ANS -->
+
+<footer role="contentinfo" class="footer footer-principal">
+  <div class="footer__region1">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4 text-center text-md-left">
+          <div class="logos">        
+            <div class="logo logo--0">
+              <a rel="nofollow" href="https://solidarites-sante.gouv.fr" title="Ministère des Solidarités et de la Santé (nouvelle fenêtre)" target="_blank">
+                
+                <img src="assets/images/logo-ministere.svg" alt="Ministère des Solidarités et de la Santé" width="133" loading="lazy" height="77"/>
+                
+              </a>
+            </div>
+        
+            <div class="logo logo--1">
+              <a rel="nofollow" href="https://esante.gouv.fr/" title="Agence du numérique en santé (nouvelle fenêtre)" target="_blank">
+                
+                <img src="assets/images/logo-ANS-footer.svg" alt="Agence du numérique en santé" width="106" loading="lazy" height="74"/>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 text-center text-md-left">
+          <p class="footer__title">Agence du Numérique en Santé</p>
+          <p>2-10 Rue d'Oradour-sur-Glane 75015 Paris</p>
+
+            <!-- <div class="m-social">
+            <ul class="m-social__list">        
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://www.linkedin.com/company/agence-du-numerique-en-sante/" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-linkedin" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#linkedin"></use></svg>
+                  </div>
+                  <span class="sr-only">linkedin</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://twitter.com/esante_gouv_fr" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-twitter" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#twitter"></use></svg>
+                  </div>
+                  <span class="sr-only">twitter</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://www.youtube.com/channel/UCd1zuSaU5cE1lRCpwv_HSMA" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-youtube" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#youtube"></use></svg>
+                  </div>
+                  <span class="sr-only">youtube</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://esante.gouv.fr/rss.xml" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-rss" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#rss"></use></svg>
+                  </div>
+                  <span class="sr-only">rss</span>
+                </a>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+        
+        <div class="col-6 col-lg-4">
+          <ul class="footer-list">
+            <li class="footer-list__item footer-list__item--hasIcon">
+              <a href="mailto:ci-sis@esante.gouv.fr" class="mailto-link">
+                <svg aria-hidden="true" focusable="false" class="svg-icon svg-angle-right"><use href="assets/images/icon-sprite.svg#angle-right"></use></svg>Contact</a>
+              </li>
+                <!-- <li class="footer-list__item">
+                <a href="https://interop-pprod.esante.gouv.fr/ci-sis-specifications/wp-content/uploads/CGU_espace_de_tests_v1.1.pdf" class="file-link">Mentions légales</a>
+              </li> -->
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+      <!-- <div class="footer__region2">
+      <div class="container">
+        <div class="footer-contentinfo">
+          <ul class="footer-list footer-list--inline">
+
+          </ul>
+        </div>
+      </div>
+    </div> -->
+  </footer>
+  </body>
+</html>

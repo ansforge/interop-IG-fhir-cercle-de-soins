@@ -3,16 +3,17 @@
 ## Pages
 
 * [Accueil](fr/index.md)
+* [Normes et standards](fr/normes_standards.md)
 * [Recherche CDS](fr/recherche_recuperation_cds.md)
 * [Interactions RESTful](fr/interaction_restful.md)
+* [IG N&S](fr/normes_standards_ig_annexe.md)
+* [Annexes](fr/annexes.md)
 * [Volume 1 - Etude fonctionnelle](fr/specifications_fonctionnelles.md)
 * [Correspondances métier](fr/correspondances_metier.md)
 * [Résumé des artefacts](fr/artifacts.md)
-* [Informations sur la traduction](fr/translationinfo.md)
 * [Historique](fr/changes.md)
 * [Interactions transaction](fr/interaction_transaction.md)
 * [Specifications Techniques](fr/specifications_techniques.md)
-* [Autres Ressources](fr/autres_ressources.md)
 * [Téléchargements et usages](fr/downloads.md)
 
 ## Resources

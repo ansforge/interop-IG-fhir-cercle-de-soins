@@ -46,8 +46,8 @@
 	  <script src="assets/js/prism-cql.js" type="text/javascript"></script>
     <script src="assets/js/mermaid.js" type="text/javascript"></script>
     <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
-    <style type="text/css">h2{--heading-prefix:"4.1"}
-    h3,h4,h5,h6{--heading-prefix:"4.1"}</style>
+    <style type="text/css">h2{--heading-prefix:"4.3"}
+    h3,h4,h5,h6{--heading-prefix:"4.3"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
       <div class="container">    <!-- container -->
 
@@ -105,10 +105,10 @@
     <a href="index.html">Accueil</a>
   </li>
   <li>
-    <a href="specifications_fonctionnelles.html">Vol 1 - Etude fonctionnelle</a>
+    <a href="specifications_fonctionnelles.html">Volume 1 - Etude fonctionnelle</a>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Vol 2 - Détail des transactions
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2 - Détail des transactions
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
@@ -130,10 +130,16 @@
     <a href="artifacts.html">Ressources de conformité</a>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Annexes
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
+      <li>
+        <a href="normes_standards.html">Normes et standards</a>
+      </li>
+      <li>
+        <a href="normes_standards_ig_annexe.html">IG N&amp;S</a>
+      </li>
       <li>
         <a href="downloads.html">Téléchargements et usage</a>
       </li>
@@ -181,15 +187,15 @@
     <div id="segment-breadcrumb" class="segment" data-fhir="generated">    <!-- segment-breadcrumb -->
       <div class="container">    <!-- container -->
         <ul class="breadcrumb">
-          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="autres_ressources.html"><b>Autres Ressources</b></a></li><li><b>Téléchargements et usages</b></li>
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="annexes.html"><b>Annexes</b></a></li><li><b>Téléchargements et usages</b></li>
 
           <span style="float: var(--ig-right);">
 
-            <a href="autres_ressources.html">&lt; précédent</a> | 
+            <a href="normes_standards_ig_annexe.html">&lt; précédent</a> | 
 
             <a href="#bottom">bas de page</a>
 
-          | <a href="translationinfo.html">suivant &gt;</a>
+          | <a href="changes.html">suivant &gt;</a>
 
           </span>
 
@@ -235,9 +241,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<p><a name="l396">​</a>L'implementation guide contient un package <a href="package.tgz">téléchargeable ici</a> permettant de valider les instances par rapport aux profils qu'il contient.</p>
+<p><a name="l408">​</a>L'implementation guide contient un package <a href="package.tgz">téléchargeable ici</a> permettant de valider les instances par rapport aux profils qu'il contient.</p>
 
-<p><a name="l402">​</a>Pour cela, il suffit de télécharger le <a href="package.tgz">package.tgz</a> et l'importer dans un serveur, par exemple sur hapi en suivant ce <a href="https://github.com/nmdp-bioinformatics/igloader">script python</a> open source.</p>
+<p><a name="l414">​</a>Pour cela, il suffit de télécharger le <a href="package.tgz">package.tgz</a> et l'importer dans un serveur, par exemple sur hapi en suivant ce <a href="https://github.com/nmdp-bioinformatics/igloader">script python</a> open source.</p>
 
 <p>Vous pourrez ensuite utiliser l'opération <a href="https://www.hl7.org/fhir/resource-operation-validate.html">$validate</a> pour valider les instances de ressource contre un profil issu de cette spécification.</p>
 
@@ -245,23 +251,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <ul>
   <li><a href="full-ig.zip">L'ensemble de la specification (zip)</a></li>
-  <li><a name="l426">​</a><a href="package.tgz">Package (tgz)</a></li>
+  <li><a name="l438">​</a><a href="package.tgz">Package (tgz)</a></li>
 </ul>
 
 <h3 id="définitions">Définitions</h3>
 
 <ul>
-  <li><a name="l436">​</a><a href="definitions.json.zip">Définitions JSON (zip)</a></li>
-  <li><a name="l440">​</a><a href="definitions.xml.zip">Définitions XML (zip)</a></li>
-  <li><a name="l444">​</a><a href="definitions.ttl.zip">Définitions Turtle (zip)</a></li>
+  <li><a name="l448">​</a><a href="definitions.json.zip">Définitions JSON (zip)</a></li>
+  <li><a name="l452">​</a><a href="definitions.xml.zip">Définitions XML (zip)</a></li>
+  <li><a name="l456">​</a><a href="definitions.ttl.zip">Définitions Turtle (zip)</a></li>
 </ul>
 
 <h3 id="exemples">Exemples</h3>
 
 <ul>
-  <li><a name="l454">​</a><a href="examples.xml.zip">Exemples XML (zip)</a></li>
-  <li><a name="l458">​</a><a href="examples.json.zip">Exemples JSON (zip)</a></li>
-  <li><a name="l462">​</a><a href="examples.ttl.zip">Exemples JSON (zip)</a></li>
+  <li><a name="l466">​</a><a href="examples.xml.zip">Exemples XML (zip)</a></li>
+  <li><a name="l470">​</a><a href="examples.json.zip">Exemples JSON (zip)</a></li>
+  <li><a name="l474">​</a><a href="examples.ttl.zip">Exemples JSON (zip)</a></li>
 </ul>
 
 
@@ -288,7 +294,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
               <td style="text-align:var(--ig-left);">&nbsp;
 
-                <a href="autres_ressources.html">&lt; précédent</a>
+                <a href="normes_standards_ig_annexe.html">&lt; précédent</a>
 
               </td>
               <td style="text-align:center">
@@ -296,7 +302,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:var(--ig-right);">&nbsp;
 
-                <a href="translationinfo.html">suivant &gt;</a>
+                <a href="changes.html">suivant &gt;</a>
 
               </td>
             </tr>
@@ -312,7 +318,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  
           Le package ans.fhir.fr.cds#2.0.1 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-08-25 08:05:00 +0000">
+  <span title="2026-08-25 08:34:00 +0000">
     2026-08-25
   </span>
 

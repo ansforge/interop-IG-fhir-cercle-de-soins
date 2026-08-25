@@ -1,17 +1,17 @@
 CDS : Validation Results
 =========================================
 
-err = 220, warn = 42, info = 1608
+err = 220, warn = 42, info = 1609
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.cds#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/cds)
- Build Errors : 18 / 8 / 0
+ Build Errors : 103 / 8 / 0
  /__w/interop-IG-fhir-cercle-de-soins/interop-IG-fhir-cercle-de-soins/igSource/fsh-generated/resources/Bundle-cds-bundle-transaction-creation-example : 11 / 9 / 38
  /__w/interop-IG-fhir-cercle-de-soins/interop-IG-fhir-cercle-de-soins/igSource/fsh-generated/resources/CapabilityStatement-CDSConsommateur : 72 / 1 / 42
  /__w/interop-IG-fhir-cercle-de-soins/interop-IG-fhir-cercle-de-soins/igSource/fsh-generated/resources/CapabilityStatement-CDSCreateurRestful : 8 / 1 / 12
  /__w/interop-IG-fhir-cercle-de-soins/interop-IG-fhir-cercle-de-soins/igSource/fsh-generated/resources/CapabilityStatement-CDSCreateurTransaction : 12 / 1 / 6
  /__w/interop-IG-fhir-cercle-de-soins/interop-IG-fhir-cercle-de-soins/igSource/fsh-generated/resources/CapabilityStatement-CDSGestionnaire : 76 / 1 / 44
  /__w/interop-IG-fhir-cercle-de-soins/interop-IG-fhir-cercle-de-soins/igSource/fsh-generated/resources/CareTeam-cds-careteam-example : 2 / 1 / 1
- /__w/interop-IG-fhir-cercle-de-soins/interop-IG-fhir-cercle-de-soins/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.cds : 0 / 2 / 13
+ /__w/interop-IG-fhir-cercle-de-soins/interop-IG-fhir-cercle-de-soins/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.cds : 0 / 2 / 14
  /__w/interop-IG-fhir-cercle-de-soins/interop-IG-fhir-cercle-de-soins/igSource/fsh-generated/resources/Organization-cds-organization-example : 4 / 0 / 8
  /__w/interop-IG-fhir-cercle-de-soins/interop-IG-fhir-cercle-de-soins/igSource/fsh-generated/resources/Patient-cds-patient-example : 1 / 2 / 7
  /__w/interop-IG-fhir-cercle-de-soins/interop-IG-fhir-cercle-de-soins/igSource/fsh-generated/resources/RelatedPerson-cds-relatedperson-example : 2 / 1 / 13
@@ -35,24 +35,109 @@ WARNING: Unable to find ImplementationGuide.definition.resource.description for 
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/cds-organization-example.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Patient/cds-patient-example.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource RelatedPerson/cds-relatedperson-example.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: en/downloads.html#/html/body/div/div/div/div/div/p/a at Line 247, column 48: The link 'package.tgz' for "téléchargeable ici" cannot be resolved
-ERROR: en/downloads.html#/html/body/div/div/div/div/div/p/a at Line 249, column 44: The link 'package.tgz' for "package.tgz" cannot be resolved
-ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 257, column 8: The link 'package.tgz' for "Package (tgz)" cannot be resolved
-ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 263, column 8: The link 'definitions.json.zip' for "Définitions JSON (zip)" cannot be resolved
-ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 264, column 8: The link 'definitions.xml.zip' for "Définitions XML (zip)" cannot be resolved
-ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 265, column 8: The link 'definitions.ttl.zip' for "Définitions Turtle (zip)" cannot be resolved
-ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 271, column 8: The link 'examples.xml.zip' for "Exemples XML (zip)" cannot be resolved
-ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 272, column 8: The link 'examples.json.zip' for "Exemples JSON (zip)" cannot be resolved
-ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 273, column 8: The link 'examples.ttl.zip' for "Exemples JSON (zip)" cannot be resolved
-ERROR: fr/downloads.html#/html/body/div/div/div/div/div/p/a at Line 240, column 48: The link 'package.tgz' for "téléchargeable ici" cannot be resolved
-ERROR: fr/downloads.html#/html/body/div/div/div/div/div/p/a at Line 242, column 44: The link 'package.tgz' for "package.tgz" cannot be resolved
-ERROR: fr/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 250, column 8: The link 'package.tgz' for "Package (tgz)" cannot be resolved
-ERROR: fr/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 256, column 8: The link 'definitions.json.zip' for "Définitions JSON (zip)" cannot be resolved
-ERROR: fr/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 257, column 8: The link 'definitions.xml.zip' for "Définitions XML (zip)" cannot be resolved
-ERROR: fr/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 258, column 8: The link 'definitions.ttl.zip' for "Définitions Turtle (zip)" cannot be resolved
-ERROR: fr/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 264, column 8: The link 'examples.xml.zip' for "Exemples XML (zip)" cannot be resolved
-ERROR: fr/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 265, column 8: The link 'examples.json.zip' for "Exemples JSON (zip)" cannot be resolved
-ERROR: fr/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 266, column 8: The link 'examples.ttl.zip' for "Exemples JSON (zip)" cannot be resolved
+ERROR: en/downloads.html#/html/body/div/div/div/div/div/p/a at Line 253, column 48: The link 'package.tgz' for "téléchargeable ici" cannot be resolved
+ERROR: en/downloads.html#/html/body/div/div/div/div/div/p/a at Line 255, column 44: The link 'package.tgz' for "package.tgz" cannot be resolved
+ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 263, column 8: The link 'package.tgz' for "Package (tgz)" cannot be resolved
+ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 269, column 8: The link 'definitions.json.zip' for "Définitions JSON (zip)" cannot be resolved
+ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 270, column 8: The link 'definitions.xml.zip' for "Définitions XML (zip)" cannot be resolved
+ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 271, column 8: The link 'definitions.ttl.zip' for "Définitions Turtle (zip)" cannot be resolved
+ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 277, column 8: The link 'examples.xml.zip' for "Exemples XML (zip)" cannot be resolved
+ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 278, column 8: The link 'examples.json.zip' for "Exemples JSON (zip)" cannot be resolved
+ERROR: en/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 279, column 8: The link 'examples.ttl.zip' for "Exemples JSON (zip)" cannot be resolved
+ERROR: en/index.html#/html/body/div/div/div/div/div/p/p/a at Line 280, column 216: The link 'translationinfo.html' for "here" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 340, column 12: The link 'StructureDefinition-cds-personne-prise-charge.html' for "PersonnePriseCharge" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 345, column 12: The link 'StructureDefinition-cds-professionnel.html' for "Professionnel" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 350, column 12: The link 'StructureDefinition-cds-contact.html' for "Contact" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 355, column 12: The link 'StructureDefinition-cds-entite-geographique.html' for "EntiteGeographique" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 360, column 12: The link 'StructureDefinition-cds-entite-juridique.html' for "EntiteJuridique" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 365, column 12: The link 'StructureDefinition-cds-organisation-interne.html' for "OrganisationInterne" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 370, column 12: The link 'StructureDefinition-cds-membre-cercle-soins.html' for "MembreCercleSoins" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 375, column 12: The link 'StructureDefinition-cds-cercle-soins.html' for "CercleSoins" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 380, column 12: The link 'StructureDefinition-cds-situation-exercice.html' for "SituationExercice" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 385, column 12: The link 'StructureDefinition-cds-exercice-professionnel.html' for "ExerciceProfessionnel" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 468, column 12: The link 'StructureDefinition-cds-cercle-soins.html' for "CercleSoins" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 473, column 12: The link 'StructureDefinition-cds-membre-cercle-soins.html' for "MembreCercleSoins" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 478, column 12: The link 'StructureDefinition-cds-personne-prise-charge.html' for "PersonnePriseCharge" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 483, column 12: The link 'StructureDefinition-cds-professionnel.html' for "Professionnel" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 488, column 12: The link 'StructureDefinition-cds-contact.html' for "Contact" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 493, column 12: The link 'StructureDefinition-cds-entite-geographique.html' for "EntiteGeographique" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 498, column 12: The link 'StructureDefinition-cds-entite-juridique.html' for "EntiteJuridique" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 503, column 12: The link 'StructureDefinition-cds-organisation-interne.html' for "OrganisationInterne" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 508, column 12: The link 'StructureDefinition-cds-situation-exercice.html' for "SituationExercice" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 513, column 12: The link 'StructureDefinition-cds-exercice-professionnel.html' for "ExerciceProfessionnel" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/p/a at Line 604, column 96: The link 'blabla' for "partie maturité et adoption de l'IG N&S" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 622, column 12: The link 'StructureDefinition-cds-personne-prise-charge.html' for "PersonnePriseCharge" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 627, column 12: The link 'StructureDefinition-cds-professionnel.html' for "Professionnel" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 632, column 12: The link 'StructureDefinition-cds-contact.html' for "Contact" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 637, column 12: The link 'StructureDefinition-cds-entite-geographique.html' for "EntiteGeographique" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 642, column 12: The link 'StructureDefinition-cds-entite-juridique.html' for "EntiteJuridique" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 647, column 12: The link 'StructureDefinition-cds-organisation-interne.html' for "OrganisationInterne" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 652, column 12: The link 'StructureDefinition-cds-membre-cercle-soins.html' for "MembreCercleSoins" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 657, column 12: The link 'StructureDefinition-cds-cercle-soins.html' for "CercleSoins" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 662, column 12: The link 'StructureDefinition-cds-situation-exercice.html' for "SituationExercice" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 667, column 12: The link 'StructureDefinition-cds-exercice-professionnel.html' for "ExerciceProfessionnel" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 804, column 12: The link 'StructureDefinition-cds-cercle-soins.html' for "CercleSoins" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 809, column 12: The link 'StructureDefinition-cds-membre-cercle-soins.html' for "MembreCercleSoins" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 814, column 12: The link 'StructureDefinition-cds-personne-prise-charge.html' for "PersonnePriseCharge" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 819, column 12: The link 'StructureDefinition-cds-professionnel.html' for "Professionnel" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 824, column 12: The link 'StructureDefinition-cds-contact.html' for "Contact" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 829, column 12: The link 'StructureDefinition-cds-entite-geographique.html' for "EntiteGeographique" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 834, column 12: The link 'StructureDefinition-cds-entite-juridique.html' for "EntiteJuridique" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 839, column 12: The link 'StructureDefinition-cds-organisation-interne.html' for "OrganisationInterne" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 844, column 12: The link 'StructureDefinition-cds-situation-exercice.html' for "SituationExercice" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 849, column 12: The link 'StructureDefinition-cds-exercice-professionnel.html' for "ExerciceProfessionnel" cannot be resolved
+ERROR: en/normes_standards.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 913, column 13: The link '[spe_synthese.html](https://discourse.openehr.org/t/revision-of-the-clinical-demographic-archetypes/367)' for "est en cours" cannot be resolved
+ERROR: fr/downloads.html#/html/body/div/div/div/div/div/p/a at Line 246, column 48: The link 'package.tgz' for "téléchargeable ici" cannot be resolved
+ERROR: fr/downloads.html#/html/body/div/div/div/div/div/p/a at Line 248, column 44: The link 'package.tgz' for "package.tgz" cannot be resolved
+ERROR: fr/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 256, column 8: The link 'package.tgz' for "Package (tgz)" cannot be resolved
+ERROR: fr/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 262, column 8: The link 'definitions.json.zip' for "Définitions JSON (zip)" cannot be resolved
+ERROR: fr/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 263, column 8: The link 'definitions.xml.zip' for "Définitions XML (zip)" cannot be resolved
+ERROR: fr/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 264, column 8: The link 'definitions.ttl.zip' for "Définitions Turtle (zip)" cannot be resolved
+ERROR: fr/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 270, column 8: The link 'examples.xml.zip' for "Exemples XML (zip)" cannot be resolved
+ERROR: fr/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 271, column 8: The link 'examples.json.zip' for "Exemples JSON (zip)" cannot be resolved
+ERROR: fr/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 272, column 8: The link 'examples.ttl.zip' for "Exemples JSON (zip)" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 333, column 12: The link 'StructureDefinition-cds-personne-prise-charge.html' for "PersonnePriseCharge" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 338, column 12: The link 'StructureDefinition-cds-professionnel.html' for "Professionnel" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 343, column 12: The link 'StructureDefinition-cds-contact.html' for "Contact" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 348, column 12: The link 'StructureDefinition-cds-entite-geographique.html' for "EntiteGeographique" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 353, column 12: The link 'StructureDefinition-cds-entite-juridique.html' for "EntiteJuridique" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 358, column 12: The link 'StructureDefinition-cds-organisation-interne.html' for "OrganisationInterne" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 363, column 12: The link 'StructureDefinition-cds-membre-cercle-soins.html' for "MembreCercleSoins" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 368, column 12: The link 'StructureDefinition-cds-cercle-soins.html' for "CercleSoins" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 373, column 12: The link 'StructureDefinition-cds-situation-exercice.html' for "SituationExercice" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 378, column 12: The link 'StructureDefinition-cds-exercice-professionnel.html' for "ExerciceProfessionnel" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 461, column 12: The link 'StructureDefinition-cds-cercle-soins.html' for "CercleSoins" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 466, column 12: The link 'StructureDefinition-cds-membre-cercle-soins.html' for "MembreCercleSoins" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 471, column 12: The link 'StructureDefinition-cds-personne-prise-charge.html' for "PersonnePriseCharge" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 476, column 12: The link 'StructureDefinition-cds-professionnel.html' for "Professionnel" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 481, column 12: The link 'StructureDefinition-cds-contact.html' for "Contact" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 486, column 12: The link 'StructureDefinition-cds-entite-geographique.html' for "EntiteGeographique" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 491, column 12: The link 'StructureDefinition-cds-entite-juridique.html' for "EntiteJuridique" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 496, column 12: The link 'StructureDefinition-cds-organisation-interne.html' for "OrganisationInterne" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 501, column 12: The link 'StructureDefinition-cds-situation-exercice.html' for "SituationExercice" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 506, column 12: The link 'StructureDefinition-cds-exercice-professionnel.html' for "ExerciceProfessionnel" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/p/a at Line 597, column 96: The link 'blabla' for "partie maturité et adoption de l'IG N&S" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 615, column 12: The link 'StructureDefinition-cds-personne-prise-charge.html' for "PersonnePriseCharge" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 620, column 12: The link 'StructureDefinition-cds-professionnel.html' for "Professionnel" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 625, column 12: The link 'StructureDefinition-cds-contact.html' for "Contact" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 630, column 12: The link 'StructureDefinition-cds-entite-geographique.html' for "EntiteGeographique" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 635, column 12: The link 'StructureDefinition-cds-entite-juridique.html' for "EntiteJuridique" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 640, column 12: The link 'StructureDefinition-cds-organisation-interne.html' for "OrganisationInterne" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 645, column 12: The link 'StructureDefinition-cds-membre-cercle-soins.html' for "MembreCercleSoins" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 650, column 12: The link 'StructureDefinition-cds-cercle-soins.html' for "CercleSoins" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 655, column 12: The link 'StructureDefinition-cds-situation-exercice.html' for "SituationExercice" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 660, column 12: The link 'StructureDefinition-cds-exercice-professionnel.html' for "ExerciceProfessionnel" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 797, column 12: The link 'StructureDefinition-cds-cercle-soins.html' for "CercleSoins" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 802, column 12: The link 'StructureDefinition-cds-membre-cercle-soins.html' for "MembreCercleSoins" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 807, column 12: The link 'StructureDefinition-cds-personne-prise-charge.html' for "PersonnePriseCharge" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 812, column 12: The link 'StructureDefinition-cds-professionnel.html' for "Professionnel" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 817, column 12: The link 'StructureDefinition-cds-contact.html' for "Contact" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 822, column 12: The link 'StructureDefinition-cds-entite-geographique.html' for "EntiteGeographique" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 827, column 12: The link 'StructureDefinition-cds-entite-juridique.html' for "EntiteJuridique" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 832, column 12: The link 'StructureDefinition-cds-organisation-interne.html' for "OrganisationInterne" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 837, column 12: The link 'StructureDefinition-cds-situation-exercice.html' for "SituationExercice" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 842, column 12: The link 'StructureDefinition-cds-exercice-professionnel.html' for "ExerciceProfessionnel" cannot be resolved
+ERROR: fr/normes_standards.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 906, column 13: The link '[spe_synthese.html](https://discourse.openehr.org/t/revision-of-the-clinical-demographic-archetypes/367)' for "est en cours" cannot be resolved
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml, cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: An HTML fragment from the set [globals-table.xhtml, globals-table.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 5: An HTML fragment from the set [expansion-params.xhtml, expansion-params.xhtml] is not included anywhere in the produced implementation guide
@@ -398,6 +483,7 @@ INFORMATION: ImplementationGuide.definition.resource.description: Unused 'en' tr
 INFORMATION: ImplementationGuide.definition.resource.description: Unused 'en' translation 'Profil défini dans le volet de Gestion du Cercle de Soins (flux 1c) pour mettre à jour un cercle de soins selon l’option Transaction.' -> ''
 INFORMATION: ImplementationGuide.definition.resource.description: Unused 'en' translation 'Le rôle de créateur incarné par un système peut créer ou mettre à jour le cercle' -> ''
 INFORMATION: ImplementationGuide.definition.resource.description: Unused 'en' translation 'Le rôle de gestionnaire incarné par un système, gère et stocke le cercle de soins,' -> ''
+INFORMATION: ImplementationGuide.definition.page.title: Unused 'en' translation 'Autres Ressources' -> ''
 WARNING: ImplementationGuide/ans.fhir.fr.cds: ImplementationGuide.dependsOn[2]: The ImplementationGuide uses package hl7.fhir.fr.core#2.1.0 released on 2024-09-04, but the most recent appropriate version is 2.2.0. This reference is getting old and the more recent version should be considered
 WARNING: ImplementationGuide/ans.fhir.fr.cds: ImplementationGuide.dependsOn[4]: The ImplementationGuide uses package hl7.fhir.uv.extensions.r4#5.2.0 released on 2025-02-10, but the most recent appropriate version is 5.3.0. This reference is getting old and the more recent version should be considered
 INFORMATION: Resource: The resource ImplementationGuide/ans.fhir.fr.cds could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)

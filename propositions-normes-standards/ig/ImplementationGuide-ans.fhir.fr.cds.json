@@ -11,7 +11,7 @@
   "name" : "CDS",
   "title" : "Cercle De Soins",
   "status" : "active",
-  "date" : "2026-08-25T08:05:50+00:00",
+  "date" : "2026-08-25T08:34:58+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -1090,27 +1090,36 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "autres_ressources.html"
+          "valueUrl" : "annexes.html"
         }],
-        "nameUrl" : "autres_ressources.html",
-        "title" : "Autres Ressources",
+        "nameUrl" : "annexes.html",
+        "title" : "Annexes",
         "generation" : "markdown",
         "page" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "normes_standards.html"
+          }],
+          "nameUrl" : "normes_standards.html",
+          "title" : "Normes et standards",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "normes_standards_ig_annexe.html"
+          }],
+          "nameUrl" : "normes_standards_ig_annexe.html",
+          "title" : "IG N&S",
+          "generation" : "markdown"
+        },
+        {
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
             "valueUrl" : "downloads.html"
           }],
           "nameUrl" : "downloads.html",
           "title" : "Téléchargements et usages",
-          "generation" : "markdown"
-        },
-        {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "translationinfo.html"
-          }],
-          "nameUrl" : "translationinfo.html",
-          "title" : "Informations sur la traduction",
           "generation" : "markdown"
         }]
       },
