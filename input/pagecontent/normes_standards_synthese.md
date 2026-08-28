@@ -142,7 +142,7 @@ Cette section présente la comparaison des standards et profils analysés dans l
     <tr>
       <td style="background-color:#eaf2fa;"><strong>Couverture métier (cercle de soins)</strong></td>
       <td>⚠️ <strong>Partielle</strong> : segments ROL (rôle d'un intervenant médical) et NK1 (personne de confiance) exploitables, mais <strong>aucun segment</strong> ne couvre les structures de santé, unités de soins, représentant légal ou aidant identifiés dans l'étude métier</td>
-      <td>✅ <strong>Complète</strong> : répond pleinement au besoin ; nécessite seulement des contraintes complémentaires (cardinalité, optionalité, nomenclature)</td>
+      <td>✅ <strong>Complète</strong> : répond pleinement au besoin ; nécessite des contraintes complémentaires (cardinalité, optionalité, nomenclature)</td>
       <td>✅ <strong>Complète</strong> : les 6 ressources couvrent la majorité des informations métier ; le résiduel est traitable par extensions</td>
       <td>⚠️ <strong>Partielle</strong> : la classe GROUP du package Demographic est pertinente pour modéliser le « cercle de soins », mais l'alignement du modèle avec CareTeam est <strong>en cours d'étude</strong>, non finalisé</td>
     </tr>

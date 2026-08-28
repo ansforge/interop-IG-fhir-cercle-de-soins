@@ -1,5 +1,5 @@
 <div class="warning" style="width: 65%">
-Étude du 10/2020, avec dernière mise à jour en 03/2021; les conclusions de cette étude reflètent l’état de l’art disponible à cette date.
+Étude publiée en 03/2021; les conclusions de cette étude reflètent l’état de l’art disponible à cette date.
 </div>
 
 <br>

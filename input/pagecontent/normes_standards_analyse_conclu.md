@@ -35,7 +35,7 @@ Le tableau ci-dessous présente la synthèse métier et technique de la présent
     IHE DCTM
   </div>
   <div style="padding: 16px 20px;">
-    <p>Le profil <b>IHE DCTM</b>, bien que récent et non encore implémenté, est le seul à couvrir pleinement le besoin d'interopérabilité de la gestion du cercle de soins tout en respectant le premier niveau de la hiérarchie doctrinale (profil IHE stable).</p>
+    <p>Le profil <b>IHE DCTM</b>, bien que récent et non encore implémenté, couvre parfaitement le besoin d'interopérabilité de la gestion du cercle de soins tout en respectant le premier niveau de la hiérarchie doctrinale (profil IHE stable).</p>
     <p>La ressource FHIR <b>CareTeam</b> dont il dépend n'a pas encore atteint une maturité satisfaisante, mais les sessions de test organisées par HL7 tout au long de l'année laissent présager une évolution rapide de cette ressource.</p>
     <p style="margin-bottom:0;">La mise en œuvre de ce volet pourra elle-même nourrir le retour d'expérience de la communauté internationale autour du profil DCTM.</p>
   </div>

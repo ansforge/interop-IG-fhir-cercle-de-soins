@@ -54,7 +54,7 @@ pages:
         normes_standards.md: 
             title: Normes et standards
         normes_standards_ig_annexe.md:
-            title: IG N&S
+            title: IG des Normes et Standards
         downloads.md:
             title: Téléchargements et usages
     changes.md:
@@ -72,7 +72,7 @@ menu:
     Ressources de conformité: artifacts.html
     Annexes:
         Normes et standards: normes_standards.html
-        IG N&S: normes_standards_ig_annexe.html
+        IG des Normes et Standards: normes_standards_ig_annexe.html
         Téléchargements et usage: downloads.html
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
         "Site de l'ANS ": new-tab https://esante.gouv.fr/

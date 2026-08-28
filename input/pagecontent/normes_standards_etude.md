@@ -2,31 +2,24 @@
 
 #### Profils IHE : PAM
 
-[Présentation générale du profil](normes_standards_ig_annexe.html#pam)
+Une présentation générale du profil est disponible sur l'[IG des Normes et Standards](normes_standards_ig_annexe.html#pam).
 
 L’extension française du profil PAM a été étudiée dans le cadre de la présente étude. Le périmètre de ce profil couvre les échanges intra-hospitaliers des identités, venues et mouvements de patients, les échanges inter-établissements des identités et venues et la diffusion d’identités vers une communauté d’établissements et de professionnels de santé. Les objectifs sont donc d’une part de notifier les identités des patients et d’autre part, de notifier les venues et mouvements.
 
 ##### Mapping données métiers - éléments techniques
 
-Ce mapping n'est pas exhaustif et peut ne pas refléter une correspondance exacte
-
 |Concept Métier|Segment HL7v2|Commentaire|
 |--------------|-------------|-----------|
-|[PersonnePriseCharge](StructureDefinition-cds-personne-prise-charge.html)|PID|Segment d'identification patient|
-|[Professionnel](StructureDefinition-cds-professionnel.html)|ROL|Précise la fonction (rôle) d'un intervenant médical en relation avec le patient|
-|[Contact](StructureDefinition-cds-contact.html)|NK1|Décrit les personnes à prévenir ou les personnes de confiance, mais ne permet pas de décrire les notions d'aidant et de responsable légal|
-|[EntiteGeographique](StructureDefinition-cds-entite-geographique.html)|Non couvert|Les structures de santé ne sont identifiés dans aucun segment|
-|[EntiteJuridique](StructureDefinition-cds-entite-juridique.html)|Non couvert|Les structures de santé ne sont identifiés dans aucun segment|
-|[OrganisationInterne](StructureDefinition-cds-organisation-interne.html)|Non couvert|Les unités de soins ne sont identifiées dans aucun segment|
-|[MembreCercleSoins](StructureDefinition-cds-membre-cercle-soins.html)|ROL / NK1|Pas de segment dédié ; répartition entre ROL (professionnels) et NK1 (entourage)|
-|[CercleSoins](StructureDefinition-cds-cercle-soins.html)|Non couvert||
-|[SituationExercice](StructureDefinition-cds-situation-exercice.html)|||
-|[ExerciceProfessionnel](StructureDefinition-cds-exercice-professionnel.html)|||
-
-texte d'origine: 
-
-Dans ce profil, les segments ROL et NK1 pourraient être intéressants pour le cas d’usage de la gestion du cercle de soins. En effet, le segment ROL représente un médecin en relation avec le patient et est destiné à préciser la fonction (rôle) d’un intervenant médical en relation avec le patient ; le segment NK1 décrit les personnes à prévenir ou les personnes de confiance.  
-Toutefois, les structures de santé et unités de soins, ainsi que les notions de représentant légal et d’aidant décrites dans l’étude métier ne sont identifiées dans aucun segment. PAM est donc adapté aux problématiques de l’identité du patient et de ses déplacements mais pas au cas d’usage de la  gestion du cercle de soins. 
+|[CercleSoins](StructureDefinition-CDSCercleSoins.html)|Non couvert||
+|[MembreCercleSoins](StructureDefinition-CDSMembreCercleSoins.html)|ROL / NK1|Pas de segment dédié ; répartition entre ROL (professionnels) et NK1 (entourage)|
+|[PersonnePriseCharge](StructureDefinition-CDSPersonnePriseCharge.html)|PID|Segment d'identification patient|
+|[Professionnel](StructureDefinition-CDSProfessionnel.html)|ROL|Précise la fonction (rôle) d'un intervenant médical en relation avec le patient|
+|[Contact](StructureDefinition-CDSContact.html)|NK1|Décrit les personnes à prévenir ou les personnes de confiance, mais ne permet pas de décrire les notions d'aidant et de responsable légal|
+|[EntiteGeographique](StructureDefinition-CDSEntiteGeographique.html)|Non couvert|Les structures de santé ne sont identifiés dans aucun segment|
+|[EntiteJuridique](StructureDefinition-CDSEntiteJuridique.html)|Non couvert|Les structures de santé ne sont identifiés dans aucun segment|
+|[OrganisationInterne](StructureDefinition-CDSOrganisationInterne.html)|Non couvert|Les unités de soins ne sont identifiées dans aucun segment|
+|[SituationExercice](StructureDefinition-CDSSituationExercice.html)|||
+|[ExerciceProfessionnel](StructureDefinition-CDSExerciceProfessionnel.html)|||
 
 ##### Analyse SWOT du standard
 
@@ -54,8 +47,7 @@ Toutefois, les structures de santé et unités de soins, ainsi que les notions d
 </tr>
 <tr>
 <td style="background-color:#e5f3ea;">
-- Réutiliser un standard déjà déployé dans l'écosystème réduit l'effort d'intégration côté éditeurs<br>
-- Cohérent avec le principe doctrinal de préférence pour un profil IHE stable
+- Réutiliser un standard déjà déployé dans l'écosystème réduit l'effort d'intégration côté éditeurs
 </td>
 <td style="background-color:#fdf0dd;">
 - Risque de construire une solution avec des extensions non standard faute de couverture native<br>
@@ -74,33 +66,27 @@ Profil adapté à l'identité et aux déplacements du patient, mais pas au cas d
 
 #### Profils IHE : DCTM
 
-[Présentation générale du profil](normes_standards_ig_annexe.html#dctm)
+Une présentation générale du profil est disponible sur l'[IG des Normes et Standards](normes_standards_ig_annexe.html#dctm).
 
 Le profil DCTM décrit les scénarios de création et de mise à jour d’équipes de soins, les scénarios de consultation d’équipes de soins, ainsi que les scénarios d’abonnement aux mises à jour d’une équipe de soins.  
 Les ressources FHIR utilisées pour mettre en œuvre ce profil sont CareTeam et Subscription.
 
 La ressource CareTeam est contrainte dans le profil DCTM, les contraintes appliquées étant compatibles avec l’étude métier du présent volet. Les flux d’abonnement aux mises à jour de la ressource CareTeam sont optionnels dans le profil DCTM et ne seront pas repris dans cette étude. La ressource Subscription ne sera donc pas exploitée.
 
-Pour obtenir les informations relatives à la maturité et à l'adoption du profil,  [consulter l'IG annexe des Normes et Standards](normes_standards_ig_annexe.html#maturité-et-adoption)
-
 ##### Mapping données métiers - éléments techniques
-
-Le profil DCTM décrit la StructureDefinition de la ressource FHIR CareTeam mais ne décrit pas précisément la manière dont les ressources Patient, Practitioner, PractitionerRole, RelatedPerson ou Organization sont référencées.
-
-Ce mapping n'est pas exhaustif et peut ne pas refléter une correspondance exacte
 
 |Concept Métier|Ressource FHIR|Élément CareTeam (DCTM)|
 |--------------|--------------|------------------------|
-|[CercleSoins](StructureDefinition-cds-cercle-soins.html)|CareTeam||
-|[MembreCercleSoins](StructureDefinition-cds-membre-cercle-soins.html)|CareTeam|`CareTeam.participant`|
-|[PersonnePriseCharge](StructureDefinition-cds-personne-prise-charge.html)|Patient|`CareTeam.subject`|
-|[Professionnel](StructureDefinition-cds-professionnel.html)|Practitioner|`CareTeam.participant.member`|
-|[Contact](StructureDefinition-cds-contact.html)|RelatedPerson|`CareTeam.participant.member`|
-|[EntiteGeographique](StructureDefinition-cds-entite-geographique.html)|Organization|`CareTeam.participant.member` / `CareTeam.managingOrganization`|
-|[EntiteJuridique](StructureDefinition-cds-entite-juridique.html)|Organization|`CareTeam.participant.member` / `CareTeam.managingOrganization`|
-|[OrganisationInterne](StructureDefinition-cds-organisation-interne.html)|Organization|`CareTeam.participant.member` / `CareTeam.managingOrganization`|
-|[SituationExercice](StructureDefinition-cds-situation-exercice.html)|||
-|[ExerciceProfessionnel](StructureDefinition-cds-exercice-professionnel.html)|||
+|[CercleSoins](StructureDefinition-CDSCercleSoins.html)|CareTeam||
+|[MembreCercleSoins](StructureDefinition-CDSMembreCercleSoins.html)|CareTeam|`CareTeam.participant`|
+|[PersonnePriseCharge](StructureDefinition-CDSPersonnePriseCharge.html)|Patient|`CareTeam.subject`|
+|[Professionnel](StructureDefinition-CDSProfessionnel.html)|Practitioner|`CareTeam.participant.member`|
+|[Contact](StructureDefinition-CDSContact.html)|RelatedPerson|`CareTeam.participant.member`|
+|[EntiteGeographique](StructureDefinition-CDSEntiteGeographique.html)|Organization|`CareTeam.participant.member` / `CareTeam.managingOrganization`|
+|[EntiteJuridique](StructureDefinition-CDSEntiteJuridique.html)|Organization|`CareTeam.participant.member` / `CareTeam.managingOrganization`|
+|[OrganisationInterne](StructureDefinition-CDSOrganisationInterne.html)|Organization|`CareTeam.participant.member` / `CareTeam.managingOrganization`|
+|[SituationExercice](StructureDefinition-CDSSituationExercice.html)|||
+|[ExerciceProfessionnel](StructureDefinition-CDSExerciceProfessionnel.html)|||
 
 ##### Mise en oeuvre
 
@@ -138,7 +124,6 @@ La figure ci-après illustre l’utilisation du profil DCTM pour la gestion du c
 - Répond au besoin métier de gestion du cercle de soins<br>
 - S'appuie sur la ressource FHIR CareTeam, avec des transactions dédiées (Update/Search/Retrieve Care Team)<br>
 - StructureDefinition disponible → outil de validation possible<br>
-- Cohérent avec la doctrine CI-SIS (préférence pour un profil IHE)
 </td>
 <td style="background-color:#fbe9e8;">
 - Profil récent, encore en phase de test / <i>trial implementation</i><br>
@@ -176,37 +161,29 @@ La figure ci-après illustre l’utilisation du profil DCTM pour la gestion du c
 
 #### FHIR R4
 
-[Présentation générale du standard](normes_standards_ig_annexe.html#présentation).
-
-L'outillage associé à ce standard est également disponible dans la [partie dédié de l'IG annexe](normes_standards_ig_annexe.html#outillage).
-
-Il convient de souligner que, bien que le standard HL7 FHIR dispose à ce jour d’une version R5, les ressources présentées dans la suite du document s’appuient sur la version R4, conformément à la stratégie nationale en vigueur. Cette stratégie relative au choix des versions FHIR a été définie dans le cadre de travaux conduits conjointement par Interop’Santé et l’Agence du Numérique en Santé en 2023-2024, puis validée à l’issue d’une [concertation](https://participez.esante.gouv.fr/project/fhir-r5-ou-r4/presentation/presentation) portée par l’ANS.
-
-Pour plus d'info sur la maturité et l'adoption du standard dans l'écosystème, consulter la [partie maturité et adoption de l'IG N&S](blabla)
-
-**Ressources FHIR concernées**
-
-L’analyse des ressources FHIR « métier » pouvant être appliquées au contexte de la gestion du cercle de soins montre que ce standard couvre la grande majorité des informations identifiées dans l’étude métier. Les informations non couvertes font l’objet d’extensions des ressources FHIR dans le cas où celles-ci sont adaptées pour mettre en œuvre les spécifications d’interopérabilité pour ce besoin.
+Une présentation générale du standard (comprenant notamment l'outillages associé, le transport et les interactions FHIR) est disponible sur l'[IG des Normes et Standards](normes_standards_ig_annexe.html#présentation).
 
 ##### Mapping données métiers - éléments techniques
 
+**Ressources FHIR concernées :**
+
+L’analyse des ressources FHIR « métier » pouvant être appliquées au contexte de la gestion du cercle de soins montre que ce standard couvre la grande majorité des informations identifiées dans l’étude métier. Les informations non couvertes font l’objet d’extensions des ressources FHIR dans le cas où celles-ci sont adaptées pour mettre en œuvre les spécifications d’interopérabilité pour ce besoin.
+
 |Concept Métier|Ressource FHIR|Commentaire|
 |--------------|--------------|-----------|
-|[PersonnePriseCharge](StructureDefinition-cds-personne-prise-charge.html)|[Patient](https://hl7.org/fhir/patient.html)<br>**(NM N)**|Décrit les données démographiques d’un patient. Cette ressource est mise en correspondance avec la classe [PersonnePriseCharge](https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-PersonnePriseCharge.html) dans le Modèle des Objets de Santé|
-|[Professionnel](StructureDefinition-cds-professionnel.html)|[Practitioner](https://hl7.org/fhir/practitioner.html)<br>**(NM 3)**|Décrit l’identité d’un professionnel de santé. Cette ressource est mise en correspondance avec la classe [Professionnel](https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-Professionnel.html) du MOS.<br><br>La ressource Practitioner permet de véhiculer les informations définies dans l’étude métier comme nécessaires pour décrire les professionnels de santé membres du cercle de soins.|
-|[Contact](StructureDefinition-cds-contact.html)|[RelatedPerson](https://hl7.org/fhir/relatedperson.html)<br>**(NM 2)**|Contient les informations sur une personne impliquée dans les soins d'un patient. Cette personne n’est pas la personne recevant les soins de santé et n’a pas de responsabilité formelle dans le processus de soins. La ressource RelatedPerson répond aux besoins définis dans l’étude métier pour décrire les membres du cercle de soins qui ne sont pas des professionnels de santé, c’est-à-dire les aidants, la personne de confiance ou les représentants légaux.|
-|[EntiteGeographique](StructureDefinition-cds-entite-geographique.html)|[Organization](https://hl7.org/fhir/organization.html)<br>**(NM 3)**|Décrit un groupement de personnes ou d'organisations, officiel ou non, formé dans le but de réaliser une certaine forme d'action collective. La ressource Organization comprend par exemple les entreprises, les institutions,les sociétés, les départements, les groupes communautaires, les groupes de pratique de soins de santé, etc. Cette ressource couvre donc la notion d’entité juridique et d'entité géographique (établissement ou de structure sanitaire, médico-sociale et sociale) telle qu’elle est définie dans l’étude métier. Cette ressource couvre également la notion d’unité de soins comme définie dans l’étude métier (unité organisationnelle regroupant des activités de soins de santé au sein d’une entité).<br><br>Par exemple, les unités de soins de néphrologie et d’hématologie peuvent être définies comme des membres du cercle dans la mesure où les patients sont suivis de manière très régulière par les différents professionnels de ces unités pour des gestes techniques récurrents (dialyse, chimiothérapie…), et donc l’ensemble de l’unité de soins peut être considéré comme un membre du cercle.|
-|[EntiteJuridique](StructureDefinition-cds-entite-juridique.html)|[Organization](https://hl7.org/fhir/organization.html)<br>**(NM 3)**|Décrit un groupement de personnes ou d'organisations, officiel ou non, formé dans le but de réaliser une certaine forme d'action collective. La ressource Organization comprend par exemple les entreprises, les institutions,les sociétés, les départements, les groupes communautaires, les groupes de pratique de soins de santé, etc. Cette ressource couvre donc la notion d’entité juridique et d'entité géographique (établissement ou de structure sanitaire, médico-sociale et sociale) telle qu’elle est définie dans l’étude métier. Cette ressource couvre également la notion d’unité de soins comme définie dans l’étude métier (unité organisationnelle regroupant des activités de soins de santé au sein d’une entité).<br><br>Par exemple, les unités de soins de néphrologie et d’hématologie peuvent être définies comme des membres du cercle dans la mesure où les patients sont suivis de manière très régulière par les différents professionnels de ces unités pour des gestes techniques récurrents (dialyse, chimiothérapie…), et donc l’ensemble de l’unité de soins peut être considéré comme un membre du cercle.|
-|[OrganisationInterne](StructureDefinition-cds-organisation-interne.html)|[Organization](https://hl7.org/fhir/organization.html)<br>**(NM 3)**|Décrit un groupement de personnes ou d'organisations, officiel ou non, formé dans le but de réaliser une certaine forme d'action collective. La ressource Organization comprend par exemple les entreprises, les institutions,les sociétés, les départements, les groupes communautaires, les groupes de pratique de soins de santé, etc. Cette ressource couvre donc la notion d’entité juridique et d'entité géographique (établissement ou de structure sanitaire, médico-sociale et sociale) telle qu’elle est définie dans l’étude métier. Cette ressource couvre également la notion d’unité de soins comme définie dans l’étude métier (unité organisationnelle regroupant des activités de soins de santé au sein d’une entité).<br><br>Par exemple, les unités de soins de néphrologie et d’hématologie peuvent être définies comme des membres du cercle dans la mesure où les patients sont suivis de manière très régulière par les différents professionnels de ces unités pour des gestes techniques récurrents (dialyse, chimiothérapie…), et donc l’ensemble de l’unité de soins peut être considéré comme un membre du cercle.|
-|[MembreCercleSoins](StructureDefinition-cds-membre-cercle-soins.html)|CareTeam.participant|Élément de la ressource CareTeam.|
-|[CercleSoins](StructureDefinition-cds-cercle-soins.html)|[CareTeam](https://hl7.org/fhir/careteam.html)<br>**(NM 2)**|Inclut l’ensemble des personnes et organisations qui participent ou prévoient de participer à la coordination des soins autour d’un patient et aux prestations de soins pour ce patient.<br><br>Les éléments suivants sont particulièrement intéressants et adaptés aux besoins décrits dans l’étude métier :<br><br>- **Status** : état courant de la ressource.<br>- **Subject** : référence à l’objet de l’équipe de soins (patient).<br>- **Period** : définit la période pendant laquelle l’équipe de soins intervient.<br>- **Participant** : définit les membres de l’équipe, notamment :<br>&nbsp;&nbsp;- **Member** : référence aux membres de l’équipe de soins (Patient, Practitioner, PractitionerRole, RelatedPerson, Organization).<br>&nbsp;&nbsp;- **Period** : période pendant laquelle le membre intervient dans le Cercle de Soins.|
-|[SituationExercice](StructureDefinition-cds-situation-exercice.html)|[PractitionerRole](https://hl7.org/fhir/practitionerrole.html)<br>**(NM 2)**|Détaille les rôles et spécialités qu'un praticien peut exercer dans différents services d’une organisation pendant une durée déterminée. Cette ressource est mise en correspondance avec les classes [ExerciceProfessionnel](https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-ExerciceProfessionnel.html) et [SituationExercice](https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-SituationExercice.html) du MOS.<br><br>La ressources PractitionerRole permet de véhiculer les informations définies dans l’étude métier comme nécessaires pour décrire les professionnels de santé membres du cercle de soins|
-|[ExerciceProfessionnel](StructureDefinition-cds-exercice-professionnel.html)|[PractitionerRole](https://hl7.org/fhir/practitionerrole.html)<br>**(NM 2)**|Détaille les rôles et spécialités qu'un praticien peut exercer dans différents services d’une organisation pendant une durée déterminée. Cette ressource est mise en correspondance avec les classes [ExerciceProfessionnel](https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-ExerciceProfessionnel.html) et [SituationExercice](https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-SituationExercice.html) du MOS.<br><br>La ressources PractitionerRole permet de véhiculer les informations définies dans l’étude métier comme nécessaires pour décrire les professionnels de santé membres du cercle de soins|
+|[CercleSoins](StructureDefinition-CDSCercleSoins.html)|[CareTeam](https://hl7.org/fhir/careteam.html)<br>**(NM 2)**|Inclut l’ensemble des personnes et organisations qui participent ou prévoient de participer à la coordination des soins autour d’un patient et aux prestations de soins pour ce patient.<br><br>Les éléments suivants sont particulièrement intéressants et adaptés aux besoins décrits dans l’étude métier :<br><br>- **Status** : état courant de la ressource.<br>- **Subject** : référence à l’objet de l’équipe de soins (patient).<br>- **Period** : définit la période pendant laquelle l’équipe de soins intervient.<br>- **Participant** : définit les membres de l’équipe, notamment :<br>&nbsp;&nbsp;- **Member** : référence aux membres de l’équipe de soins (Patient, Practitioner, PractitionerRole, RelatedPerson, Organization).<br>&nbsp;&nbsp;- **Period** : période pendant laquelle le membre intervient dans le Cercle de Soins.|
+|[MembreCercleSoins](StructureDefinition-CDSMembreCercleSoins.html)|CareTeam.participant|Élément de la ressource CareTeam.|
+|[PersonnePriseCharge](StructureDefinition-CDSPersonnePriseCharge.html)|[Patient](https://hl7.org/fhir/patient.html)<br>**(NM N)**|Décrit les données démographiques d’un patient. Cette ressource est mise en correspondance avec la classe [PersonnePriseCharge](https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-PersonnePriseCharge.html) dans le Modèle des Objets de Santé|
+|[Professionnel](StructureDefinition-CDSProfessionnel.html)|[Practitioner](https://hl7.org/fhir/practitioner.html)<br>**(NM 3)**|Décrit l’identité d’un professionnel de santé. Cette ressource est mise en correspondance avec la classe [Professionnel](https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-Professionnel.html) du MOS.<br><br>La ressource Practitioner permet de véhiculer les informations définies dans l’étude métier comme nécessaires pour décrire les professionnels de santé membres du cercle de soins.|
+|[Contact](StructureDefinition-CDSContact.html)|[RelatedPerson](https://hl7.org/fhir/relatedperson.html)<br>**(NM 2)**|Contient les informations sur une personne impliquée dans les soins d'un patient. Cette personne n’est pas la personne recevant les soins de santé et n’a pas de responsabilité formelle dans le processus de soins. La ressource RelatedPerson répond aux besoins définis dans l’étude métier pour décrire les membres du cercle de soins qui ne sont pas des professionnels de santé, c’est-à-dire les aidants, la personne de confiance ou les représentants légaux.|
+|[EntiteGeographique](StructureDefinition-CDSEntiteGeographique.html)|[Organization](https://hl7.org/fhir/organization.html)<br>**(NM 3)**|Décrit un groupement de personnes ou d'organisations, officiel ou non, formé dans le but de réaliser une certaine forme d'action collective. La ressource Organization comprend par exemple les entreprises, les institutions,les sociétés, les départements, les groupes communautaires, les groupes de pratique de soins de santé, etc. Cette ressource couvre donc la notion d’entité juridique et d'entité géographique (établissement ou de structure sanitaire, médico-sociale et sociale) telle qu’elle est définie dans l’étude métier. Cette ressource couvre également la notion d’unité de soins comme définie dans l’étude métier (unité organisationnelle regroupant des activités de soins de santé au sein d’une entité).<br><br>Par exemple, les unités de soins de néphrologie et d’hématologie peuvent être définies comme des membres du cercle dans la mesure où les patients sont suivis de manière très régulière par les différents professionnels de ces unités pour des gestes techniques récurrents (dialyse, chimiothérapie…), et donc l’ensemble de l’unité de soins peut être considéré comme un membre du cercle.|
+|[EntiteJuridique](StructureDefinition-CDSEntiteJuridique.html)|[Organization](https://hl7.org/fhir/organization.html)<br>**(NM 3)**|Décrit un groupement de personnes ou d'organisations, officiel ou non, formé dans le but de réaliser une certaine forme d'action collective. La ressource Organization comprend par exemple les entreprises, les institutions,les sociétés, les départements, les groupes communautaires, les groupes de pratique de soins de santé, etc. Cette ressource couvre donc la notion d’entité juridique et d'entité géographique (établissement ou de structure sanitaire, médico-sociale et sociale) telle qu’elle est définie dans l’étude métier. Cette ressource couvre également la notion d’unité de soins comme définie dans l’étude métier (unité organisationnelle regroupant des activités de soins de santé au sein d’une entité).<br><br>Par exemple, les unités de soins de néphrologie et d’hématologie peuvent être définies comme des membres du cercle dans la mesure où les patients sont suivis de manière très régulière par les différents professionnels de ces unités pour des gestes techniques récurrents (dialyse, chimiothérapie…), et donc l’ensemble de l’unité de soins peut être considéré comme un membre du cercle.|
+|[OrganisationInterne](StructureDefinition-CDSOrganisationInterne.html)|[Organization](https://hl7.org/fhir/organization.html)<br>**(NM 3)**|Décrit un groupement de personnes ou d'organisations, officiel ou non, formé dans le but de réaliser une certaine forme d'action collective. La ressource Organization comprend par exemple les entreprises, les institutions,les sociétés, les départements, les groupes communautaires, les groupes de pratique de soins de santé, etc. Cette ressource couvre donc la notion d’entité juridique et d'entité géographique (établissement ou de structure sanitaire, médico-sociale et sociale) telle qu’elle est définie dans l’étude métier. Cette ressource couvre également la notion d’unité de soins comme définie dans l’étude métier (unité organisationnelle regroupant des activités de soins de santé au sein d’une entité).<br><br>Par exemple, les unités de soins de néphrologie et d’hématologie peuvent être définies comme des membres du cercle dans la mesure où les patients sont suivis de manière très régulière par les différents professionnels de ces unités pour des gestes techniques récurrents (dialyse, chimiothérapie…), et donc l’ensemble de l’unité de soins peut être considéré comme un membre du cercle.|
+|[SituationExercice](StructureDefinition-CDSSituationExercice.html)|[PractitionerRole](https://hl7.org/fhir/practitionerrole.html)<br>**(NM 2)**|Détaille les rôles et spécialités qu'un praticien peut exercer dans différents services d’une organisation pendant une durée déterminée. Cette ressource est mise en correspondance avec les classes [ExerciceProfessionnel](https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-ExerciceProfessionnel.html) et [SituationExercice](https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-SituationExercice.html) du MOS.<br><br>La ressources PractitionerRole permet de véhiculer les informations définies dans l’étude métier comme nécessaires pour décrire les professionnels de santé membres du cercle de soins|
+|[ExerciceProfessionnel](StructureDefinition-CDSExerciceProfessionnel.html)|[PractitionerRole](https://hl7.org/fhir/practitionerrole.html)<br>**(NM 2)**|Détaille les rôles et spécialités qu'un praticien peut exercer dans différents services d’une organisation pendant une durée déterminée. Cette ressource est mise en correspondance avec les classes [ExerciceProfessionnel](https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-ExerciceProfessionnel.html) et [SituationExercice](https://ansforge.github.io/IG-modele-objets-sante/main/ig/StructureDefinition-SituationExercice.html) du MOS.<br><br>La ressources PractitionerRole permet de véhiculer les informations définies dans l’étude métier comme nécessaires pour décrire les professionnels de santé membres du cercle de soins|
 |*|[Bundle](https://www.hl7.org/fhir/bundle.html)<br>**(NM N)**|Un document FHIR est généré à partir de plusieurs ressources, contenues dans une ressource appelée Bundle (bouquet de ressources). Ce bouquet rassemble de manière indépendante ces ressources, c’est-à-dire qu’elles peuvent être consultées directement en utilisant l’API Restful de FHIR.<br><br>L’utilisation de la ressource Bundle est particulièrement pertinente lorsque le système cible retourne un ensemble d’instances de ressources ou lorsque plusieurs ressources doivent être soumises en même temps pour permettre l’établissement de liens (référence) entre elles|
 
 ##### Description du workflow
-
-Les informations concernant le transport et les interactions FHIR sont disponibles dans [l'IG annexe](normes_standards_ig_annexe.html#transport-et-interactions-fhir).
 
 ###### Création d’un cercle de soins
 
@@ -273,17 +250,13 @@ Si la mise à jour du cercle de soins est correctement effectuée, le système g
 </td>
 <td style="background-color:#fdf0dd;">
 - Instabilité persistante de CareTeam → risque de refontes majeures des spécifications d'interopérabilité si adopté seul<br>
-- Utiliser FHIR sans profil IHE va à l'encontre du principe doctrinal de minimiser le nombre de standards différents mobilisés
 </td>
 </tr>
 
 <tr>
 <td colspan="2" style="background-color:#ffffff; padding:12px;">
 <b>Synthèse</b><br>
-Les ressources FHIR identifiées répondent aux besoins identifiés dans l’étude métier. La ressource CareTeam utilisée pour décrire le cercle de soins apparaît comme la ressource centrale adaptée au cas d’usage de la gestion du cercle de soins. 
-<p> FHIR décrit également une API REST réutilisant les méthodes HTTP, celle-ci est utilisée dans les scénarios ci-après pour permettre l’interaction entre les différents acteurs impliqués dans le cas d’usage de la gestion du cercle de soins.</p> 
-<br>
-Ainsi, malgré une bonne couvrance de l'ensemble des flux, l'instabilité de CareTeam introduit un risque d'évolution majeure des spécifications si retenu sans profilage IHE.
+La ressource CareTeam (NM2) reste aujourd’hui instable et pourrait encore être modifiée sans assurer de rétrocompatibilité avec la version actuelle. Par conséquent, il n’est pas à exclure que les spécifications d’interopérabilité de la gestion de cercles de soins subissent des modifications majeures dans le cas d’une adoption du standard FHIR.
 </td>
 </tr>
 
@@ -291,44 +264,33 @@ Ainsi, malgré une bonne couvrance de l'ensemble des flux, l'instabilité de Car
 
 #### openEHR
 
-[Présentation générale du standard](normes_standards_ig_annexe.html#description).
+Une présentation générale du profil est disponible sur l'[IG des Normes et Standards](normes_standards_ig_annexe.html#description).
 
 ##### Le modèle openEHR
 
 Cette section présente les éléments du [modèle d’information openEHR](https://specifications.openehr.org/releases/RM/latest/ehr.html) pertinents pour le besoin d’interopérabilité de gestion du « cercle de soins »
 
-**[openEHR Demographic](https://specifications.openehr.org/releases/RM/latest/ehr.html#_demographic_data_in_the_ehr) Information Model**
+**openEHR Demographic Information Model :**
 
-Ce modèle est basé sur les standards ISO 13606-5 (Informatique de santé -- Communication du dossier de santé informatisé -- Partie 5: Spécification d'interfaces) et HL7v3 RIM pour décrire les informations démographiques d’une personne physique. Ce modèle décrit les informations liées à l’identité de la personne, son adresse, ses informations de contact ainsi que ses relations avec d’autres personnes.
-
-Le package Demographic d’OpenEHR contient différentes classes qui permettent de décrire le cas d’usage de la gestion du cercle de soins :
+Le modèle [openEHR Demographique](https://specifications.openehr.org/releases/RM/latest/ehr.html#_demographic_data_in_the_ehr) est basé sur les standards ISO 13606-5 (Informatique de santé -- Communication du dossier de santé informatisé -- Partie 5: Spécification d'interfaces) et HL7v3 RIM pour décrire les informations démographiques d’une personne physique. Ce modèle décrit les informations liées à l’identité de la personne, son adresse, ses informations de contact ainsi que ses relations avec d’autres personnes.
 
 Le package Demographic d’OpenEHR contient différentes classes qui permettent de décrire le cas
 d’usage de la gestion du cercle de soins :
 
-- la classe PARTY pour représenter l’usager pour lequel le cercle de soins est défini, ainsi que l’ensemble des membres du cercle, personnes et organisations,
-- la classe ROLE pour définir le rôle de chaque acteur,
-- la classe ACTOR héritée de la classe PARTY, pour décrire toute entité capable de tenir un rôle ; un acteur peut être une personne, une organisation ou un groupe,
-- la classe RELATIONSHIP pour décrire les relations entre les différentes parties,
-- la classe GROUP qui est un ensemble de PARTIES réunies pour un objectif commun, par exemple une équipe de soins. 
-  Cette classe est particulièrement intéressante pour le cas d’usage de la gestion du cercle de soins, en représentant le groupe « cercle de soins » d’une personne prise en charge. Ce groupe serait constitué d’acteurs (personnes ou organisations) définis par leur rôle et leur lien avec la personne prise en charge.
-
 ##### Mapping données métiers - éléments techniques
-
-Ce mapping n'est pas exhaustif et peut ne pas refléter une correspondance exacte
 
 |Concept Métier|Classe openEHR|Commentaire|
 |--------------|--------------|-----------|
-|[CercleSoins](StructureDefinition-cds-cercle-soins.html)|GROUP|Représente le regroupement de PARTIES formé pour un objectif commun (équipe de soins)|
-|[MembreCercleSoins](StructureDefinition-cds-membre-cercle-soins.html)|PARTY|Membre du groupe, personne ou organisation|
-|[PersonnePriseCharge](StructureDefinition-cds-personne-prise-charge.html)|PARTY|Usager pour lequel le cercle de soins est défini|
-|[Professionnel](StructureDefinition-cds-professionnel.html)|ACTOR + ROLE + RELATIONSHIP||
-|[Contact](StructureDefinition-cds-contact.html)|ACTOR + ROLE + RELATIONSHIP||
-|[EntiteGeographique](StructureDefinition-cds-entite-geographique.html)|ACTOR + ROLE + RELATIONSHIP||
-|[EntiteJuridique](StructureDefinition-cds-entite-juridique.html)|ACTOR + ROLE + RELATIONSHIP||
-|[OrganisationInterne](StructureDefinition-cds-organisation-interne.html)|ACTOR + ROLE + RELATIONSHIP||
-|[SituationExercice](StructureDefinition-cds-situation-exercice.html)|||
-|[ExerciceProfessionnel](StructureDefinition-cds-exercice-professionnel.html)|||
+|[CercleSoins](StructureDefinition-CDSCercleSoins.html)|GROUP|Représente le regroupement de PARTIES formé pour un objectif commun (équipe de soins). GROUP est une classe particulièrement intéressante pour le cas d’usage de la gestion du cercle de soins, en représentant le groupe « cercle de soins » d’une personne prise en charge. Ce groupe serait constitué d’acteurs (personnes ou organisations) définis par leur rôle et leur lien avec la personne prise en charge. |
+|[MembreCercleSoins](StructureDefinition-CDSMembreCercleSoins.html)|PARTY|Membre du groupe, personne ou organisation|
+|[PersonnePriseCharge](StructureDefinition-CDSPersonnePriseCharge.html)|PARTY|Usager pour lequel le cercle de soins est défini|
+|[Professionnel](StructureDefinition-CDSProfessionnel.html)|ACTOR + ROLE + RELATIONSHIP|un ACTOR hérite de PARTY, il peut s'agir d'une personne, d'une organisation ou d'un groupe, il est capable de tenir un ROLE. Son lien avec les autres PARTIES est défini avec RELATIONSHIP|
+|[Contact](StructureDefinition-CDSContact.html)|ACTOR + ROLE + RELATIONSHIP||
+|[EntiteGeographique](StructureDefinition-CDSEntiteGeographique.html)|ACTOR + ROLE + RELATIONSHIP||
+|[EntiteJuridique](StructureDefinition-CDSEntiteJuridique.html)|ACTOR + ROLE + RELATIONSHIP||
+|[OrganisationInterne](StructureDefinition-CDSOrganisationInterne.html)|ACTOR + ROLE + RELATIONSHIP||
+|[SituationExercice](StructureDefinition-CDSSituationExercice.html)|||
+|[ExerciceProfessionnel](StructureDefinition-CDSExerciceProfessionnel.html)|||
 
 ##### L’API REST d’openEHR
 
@@ -385,7 +347,7 @@ Des mécanismes d’authentification et d’autorisation sont également décrit
 <td colspan="2" style="background-color:#ffffff; padding:12px;">
 <b>Synthèse</b><br>
 Le package Demographic d’OpenEHR contient l’ensemble des notions décrites dans l’étude métier de la gestion du cercle de soins. Aujourd’hui, une révision de ce package est envisagée, en particulier pour prendre en compte la problématique de l’équipe de soins en s’alignant à la ressource FHIR CareTeam ; <br>
-Ce travail <a href="[spe_synthese.html](https://discourse.openehr.org/t/revision-of-the-clinical-demographic-archetypes/367)">est en cours</a>. La possibilité d’adaptation d’OpenEHR au cas d’usage de la gestion du cercle de soins n’a donc pas encore atteint le niveau de maturité nécessaire.
+Ce travail <a href="https://discourse.openehr.org/t/revision-of-the-clinical-demographic-archetypes/367">est en cours</a>. La possibilité d’adaptation d’OpenEHR au cas d’usage de la gestion du cercle de soins n’a donc pas encore atteint le niveau de maturité nécessaire.
 <br>
 Ainsi c'est un modèle pertinent sur le fond, mais dont la mise en œuvre est <b>prématurée</b> pour ce cas d'usage.
 </td>

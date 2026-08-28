@@ -17,7 +17,7 @@ skinparam defaultFontSize 14
 skinparam defaultFontName "DejaVu Sans"
 
 rectangle "1. Privilégier un profil IHE adapté et stable\n" as R1
-rectangle "2. Réutiliser des normes\n et standards déjà utilisés dans le\n CI-SISpour des cas d'usages similaires" as R2
+rectangle "2. Réutiliser des normes\n et standards déjà utilisés dans le\n CI-SIS pour des cas d'usages similaires" as R2
 rectangle "3. Consulter des acteurs pour\n identifier la norme ou le standard\n à utiliser" as R3
 
 R1 --> R2 : à défaut
