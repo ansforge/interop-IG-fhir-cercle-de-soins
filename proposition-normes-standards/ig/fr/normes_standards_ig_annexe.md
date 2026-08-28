@@ -1,6 +1,6 @@
-# IG N&S - Cercle De Soins v2.0.1
+# IG des Normes et Standards - Cercle De Soins v2.0.1
 
-## IG N&S
+## IG des Normes et Standards
 
 Cet IG contient toutes les descriptions des standard à [date]. Le reste des informations, propre au cas d'usage doit être complété par l'auteur de l'IG.
 

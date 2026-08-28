@@ -6,7 +6,7 @@
 * [Normes et standards](normes_standards.md)
 * [Recherche CDS](recherche_recuperation_cds.md)
 * [Interactions RESTful](interaction_restful.md)
-* [IG N&S](normes_standards_ig_annexe.md)
+* [IG des Normes et Standards](normes_standards_ig_annexe.md)
 * [Annexes](annexes.md)
 * [Volume 1 - Etude fonctionnelle](specifications_fonctionnelles.md)
 * [Correspondances métier](correspondances_metier.md)

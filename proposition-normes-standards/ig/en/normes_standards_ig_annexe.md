@@ -1,6 +1,6 @@
-# IG N&S - Cercle De Soins v2.0.1
+# IG des Normes et Standards - Cercle De Soins v2.0.1
 
-## IG N&S
+## IG des Normes et Standards
 
  
 There is no translation page available for the current page, so it has been rendered in the default language 

@@ -177,8 +177,8 @@
     "oids" : ["2.16.840.1.113883.18.58"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-relatedperson-relationshiptype.html" : "Patient relationship type",
-    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-patient-contact-role.html" : "FR Core ValueSet Patient contact role"
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-patient-contact-role.html" : "FR Core ValueSet Patient contact role",
+    "http://hl7.org/fhir/R4/valueset-relatedperson-relationshiptype.html" : "Patient relationship type"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v2-0203",
@@ -247,7 +247,7 @@
     "oids" : ["1.2.250.1.71.4.2.4"],
     "uses" : {
     },
-    "https://interop.esante.gouv.fr/terminologies/1.12.0/ValueSet-JDV-J101-SecteurActivite-RASS.html" : "JDV_J101_SecteurActivite_RASS"
+    "https://interop.esante.gouv.fr/terminologies/1.13.0/ValueSet-JDV-J101-SecteurActivite-RASS.html" : "JDV_J101_SecteurActivite_RASS"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/TRE_R11-CiviliteExercice/FHIR/TRE-R11-CiviliteExercice",
@@ -259,7 +259,7 @@
     "oids" : ["1.2.250.1.213.1.6.1.11"],
     "uses" : {
     },
-    "https://interop.esante.gouv.fr/terminologies/1.12.0/ValueSet-JDV-J79-CiviliteExercice-RASS.html" : "JDV_J79_CiviliteExercice_RASS"
+    "https://interop.esante.gouv.fr/terminologies/1.13.0/ValueSet-JDV-J79-CiviliteExercice-RASS.html" : "JDV_J79_CiviliteExercice_RASS"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/TRE_R216-HL7RoleCode/FHIR/TRE-R216-HL7RoleCode",
@@ -307,8 +307,8 @@
     "oids" : ["2.16.840.1.113883.5.110"],
     "uses" : {
     },
-    "ValueSet-careteam-roles-vs.html" : "Roles des participants dans un cercle de soins",
-    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-patient-contact-role.html" : "FR Core ValueSet Patient contact role"
+    "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-patient-contact-role.html" : "FR Core ValueSet Patient contact role",
+    "ValueSet-careteam-roles-vs.html" : "Roles des participants dans un cercle de soins"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement",
@@ -320,7 +320,7 @@
     "oids" : ["1.2.250.1.213.1.6.1.8"],
     "uses" : {
     },
-    "https://interop.esante.gouv.fr/terminologies/1.12.0/ValueSet-JDV-J129-CategorieEtablissement-RASS.html" : "JDV_J129_CategorieEtablissement_RASS"
+    "https://interop.esante.gouv.fr/terminologies/1.13.0/ValueSet-JDV-J129-CategorieEtablissement-RASS.html" : "JDV_J129_CategorieEtablissement_RASS"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/TRE_R72-FinessStatutJuridique/FHIR/TRE-R72-FinessStatutJuridique",
@@ -332,7 +332,7 @@
     "oids" : ["1.2.250.1.213.1.6.1.44"],
     "uses" : {
     },
-    "https://interop.esante.gouv.fr/terminologies/1.12.0/ValueSet-JDV-J100-FinessStatutJuridique-RASS.html" : "JDV_J100_FinessStatutJuridique_RASS"
+    "https://interop.esante.gouv.fr/terminologies/1.13.0/ValueSet-JDV-J100-FinessStatutJuridique-RASS.html" : "JDV_J100_FinessStatutJuridique_RASS"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/TRE_R73-ESPIC/FHIR/TRE-R73-ESPIC",
@@ -344,7 +344,7 @@
     "oids" : ["1.2.250.1.213.1.6.1.45"],
     "uses" : {
     },
-    "https://interop.esante.gouv.fr/terminologies/1.12.0/ValueSet-JDV-J162-ESPIC-RASS.html" : "JDV_J162_ESPIC_RASS"
+    "https://interop.esante.gouv.fr/terminologies/1.13.0/ValueSet-JDV-J162-ESPIC-RASS.html" : "JDV_J162_ESPIC_RASS"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/TRE_R75-InseeNAFrev2Niveau5/FHIR/TRE-R75-InseeNAFrev2Niveau5",
@@ -356,7 +356,7 @@
     "oids" : ["1.2.250.1.213.1.6.1.47"],
     "uses" : {
     },
-    "https://interop.esante.gouv.fr/terminologies/1.12.0/ValueSet-JDV-J99-InseeNAFrav2Niveau5-RASS.html" : "JDV_J99_InseeNAFrav2Niveau5_RASS"
+    "https://interop.esante.gouv.fr/terminologies/1.13.0/ValueSet-JDV-J99-InseeNAFrav2Niveau5-RASS.html" : "JDV_J99_InseeNAFrav2Niveau5_RASS"
   },
   {
     "url" : "https://mos.esante.gouv.fr/NOS/TRE_R81-Civilite/FHIR/TRE-R81-Civilite",
@@ -368,7 +368,7 @@
     "oids" : ["1.2.250.1.213.1.6.1.69"],
     "uses" : {
     },
-    "https://interop.esante.gouv.fr/terminologies/1.12.0/ValueSet-JDV-J78-Civilite-RASS.html" : "JDV_J78_Civilite_RASS"
+    "https://interop.esante.gouv.fr/terminologies/1.13.0/ValueSet-JDV-J78-Civilite-RASS.html" : "JDV_J78_Civilite_RASS"
   },
   {
     "url" : "urn:ietf:bcp:47",

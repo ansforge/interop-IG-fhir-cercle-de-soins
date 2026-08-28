@@ -18,7 +18,7 @@
   fhir:ImplementationGuide.name [ fhir:value "CDS"] ;
   fhir:ImplementationGuide.title [ fhir:value "Cercle De Soins"] ;
   fhir:ImplementationGuide.status [ fhir:value "active"] ;
-  fhir:ImplementationGuide.date [ fhir:value "2026-08-25T08:41:23+00:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-08-28T14:32:49+00:00"^^xsd:dateTime] ;
   fhir:ImplementationGuide.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
   fhir:ImplementationGuide.contact [
      fhir:index 0 ;
@@ -84,7 +84,7 @@
        fhir:link <https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies>
      ] ;
      fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "ans.fr.terminologies" ] ;
-     fhir:ImplementationGuide.dependsOn.version [ fhir:value "1.12.0" ]
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "1.13.0" ]
   ], [
      fhir:index 4 ;
      fhir:Element.id [ fhir:value "hl7_fhir_uv_extensions_r4" ] ;
@@ -1276,7 +1276,7 @@
              fhir:Extension.valueUrl [ fhir:value "normes_standards_ig_annexe.html" ]
            ] ;
            fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "normes_standards_ig_annexe.html" ] ;
-           fhir:ImplementationGuide.definition.page.title [ fhir:value "IG N&S" ] ;
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "IG des Normes et Standards" ] ;
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
          ], [
            fhir:index 2 ;

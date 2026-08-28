@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="30e5a2b9-406a-424a-88d6-7fde6e0c2459"/>
+  <id value="b47a22e5-56c2-4563-80be-a541cebc347d"/>
   <meta>
-    <lastUpdated value="2026-08-25T08:41:23.881+00:00"/>
+    <lastUpdated value="2026-08-28T14:32:49.705+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -18,13 +18,13 @@
               <p>Expansion effectuée en interne basée sur :</p>
               <ul>
                 <li>
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R259-HL7ParticipationFunction.html">codesystem TRE_R259_HL7ParticipationFunction v20231215120000 (CodeSystem)</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R259-HL7ParticipationFunction.html">codesystem TRE_R259_HL7ParticipationFunction v20231215120000 (CodeSystem)</a>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/TRE_R259-HL7ParticipationFunction/FHIR/TRE-R259-HL7ParticipationFunction|20231215120000" title="Cliquer pour copier l'URL" class="btn-copy"> </button>
                   </span>
                 </li>
                 <li>
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html">codesystem TRE_R260_HL7RoleClass v20240426120000 (CodeSystem)</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html">codesystem TRE_R260_HL7RoleClass v20240426120000 (CodeSystem)</a>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass|20240426120000" title="Cliquer pour copier l'URL" class="btn-copy"> </button>
                   </span>
@@ -61,7 +61,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R259-HL7ParticipationFunction/FHIR/TRE-R259-HL7ParticipationFunction</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R259-HL7ParticipationFunction.html#TRE-R259-HL7ParticipationFunction-PCP">PCP</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R259-HL7ParticipationFunction.html#TRE-R259-HL7ParticipationFunction-PCP">PCP</a>
                 </td>
                 <td/>
                 <td/>
@@ -82,7 +82,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-ECON">ECON</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-ECON">ECON</a>
                 </td>
                 <td>personne à prévenir en cas d'urgence</td>
                 <td/>
@@ -103,7 +103,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-GUARD">GUARD</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-GUARD">GUARD</a>
                 </td>
                 <td>Responsable légal</td>
                 <td/>
@@ -124,7 +124,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-QUAL">QUAL</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-QUAL">QUAL</a>
                 </td>
                 <td>Personne de confiance</td>
                 <td>deprecated</td>
@@ -145,7 +145,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-POLHOLD">POLHOLD</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-POLHOLD">POLHOLD</a>
                 </td>
                 <td>Assuré ouvrant droit</td>
                 <td/>
@@ -166,7 +166,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-CON">CON</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-CON">CON</a>
                 </td>
                 <td>Informateur</td>
                 <td/>
@@ -187,7 +187,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-CAREGIVER">CAREGIVER</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-CAREGIVER">CAREGIVER</a>
                 </td>
                 <td>Aidant</td>
                 <td/>
@@ -208,7 +208,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-PAT">PAT</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-PAT">PAT</a>
                 </td>
                 <td>aidé</td>
                 <td/>
@@ -229,7 +229,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-PROV">PROV</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-PROV">PROV</a>
                 </td>
                 <td>Professionnel de santé</td>
                 <td/>
@@ -250,7 +250,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-AGNT">AGNT</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-AGNT">AGNT</a>
                 </td>
                 <td>Professionnel caractérisé par son rôle</td>
                 <td/>
@@ -271,7 +271,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-NOK">NOK</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-NOK">NOK</a>
                 </td>
                 <td>personne de confiance</td>
                 <td/>
@@ -308,7 +308,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-08-25T08:41:23+00:00"/>
+        <date value="2026-08-28T14:32:49+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -317,8 +317,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:36eb927b-aaee-4a80-9171-f9dee459364b"/>
-          <timestamp value="2026-08-25T08:42:28+00:00"/>
+          <identifier value="urn:uuid:a5e02b1c-946f-4dd7-9860-9e84154c058e"/>
+          <timestamp value="2026-08-28T14:33:54+00:00"/>
           <total value="11"/>
           <offset value="0"/>
           <parameter>
@@ -423,13 +423,13 @@
               <p>Expansion effectuée en interne basée sur :</p>
               <ul>
                 <li>
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R259-HL7ParticipationFunction.html">codesystem TRE_R259_HL7ParticipationFunction v20231215120000 (CodeSystem)</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R259-HL7ParticipationFunction.html">codesystem TRE_R259_HL7ParticipationFunction v20231215120000 (CodeSystem)</a>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/TRE_R259-HL7ParticipationFunction/FHIR/TRE-R259-HL7ParticipationFunction|20231215120000" title="Cliquer pour copier l'URL" class="btn-copy"> </button>
                   </span>
                 </li>
                 <li>
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html">codesystem TRE_R260_HL7RoleClass v20240426120000 (CodeSystem)</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html">codesystem TRE_R260_HL7RoleClass v20240426120000 (CodeSystem)</a>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass|20240426120000" title="Cliquer pour copier l'URL" class="btn-copy"> </button>
                   </span>
@@ -466,7 +466,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R259-HL7ParticipationFunction/FHIR/TRE-R259-HL7ParticipationFunction</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R259-HL7ParticipationFunction.html#TRE-R259-HL7ParticipationFunction-PCP">PCP</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R259-HL7ParticipationFunction.html#TRE-R259-HL7ParticipationFunction-PCP">PCP</a>
                 </td>
                 <td/>
                 <td/>
@@ -487,7 +487,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-ECON">ECON</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-ECON">ECON</a>
                 </td>
                 <td>personne à prévenir en cas d'urgence</td>
                 <td/>
@@ -508,7 +508,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-GUARD">GUARD</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-GUARD">GUARD</a>
                 </td>
                 <td>Responsable légal</td>
                 <td/>
@@ -529,7 +529,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-QUAL">QUAL</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-QUAL">QUAL</a>
                 </td>
                 <td>Personne de confiance</td>
                 <td>deprecated</td>
@@ -550,7 +550,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-POLHOLD">POLHOLD</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-POLHOLD">POLHOLD</a>
                 </td>
                 <td>Assuré ouvrant droit</td>
                 <td/>
@@ -571,7 +571,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-CON">CON</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-CON">CON</a>
                 </td>
                 <td>Informateur</td>
                 <td/>
@@ -592,7 +592,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-CAREGIVER">CAREGIVER</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-CAREGIVER">CAREGIVER</a>
                 </td>
                 <td>Aidant</td>
                 <td/>
@@ -613,7 +613,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-PAT">PAT</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-PAT">PAT</a>
                 </td>
                 <td>aidé</td>
                 <td/>
@@ -634,7 +634,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-PROV">PROV</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-PROV">PROV</a>
                 </td>
                 <td>Professionnel de santé</td>
                 <td/>
@@ -655,7 +655,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-AGNT">AGNT</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-AGNT">AGNT</a>
                 </td>
                 <td>Professionnel caractérisé par son rôle</td>
                 <td/>
@@ -676,7 +676,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-NOK">NOK</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-NOK">NOK</a>
                 </td>
                 <td>personne de confiance</td>
                 <td/>
@@ -713,7 +713,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-08-25T08:41:23+00:00"/>
+        <date value="2026-08-28T14:32:49+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -722,8 +722,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:36eb927b-aaee-4a80-9171-f9dee459364b"/>
-          <timestamp value="2026-08-25T08:42:28+00:00"/>
+          <identifier value="urn:uuid:a5e02b1c-946f-4dd7-9860-9e84154c058e"/>
+          <timestamp value="2026-08-28T14:33:54+00:00"/>
           <total value="11"/>
           <offset value="0"/>
           <parameter>
@@ -828,13 +828,13 @@
               <p>Expansion performed internally based on:</p>
               <ul>
                 <li>
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R259-HL7ParticipationFunction.html">codesystem TRE_R259_HL7ParticipationFunction v20231215120000 (CodeSystem)</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R259-HL7ParticipationFunction.html">codesystem TRE_R259_HL7ParticipationFunction v20231215120000 (CodeSystem)</a>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/TRE_R259-HL7ParticipationFunction/FHIR/TRE-R259-HL7ParticipationFunction|20231215120000" title="Click to Copy URL" class="btn-copy"> </button>
                   </span>
                 </li>
                 <li>
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html">codesystem TRE_R260_HL7RoleClass v20240426120000 (CodeSystem)</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html">codesystem TRE_R260_HL7RoleClass v20240426120000 (CodeSystem)</a>
                   <span class="copy-text-inline">
                     <button data-clipboard-text="https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass|20240426120000" title="Click to Copy URL" class="btn-copy"> </button>
                   </span>
@@ -871,7 +871,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R259-HL7ParticipationFunction/FHIR/TRE-R259-HL7ParticipationFunction</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R259-HL7ParticipationFunction.html#TRE-R259-HL7ParticipationFunction-PCP">PCP</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R259-HL7ParticipationFunction.html#TRE-R259-HL7ParticipationFunction-PCP">PCP</a>
                 </td>
                 <td>Médecin traitant</td>
                 <td/>
@@ -892,7 +892,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-ECON">ECON</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-ECON">ECON</a>
                 </td>
                 <td>personne à prévenir en cas d'urgence</td>
                 <td/>
@@ -913,7 +913,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-GUARD">GUARD</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-GUARD">GUARD</a>
                 </td>
                 <td>Responsable légal</td>
                 <td/>
@@ -934,7 +934,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-QUAL">QUAL</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-QUAL">QUAL</a>
                 </td>
                 <td>Personne de confiance</td>
                 <td>deprecated</td>
@@ -955,7 +955,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-POLHOLD">POLHOLD</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-POLHOLD">POLHOLD</a>
                 </td>
                 <td>Assuré ouvrant droit</td>
                 <td/>
@@ -976,7 +976,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-CON">CON</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-CON">CON</a>
                 </td>
                 <td>Informateur</td>
                 <td/>
@@ -997,7 +997,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-CAREGIVER">CAREGIVER</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-CAREGIVER">CAREGIVER</a>
                 </td>
                 <td>Aidant</td>
                 <td/>
@@ -1018,7 +1018,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-PAT">PAT</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-PAT">PAT</a>
                 </td>
                 <td>aidé</td>
                 <td/>
@@ -1039,7 +1039,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-PROV">PROV</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-PROV">PROV</a>
                 </td>
                 <td>Professionnel de santé</td>
                 <td/>
@@ -1060,7 +1060,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-AGNT">AGNT</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-AGNT">AGNT</a>
                 </td>
                 <td>Professionnel caractérisé par son rôle</td>
                 <td/>
@@ -1081,7 +1081,7 @@
                   <code>https://mos.esante.gouv.fr/NOS/TRE_R260-HL7RoleClass/FHIR/TRE-R260-HL7RoleClass</code>
                 </td>
                 <td style="white-space:nowrap">  
-                  <a href="https://interop.esante.gouv.fr/terminologies/1.12.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-NOK">NOK</a>
+                  <a href="https://interop.esante.gouv.fr/terminologies/1.13.0/CodeSystem-TRE-R260-HL7RoleClass.html#TRE-R260-HL7RoleClass-NOK">NOK</a>
                 </td>
                 <td>personne de confiance</td>
                 <td/>
@@ -1118,7 +1118,7 @@
           </extension>
         </title>
         <status value="active"/>
-        <date value="2026-08-25T08:41:23+00:00"/>
+        <date value="2026-08-28T14:32:49+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1127,8 +1127,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:1e74d715-2506-4df9-9a07-15b9ab51c48f"/>
-          <timestamp value="2026-08-25T08:42:28+00:00"/>
+          <identifier value="urn:uuid:16a86322-7b3f-4fb5-8397-fe10d68b5e1b"/>
+          <timestamp value="2026-08-28T14:33:54+00:00"/>
           <total value="11"/>
           <offset value="0"/>
           <parameter>

@@ -11,7 +11,7 @@
   "name" : "CDS",
   "title" : "Cercle De Soins",
   "status" : "active",
-  "date" : "2026-08-25T08:41:23+00:00",
+  "date" : "2026-08-28T14:32:49+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -56,7 +56,7 @@
     "id" : "ans_fr_terminologies",
     "uri" : "https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies",
     "packageId" : "ans.fr.terminologies",
-    "version" : "1.12.0"
+    "version" : "1.13.0"
   },
   {
     "id" : "hl7_fhir_uv_extensions_r4",
@@ -1110,7 +1110,7 @@
             "valueUrl" : "normes_standards_ig_annexe.html"
           }],
           "nameUrl" : "normes_standards_ig_annexe.html",
-          "title" : "IG N&S",
+          "title" : "IG des Normes et Standards",
           "generation" : "markdown"
         },
         {
