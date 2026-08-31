@@ -1,0 +1,10 @@
+@startuml
+
+hide footbox
+
+Créateur -> Gestionnaire : Flux 4 - **MiseJourCercleSoins** - <font color=red> PUT  [Lien vers le serveur] / [CareTeam] / [id]
+
+Gestionnaire --> Créateur : <font color=red> HTTP 200 OK
+
+@enduml
+

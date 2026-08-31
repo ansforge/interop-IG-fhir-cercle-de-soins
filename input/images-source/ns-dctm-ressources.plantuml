@@ -1,0 +1,44 @@
+@startuml
+
+skinparam linetype ortho
+
+skinparam hyperlinkUnderline false
+'Declaration des éléments
+rectangle {
+
+    rectangle "CercleSoin\n [[https://hl7.org/fhir/R4/careteam.html Careteam]]" as Patient #LightSeaGreen;line:Black;text:Black
+
+    rectangle "MembreCercleSoins\n [[https://hl7.org/fhir/R4/careteam-definitions.html#CareTeam.participant.member CareTeam]]" as CareTeam #LightSkyBlue;line:Black;text:Black
+
+    rectangle "PersonnePriseCharge\n [[https://hl7.org/fhir/patient.html Patient]]" as  Patient #aquamarine;line:Black;text:Black
+
+    rectangle "Professionnel\n  [[https://hl7.org/fhir/practioner.html Practitioner]]" as  Practitioner #paleturquoise;line:Black;text:Black
+    rectangle "Contact\n [[https://hl7.org/fhir/relatedperson.html RelatedPerson]]" as RelatedPerson #mintcream;line:Black;text:Black
+    rectangle "EntiteGeographique\n [[https://hl7.org/fhir/organization.html Organization]]" as Organization1 #plum;line:Black;text:Black
+
+    rectangle "EntiteJuridique\n [[https://hl7.org/fhir/organization.html Organization]]" as Organization2 #plum;line:Black;text:Black
+
+    rectangle "OrganisationInterne\n [[https://hl7.org/fhir/organization.html Organization3]]" as Organization3 #plum;line:Black;text:Black
+
+
+    rectangle "Modèle logique\nProfil FHIR " AS Legend
+
+}
+
+
+'Liens entre éléments
+
+' # Patient #
+
+Patient <-- CareTeam : subject
+
+' # careteam #
+CareTeam --> RelatedPerson : participant.member
+CareTeam --> Organization1 : participant.member
+CareTeam --> Organization2 : participant.member
+CareTeam --> Organization3 : participant.member
+CareTeam --> Practitioner : participant.member
+
+Practitioner -[hidden]-> Legend
+
+@enduml

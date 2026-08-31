@@ -1,0 +1,10 @@
+@startuml
+
+hide footbox
+
+Créateur --> Gestionnaire : Flux 1 - **CreationCercleSoins** - <font color=red> POST [Lien vers le serveur]+{ressourceType: Bundle/
+
+Gestionnaire --> Créateur : <font color=red> HTTP 201 created
+
+@enduml
+

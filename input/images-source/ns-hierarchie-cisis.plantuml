@@ -1,0 +1,26 @@
+@startuml
+
+left to right direction
+skinparam rectangle {
+  BackgroundColor #F7FAFD
+  BorderColor #185FA5
+  FontColor #085877
+}
+skinparam FontColor #1a1a1a
+skinparam ArrowFontColor #1a1a1a
+skinparam ArrowFontStyle italic
+
+
+skinparam ArrowFontStyle plain
+skinparam defaultFontSize 14
+
+skinparam defaultFontName "DejaVu Sans"
+
+rectangle "1. Privilégier un profil IHE adapté et stable\n" as R1
+rectangle "2. Réutiliser des normes\n et standards déjà utilisés dans le\n CI-SIS pour des cas d'usages similaires" as R2
+rectangle "3. Consulter des acteurs pour\n identifier la norme ou le standard\n à utiliser" as R3
+
+R1 --> R2 : à défaut
+R2 --> R3 : à défaut
+
+@enduml
